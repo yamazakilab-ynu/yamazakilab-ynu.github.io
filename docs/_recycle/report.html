@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en jp">
+  <head>
+    <title>tyamazaki.com/report</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="tyamazaki.com is portfolio, blog and paper reviewing website designed by Takahiro Yamazaki, who is a materials scientist/researcher ant university"/>
+    <meta name="keywords" content="tyamazaki, Takahiro, Yamazaki, portfolio, homepage, website, materials, Scientist, researcher, professor, physics, magnetism, machine learning, Barkhausen, Non-equilibrium, functional, projects, publications, notes, blog, 山崎貴大, 研究者, 大学教員, 論文紹介, 物材見聞録, オブザーブ, ブログ, 材料物理, 物性物理, 材料工学, マテリアルズインフォマティクス"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./img/favicon.png">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NYGV5L0T7N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NYGV5L0T7N');
+    </script>
+
+  </head>
+  <!-- body -->
+  <body class="light" id="top">
+
+    <!-- header -->
+    <header class="header center">
+      <h3><a href="./" class="link">tyamazaki.com</a></h3>
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="./">top</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="./review">review</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="./blog">blog</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="./publications">publications</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="./projects">projects</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="./notes">notes</a>
+          </li>
+        </ul>
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+        <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger"> 
+          <i aria-hidden="true" id="btn-navigation" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Main contents -->
+    <main>
+      <div class="about4 center">
+        <h2 class="center">Report</h2>
+        <h5>User report via Google analysis</h5>
+      </div>
+
+      <!-- 2023-08-28 -->
+      <section class="section1">
+        <div class="titleWithDate under3">
+          <h3><span class="date"><i aria-hidden="true" class="far fa-clock"></i> 2023-10-23</span></h3>
+        </div>
+        <div class="description10"><iframe id="pdfIframe" src="./report/report231023.pdf"></iframe>
+        </div>
+        
+        <div class="titleWithDate under3">
+          <h3><span class="date"><i aria-hidden="true" class="far fa-clock"></i> 2023-08-28</span></h3>
+        </div>
+        <div class="description10"><iframe id="pdfIframe" src="./report/report230828.pdf"></iframe>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftyamazaki.com%2Freport&count_bg=%2318B41D&title_bg=%23555555&icon=atom.svg&icon_color=%23E7E7E7&title=Thanks:)&edge_flat=false"/><br><br>Copyright © 2022-2023 <a href="./">tyamazaki.com</a> | All rights reserved.
+    </footer>
+
+    <div class="scroll-container">
+      <div class="scroll-top">
+        <a aria-label="Scroll up" href="#top">
+          <i aria-hidden="true" class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+      <div class="scroll-down">
+        <a aria-label="Scroll down" href="#bottom">
+            <i aria-hidden="true" class="fas fa-arrow-down"></i>
+        </a>
+    </div>
+    </div>
+    <script src="./script.js"></script>
+    <div id="bottom"></div>
+  </body>
+</html>

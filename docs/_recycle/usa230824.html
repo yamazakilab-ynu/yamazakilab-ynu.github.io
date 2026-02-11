@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en jp">
+  <head>
+    <title>ty/blog/posts/usa</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 "/>
+    <meta name="description" content="This portfolio website is designed by tyamazaki (Takahiro Yamazaki), who is a materials scientist/researcher" />
+    <meta name="keywords" content="tyamazaki, Takahiro, Yamazaki, portfolio, homepage, website, materials, Scientist, researcher, professor, physics, magnetism, machine learning, Barkhausen, Non-equilibrium, functional, projects, publications, notes, blog" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="../../styles.css">
+    <link rel="icon" href="../../img/favicon.png">
+    <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous">
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NYGV5L0T7N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NYGV5L0T7N');
+    </script>
+  </head>
+  <!-- body -->
+  <body class="light" id="top">
+
+    <!-- header -->
+    <header class="header center">
+      <h3><a href="../../" class="link">tyamazaki.com</a></h3>
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="../../">top</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../../review">review</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../../blog">blog</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../../publications">publications</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../../projects">projects</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../../notes">notes</a>
+          </li>
+        </ul>
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+        <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger"> 
+          <i aria-hidden="true" id="btn-navigation" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+    
+    <div class="about4 center">
+      <h2>ブログ</h2>
+      <h5>材料物理研究者のつぶやき</h5>
+    </div>
+    <div class="container">
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <!-- ブログ一覧 -->
+        <ul class="chapters"><p class="under3 description1">ブログ一覧</p>
+          <li class="description3">&nbsp;2023年
+            <ul class="sections description5">
+              <li><a class="link link--nav" href="#us">米メリーランド滞在記</a></li>
+              <li><a class="link link--nav" href="#working">大学での仕事内容</a></li>
+              <li><a class="link link--nav" href="#peer-review">Web3時代のPeer review</a></li>
+            </ul>
+          </li>
+          <li class="description3">&nbsp;2022年
+            <ul class="sections description5">
+              <li><a class="link link--nav" href="#github-pages">5分で作れるホームページ</a></li>
+              <li><a class="link link--nav" href="#slackgpt">ChatGPT要約botで論文読み</a></li>
+              <li><a class="link link--nav" href="#chatgpt">私のChatGPTの使い方</a></li>
+            </ul>
+          </li>
+        </ul><br>
+
+        <!-- ノウハウ一覧 -->
+        <ul class="chapters"><p class="under3 description1">ノウハウ一覧</p>
+          <!-- 材料創製 -->
+          <li class="description3">&nbsp;材料創製
+            <ul class="sections description5">
+              <li><a class="link link--nav" href="#sputter">マグネトロンスパッタ装置</a></li>
+              <li><a class="link link--nav" href="#sem">FE-SEM</a></li>
+              <li><a class="link link--nav" href="#tem-p">TEM用試料加工</a></li>
+              <li><a class="link link--nav" href="#tem">TEM観察</a></li>
+              <li><a class="link link--nav" href="#tem">大型放射光施設</a></li>
+            </ul>
+            
+          </li>
+          <!-- 数値計算 -->
+          <li class="description3">&nbsp;数値計算
+            <ul class="sections description5">
+              <li><a class="link link--nav" href="#vasp">VASP v6.3.2</a></li>
+              <li><a class="link link--nav" href="#wien2k">Wien2k v23.2</a></li>
+              <li><a class="link link--nav" href="#comsol">COMSOL Multiphysics v6.1</a></li>
+              <li><a class="link link--nav" href="#mumax">mumax v3.10</a></li>
+              <li><a class="link link--nav" href="#oommf">OOMMG v2.0</a></li>
+            </ul>
+          </li>
+          <!-- 機械学習 -->
+          <li class="description3">&nbsp;機械学習
+            <ul class="sections description5">
+              <li><a class="link link--nav" href="#chatgpt-p">ChatGPT prompt</a></li>
+              <li><a class="link link--nav" href="#vscode">VSCode</a></li>
+              <li><a class="link link--nav" href="#pca">PCA/MDS</a></li>
+              <li><a class="link link--nav" href="#som">SOM</a></li>
+              <li><a class="link link--nav" href="#homology">Persistent homology</a></li>
+            </ul>
+          </li>
+        </ul><br>
+
+        <!-- クラス一覧 -->
+        <ul class="chapters"><p class="under3 description1">クラス一覧</p>
+          <!-- 物性物理 -->
+          <li class="description3">&nbsp;物性物理
+            <ul class="sections description5">
+              <li><a class="link link--nav" href="#sputter">物性物理の導入</a></li>
+              <li><a class="link link--nav" href="#sem">量子力学の復習</a></li>
+              <li><a class="link link--nav" href="#tem-p">固体の結晶構造</a></li>
+              <li><a class="link link--nav" href="#tem">電子のバンド構造</a></li>
+              <li><a class="link link--nav" href="#tem">電子の動的性質</a></li>
+              <li><a class="link link--nav" href="#tem">磁性</a></li>
+              <li><a class="link link--nav" href="#tem">超伝導性</a></li>
+              <li><a class="link link--nav" href="#tem">格子振動とフォノン</a></li>
+              <li><a class="link link--nav" href="#tem">強相関系</a></li>
+              <li><a class="link link--nav" href="#tem">最新の研究トピックと展望</a></li>
+            </ul>
+          </li>
+          <!-- 材料工学 -->
+          <li class="description3">&nbsp;材料工学
+            <ul class="sections description5">
+              <li><a class="link link--nav" href="#vasp">材料工学の導入</a></li>
+              <li><a class="link link--nav" href="#wien2k">金属と合金</a></li>
+              <li><a class="link link--nav" href="#comsol">セラミックス</a></li>
+              <li><a class="link link--nav" href="#mumax">ポリマー材料</a></li>
+              <li><a class="link link--nav" href="#oommf">コンポジット材料</a></li>
+              <li><a class="link link--nav" href="#vasp">ナノ材料</a></li>
+              <li><a class="link link--nav" href="#comsol">電子・光学材料</a></li>
+              <li><a class="link link--nav" href="#mumax">材料の機械的性質</a></li>
+              <li><a class="link link--nav" href="#oommf">材料の持続可能性とリサイクル</a></li>
+              <li><a class="link link--nav" href="#wien2k">最新の研究トピックと展望</a></li>
+            </ul>
+          </li>
+
+          <!-- マテインフォ -->
+          <li class="description3">&nbsp;マテインフォ
+            <ul class="sections description5">
+              <li><a class="link link--nav" href="#vasp">マテインフォの導入</a></li>
+              <li><a class="link link--nav" href="#wien2k">データの取得と前処理</a></li>
+              <li><a class="link link--nav" href="#comsol">特徴量エンジニアリング</a></li>
+              <li><a class="link link--nav" href="#mumax">データ駆動のモデル構築</a></li>
+              <li><a class="link link--nav" href="#oommf">深層学習と材料データ</a></li>
+              <li><a class="link link--nav" href="#vasp">データの視覚化と解釈</a></li>
+              <li><a class="link link--nav" href="#comsol">高スループット実験とデータ</a></li>
+              <li><a class="link link--nav" href="#mumax">データベースとオープンソースツール</a></li>
+              <li><a class="link link--nav" href="#oommf">実用的な問題への応用</a></li>
+              <li><a class="link link--nav" href="#wien2k">最新の研究トピックと展望</a></li>
+            </ul>
+          </li>
+
+          <!-- その他
+          <li class="description3">&nbsp;その他
+            <ul class="sections description5">
+              <li><a class="link link--nav" href="#chatgpt-p">研究の基礎</a></li>
+              <li><a class="link link--nav" href="#vscode">物性計測技術</a></li>
+              <li><a class="link link--nav" href="#pca">材料の構造解析</a></li>
+              <li><a class="link link--nav" href="#som">表面・界面分析技術</a></li>
+              <li><a class="link link--nav" href="#fft">材料の機械的性質の評価</a></li>
+              <li><a class="link link--nav" href="#homology">シミュレーションとモデリング</a></li>
+              <li><a class="link link--nav" href="#chatgpt-p">熱解析技術</a></li>
+              <li><a class="link link--nav" href="#vscode">光学的性質の評価</a></li>
+              <li><a class="link link--nav" href="#pca">応用的評価技術</a></li>
+              <li><a class="link link--nav" href="#som">研究の報告と発表</a></li>
+              <li><a class="link link--nav" href="#fft">論文投稿</a></li>
+              <li><a class="link link--nav" href="#homology">論文査読</a></li>
+            </ul>
+          </li> -->
+        </ul>
+      </aside>
+      <!-- Main contents -->
+      <main class="main-content">
+        <div class="about1 center" style="background-image: url('../img/usa.png'); background-repeat: no-repeat; background-position: center; background-size: cover;">
+          <h1 class="text-with-border">米メリーランド滞在記</h1>
+        </div><br>
+        
+        <!-- 概要 -->
+        <section>
+          <div class="description2">
+            　2020年3月から1年間、私は米国東海岸のメリーランド大学で在米研究に取り組みました。この期間、新型コロナウイルスが拡大し、その影響で起こったさまざまな社会的変化をアメリカで直接経験しました。異文化に触れる日々は新しい視点や挑戦をもたらし、日本とアメリカの研究文化の違いを深く理解することができました。今、再び海外渡航が容易になる中、私の体験が皆さんの参考になれば嬉しいです。
+          </div>
+        </section><br>
+
+        <!-- 目次 -->
+        <section>     
+          <h4 class="under">目次</h4>
+          <ol>
+            <li class="description22"><a href="#1">はじめに</a></li>
+            <li class="description22"><a href="#2">渡航までの道のり</a></li>
+            <li class="description22"><a href="#3">メリーランド大学での研究生活</a></li>
+            <li class="description22"><a href="#4">メリーランドでの生活</a></li>
+            <li class="description22"><a href="#5">おわりに</a></li>
+          </ol>
+        </section><br><br>
+
+        <section>
+          <!-- はじめに -->
+          <div id="1"><h4>1. はじめに</h4>
+            <div class="description2">
+              　世界を舞台に研究を展開する機会は、その土地の文化や環境に触れるだけでなく、自分の視野や知識を拡張する絶好の機会です。今回、私はアメリカのメリーランドでその経験を得ることができました。
+            </div>
+          </div><br>
+          
+
+          <!-- 渡航までの道のり -->
+          <div id="2"><h4>2. 渡航までの道のり</h4>
+            <div class="description2">
+              　学位を取得した後、私は日本学術振興会の特別研究員PDとして名古屋大学にて研究を行っていました。この研究期間の一部を利用し、アメリカのメリーランド大学へ渡航することに。受け入れ先として選んだのは、Ichiro Takeuchi教授の研究室。私の博士課程での研究活動において、彼の研究室の論文を度々参照していたからです。<br>
+              　私のテーマは、弾性熱量効果に関する研究。近年、このテーマは次世代のエコ技術としての注目を浴びています。そんな中、渡航の計画はコロナ禍の影響で幾度となく遅れをとってしまいました。しかし、困難を乗り越え、ついにメリーランドへの道が開かれました。
+            </div>
+          </div><br>
+
+          <!-- メリーランド大学での研究生活 -->
+          <div id="3"><h4>3. メリーランド大学での研究生活</h4>
+            <div class="description2">
+              　メリーランド大学にて私の研究の舞台となったのは、米国エネルギー省（DOE）の支援を受ける、革新的な固体冷媒の開発プロジェクトでした。このプロジェクトには、私を含むポスドクや博士学生たちが熱心に取り組んでおり、日々の研究活動は熱気に包まれていました。しかしながら、コロナ禍の状況下、研究室の人数制限や必要な講習の延期など、予想外の障壁に直面しました。しかし、そのような状況下でも私たちは研究の進捗を目指し、協力しあいました。<br>
+              　私が中心となって携わったのは、材料の微細構造解析に関する部分で、この課題に取り組む中でノーステキサス大学との共同研究の機会が生まれました。この共同研究は、学会での発表や学術論文という形で多くの成果を上げることができました。このような成果の背後には、多くの時間と努力、そして各研究者の熱意がありました。<br>
+              　アメリカの研究環境の中で感じたことの一つは、博士課程の学生たちの高い研究志向です。彼らは、TAやRAとしても活動しながら、自らの学位のための研究にも熱心に取り組んでおり、その姿勢は日本の研究環境とは異なるものでした。アメリカの学術環境の中での競争は厳しく、それが彼らの研究への情熱を引き出しているのかもしれません。<br><br>
+              </p><p class="img_align">
+                <img src="../img/usa-1.png" class="img300">
+                <img src="../img/usa-2.png" class="img300">
+              </p>
+            </div>
+          </div><br>
+
+          <!-- メリーランドでの生活 -->
+          <div id="4"><h4>4. メリーランドでの生活</h4>
+            <div class="description2">
+              　メリーランド州の日常は、コロナの規制が次第に緩和され、アメリカ特有の生活スタイルに戻っていく様子を目の当たりにしました。首都ワシントン DC の隣に位置するメリーランドは、政治に関心を持つ若者が多いだけでなく、科学研究の中心地としても知られています。アメリカ国立衛生研究所やNASA、そして名門ジョンズ・ホプキンス大学など、世界が注目する研究機関が集結しています。<br>
+              　私の休日は、ワシントン DC の歴史的なスポットやスミソニアン博物館群を巡ることで、アメリカの文化や歴史に触れる機会となりました。そして、アメリカの"日常"を直接体験することは、言葉では表せないほどの価値がありました。<br>
+              　新しい環境での生活は、多くの挑戦を伴いました。特に電話での英会話は、初めは大変でした。しかし、これらの経験が私の英語力向上に繋がり、より豊かな交流を楽しむことができました。
+            </div>
+          </div><br>
+
+          <!-- おわりに -->
+          <div id="5"><h4>5. おわりに</h4>
+            <div class="description2">
+              　メリーランドでの1年間は、私の人生において非常に貴重な期間となりました。学問的な挑戦はもちろんのこと、異文化との接触は私の価値観や視野を広げ、新しい考え方や発想を持ち帰ることができました。この経験をサポートしてくださった多くの方々、そして共に学び合った仲間たちに、心からの感謝を伝えたいと思います。私のキャリアの中で、この渡米経験は特別なものとして記憶されるでしょう。
+            </div>
+          </div>
+        </section><br><br>
+
+        <section><h4 class="under">リファレンス</h4>
+          <ol class="description22">
+            <li><a href="https://mse.umd.edu/">メリーランド大学材料工学部</a></li>
+          </ol>
+        </section><br><br>
+
+      </main>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+      © 2023 <a href="../../" class="link footer__link">tyamazaki</a>. All rights reserved.<br><br>
+      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftyamazaki.com%2Fblog%2Fposts%2Fusa&count_bg=%2318B41D&title_bg=%23555555&icon=atom.svg&icon_color=%23E7E7E7&title=Thanks:)&edge_flat=false"/>
+    </footer>
+
+    <div class="scroll-container">
+      <div class="scroll-top">
+        <a aria-label="Scroll up" href="#top">
+          <i aria-hidden="true" class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+      <div class="scroll-down">
+        <a aria-label="Scroll down" href="#bottom">
+            <i aria-hidden="true" class="fas fa-arrow-down"></i>
+        </a>
+    </div>
+    </div>
+    <script src="../../script.js"></script>
+    <div id="bottom"></div>
+  </body>
+</html>

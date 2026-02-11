@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en jp">
+  <head>
+    <title>ty/review/materials</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="tyamazaki.com is portfolio, blog and paper reviewing website designed by Takahiro Yamazaki, who is a materials scientist/researcher ant university"/>
+    <meta name="keywords" content="tyamazaki, Takahiro, Yamazaki, portfolio, homepage, website, materials, Scientist, researcher, professor, physics, magnetism, machine learning, Barkhausen, Non-equilibrium, functional, projects, publications, notes, blog, 山崎貴大, 研究者, 大学教員, 論文紹介, 物材見聞録, オブザーブ, ブログ, 材料物理, 物性物理, 材料工学, マテリアルズインフォマティクス"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../img/favicon.png">
+    <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous">
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NYGV5L0T7N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NYGV5L0T7N');
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(function() {
+        $("#sidebar").load("./sidebar.html");
+      });
+    </script>
+  </head>
+  <!-- body -->
+  <body class="light" id="top">
+    <!-- header -->
+    <header class="header center">
+      <h3><a href="../" class="link">tyamazaki.com</a></h3>
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="../">top</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../review">review</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../blog">blog</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../publications">publications</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../projects">projects</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../notes">notes</a>
+          </li>
+        </ul>
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+        <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger"> 
+          <i aria-hidden="true" id="btn-navigation" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+       
+    <div class="about4 center">
+      <h1>論文紹介</h1>
+      <h5>分野別：材料工学の基礎と応用</h5>
+    </div>
+    <div class="container">
+      <!-- Main contents -->
+      <main class="main-content">
+        <nav aria-label="breadcrumb">
+          <ul class="breadcrumb">
+            <li><a href="../" class="link2 link2--nav2">Home</a></li>
+            <li><a href="../review" class="link2 link2--nav2">Review</a></li>
+            <li>材料工学</li>
+          </ul>
+        </nav>
+
+        <section>
+          <section>
+            <h3 class="section__title3">狙い</h3>
+            <div class="description2">
+              材料工学（Materials Engineering）は、物質の内部構造、プロセス、プロパティ、そしてその物質がさまざまな環境や条件下でどのように反応するかを研究する工学および科学の分野です。この学問は、新しい材料の設計、開発、そして性能評価に至るまで、幅広いトピックを網羅しています。例えば、金属、セラミック、ポリマー、複合材料、バイオマテリアルなどの各種材料、材料の構造と性質、材料の加工と製造プロセス、材料の応用と性能評価などを対象としています。
+            </div>
+          </section><br>
+
+          <section>     
+            <h4 class="under3">論文タイトル一覧</h4>
+            <ol class="indent">
+              <li class="description22"><a href="#3">
+                硬質炭素の細孔内でのナトリウム貯蔵機構の解明</a></li>
+              <li class="description22"><a href="#2">
+                多結晶材料の有効特性を予測するためのグラフニューラルネットワーク</a></li>
+              <li class="description22"><a href="#1">
+                トポロジカル電磁気学によるインダクタンスとキャパシタンスの発現</a></li>
+            </ol>
+          </section><br>
+
+          <section>
+            <div id="3"><h4 class="indent2">硬質炭素の細孔内でのナトリウム貯蔵機構の解明</h4>
+              <div class="description2">
+                硬質炭素（HC）は、ナトリウムイオン電池（NIBs）の負極として有望な材料であるが、ナトリウム貯蔵の一般的な機構は不明である。本研究では、異なる熱分解温度で作製したHCの微細構造と電気化学特性を相関させることで、細孔内でのナトリウム貯蔵機構を明らかにした。オペランドシンクロトロン小角X線散乱（SAXS）、広角X線散乱（WAXS）、X線吸収近傍構造（XANES）、ラマン分光法などを組み合わせて、細孔内でのナトリウム充填過程を詳細に調べた。HCの微細構造は、細孔サイズ分布や閉鎖細孔の体積分率、欠陥濃度やグラフェン層間距離や局所秩序などに影響することがわかった。HCの細孔内でのナトリウム貯蔵は、欠陥部位への吸着と細孔内でのクラスター形成という二段階の過程で起こり、その過程はHCの微細構造に依存することがわかった。 
+              </div>
+              <div class="description10">
+                Published 2023-10-08<br>
+                Revealing the Sodium Storage Mechanisms in Hard Carbon Pores<br>
+                Luis Kitsu Iglesias, et al. (University of Colorado Boulder, USA)<br>
+                <a href="https://onlinelibrary.wiley.com/doi/10.1002/aenm.202302171" target="_blank" class="link2 link2--nav2">
+                  https://doi.org/10.1002/aenm.202302171</a>
+              </div><div class="img_align">
+                <img src="../review/img/materials-3-1.png" class="img300">
+                <img src="../review/img/materials-3-2.png" class="img300">
+                <img src="../review/img/materials-3-3.png" class="img300">
+              </div>
+              <div class="description6">
+                【コメント】：親戚の博士学生が第一著者の論文。ナトリウム電池の微細構造に対して放射光実験をしていて、米国内飛び回っているらしい。<br>
+                【用語】硬質炭素（HC）：無秩序な炭素質材料で、ランダムに配向したグラフェン層からなる。ナトリウムイオン電池（NIBs）の負極として高い容量や安定性を示す。ナトリウムイオン電池（NIBs）：ナトリウムイオンを担体として電気エネルギーを蓄える二次電池。リチウムイオン電池（LIBs）に比べて、安価で持続可能な電池技術として期待されている。シンクロトロン小角X線散乱（SAXS）：シンクロトロン放射光源から発生するX線を試料に当てて散乱させ、その散乱パターンから試料中の微小構造や空隙などを解析する技術。<br>
+                【方法】本研究では、異なる熱分解温度（1100, 1400, 2000 °C）で作製したHCを用いた。HCの微細構造を調べるために、SAXSで細孔サイズ分布や閉鎖細孔の体積分率を測定し、ラマン分光法で欠陥濃度やグラフェンの局所秩序を評価し、WAXSでグラフェン層間距離やグラフェンドメインの大きさを決定した。HCの電気化学特性を調べるために、ナトリウムイオン電池の負極としてHCを用いて充放電試験を行い、容量-電位曲線を得た。HCの細孔内でのナトリウム貯蔵機構を明らかにするために、オペランドSAXSで充電中のHCの細孔充填過程を追跡し、細孔サイズ分布と細孔内でのナトリウム充填度の関係をモデル化した。また、エクスシチュXANESで充電後のHCのナトリウム酸化状態を測定し、細孔サイズとナトリウムの金属性との相関を調べた。<br>
+                【新規性】本研究は、異なる微細構造を持つHCにおける細孔内でのナトリウム貯蔵機構をオペランドSAXSとエクスシチュXANESという相補的な手法で定量的に解明した点で学術的に新規である。本研究は、HCの微細構造が細孔サイズ分布や閉鎖細孔の体積分率、欠陥濃度やグラフェン層間距離や局所秩序などに影響し、それらがさらにナトリウム貯蔵容量や電位曲線に反映されることを示した点で学術的に重要である。本研究は、HCの細孔内でのナトリウム貯蔵が欠陥部位への吸着と細孔内でのクラスター形成という二段階の過程で起こり、その過程がHCの微細構造に依存することを示した点で学術的に興味深い。
+              </div>
+            </div><br><br>
+
+            <div id="2"><h4 class="indent2">多結晶材料の有効特性を予測するためのグラフニューラルネットワーク</h4>
+              <div class="description2">
+                ・LLZOセラミックを例にとって、有限幅の粒界を持つ三次元多結晶微細構造とその有効イオン伝導率および有効弾性剛性係数を大規模に生成し、物理ベースのシミュレーションで計算した。<br>
+                ・原子結晶構造の特性を予測するために開発された結晶グラフ畳み込みニューラルネットワークを基に、多結晶グラフニューラルネットワーク（PGNN）モデルを開発した。PGNNモデルは、粒子と粒界の物理的特徴をノードとエッジの特徴としてグラフに表現し、メッセージ伝達関数を用いて粒子間や粒界間の相互作用を考慮する。<br>
+                ・最適化されたPGNNモデルは、線形回帰モデルや二つの基準となる畳み込みニューラルネットワーク（CNN）モデルよりも低い誤差（1.4%未満）で有効イオン伝導率テンソルの全ての対角成分を予測することができた。また、EBSDデータから生成された統計的に異なる微細構造に対しても良好な外挿性能を示した。<br>
+                ・逐次的前方選択法を用いて、粒子や粒界の個々の物理的特徴が予測精度に及ぼす相対的な重要度を定量化した。その結果、粒子や粒界の導電率が最も重要であり、粒界の厚さや粒子の中心位置は不要な特徴であることがわかった。さらに、有効イオン伝導率を予測するために事前学習されたPGNNモデルは、同じ微細構造の有効弾性剛性係数を予測する際に優れた転移学習性能を示した。
+              </div>
+              <div class="description10">
+                DATE: 8 Jun 2023 (v2)<br>
+                Graph Neural Network for Predicting the Effective Properties of Polycrystalline Materials: A Comprehensive Analysis<br>
+                Minyi Dai et al. (University of Wisconsin-Madison, USA)<br>
+                <a href="https://arxiv.org/abs/2209.05583" target="_blank" class="link2 link2--nav2">
+                  arXiv:2209.05583 (cond-mat.mtrl-sci)</a>
+              </div><div class="img_align">
+                <img src="../review/img/materials-1-1.png" class="img300">
+                <img src="../review/img/materials-1-2.png" class="img300">
+              </div><div class="description6">
+                コメント：複雑になるにつれて物性・材料特性を予測する説明変数は膨大に増えていく。どういった特徴量エンジニアリングが必要になっていくか。また、グラフ理論を機械学習に組み込んだ予測モデルも興味深い。
+              </div>
+            </div><br><br>
+
+            <div id="1"><h4 class="indent2">トポロジカル電磁気学によるインダクタンスとキャパシタンスの発現</h4>
+              <div class="description2">
+                ・トポロジカル電磁気学：絶縁体中の電子の運動が非自明な運動量空間トポロジーを持つとき、通常のマクスウェル方程式では記述できない異常な磁気電気応答が現れる。これをトポロジカル電磁気学と呼ぶ。<br>
+                ・インダクタンスとキャパシタンス：電流と電圧の関係を表す複素インピーダンスには、インダクタンスとキャパシタンスという二つの要素が含まれる。インダクタンスは電流に対する遅れを、キャパシタンスは電圧に対する遅れを表す。<br>
+                ・トポロジカル材料と磁性材料のヘテロ構造：トポロジカル絶縁体や量子スピンホール絶縁体などのトポロジカル材料と、強磁性体や反強磁性体などの磁性材料を接合したヘテロ構造では、トポロジカル電磁気学と磁化ダイナミクスが相互作用する。<br>
+                ・トポロジカル電磁気学によるインダクタンスとキャパシタンスの発現：トポロジカル材料と磁性材料のヘテロ構造に交流電圧を印加すると、トポロジカル電子系が磁化ダイナミクスを駆動し、その結果としてインダクタンスやキャパシタンスが発現する。このインダクタンスやキャパシタンスは、従来の金属回路や最近提案された金属磁性体によるものと比べて、高い周波数帯域、低い消費電力、高い品質因子を実現できる。
+              </div>
+              <div class="description10">
+                DATE: 26 May 2023<br>
+                Emergence of Inductance and Capacitance from Topological Electromagnetism<br>
+                Yasufumi Araki et al. (Japan Atomic Energy Agency, Japan)<br>
+                <a href="https://journals.jps.jp/doi/epdf/10.7566/JPSJ.92.074705" target="_blank" class="link2 link2--nav2">
+                  journals.jps.jp:doi/epdf/10.7566/JPSJ.92.074705</a>
+              </div><div class="img_align">
+                <img src="../review/img/materials-2-1.png" class="img300">
+                <img src="../review/img/materials-2-2.png" class="img300">
+              </div><div class="description6">
+                コメント：創発インダクタよりすごい絶縁体インダクタとのこと。トポロジカル磁性体なので高品質な合成や今回はヘテロ構造の高精度な界面制御が求められると思うが、これをベースに派生技術が展開したら面白そう。<br>
+                関連記事：<a href="https://www.jaea.go.jp/02/press2023/p23061602/" target="_blank" class="link2 link2--nav2">日本原子力研究開発機構プレスリリース（16 Jun 2023）</a>「インダクタ」のサイズを10000分の1に！超小型化できる新原理を考案<br>
+                補足：この論文はトポロジカル材料と磁性材料のヘテロ構造という特殊な系を考えているが、その理論的枠組みは一般的であり、他の種類の秩序変数や物質系にも適用できる可能性があることを指摘している。例えば、超伝導体や強相関電子系などのトポロジカル材料と、多極子秩序やスカイルミオンなどの磁性材料とのヘテロ構造では、どのようなトポロジカル電磁気学が現れるか興味深い問題である。
+              </div>
+            </div><br><br>
+
+            <!-- <div id="3"><h4 class="indent2">3. 化学ツールを組み込んだ大規模言語モデル：ChemCrowという化学エージェントの開発と評価</h4>
+              <div class="description2">
+                ・大規模言語モデル（LLM）と化学分野の専門的なツールを統合することで、有機合成、薬物発見、材料設計などの化学関連のタスクを自動的に解決することができる化学エージェント（ChemCrow）を開発した。<br>
+                ・ChemCrowは、LLMに与えられたタスクとツールのリストから、思考・行動・観察の形式で自律的な推論プロセスを展開し、最終的な回答に到達する。ツールは、LLMが化学的に正確かつ効率的な情報を得るために必要な場合に呼び出される。<br>
+                ・ChemCrowは、GPT-4という最新のLLMを用いて、さまざまな難易度の14個のタスクに対して評価された。専門家による評価では、ChemCrowはGPT-4よりも化学的な正確さ、推論の質、タスクの完了度において優れていることが示された。特に複雑なタスクでは、ChemCrowはGPT-4が苦手とする化学的な知識や理解をツールを通して補うことができた。<br>
+                ・ChemCrowの開発と利用には、二重使用や安全性や倫理性などの潜在的なリスクが伴うことを認識し、それらを軽減するための戦略を提案した。例えば、危険な物質や反応に対しては警告やエラーを出すツールを組み込んだり、人間のフィードバックやレビューを求めたりすることである。
+              </div>
+              <div class="description6">
+                コメント：GPT-4を用いた最近注目される材料設計ツール。人間言語と機械言語を繋ぐ材料設計の実現に期待。マテリアルズインフォマティクスは有機よりも無機の方が進んでいる理解であったが、言語モデルを利用したツールは有機からスタートするのは少し驚き。
+              </div>
+              <div class="description10">
+                DATE: 21 Jun 2023 (v4), 11 Apr 2023 (v1)<br>
+                Augmenting large language models with chemistry tools<br>
+                Andres M. Bran et al. (Laboratory of Artificial Chemical Intelligence (LIAC), ISIC, EPFL, Switzerland)<br>
+                <a href="https://arxiv.org/abs/2304.05376" target="_blank" class="link2 link2--nav2">
+                  arXiv:2304.05376 (chem-ph)</a>
+              </div><div class="img_align">
+                <img src="../review/img/materials-3-1.png" class="img300">
+                <img src="../review/img/materials-3-2.png" class="img300">
+              </div>
+            </div><br><br>
+
+            <div id="4"><h4>4. GPT-4を用いた化学研究の可能性と限界</h4>
+              <div class="description2">
+                ・この文書は、GPT-4という大規模な言語モデルが化学研究にどのように応用できるかを検証したものである。<br>
+                ・GPT-4は、有機化学、化学情報学、数学、物理化学などの分野において、一般的な教科書レベルの知識を持っていることが示された。<br>
+                ・GPT-4は、少量のデータから新しい知識を学習し、推論問題や説明変数の選択、沸点や多変数関数の探索などのタスクに対処できることが示された。<br>
+                ・GPT-4は、分子構造や実験データなどの非言語データの扱いに課題があり、専門的な内容や最新の情報に対応できない場合があることが示された。
+              </div>
+              <div class="description6">
+                コメント：GPTを用いた科学研究の有用性と限界の一例を見れて大変参考になった。非言語データの扱いへの対応の向上により、GPT-4を用いた自動化実験技術の普及にも期待したい。<br>
+                関連記事：<a href="https://www.nature.com/articles/s41578-023-00588-4" target="_blank" class="link2 link2--nav2">Zhichu Ren et al., Nature Reviews Materials (2023)</a>：AIとアクティブラーニングを用いた自律実験の課題と展望
+              </div><div class="description10">
+                DATE: 5 Jun 2023<br>
+                Prompt engineering of GPT-4 for chemical research: what can/cannot be done?<br>
+                Kan Hatakeyama-Sato et al. (Tokyo Institute of Technology, Japan)<br>
+                <a href="https://chemrxiv.org/engage/chemrxiv/article-details/647d305dbe16ad5c577b6627" target="_blank" class="link2 link2--nav2">
+                  10.26434/chemrxiv-2023-s1x5p</a>
+              </div><div class="img_align">
+                <img src="../review/img/materials-4-1.png" class="img300">
+                <img src="../review/img/materials-4-2.png" class="img300">
+              </div>
+            </div><br><br> -->
+
+          </section>
+        </section>
+      </main>
+
+      <!-- Sidebar -->
+      <aside id="sidebar" class="sidebar"></aside>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftyamazaki.com%2Freview%2Fmaterials&count_bg=%2318B41D&title_bg=%23555555&icon=atom.svg&icon_color=%23E7E7E7&title=Thanks:)&edge_flat=false"/><br><br>Copyright © 2022-2023 <a href="../">tyamazaki.com</a> | All rights reserved.
+    </footer>
+
+    <div class="scroll-container">
+      <div class="scroll-top">
+        <a aria-label="Scroll up" href="#top">
+          <i aria-hidden="true" class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+      <div class="scroll-down">
+        <a aria-label="Scroll down" href="#bottom">
+            <i aria-hidden="true" class="fas fa-arrow-down"></i>
+        </a>
+    </div>
+    </div>
+    <script src="../script.js"></script>
+    <div id="bottom"></div>
+  </body>
+</html>

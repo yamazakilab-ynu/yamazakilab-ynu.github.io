@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en jp">
+  <head>
+    <title>ty/review/nonequ</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 "/>
+    <meta name="description" content="This portfolio website is designed by tyamazaki (Takahiro Yamazaki), who is a materials scientist/researcher" />
+    <meta name="keywords" content="tyamazaki, Takahiro, Yamazaki, portfolio, homepage, website, materials, Scientist, researcher, professor, physics, magnetism, machine learning, Barkhausen, Non-equilibrium, functional, projects, publications, notes, blog" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../img/favicon.png">
+    <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous">
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NYGV5L0T7N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NYGV5L0T7N');
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(function() {
+        $("#sidebar").load("./sidebar.html");
+      });
+    </script>
+  </head>
+  <!-- body -->
+  <body class="light" id="top">
+    <!-- header -->
+    <header class="header center">
+      <h3><a href="../" class="link">tyamazaki.com</a></h3>
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="../">top</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../review">review</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../blog">blog</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../publications">publications</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../projects">projects</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../notes">notes</a>
+          </li>
+        </ul>
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+        <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger"> 
+          <i aria-hidden="true" id="btn-navigation" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+    
+    <div class="about4 center">
+      <h1>論文紹介</h1>
+      <h5>機能特集：非平衡臨界現象の基礎と応用</h5>
+    </div>
+    <div class="container">
+      <!-- Main contents -->
+      <main class="main-content">
+        <nav aria-label="breadcrumb">
+          <ul class="breadcrumb">
+            <li><a href="../" class="link2 link2--nav2">Home</a></li>
+            <li><a href="../review" class="link2 link2--nav2">Review</a></li>
+            <li>非平衡臨界現象</li>
+          </ul>
+        </nav>
+
+        <section>
+          <section>
+            <h3 class="section__title3">狙い</h3>
+            <div class="description2">
+              非平衡臨界現象は、熱力学的な平衡状態にない系において観察される統計力学的な現象です。これらの系は一般的には時間に依存し、外部からエネルギーまたは物質が供給されています。例としては、流体の乱流、砂山の崩壊、トラフィックフローなどがあります。また、熱力学的な平衡にない系での長距離相関やクリティカルな動きを研究対象とします。このような系は通常、マイクロスコピックなレベルでのランダムな動きと、マクロスコピックなレベルでの相互作用や制約条件によって特徴づけられます。非平衡系は熱力学第二法則によって駆動されるため、時間の進行に伴い状態が変化するのが一般的です。
+              キーワード：臨界現象、相変態
+            </div>
+          </section><br>
+          
+          <section>     
+            <h4 class="under3">論文タイトル一覧</h4>
+            <ol class="indent">
+              <li class="description22"><a href="#1">
+                クラックリングノイズ顕微鏡法：材料中のナノスケールの雪崩現象を研究する新しい方法</a></li>
+              <li class="description22"><a href="#2">
+                磁壁共トンネリングによる量子バルクハウゼンノイズ</a></li>
+              <!-- <li class="description22"><a href="#3">
+                量子、原子、連続体システムにおける科学のための人工知能</a></li> -->
+              <!-- <li class="description22"><a href="#4">
+                層間スタッキングによって誘起される二次元ファンデルワールス磁性体中の反スキルミオン</a></li> -->
+            </ol>
+          </section><br><br>
+
+          <section>
+            <div id="1"><h4 class="indent2">1. クラックリングノイズ顕微鏡法：材料中のナノスケールの雪崩現象を研究する新しい方法</h4>
+              <div class="description2">
+                ・AFMナノインデンテーションを用いて、材料が変形するときに原子が移動する際に発生するクラックリングノイズをナノスケールで測定する方法を開発した。<br>
+                ・フェロエレクトリックPbTiO3単結晶中のドメインとドメイン壁というトポロジカル欠陥におけるクラックリングノイズと雪崩現象を調べた。<br>
+                ・ドメインとドメイン壁では、雪崩の臨界指数が異なり、ドメイン壁では混合臨界性が抑制されることを示した。<br>
+                雪崩のエネルギー分布と最尤法による指数から、PbTiO3のドメインとドメイン壁にはそれぞれ独自のクラックリングノイズが存在することを明らかにした。<br>
+                ・広範囲の材料系や応用分野において、個々のナノスケールの特徴に関する先進的な知識を生成する可能性を提供する新しい概念を提示した。
+              </div>
+              <div class="description6">
+                コメント：私の知る限り、圧電材に置けるバルクハウゼンノイズの2例目だ。いい論文誌に出てこの分野の盛り上がりを期待している。<br>
+                用語：クラックリングノイズ：外部刺激に応答して非線形動的材料系で起こるスケール不変現象で、ジャークや雪崩と呼ばれる不連続な材料運動が発生し、音波を伴う現象。元々は磁性材料のバルクハウゼンノイズとして研究されていたが、現在では地震学や建築材料の監視、相転移やニューラルネットワークなどの基礎研究など、多様な分野で用いられている。雪崩現象：外部刺激によって材料中の原子や欠陥が移動する際に発生する不連続な運動で、サイズや持続時間がパワーロー分布に従うスケール不変現象。雪崩現象は多様な物理系で見られる普遍的な振る舞いであり、臨界指数やスケーリング関数などで記述される。雪崩現象は材料の物性や応答性に影響を与える重要な要素である。ドメイン壁：異方的な秩序パラメータを持つ材料中で、異なる方向や相に揃った領域（ドメイン）の境界に存在するトポロジカル欠陥。ドメイン壁は外部刺激によって移動や変形することができ、その際にクラックリングノイズや雪崩現象を引き起こす。ドメイン壁はドメインとは異なるナノスケールの物性を示すことがあり、新しい機能性材料やデバイスの構成要素として注目されている。
+                手法論：AFMナノインデンテーションとは、原子間力顕微鏡（AFM）のプローブを用いて、材料表面に微小な力を加えて変形させる方法である。AFMプローブは力を加えると同時に、材料の反応として生じる凹みの深さを測定することができる。凹みの深さの時間変化から、クラックリングノイズの強度や雪崩のエネルギー分布などを求めることができる。本研究では、AFMナノインデンテーションを用いて、フェロエレクトリックPbTiO3単結晶中のドメインとドメイン壁におけるクラックリングノイズを測定した。具体的な手順は以下の通りである。1. PbTiO3単結晶を固相反応法とプラチナ坩堝法で合成した。2. AFMプローブ（ダイヤモンド製）を用いて、PbTiO3単結晶表面に最大30 µNの力を8時間かけて加えた。この間に、表面の変位を検出した。3. AFMプローブが加えた力に対するPbTiO3単結晶の反応として生じた凹みの深さの時間変化から、クラックリングノイズの強度や雪崩のエネルギー分布を求めた。4. 最尤法によって、雪崩の臨界指数やパワーロー分布の指数を算出した。5. ドメインとドメイン壁でクラックリングノイズや雪崩現象に違いがあるかどうかを比較した。
+              </div><div class="description10">
+                2023-08-16<br>Crackling noise microscopy<br>
+                Cam-Phu Thi Nguyen et al. (UNSW Sydney, Australia)<br>
+                <a href="https://www.nature.com/articles/s41467-023-40665-4" target="_blank" class="link2 link2--nav2">
+                Nature Communications 14, 4963 (2023)</a>
+              </div><div class="img_align">
+                <img src="../review/img/nonequ-1-1.png" class="img300">
+                <img src="../review/img/nonequ-1-2.png" class="img300">
+                <img src="../review/img/nonequ-1-3.png" class="img300">
+              </div>
+            </div><br><br>
+            <div id="2"><h4 class="indent2">2. 磁壁共トンネリングによる量子バルクハウゼンノイズ</h4>
+              <div class="description2">
+                ・強い結晶場によって低温でイジングダブレットになる希土類強磁性体のドメインウォール運動を量子レジームで観測した。<br>
+                ・ドメインウォール運動はバルクハウゼンノイズとして観測される雪崩ダイナミクスを示し、従来の繰り込み群法や古典的ドメインウォールモデルでは説明できない非臨界的な振る舞いを発見した。<br>
+                ・ドメインウォール運動には、外部磁場に対して異なる依存性を持つ二種類の量子力学的なメカニズムが存在することを明らかにした。一つは個々のドメインウォールが独立にトンネリングするメカニズムで、もう一つは隣接するドメインウォールが相関してトンネリングするメカニズムである。<br>
+                ・相関トンネリングは、ドメインウォール内の小さな部分（プラケット）が共トンネリングして生成されるドメインウォール対によって起こり、プラケット対は双極子相互作用によって相関している。この相関は、イジング軸に垂直な方向に外部磁場をかけることで抑制される。 
+              </div>
+              <div class="description6">
+                コメント：
+                磁壁がトンネリングするバルクハウゼンノイズ。私の一番興味のある分野。<br>
+                学術的に面白い点：
+                量子相転移や量子トンネリングなどの現象を観測できる理想的な系として、イジングダブレットになる希土類強磁性体LiHoxY1-xF4を用いたこと。ドメインウォールの運動が量子トンネリングに支配されることを示し、その運動がアバランシュダイナミクスを呈することを発見したこと。ドメインウォールの運動における非臨界的な振る舞いを、伝統的な繰り込み群や古典的なドメインウォールモデルでは説明できないことを指摘し、プラケットの共トンネリングと双極子相互作用によるドメインウォール対の相関を考慮した新しい理論を提案したこと。<br>
+                用語：
+                バルクハウゼンノイズ：強磁性体に外部磁場を印加したときに、ドメインやドメインウォールの不連続な運動によって生じる電圧や音響信号のこと。雪崩現象やクラックリングノイズの一例とされる。ドメインウォール：強磁性体内で異なる方向に向いた磁区（ドメイン）の境界面のこと。ドメインウォール内では、スピンが連続的に回転している。ドメインウォールの回転方向や厚さは、交換相互作用や異方性、双極子相互作用などによって決まる。量子トンネリング：ポテンシャル障壁を超えることが古典力学的には不可能な粒子が、量子力学的な確率で障壁を透過する現象のこと。粒子の波動性や不確定性原理によって説明される。<br>
+                手法論：
+                イジングダブレットになる希土類強磁性体LiHoxY1-xF4の単結晶試料を用いた。試料を超伝導ベクトル磁石内の低温測定装置にセットし、イジング軸に平行な方向に±4 kOeの磁場を印加した。また、イジング軸に垂直な方向に0～200 Oeの磁場を印加した。試料のマクロな磁化曲線はGaAsホール効果磁力計で測定した。試料の雪崩イベントは、試料に巻き付けた100回転の誘導コイルで磁化の時間微分を測定し、電圧信号に変換した。この電圧信号は、高周波トランスフォーマーアンプとトランジスタプリアンプで増幅し、オシロスコープで1 MHzのサンプリングレートでデジタル化した。雪崩イベントは、低周波成分を除去した後、機器ノイズの3.5σ以上の電圧を持つデータセグメントとして自動的に抽出した。各イベントの始まりと終わりは0 Vに線形補間した。イベントの統計量（持続時間Tや面積Sなど）や相関関係を解析した。<br>
+                材料：
+                LiHoxY1-xF4は、ホルミウムとイットリウムの混合物で構成されるフッ化物で、強い結晶場によって低温でイジングダブレットになる特徴を持ちます。この物質は、外部磁場に対して量子相転移を示し、量子スピングラスや量子トンネリングなどの現象を観測することができる理想的な系として研究されています。この物質の磁化ダイナミクスは、量子イジングハミルトニアンと環境との相互作用によって記述されます。環境との相互作用には、超微細相互作用、スピンフォノン相互作用、電磁場との相互作用、不純物による乱れなどが含まれます。この物質のドメインウォール運動は、小さな部分（プラケット）が量子トンネリングすることで起こります。プラケットは、双極子相互作用によって隣接するドメインウォールと相関して共トンネリングすることがあります。この物質のバルクハウゼンノイズは、ドメインウォール運動に伴う雪崩ダイナミクスを反映しており、二種類の量子力学的なメカニズムが存在することを示しています。一つは個々のドメインウォールが独立にトンネリングするメカニズムで、もう一つはドメインウォール対が相関してトンネリングするメカニズムです。
+                関連研究：
+                <a href="https://discovery.ucl.ac.uk/id/eprint/137311/1/137311.pdf" target="_blank" class="link2 link2--nav2">Quantum and Classical Glass Transitions in LiHoxY1-xF4, Phys. Rev. Lett. 101 (2008) 057201</a>, <a href="https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.117.087201" target="_blank" class="link2 link2--nav2">Quantitative Scaling of Magnetic Avalanches, Phys. Rev. Lett. 117 (2016) 087201</a> 
+              </div>
+              <div class="description10">
+                2023-09-03<br>
+                Quantum Barkhausen Noise Induced by Domain Wall Co-Tunneling<br>
+                C. Simon, et al. (California Institute of Technology, USA)<br>
+                <a href="https://arxiv.org/abs/2309.01799" target="_blank" class="link2 link2--nav2">
+                  arXiv:2309.01799 (cond-mat.dis-nn)</a>
+              </div><div class="img_align">
+                <img src="../review/img/202309-1-1.png" class="img300">
+                <img src="../review/img/202309-1-2.png" class="img300v">
+              </div>
+            </div><br><br>
+
+            <!-- <div id="2"><h4 class="indent2">2. ハロゲン化物ペロブスカイトの自由エネルギー形貌の解明：CsPbBr3とMAPbI3の不安定性と相転移特性</h4>
+              <div class="description2">
+                ・ハロゲン化物ペロブスカイトは温度によって立方晶、四方晶、斜方晶などの異なる結晶構造を取るが、その自由エネルギー形貌は未解明だった。<br>
+                ・本研究では、CsPbBr3とMAPbI3という二つの代表的なハロゲン化物ペロブスカイトについて、機械学習に基づく分子力場を用いて分子動力学シミュレーションと傘サンプリング法を行った。その結果、CsPbBr3では立方晶から四方晶への相転移が一次相転移であることを確認し、斜方晶から四方晶への相転移は連続相転移であることを示した。<br>
+                ・MAPbI3では、有機分子MAが持つ配向自由度が相転移や不安定性に影響を与えることを見出した。特に、斜方晶から四方晶への相転移は大きな自由エネルギー障壁を持ち、斜方晶は高温でもメタ安定な状態になることがわかった。また、MAPbI3では実験で観測されていないメタ安定な四方晶構造（a −a −c 0）も発見し、その存在可能性や動力学的挙動について議論した。
+              </div>
+              <div class="description6">
+                コメント：ハロゲン化物ペロブスカイトという太陽電池に有望な材料の自由エネルギー形貌を計算物理学と化学の手法で明らかにして、どう他の材料系と比較していくのか興味があります。<br>
+                補足：ハロゲン化物ペロブスカイト：ABX3型の結晶構造を持つ化合物で、Aはアルカリ金属や有機分子（例えばMA=CH3NH3）、Bは鉛や錫などの金属元素、Xはハロゲン元素（フッ素、塩素、臭素、ヨウ素）である。光吸収や電荷移動などの特性が優れており、太陽電池や発光ダイオードなどの応用が期待されている。自由エネルギー形貌：物質の状態や構造を表す変数（例えば温度や圧力、分子の配向など）に対する自由エネルギーの分布を示す図。自由エネルギーが最も低いところが安定な状態や構造であり、自由エネルギーが高いところは不安定な状態や構造である。自由エネルギー形貌は相転移や反応経路などの物理化学的現象を理解するために重要である。傘サンプリング法：分子動力学シミュレーションで用いられるサンプリング法の一種で、自由エネルギー形貌の探索を効率的に行うために、あらかじめ選んだ変数（例えば分子の変形や距離など）に沿って系にバイアスポテンシャル（例えば調和ポテンシャルなど）をかける方法。バイアスポテンシャルによって系は安定な状態から不安定な状態へと移動しやすくなり、自由エネルギー形貌の全体像を得ることができる。
+              </div>
+              <div class="description10">
+                22 Jul 2023<br>
+                Revealing the free energy landscape of halide perovskites: Metastability and transition characters in CsPbBr3 and MAPbI3<br>
+                Erik Fransson et al. (Chalmers University of Technology, Sweden)<br>
+                <a href="hhttps://arxiv.org/abs/2307.12100" target="_blank" class="link2 link2--nav2">
+                  https://arxiv.org/abs/2307.12100v1</a>
+              </div><div class="img_align">
+                <img src="../review/img/nonequ-2-1.png" class="img300">
+                <img src="../review/img/nonequ-2-2.png" class="img300">
+              </div>
+            </div><br><br> -->
+
+            <!-- <div id="3"><h4 class="indent2">3. 量子、原子、連続体システムにおける科学のための人工知能</h4>
+              <div class="description2">
+                ・AI for Scienceという新しい研究分野、特に、量子、原子、連続体という3つのスケールで自然現象を理解するためのAIの手法について、技術的に詳細に解説しています。AI for Scienceとは、自然科学の発見を促進するために、人工知能（AI）の技術を利用することである。
+                ・量子、原子、連続体システムにおけるAIの手法は、分子の3次元構造や物理的・化学的性質を考慮した表現学習や予測・生成タスクに有効である。
+                ・これらの手法の設計においては、分子の対称性や表現力、効率性などの課題に対処する必要がある。
+                ・既存の手法は、特徴量のテンソル次数とGNN層のボディ次数という2つの観点から分類できる。
+                ・テンソル次数が高いほど、分子の3次元情報をより豊かに表現できるが、計算コストや実装難度も高くなる。ボディ次数が高いほど、分子の局所的な幾何学的特徴をより正確に捉えられるが、組み合わせ爆発や冗長性も発生する。
+              </div>
+              <div class="description6">
+                コメント：AI for Scienceという新しい研究分野に関する263ページにもなるサーベイ論文で、時間をとってじっくり読み込みたいところです。いつかAIが自然科学の理解を深めて、全解明する日は来るのだろうか。
+              </div>
+              <div class="description10">
+                DATE: 17 Jul 2023<br>
+                Artificial Intelligence for Science in Quantum, Atomistic, and Continuum Systems<br>
+                Xuan Zhang et al. (Texas A&M University, USA)<br>
+                <a href="https://arxiv.org/abs/2307.08423" target="_blank" class="link2 link2--nav2">
+                  arXiv:2307.08423 (cs.LG)</a>
+              </div><div class="img_align">
+                <img src="../review/img/nonequ-3-1.png" class="img300">
+                <img src="../review/img/nonequ-3-2.png" class="img300">
+              </div>
+            </div><br><br> -->
+
+          </section>
+
+        </section>
+      </main>
+      
+      <!-- Sidebar -->
+      <aside id="sidebar" class="sidebar"></aside>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftyamazaki.com%2Freview%2Fnonequ&count_bg=%2318B41D&title_bg=%23555555&icon=atom.svg&icon_color=%23E7E7E7&title=Thanks:)&edge_flat=false"/><br><br>Copyright © 2022-2023 <a href="../">tyamazaki.com</a> | All rights reserved.
+    </footer>
+
+    <div class="scroll-container">
+      <div class="scroll-top">
+        <a aria-label="Scroll up" href="#top">
+          <i aria-hidden="true" class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+      <div class="scroll-down">
+        <a aria-label="Scroll down" href="#bottom">
+            <i aria-hidden="true" class="fas fa-arrow-down"></i>
+        </a>
+      </div>
+    </div>
+    <script src="../script.js"></script>
+    <!-- <script>
+      window.addEventListener("DOMContentLoaded", function() {
+          loadComponent("sidebar", "sidebar.html");
+      });
+
+      function loadComponent(elementId, url) {
+          fetch(url).then(function(response) {
+              return response.text();
+          }).then(function(data) {
+              document.getElementById(elementId).innerHTML = data;
+          });
+      }
+    </script> -->
+    <div id="bottom"></div>
+  </body>
+</html>

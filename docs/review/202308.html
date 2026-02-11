@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html lang="en jp">
+  <head>
+    <title>ty/review/202308</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="tyamazaki.com is portfolio, blog and paper reviewing website designed by Takahiro Yamazaki, who is a materials scientist/researcher ant university"/>
+    <meta name="keywords" content="tyamazaki, Takahiro, Yamazaki, portfolio, homepage, website, materials, Scientist, researcher, professor, physics, magnetism, machine learning, Barkhausen, Non-equilibrium, functional, projects, publications, notes, blog, 山崎貴大, 研究者, 大学教員, 論文紹介, 物材見聞録, オブザーブ, ブログ, 材料物理, 物性物理, 材料工学, マテリアルズインフォマティクス"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../img/favicon.png">
+    <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous">
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NYGV5L0T7N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NYGV5L0T7N');
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(function() {
+        $("#sidebar").load("./sidebar.html");
+      });
+    </script>
+  </head>
+  <!-- body -->
+  <body class="light" id="top">
+    <!-- header -->
+    <header class="header center">
+      <h3><a href="../" class="link">tyamazaki.com</a></h3>
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="../">top</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../review">review</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../blog">blog</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../publications">publications</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../projects">projects</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../notes">notes</a>
+          </li>
+        </ul>
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+        <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger"> 
+          <i aria-hidden="true" id="btn-navigation" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <div class="about4 center">
+      <h1>論文紹介</h1>
+      <h5>2023年8月：研究動向と注目論文</h5>
+    </div>
+    <div class="container">
+      <!-- Main contents -->
+      <main class="main-content">
+        <nav aria-label="breadcrumb">
+          <ul class="breadcrumb">
+            <li><a href="../" class="link2 link2--nav2">Home</a></li>
+            <li><a href="../review" class="link2 link2--nav2">Review</a></li>
+            <li><a href="../review-23" class="link2 link2--nav2">2023</a></li>
+            <li>August</li>
+          </ul>
+        </nav>
+        
+
+        <!-- 2023 -->
+        <section id="2023">
+          <section>
+            <h3 class="section__title3">所感</h3>
+            <div class="description2">
+              先月、常温常圧で超伝導を示すと主張されたLK-99(Pb10-xCux(PO4)6O)に関する再試論文が相次いだが、Science誌やNature誌は「LK-99は超伝導体ではない」と結論づけた。中国やアメリカからは多数の再現実験が報告されたが、日本からは1本しか論文が出なかった。これは、日本のアカデミアに余裕がないのか、興味がないのか、あるいは最初から超伝導でないと見抜いていたのか。また、注目すべき論文として、パインズの悪魔や量子スピンネマティックに関する発見にインパクトがあったと思う。マテリアルズインフォマティクスについても解析手法がどんどん高度化しており、今後ますますの専門性を要するようになっていくと思われる。
+            </div>
+          </section><br>
+
+          <!-- ピックアップ論文 -->
+          <section>     
+            <h4 class="under3">論文タイトル一覧</h4>
+            <ol class="indent">
+              <li class="description22"><a href="#1">
+                室温常圧で超伝導を示す銅ドープ鉛アパタイト構造の合成と機構</a></li>
+              <li class="description22"><a href="#2">
+                多元素合金の機械的性質予測のための原始的な機械学習ツール</a></li>
+              <li class="description22"><a href="#3">
+                弾性カロリック効果によるフェロ四極子金属TmAg2のネマティック感受性の測定</a></li>
+              <li class="description22"><a href="#4">
+                単層CrSBrにおける電場誘起ハーフメタル</a></li>
+              <li class="description22"><a href="#5">
+                キラル磁気ソリトンの発見と制御：ランダウ・リフシッツ・ギルバート方程式の厳密解</a></li>
+              <li class="description22"><a href="#6">
+                高圧下でのNd2CoFeO6二重ペロブスカイトの構造相転移と磁気弾性結合</a></li>
+              <li class="description22"><a href="#7">
+                多発性TbMnO3のスピン波分散とマグノンキラリティ</a></li>
+              <li class="description22"><a href="#8">
+                室温付近での磁気冷却効果の基礎と応用：RMn6Sn6系列の磁気構造と高エントロピー合金化の影響</a></li>
+              <li class="description22"><a href="#9">
+                分子動力学シミュレーションにおけるエネルギー保存の問題と機械学習ポテンシャルの役割</a></li>
+              <li class="description22"><a href="#10">
+                パインズの悪魔の発見：Sr2RuO4における3次元音響プラズモンの観測</a></li>
+              <li class="description22"><a href="#11">
+                機械学習によるランダム位相近似からの密度汎関数の構築</a></li>
+              <li class="description22"><a href="#12">
+                材料特性予測のためのドメイン適応に基づく機械学習の改善</a></li>
+              <li class="description22"><a href="#13">
+                結晶化合物の構造変換モデル</a></li>
+              <li class="description22"><a href="#14">
+                1T-PtSe2族における対称性指標のない非標準性、遮断されたエッジ状態、およびマヨラナ工学</a></li>
+              <li class="description22"><a href="#15">
+                量子スピンネマティックのダイナミクス：傾いた反強磁性体との比較</a></li>
+              <li class="description22"><a href="#16">
+                既知の無機材料の組成データから結晶無機材料の合成可能性を予測する</a></li>
+              <li class="description22"><a href="#17">
+                EPWコードを用いた第一原理に基づく電子-フォノン物理学</a></li>
+              <li class="description22"><a href="#18">
+                X線回折パターンを再現する結晶構造の作成法</a></li>
+              <li class="description22"><a href="#19">
+                高速で頑健なEBSDデータ収集のための軽量トランスフォーマー</a></li>
+              <li class="description22"><a href="#20">
+                既知の無機材料の組成データから結晶無機材料の合成可能性を予測する</a></li>
+              <li class="description22"><a href="#21">
+                高スループットスクリーニングのための次元削減によるトポロジカル材料のニューラルネットワーク学習の加速</a></li>
+              <li class="description22"><a href="#22">
+                実験データとシミュレーションデータの融合による機械学習力場の精度向上</a></li>
+              <li class="description22"><a href="#23">
+                強いスピン軌道結合磁性体におけるキタエフ物理学を超えて</a></li>
+              <li class="description22"><a href="#24">
+                ひずみ工学により2D MoTe2を用いた高性能相変化メモリスタが実現</a></li>
+            </ol>
+          </section><br><br>
+
+          <section>
+            <div id="1"><h4 class="indent2">1. 室温常圧で超伝導を示す銅ドープ鉛アパタイト構造の合成と機構</h4>
+              <div class="description2">
+                ・固相法を用いて、鉛アパタイト(Pb10(PO4)6O)に銅を部分的に置換したLK-99®という物質を合成した。この物質は、室温常圧で電気抵抗がゼロになる超伝導体であることを示した。<br>
+                ・LK-99®の結晶構造は、X線回折(XRD)により修飾鉛アパタイト(MLA)構造であることが分かった。銅のドープにより、結晶格子の体積収縮が起こり、絶縁体から金属への相転移(IMT)が引き起こされた。<br>
+                ・LK-99®の超伝導性は、温度や磁場に依存する磁化率やI-V特性を測定することで確認した。特に、室温常圧で物質が磁石の上で部分的に浮上するメイスナー効果を観察した。<br>
+                ・LK-99®の超伝導機構は、1次元的なCu2+−O1/2−Cu2+チェーンにおける電荷密度波(CDW)とオンサイトクーロン反発エネルギー(Uc)によるバイポーラロン形成とトンネル効果に基づくと考えられる。これは、BR-BCS理論により説明できる。
+              </div>
+              <div class="description6">
+                コメント：LK-99が常温常圧超伝導じゃないのは残念だけど、盛り上がり自体は好き。次に期待。
+              </div>
+              <div class="description6">
+                関連記事：<a href="https://www.science.org/content/blog-post/breaking-superconductor-news" target="_blank" class="link2 link2--nav2">サイエンス誌が最初に取り上げた記事（27 Jul 2023）</a>：Breaking Superconductor News, 
+                <a href="https://www.science.org/content/blog-post/room-temperature-superconductor-new-developments" target="_blank" class="link2 link2--nav2">サイエンス誌が2度目に取り上げた記事（1 Aug 2023）</a>：A Room-Temperature Superconductor? New Developments, 
+                <a href="https://www.nature.com/articles/d41586-023-02481-0" target="_blank" class="link2 link2--nav2">Nature誌が最初に取り上げた記事（4 Aug 2023）</a>：LK-99 isn’t a superconductor — how science sleuths solved the mystery, 
+                <a href="https://twitter.com/alexkaplan0/status/1688731316777275392" target="_blank" class="link2 link2--nav2">超伝導でないと決定づけたAlex Kaplan（誰？）のツイート（8 Aug 2023）, </a>
+                <a href="https://www.science.org/content/article/short-spectacular-life-viral-room-temperature-superconductivity-claim" target="_blank" class="link2 link2--nav2">サイエンス誌が3度目に取り上げた記事（8 Aug 2023）</a>：The short, spectacular life of that viral room-temperature superconductivity claim, 
+                <a href="https://www.nature.com/articles/d41586-023-02585-7" target="_blank" class="link2 link2--nav2">最近Nature誌で報告された超伝導でないとする記事（16 Aug 2023）</a>：Claimed superconductor LK-99 is an online sensation — but replication efforts fall short.
+              </div>
+              <div class="description10">
+                11 Aug 2023 (v3), 26 Jul 2023 (v1)<br>
+                Superconductor Pb10−xCux(PO4)6O showing levitation at room temperature and atmospheric pressure and mechanism<br>
+                Sukbae Lee et al. (Quantum Energy Research Centre, South Korea)<br>
+                <a href="https://arxiv.org/abs/2307.12037" target="_blank" class="link2 link2--nav2">
+                  arXiv:2307.12037 (cond-mat.supr-con)</a>
+              </div><div class="img_align">
+                <img src="../review/img/202308-1-1.png" class="img300">
+                <img src="../review/img/202308-1-2.png" class="img300">
+              </div>
+            </div><br><br>
+            <div id="2"><h4 class="indent2">2. 多元素合金の機械的性質予測のための原始的な機械学習ツール</h4>
+              <div class="description2">
+                ・多元素合金（MPEA）の組成と6つの機械的性質（硬さ、降伏強度、引張強度、伸び、圧縮強度、塑性）を含むデータセットを作成した。<br>
+                ・MPEAの組成を機械学習モデルの入力ベクトルに変換するために、パーサーというツールを開発した。<br>
+                ・線形回帰、K近傍回帰、サポートベクター回帰、ランダムフォレスト回帰などのさまざまな機械学習モデルを適用して、MPEAの機械的性質を予測した。<br>
+                ・Gradioというライブラリを使って、機械学習モデルの予測結果を視覚化し、ユーザーと対話できるインターフェースを作成した。
+              </div>
+              <div class="description6">
+                  コメント：マテインフォ系のGUIの優れたソフトが最近色々な特性解析に拡張しているような気がする。
+              </div>
+              <div class="description10">
+                15 Aug 2023<br>A primitive machine learning tool for the mechanical property prediction of multiple principal element alloys<br>R. Tan et al. (The Australian National University, Australia)<br>
+                <a href="https://arxiv.org/abs/2308.07649" target="_blank" class="link2 link2--nav2">
+                arXiv:2308.07649 (cond-mat)</a>
+              </div><div class="img_align">
+                  <img src="../review/img/202308-2-1.png" class="img300">
+                  <img src="../review/img/202308-2-2.png" class="img300">
+              </div>
+            </div><br><br>
+            <div id="3"><h4 class="indent2">3. 弾性カロリック効果によるフェロ四極子金属TmAg2のネマティック感受性の測定</h4>
+              <div class="description2">
+                ・TmAg2は、4f電子がフェロ四極子秩序を形成し、4回対称性を破る電子ネマティック相転移を5Kで起こす金属物質である。<br>
+                ・c軸に沿った磁場は、フェロ四極子秩序パラメータに対する有効な横場として機能し、相転移温度を3.2Tで完全に抑制する。<br>
+                ・弾性カロリック効果は、物質が経験するひずみによって誘起される温度変化を測定する技術であり、フェロ四極子-ひずみ感受性を直接探ることができる。<br>
+                ・弾性カロリック効果から得られたネマティック感受性は、弾性定数の測定と一致し、横場イジング模型によって定量的に説明される。
+              </div>
+              <div class="description6">
+                  コメント：弾性カロリック効果とフェロ四極子とc軸磁場の関係は興味深い。<br>
+                  補足：ネマティックとは、液体と固体の間にある液晶の一種で、分子の向きが平均して一方向に揃っているが、位置はばらばらで流動性をもつ状態のこと。物性物理分野では、固体中の電子やスピンなどがネマティックのように回転対称性を破る状態や現象について研究されている。例えば、鉄系超伝導体では、電子系が 4 回対称から 2 回対称へ低下する電子ネマティック状態に相転移することが知られていたり、フラストレート磁性体では、スピンの液体状態からスピンネマティック状態への転移が議論されている。さらに、超伝導状態においても、系のもつ回転対称性を破るネマティック超伝導が見つかっているようである。これらのネマティック現象は、固体物質の新奇な物性や相転移を理解するための重要なキーワードとして注目される。
+              </div>
+              <div class="description10">
+                  10 Aug 2023<br>The nematic susceptibility of the ferroquadrupolar metal TmAg2 measured via the elastocaloric effect<br>Elliott W et al. (Stanford University, USA)<br>
+                <a href="https://arxiv.org/abs/2308.05312" target="_blank" class="link2 link2--nav2">
+                  arXiv:2308.05312 (cond-mat)</a>
+              </div><div class="img_align">
+                  <img src="../review/img/202308-3-1.png" class="img300">
+                  <img src="../review/img/202308-3-2.png" class="img300">
+              </div>
+            </div><br><br>
+            <div id="4"><h4 class="indent2">4. 単層CrSBrにおける電場誘起ハーフメタル</h4>
+              <div class="description2">
+                ・2層の磁性原子を持つ2次元（2D）強磁性（FM）材料に垂直電場をかけることで、ハーフメタル性（一方のスピンチャネルが金属で、もう一方が絶縁体または半導体である性質）を実現する新しいメカニズムを提案した。電場により、異なる層の電子バンドがずれることで、ハーフメタル性が誘起される。<br>
+                ・単層CrSBrは正方晶系の結晶構造を持ち、SとBr原子によって形成された歪んだ八面体配位にある2層のCr原子が磁性を持つ。第一原理計算により、CrSBrは電場なしではFM半導体であるが、適切な範囲の電場をかけるとFMハーフメタルになることを見出した。<br>
+                ・ハーフメタル性を誘起するために必要な電場強度は約0.4 V/Å程度であり、実験的に達成可能な値であることを示した。また、ハーフメタル性を定義するギャップは0.33 eV以上であり、スピン反転励起のエネルギーが十分に高いことを確認した。<br>
+                ・CrSBr単層を用いて、電場のオンオフによってデータ書き込みと読み出しを行う可能なスピントロニクスデバイスの概念図を示した。また、同じ構造とFM配位を持つ他の単層材料（VSF, VSeF, VSeBr, CrSCl, CrSI, CrSeBr, CrSeI）にも本研究の方法や分析が適用可能であることを指摘した。
+              </div>
+              <div class="description6">
+                コメント：ハーフメタル性を定義するギャップの閾値は0.33eVだったのか。これを電場誘起で発現させるのは興味深い。
+              </div>
+              <div class="description10">
+                  7 Aug 2023<br>Electric-field induced half-metal in monolayer CrSBr<br>Hao-Tian Guo et al. (Xi’an University of Posts and Telecommunications, China)<br>
+                <a href="https://arxiv.org/abs/2308.03430" target="_blank" class="link2 link2--nav2">
+                  arXiv:2308.03430 (cond-mat)</a>
+              </div><div class="img_align">
+                  <img src="../review/img/202308-4-1.png" class="img300">
+                  <img src="../review/img/202308-4-2.png" class="img300">
+              </div>
+            </div><br><br>
+            <div id="5"><h4 class="indent2">5. キラル磁気ソリトンの発見と制御：ランダウ・リフシッツ・ギルバート方程式の厳密解</h4>
+              <div class="description2">
+                ・ランダウ・リフシッツ・ギルバート方程式（LLG方程式）と一般化非線形シュレーディンガー方程式（GNLS方程式）との間に幾何学的な対応関係を見出し、LLG方程式を厳密に解くことができることを示した。<br>
+                ・ダルブー変換を用いて、等方性強磁性ナノワイヤー中に存在するキラル磁気ソリトンという新しい磁化構造の解析的な形式を導出した。キラル磁気ソリトンは、空間的に局在する孤立した波の一種で、鏡像対称性と位相ジャンプを持ち、左巻き、右巻き、中立の三種類に分類できる。スピンが360°回転する構造を持つ磁化構造を有する。<br>
+                ・スピン偏極電流の注入によって、キラル磁気ソリトンの運動を任意に操作できることを理論的にも数値的にも確認した。電流の強度や方向に応じて、ソリトンの速度や進行方向を変えたり、停止させたりできる。<br>
+                ・ギルバート減衰の影響を考慮すると、キラル磁気ソリトンは伝播中にエネルギーを失って均一な磁化状態に崩壊することを示した。しかし、適切なスピン電流を加えることで、非断熱的なスピントルクが減衰効果に対抗して、ソリトンの長距離伝播を可能にすることができる。
+              </div>
+              <div class="description6">
+                コメント：この研究では、交換場だけを考慮してキラル磁気ソリトンを解析しているようだが、他の有効場や異方性、不均一性などの要素が加わった場合にどうなるのか興味あり。
+              </div>
+              <div class="description10">
+                  16 Aug 2023<br>Discovery and regulation of chiral magnetic solitons: Exact solution from Landau-Lifshitz-Gilbert equation<br>Xin-Wei Jin et al. (Northwest University, China)<br>
+                <a href="https://arxiv.org/abs/2308.08331" target="_blank" class="link2 link2--nav2">
+                  arXiv:2308.08331 (cond-mat)</a>
+              </div><div class="img_align">
+                  <img src="../review/img/202308-5-1.png" class="img300">
+                  <img src="../review/img/202308-5-2.png" class="img300">
+                </p>
+              </div>
+            </div><br><br>
+            <div id="6"><h4 class="indent2">6. 高圧下でのNd2CoFeO6二重ペロブスカイトの構造相転移と磁気弾性結合</h4>
+              <div class="description2">
+                ・高圧XRD測定：Nd2CoFeO6 (NCFO)は、高圧下で正方晶から単斜晶への構造相転移を約13.8 GPaで起こすことがXRD測定によって明らかになった。相転移は、(Fe/Co)O6八面体の歪みが圧力によって増加し、格子ひずみを緩和するために起こる。また、約1.1 GPaで体積圧縮率と体積弾性率に異常が見られたが、これは電子的な異常によるものと考えられる。<br>
+                ・低温ラマン分析：NCFOのラマンスペクトルは、温度が低下すると青方偏移するが、約47 Kで急激に赤方偏移することが低温ラマン分析によって示された。この赤方偏移は、スピン再配向転移に関連していると考えられる。また、約240 Kでラマンモード周波数に突然の飛びが見られたが、これは反強磁性転移温度TNと一致する。<br>
+                ・高圧ラマン分析：高圧下でのラマンスペクトルは、約27.4 GPaまで大きな変化は見られなかった。しかし、AgとBgモードのピーク位置は、約1 GPaと約13.1 GPaで傾きの変化を示した。13.1 GPa以上では、正方晶から単斜晶への構造相転移に関連して傾きが減少した。1 GPa以下では、圧力に対する傾きが半分以下に減少したが、これは新しいスピン配列によるものと推測される。<br>
+                ・磁場下での高圧ラマン分析：外部磁場を印加すると、Bgモードは圧力に伴って硬化した。この硬化は、スピンと磁場との強い相互作用によってスピンフォノン相互作用が影響を受けるためだと考えられる。また、磁場を切った後もラマンスペクトルは元の振る舞いに戻らなかった。この現象は詳細な理論的研究が必要である。
+              </div>
+              <div class="description6">
+                コメント：電子的な相転移や構造的な相転移を評価するのに歪み印加は有効のようだ。
+              </div>
+              <div class="description10">
+                  18 Aug 2023<br>
+                  Pressure-induced softening in bulk modulus due to magneto-elastic coupling in Nd2CoFeO6 double Perovskite<br>
+                  Bidisha Mukherjee et al. (Indian Institute of Science Education and Research Kolkata, India)<br>
+                <a href="https://arxiv.org/abs/2308.09651" target="_blank" class="link2 link2--nav2">
+                  arXiv:2308.09651 (cond-mat)</a>
+              </div><div class="img_align">
+                  <img src="../review/img/202308-6-1.png" class="img300">
+                  <img src="../review/img/202308-6-2.png" class="img300">
+              </div>
+            </div><br><br>
+            <div id="7"><h4 class="indent2">7. 多発性TbMnO3のスピン波分散とマグノンキラリティ</h4>
+              <div class="description2">
+                ・多発性TbMnO3は、複雑な磁気構造によって電気分極を直接誘起するタイプII多発性物質の代表例である。<br>
+                ・中性子散乱実験と線形スピン波理論を用いて、多発性相でのマグノン分散と強度分布を詳細に調べた。<br>
+                ・楕円形スピンサイクロイドと単一イオン異方性を考慮したモデルが、実験データとよく一致し、交換相互作用やダイナミックキラリティのパラメーターを決定した。<br>
+                ・電場効果やTbモーメントの秩序化（Tb3+の4f電子がMn3+の3d電子と結合）が、マグノン分散やキラリティに影響を与えることを示し、多発性結合機構や電磁マグノンについて議論した。<br>
+                ・Tbモーメントは、マグノン分散やキラリティにも影響を与え、特に、Tbモーメントの秩序化が起こる低温領域では、マグノン分散がギャップを開き、キラリティが反転する。これは、Tbモーメントが逆DM相互作用を強めることで、マグノンのエネルギーとキラリティに影響を与えることを示している。
+              </div>
+              <div class="description6">
+                コメント：4f電子と3d電子の相互作用の効果はまだまだ未知領域で興味深い。
+              </div>
+              <div class="description10">
+                  18 Aug 2023<br>
+                  Spin-wave dispersion and magnon chirality in multiferroic TbMnO3<br>
+                  S. Holbein et al. (Universit¨at zu K¨oln, Germany)<br>
+                <a href="https://arxiv.org/abs/2308.09407" target="_blank" class="link2 link2--nav2">
+                  arXiv:2308.09407 (cond-mat)</a>
+              </div><div class="img_align">
+                  <img src="../review/img/202308-7-1.png" class="img300">
+                  <img src="../review/img/202308-7-2.png" class="img300">
+              </div>
+            </div><br><br>
+            <div id="8"><h4 class="indent2">8. 室温付近での磁気冷却効果の基礎と応用：RMn6Sn6系列の磁気構造と高エントロピー合金化の影響</h4>
+              <div class="description2">
+                  ・RMn6Sn6はカゴメ格子を形成するMn原子と三角格子を形成する希土類原子Rからなる物質で、RKKY相互作用によって磁気構造がRの選択に敏感に変化することが示された。<br>
+                  ・RMn6Sn6は室温付近でFM、FIM、AFMの異なる磁気秩序を示し、それぞれに対応する磁気冷却効果（MCE）を評価した。FMやFIMの秩序を持つ物質（例えばHoMn6Sn6）はAFMの秩序を持つ物質（例えばLuMn6Sn6）よりも大きなMCEを示した。<br>
+                  ・MCEの効率は最大エントロピー変化（∆SMAX）だけでなく、磁気転移の幅（FWHM）や冷却容量（RC）にも依存することが分かった。FWHMが大きいほどRCが大きくなり、MCEが高効率になることが示された。<br>
+                  ・高エントロピー合金化はRKKY相互作用をランダム化し、磁気転移を広げることでRCを増加させる可能性があると考えられた。しかし、本研究では4種類や5種類の希土類元素を混合した高エントロピー合金（HEA）を作製しても、純粋なRMn6Sn6と比較してMCEに顕著な改善は見られなかった。
+              </div>
+              <div class="description6">
+                  コメント：RKKY相互作用や高エントロピー合金化が磁気冷却効果に与える影響についてよくわかった。希土類元素の選択は重要だが、その何が効いてくるのか気になる。
+              </div>
+              <div class="description10">
+                  17 Aug 2023<br>
+                  Rare-earth Engineering of the Magnetocaloric Effect in RMn6Sn6<br>
+                  Kyle Fruhling et al. (Boston College, USA)<br>
+                <a href="https://arxiv.org/abs/2308.09161" target="_blank" class="link2 link2--nav2">
+                  arXiv:2308.09161 (cond-mat)</a>
+              </div><div class="img_align">
+                  <img src="../review/img/202308-8-1.png" class="img300">
+                  <img src="../review/img/202308-8-2.png" class="img300">
+              </div>
+            </div><br><br>
+            <div id="9"><h4 class="indent2">9. 分子動力学シミュレーションにおけるエネルギー保存の問題と機械学習ポテンシャルの役割</h4>
+              <div class="description2">
+                  ・分子動力学シミュレーションでは、シミュレーションエネルギーの保存と真のエネルギーの保存という二つの概念を明確に区別する必要がある。シミュレーションエネルギーの保存は、シミュレーションの品質を保証するものではなく、真のエネルギーの保存に近づくことが重要である。<br>
+                  ・真のエネルギーの保存を評価するために、理論的最良推定（TBE）と呼ばれる概念を提案する。TBEは、可能な限り高精度で計算コストが低い原子間モデルを用いて、シミュレーション後にポテンシャルエネルギーを計算することで得られる。TBE全エネルギーが一定であれば、シミュレーションは真のエネルギーを保存していると言える。<br>
+                  ・機械学習（ML）ポテンシャルは、シミュレーションエネルギーを保存することができるが、分子が不安定になったり解離したりするなど、物理的に正しくない結果を与えることがある。このような場合、TBE全エネルギーは大きく変動し、真のエネルギーの保存から外れることが示される。<br>
+                  ・真のエネルギーの保存に近づくために、異なる原子間モデルを組み合わせた混合モデル戦略を提案する。この戦略では、必要に応じてより高精度のモデルに切り替えることで、シミュレーションエネルギーの連続性を犠牲にしながらも、TBE全エネルギーの変動を抑えることができる。
+              </div>
+              <div class="description6">
+                  コメント：分子動力学シミュレーションにおけるエネルギー保存の問題に新しい視点を提供し、機械学習ポテンシャルの開発や評価に役立つ指標や戦略を提案している。特に、TBE全エネルギーという概念は、真のエネルギーの保存からどれだけ外れているかを直感的に把握できる有用な手法である。<br>
+                  また、主に小さな分子系（N2O, H2, C6H6）について数値実験を行っており、より大きく複雑な系や異なる温度や圧力下での挙動、また、TBE全エネルギーを計算するために用いられる原子間モデルやパラメータ（例えば時間刻みや混合モデルの切り替え条件）の選択についても、より詳細な基準や根拠が欲しいところ。
+              </div>
+              <div class="description10">
+                  22 Aug 2023<br>
+                  Energy-conserving molecular dynamics is not energy conserving<br>
+                  Lina Zhang et al. (Xiamen University, China)<br>
+                <a href="https://arxiv.org/abs/2308.11305" target="_blank" class="link2 link2--nav2">
+                  arXiv:2308.11305 (physics.chem-ph)</a>
+              </div><div class="img_align">
+                  <img src="../review/img/202308-9-1.png" class="img300">
+                  <img src="../review/img/202308-9-2.png" class="img300">
+              </div>
+            </div><br><br>
+            <div id="10"><h4 class="indent2">10. パインズの悪魔の発見：Sr2RuO4における3次元音響プラズモンの観測</h4>
+              <div class="description2">
+                ・Sr2RuO4は、電子密度の量子化された集団振動であるプラズモンと、異なるバンドの電子が逆位相で動くことで電荷が中性になるデーモンという2種類の集団励起モードを持つことを理論的に予測した。<br>
+                ・デーモンは、光と結合しないため、非ゼロの運動量で電子エネルギー損失分光法（EELS）を用いて検出することができる。<br>
+                ・Sr2RuO4のEELS測定から、デーモンの存在を実験的に確認した。デーモンは、エネルギーギャップが小さく、運動量に対して線形に分散し、強度がq−1.8というべき乗則に従うことから、中性で音響的な性質を持つことが分かった。<br>
+                ・デーモンは、1956年にPinesによって予想されたが、3次元金属で観測されたのは今回が初めてである。デーモンは、多バンド金属の低エネルギー物理や超伝導性などに重要な役割を果たす可能性がある。
+              </div><div class="description6">
+                コメント：電子が結合して、質量がなく、電気的に中性で、光と相互作用しない複合粒子を形成できるとパインズが予測した。実験での粗い実証でギャップを残しつつその他の証拠から特殊なプラズモンの存在を説明できるのだという。詳しくはぶひんさんのブログに書かれています。<br>
+                関連記事：<a href="https://www.kyoto-u.ac.jp/ja/research-news/2023-08-10" target="_blank" class="link2 link2--nav2">京都大学プレスリリース（10 Aug 2023）</a>Sr2RuO4での「パインズの悪魔」の観測 67年前に予言された金属の奇妙な振る舞いの発見、<a href="http://buhin-blog.blogspot.com/2023/08/blog-post.html" target="_blank" class="link2 link2--nav2">ぶひんブログ（27 Aug 2023）</a>あくまで悪魔ですから～ルテネイト酸化物で観測されたパインズのデーモン～<br>
+                補足：Sr2RuO4は、非従来型の超伝導体であり、スピン三重項状態という特異な秩序パラメーターの対称性を持つと考えられている。スピン三重項超伝導体では、電子のスピンが反平行ではなく平行になることで、磁場に対して強い超伝導性を示す可能性がある。Sr2RuO4は、電子密度の量子化された集団振動であるプラズモンと、異なるバンドの電子が逆位相で動くことで電荷が中性になるデーモンという2種類の集団励起モードを持つことが理論的に予測されている。デーモンは、光と結合しないため、非ゼロの運動量で電子エネルギー損失分光法（EELS）を用いて検出することができる。デーモンは、1956年にPinesによって予想されたが、3次元金属で観測されたのは今回が初めてである。デーモンは、多バンド金属の低エネルギー物理や超伝導性などに重要な役割を果たす可能性がある。
+              </div><div class="description10">
+                09 Aug 2023<br>
+                Pines’ demon observed as a 3D acoustic plasmon in Sr2RuO4<br>
+                Ali A. Husain et al. (University of Illinois, Urbana, IL, USA)<br>
+                <a href="https://www.nature.com/articles/s41586-023-06318-8" target="_blank" class="link2 link2--nav2">
+                  Nature:s41586-023-06318-8 (article)</a>
+              </div><div class="img_align">
+                <img src="../review/img/202308-10-1.png" class="img300">
+                <img src="../review/img/202308-10-2.png" class="img300">
+              </div>
+            </div><br><br>
+            <div id="11"><h4 class="indent2">11. 機械学習によるランダム位相近似からの密度汎関数の構築</h4>
+              <div class="description2">
+                ・ランダム位相近似（RPA）という高精度な密度汎関数理論（DFT）を、機械学習（ML）の技術を用いて低コストで再現するML-RPAモデルを提案している。<br>
+                ・ML-RPAモデルは、電子密度の非局所的な表現とカーネル回帰を組み合わせて、RPAの交換相関エネルギーとポテンシャルを近似するものである。<br>
+                ・ML-RPAモデルは、ダイヤモンドと液体水のデータセットに対して訓練され、RPAと同等の精度で物性や分光学的性質を予測することができる。<br>
+                ・ML-RPAモデルは、自己無撞着計算や分子動力学シミュレーションなど、通常のDFTと同様に応用することができ、均一電子気体などのDFTにおける重要な基準にも適合している。
+              </div>
+              <div class="description6">
+                コメント：VASPの開発部隊らによって高次のDFTからML-DFTを構築するという新しいアプローチが提案漁れていて興味深い。RPAはDFTにおける最高水準の理論であり、その再現性や汎用性は非常に気になるところ。特に、ML-RPAモデルが水や氷などの非局所的な相互作用を十分に記述できていないことを指摘していて、電子密度表現のカットオフ半径が小さいことに由来するらしい。カットオフ半径と計算精度についてどんな関係があるだろうか。<br>
+                関連記事：<a href="https://www.vasp.at/info/post/#NEW%20RELEASE%3a%20VASP.6.4.2" target="_blank" class="link2 link2--nav2"> VASP (Vienna Ab Initio Simulation Package)</a> NEW RELEASE: VASP.6.4.2, <a href="https://vaspkit.com/" target="_blank" class="link2 link2--nav2">vaspkit</a>: Overview<br>
+                補足：DFTは、物質の電子状態を計算するための理論であり、量子力学の基礎方程式であるSchrödinger方程式を解く代わりに、電子密度という物理量を用いてエネルギーや物性を求めることができる。DFTは、計算コストが小さく、多くの物質に適用できるという利点があるが、電子間の相互作用を厳密に記述できないという欠点がある。このため、DFTの精度は、電子間の相互作用を近似する汎関数と呼ばれる項に依存する。RPAは、DFTにおける最高水準の汎関数の一つであり、電子間の相互作用を高精度に記述することができる。しかし、RPAは計算コストが非常に高く、大規模な系や動的な過程を扱うことが困難である。この研究では、MLの技術を量子化学計算と組み合わせることで、RPAと同等の精度で物性や分光学的性質を予測することができるML-RPAモデルを開発した。
+              </div>
+              <div class="description10">
+                  1 Aug 2023<br>
+                  Machine learning density functionals from the random-phase approximation<br>
+                  Stefan Riemelmoser et al. (University of Vienna, Austria)<br>
+                <a href="https://arxiv.org/abs/2308.11305" target="_blank" class="link2 link2--nav2">
+                  arXiv:2308.11305 (cond-mat.mtrl-sci)</a>
+              </div><div class="img_align">
+                  <img src="../review/img/202308-11-1.png" class="img300">
+                  <img src="../review/img/202308-11-2.png" class="img300">
+              </div>
+            </div><br><br>
+            <div id="12"><h4 class="indent2">12. 材料特性予測のためのドメイン適応に基づく機械学習の改善</h4>
+              <div class="description2">
+                ・ドメインシフト問題：機械学習モデルは、訓練データと異なる分布を持つ新しいデータに対して性能が低下するという問題に直面している。これはドメインシフト問題と呼ばれる。<br>
+                ・ドメイン適応手法：ドメイン適応手法は、ソースドメイン（訓練データ）とターゲットドメイン（テストデータ）の知識を利用して、ターゲットドメインに適応し、汎化性能を向上させることを目的としている。ドメイン適応手法には、特徴ベース、インスタンスベース、パラメータベースの三つの主要なカテゴリがある。<br>
+                ・材料特性予測のベンチマーク：材料特性予測では、ターゲット材料の組成や構造が既知であり、かつ希少な組成や特異な特性を持つ材料に興味があることが多い。このような場合には、テストデータは訓練データと異なる分布を持つ。そこで、我々は室温超伝導体やガラス材料のデータセットを用いて、五つの現実的な材料特性予測のベンチマーク問題を提案した。<br>
+                ・実験結果と考察：我々は30以上の既存のドメイン適応手法をベンチマーク問題に適用し、その性能を評価した。その結果、一部のドメイン適応手法は、ベースラインモデルや最先端のニューラルネットワークモデルよりも優れた性能を示した。特に、インスタンスベースのドメイン適応手法であるBWやRULSIFが強力な性能を発揮した。一方で、特徴ベースやパラメータベースのドメイン適応手法は、材料科学の分野におけるドメインシフトの関係を捉えられていないために、性能が低下することが多く見られた。
+              </div>
+              <div class="description6">
+                コメント：この研究は、主に組成ベースの材料特性予測に焦点を当てているが、構造ベースの材料特性予測にもドメイン適応手法を適用することができそう。また、不確実性量化などの技術を導入して予測結果の信頼性や説明性を向上させるような展開も期待できる。<br>
+                関連記事：<a href="https://www.vasp.at/info/post/#NEW%20RELEASE%3a%20VASP.6.4.2" target="_blank" class="link2 link2--nav2"> VASP (Vienna Ab Initio Simulation Package)</a> NEW RELEASE: VASP.6.4.2, <a href="https://vaspkit.com/" target="_blank" class="link2 link2--nav2">vaspkit</a>: Overview<br>
+                補足：ドメイン適応手法とは、ソースドメイン（訓練データ）とターゲットドメイン（テストデータ）の間の分布の違いを縮小することで、ターゲットドメインにおけるモデルの性能を向上させるための機械学習の手法である。ドメイン適応手法には、特徴ベース、インスタンスベース、パラメータベースの三つの主要なカテゴリがある。特徴ベース：ソースドメインとターゲットドメインの特徴空間を変換することで、分布の差を埋める手法である。例えば、敵対的学習を用いて、特徴抽出器が両ドメインの特徴を区別できないようにしている。インスタンスベース：ソースドメインとターゲットドメインのサンプル間の重み付けや再サンプリングを行うことで、分布の差を埋める手法である。例えば、重み付き最小二乗法（WLS）や相対的不確実性サンプリング（RULSIF）などの手法を用いて、ターゲットドメインに近いソースドメインのサンプルに重みを付けている。パラメータベース：ソースドメインとターゲットドメインのモデルパラメータ間の関係を利用することで、分布の差を埋める手法である。例えば、ソースドメインで学習したモデルパラメータを正則化項として用いて、ターゲットドメインでモデルを微調整している。
+                方法論：本研究では、Matbenchからダウンロードした2つのデータセット（matbench_expt_gapとmatbench_glass）を用いた。これらは、ガラス材料の分類問題とバンドギャップの回帰問題である。標準的な機械学習モデルの評価方法であるランダムな訓練・テスト分割やk分割交差検証ではなく、現実的な材料特性予測のシナリオを反映するために、5つの方法でターゲットテストセットを生成した。それぞれの方法は以下の通りである。1. Leave-one-cluster-out (LOCO)：全データセットをマグパイ特徴量を用いて50個のクラスターに分割し、各クラスターを順番にテストセットとして使用する。2. Single-point targets with lowest composition density (SparseXSingle)：全データセットをマグパイ特徴量に変換し、t-SNEによって2次元空間に次元削減する。各データ点の密度を計算し、最も低密度な上位500個のサンプルを選択する。K-meansクラスタリングによって50個のクラスターに分ける。各クラスターから1つのサンプルを選択し、50個のターゲットサンプルとする。3. Single-point targets with lowest property density (SparseYSingle)：全データセットをy値（目的変数）でソートし、各データ点のy値の密度を計算する。最も低密度な上位500個のサンプルを選択する。K-meansクラスタリングによって50個のクラスターに分ける。各クラスターから1つのサンプルを選択し、50個のターゲットサンプルとする方法です。
+              </div>
+              <div class="description10">
+                  5 Aug 2023<br>
+                  Improving realistic material property prediction using domain adaptation based machine learning<br>
+                  Jeffrey Hu et al. (University of South Carolina, USA)<br>
+                <a href="https://arxiv.org/abs/2308.02937" target="_blank" class="link2 link2--nav2">
+                  arXiv:2308.02937 (cond-mat.mtrl-sci)</a>
+              </div><div class="img_align">
+                  <img src="../review/img/202308-12-1.png" class="img300">
+                  <img src="../review/img/202308-12-2.png" class="img300">
+              </div>
+            </div><br><br>
+            <div id="13"><h4 class="indent2">13. 結晶化合物の構造変換モデル</h4>
+              <div class="description2">
+                ・結晶化合物の構造最適化にかかる計算コストを削減するために、未最適化構造と最適化構造の間のドメイン変換モデルを提案した。このモデルは、pix2pixと呼ばれる画像間変換モデルを基にしており、結晶グラフ畳み込みニューラルネットワークで得られた結晶特徴ベクトルを変換する。<br>
+                ・X-Mn-O（X=Mg, Ca, Sr, Ba）という元素置換データセットを用いて、提案モデルの性能を評価した。1未最適化構造から最適化構造の形成エネルギーを予測する際に、提案モデルは他の3つのGCNベースのベースラインモデルよりも高い精度と汎化性能を示した。<br>
+                ・提案モデルは、未最適化構造から最適化構造への変換後の結晶特徴ベクトルを生成することができる。この特徴ベクトルは、t-SNEによって2次元空間にマッピングされ、最適化構造の特徴空間と分布が一致することが確認された。<br>
+                ・提案モデルは、未最適化構造から最適化構造への変換後の結晶特徴ベクトルを用いて、最適化構造の原子座標や単位胞情報を予測することができる。この予測により、84%の結晶構造が正しく再現された。また、DFT計算による完全な構造最適化に必要なコストも32%削減された。
+              </div>
+              <div class="description6">
+                コメント：この研究は、高スループットな材料探索において重要な課題である構造最適化のコスト削減に貢献するものである。ドメイン変換モデルを用いて、未最適化構造から最適化構造への変換を効率的に行うことができるというアイデアは画期的である。また、X-Mn-Oという限られた化学空間で実証されたが、より多様な元素や組成を含む一般的な材料データセットに対しても同様に有効であるかどうかは不明である。また、提案モデルが予測する最適化構造が真に安定なものであるかどうかも確認する必要がある。<br>
+                関連記事：<a href="https://github.com/kaist-amsg/Cryslator" target="_blank" class="link2 link2--nav2"> Github: Cryslator</a> Implementation of Cryslator developed by Prof. Yousung Jung group at Seoul National University<br>
+                補足：ドメイン変換モデルは、あるドメイン（例えば、馬の画像）から別のドメイン（例えば、シマウマの画像）への画像変換を学習するニューラルネットワークである。pix2pixは、ドメイン変換モデルの一種で、条件付きGANと呼ばれるGANモデルを用いている。pix2pixは、入力画像と出力画像に相当する2つの画像の対応関係を学習するために、ペア画像（入力画像と出力画像が1対1で対応している画像）を必要とする。しかし、ペア画像を大量に入手することは困難な場合が多く、この点がpix2pixの課題である。ドメイン変換モデルには、ペア画像を必要としないものもあり、例えば、CycleGANは、2つのドメインに属する画像データセットからその関係を学習し、双方向の画像変換を行うことができる。CycleGANは、pix2pixと同じく条件付きGANを用いているが、サイクル一貫性損失と呼ばれる損失関数を導入することで、ペア画像なしでドメイン変換を学習できるようにしている。
+              </div>
+              <div class="description10">
+                  11 Aug 2023<br>
+                  A structure translation model for crystal compounds<br>
+                  Sungwon Kim et al. (University of South Carolina, USA)<br>
+                <a href="https://doi.org/10.1038/s41524-023-01094-5" target="_blank" class="link2 link2--nav2">
+                  npj Computational Materials (2023) 9:142</a>
+              </div><div class="img_align">
+                  <img src="../review/img/202308-13-1.png" class="img300">
+                  <img src="../review/img/202308-13-2.png" class="img300">
+              </div>
+            </div><br><br>
+            <div id="14"><h4 class="indent2">14. 1T-PtSe2族における対称性指標のない非標準性、遮断されたエッジ状態、およびマヨラナ工学</h4>
+              <div class="description2">
+                ・1T-PtSe2は、Pt-dとSe-px,yの軌道混成に起因する対称性指標のない非標準的な絶縁体であることを第一原理計算によって示した。この非標準性は、対称性固有値ではなく、1次元ウィルソンループ法によって計算された電荷中心のずれによって診断される。<br>
+                ・1T-PtSe2のジグザグエッジには、遮断された電子状態が現れ、大きなラシュバ分裂を示す。これらの1次元エッジ状態は、超伝導近接効果と外部磁場の下で、スピンレスp波キタエフ鎖と等価になる。<br>
+                ・1T-PtSe2単層の四隅にマヨラナゼロモード（MZM）を生成する方法を提案した。MZMは、ジグザグエッジに磁気ギャップを誘起する強磁性絶縁体CrGeTe3を基板として用いることで実現可能である。<br>
+                ・1T-PtSe2族（MX2; M = Ni, Pd, Pt; X = S, Se, Te）の他のメンバーも対称性指標のない非標準性を持つことを示した。また、(Ga/In)3+や(Ge/Sn)4+の価電子を持つ化合物にもこのような非標準性が広く存在することを見出した。
+              </div>
+              <div class="description6">
+                コメント：対称性指標のない非標準性は、トポロジカル絶縁体と同様に、対称性だけでは診断できない新しい物質クラスであると言える。この非標準性がどのような物理的効果や応用につながるかは今後の課題である。
+                1T-PtSe2単層でMZMを生成する方法は、実験的にアクセス可能であり、量子情報処理やトポロジカル量子計算におけるMZMの利用可能性を示唆している。しかし、MZMの存在や操作を確認するためには、さらに詳細な理論的予測や実験的手法が必要である。<br>
+                補足：トポロジカル絶縁体は、超伝導や磁性といった他の秩序と相互作用することで、さらに興味深い現象を生み出す。例えば、超伝導近接効果という現象では、超伝導体と接触した非超伝導体にも超伝導性が誘起される。この現象をトポロジカル絶縁体のエッジ状態に適用することで、マヨラナ粒子と呼ばれる特殊な準粒子が生成される可能性がある。マヨラナ粒子は、自分自身の反粒子であり、量子情報処理やトポロジカル量子計算に応用できると期待されている。
+              </div>
+              <div class="description10">
+                  23 Aug 2023<br>
+                  Symmetry indicator-free unconventionality, obstructed edge states and Majorana engineering in 1T-PtSe2 family<br>
+                  Haohao Sheng et al. (Chinese Academy of Sciences, China)<br>
+                <a href="https://arxiv.org/abs/2308.12055" target="_blank" class="link2 link2--nav2">
+                  arXiv:2308.12055</a>
+              </div><div class="img_align">
+                  <img src="../review/img/202308-14-1.png" class="img300">
+                  <img src="../review/img/202308-14-2.png" class="img300">
+              </div>
+            </div><br><br>
+            <div id="15"><h4 class="indent2">15. 量子スピンネマティックのダイナミクス：傾いた反強磁性体との比較</h4>
+              <div class="description2">
+                ・スピンネマティックの理論：三次元量子スピン系におけるスピンネマティック相を記述するために、マグノンとバイマグノンの相互作用するボソン理論を開発した。バイマグノンの形状因子を導入して、サイトネマティックやボンドネマティックなど、様々なタイプのスピンネマティック秩序を統一的に扱えるようにした。<br>
+                ・ダイナミクスの計算：ゼロ温度での動的スピン構造因子と有限温度での核磁気共鳴（NMR）緩和率を計算した。動的スピン構造因子は、バイマグノンの形状因子に依存する強度変化や、ギャップレスなナンブ-ゴールドストーンモードを示した。NMR緩和率は、低温ではT 3 に比例し、スピンネマティック転移温度では発散しないことを見出した。<br>
+                ・傾いた反強磁性体との比較：同じ方法論を用いて、傾いた反強磁性体におけるダイナミクスも分析した。傾いた反強磁性体では、動的スピン構造因子はギャップレスなナンブ-ゴールドストーンモードとその上にある連続体を示し、NMR緩和率は低温ではT 3 に比例するが、反強磁性転移温度では発散することがわかった。これらの結果は、スピンネマティックと傾いた反強磁性体のダイナミクスには類似点と相違点があることを示している。<br>
+                ・物理的意義と展望：この研究は、スピンネマティック相におけるダイナミクスの包括的な理解を提供し、実験的な検証や識別に役立つ指標を与えた。また、バイマグノンの形状因子や対称性がダイナミクスに与える影響を明らかにし、隠れた秩序パラメーターの構造を探る手段を示した。さらに、傾いた反強磁性体との比較により、異なるタイプの秩序間で共通する特徴や差異を見出し、量子臨界現象や相転移の性質に関する洞察を得た。
+              </div>
+              <div class="description6">
+                コメント：ネマティックというミクロ的にばらばらな状態の物理が最近多い。磁化を持たないスピン液体やこのスピンネマティックの関係（一方向へ転移する？）にも注目されているようです。<br>
+                興味深い点：１．スピンネマティックという新奇な量子相を理論的に予言し、その特徴や安定性を明らかにしたこと。スピンネマティックは、スピンの向きが平均して一方向に揃っているが、その大きさはランダムである状態で、回転対称性を破るが磁化は持たないという特徴をもつ。このような相は、固体物質の中で実現される可能性があり、その探索や検出法についても研究されている。２．スピンネマティックのダイナミクスを傾いた反強磁性体と比較したこと。傾いた反強磁性体は、スピンの向きが平面内で揺らぐ状態で、回転対称性を破るが磁化は持たないという特徴をもつ。スピンネマティックと傾いた反強磁性体は、共通する対称性の性質をもつため、そのダイナミクスや応答関数に類似点や相違点があるかどうかを調べることが興味深い。３．量子コヒーレンスや量子相転移を多角形スピン鎖モデルで調べたこと。多角形スピン鎖モデルは、スピンの相互作用が二次ではなく四次であるモデルで、スピン-1 やスピン-2 などの高次スピン系に適用できる。このモデルでは、単一イオン異方性の影響によって、さまざまな種類のスピンネマティック相が現れる。また、量子コヒーレンスの尺度として、コンカレンスやエントロピーなどの量子相関関数を計算し、それらが相転移や異方性にどのように影響されるかを分析している。
+              </div>
+              <div class="description10">
+                  24 Aug 2023<br>
+                  Dynamics of quantum spin-nematics: comparisons with canted antiferromagnets<br>
+                  Tsutomu Momoi (RIKEN, Japan)<br>
+                <a href="https://arxiv.org/abs/2308.12569" target="_blank" class="link2 link2--nav2">
+                  arXiv:2308.12569 (cond-mat.str-el)</a>
+              </div><div class="img_align">
+                  <img src="../review/img/202308-15-1.png" class="img300">
+                  <img src="../review/img/202308-15-2.png" class="img300">
+              </div>
+            </div><br><br>
+            <div id="16"><h4 class="indent2">16. 既知の無機材料の組成データから結晶無機材料の合成可能性を予測する</h4>
+              <div class="description2">
+                ・本研究では、合成可能な無機結晶材料を信頼性高く識別するために、既に合成された無機化合物の組成データを利用して、深層学習モデル（SynthNN）を開発した。SynthNNは、化学式から直接合成可能性を分類するモデルであり、構造情報は必要ない。<br>
+                ・SynthNNは、人工的に生成された未合成の化合物とともに、実験的に合成された化合物のデータベースで訓練され、原子埋め込み行列と呼ばれる学習された特徴量を用いて、化学式を表現する。この特徴量は、合成された材料の分布から直接学習されるため、合成可能性に影響する要因を最適に捉えることができる。<br>
+                ・SynthNNの性能は、電荷平衡やDFT計算された形成エネルギーといった従来の計算手法や、専門家の化学者と比較しても優れており、専門家よりも高い精度で合成可能な材料を識別し、DFTよりも何桁も高速にスクリーニングできる。<br>
+                ・SynthNNの予測は、原子数や化学系統などの要素によって変化するが、モデルの内部構造を解析することで、電荷平衡や化学的類似性などの物理的な原理が予測に反映されていることが示された。SynthNNは、これらの原理をデータから自動的に学習し、柔軟に適用することができる。
+              </div>
+              <div class="description6">
+                コメント：この手の予測モデルの外挿性能について気になる。部分的な教師あり学習に近いことを行っているようだが、従来の教師学習とこの深層学習とを比較して、予測性能や機能解析にどの程度貢献できるのだろうか。<br>
+                補足：１．部分教師付き学習は、教師あり学習と教師なし学習の中間に位置する手法であり、ラベル付けされたデータとラベル付けされていないデータの両方を利用する。この手法により、実験的に合成された材料のデータベースの不完全さや未合成の材料に対するラベル付けの不可能さという課題を克服することができる。２．原子埋め込み行列と呼ばれる学習された特徴量を用いて、化学式を表現する。この特徴量は、合成された材料の分布から直接学習されるため、合成可能性に影響する要因を最適に捉えることができる。また、この特徴量は、構造情報や電荷平衡などの物理的な原理を反映しており、モデルの内部構造を解析することで、予測原理を明らかにすることができる。
+              </div>
+              <div class="description10">
+                  24 Aug 2023<br>
+                  Predicting the synthesizability of crystalline inorganic materials from the data of known material compositions<br>
+                  Evan R. Antoniuk (Lawrence Livermore National Laboratory, USA)<br>
+                <a href="https://www.nature.com/articles/s41524-023-01114-4" target="_blank" class="link2 link2--nav2">
+                  npj Computational Materials (2023) 155</a>
+              </div><div class="img_align">
+                  <img src="../review/img/202308-16-1.png" class="img300v">
+                  <img src="../review/img/202308-16-2.png" class="img300v">
+              </div>
+            </div><br><br>
+            <div id="17"><h4 class="indent2">17. EPWコードを用いた第一原理に基づく電子-フォノン物理学</h4>
+              <div class="description2">
+                ・EPWコードは、密度汎関数摂動理論と最大局在化ワニエ関数を組み合わせて、超微細なブリュアンゾーン格子上で電子-フォノン結合行列要素を効率的に計算し、電子-フォノン相互作用に関連する物性を予測するオープンソースのソフトウェアである。<br>
+                ・EPWコードは、2016年以降に大幅に発展し、電荷キャリアの移動度や超伝導臨界温度などの温度依存性のある物性や、フォノン支援量子過程を計算するための新しいモジュールを追加した。<br>
+                ・EPWコードは、高性能計算（HPC）アーキテクチャに対応するために、MPIとOpenMPを用いた並列化やHDF5を用いた並列I/Oなどの計算アルゴリズムや並列化技術を改良した。<br>
+                ・EPWコードは、様々な物質系において、ポラロンやフォノン支援光吸収などの電子-フォノン相互作用による現象を定量的に再現し、実験と良好な一致を示した。<br>
+                ・EPWコードは、Quantum ESPRESSO材料シミュレーションスイートの一部として配布されており、EPWコードの開発者や利用者のコミュニティが形成されている。
+              </div>
+              <div class="description6">
+                コメント：電子ーフォノン間の相互作用を解析する第一原理のフリーソフトを開発して色々確かめた論文。計算性能、近似手法、解析技術の向上で計算材料科学の有用性もどんどん向上していっている。<br>
+                補足1：最大局在化ワニエ関数とは、あるバンドのブロッホ関数から得られるワニエ関数のうち、実空間で最も局在化したもの。これは、ブロッホ関数と同じバンド構造を再現しながら、分子軌道に似た直感的な形を持ち、電子分極や電子輸送などの物理量の計算や可視化に役立つ。ワニエ-フーリエ補間とは、ワニエ関数とフーリエ変換の関係を利用して、逆格子空間の波数ベクトルに対応するブロッホ関数を近似的に求める方法である。ワニエ関数は実空間の格子ベクトルで指定される局在化した軌道であり、ブロッホ関数は逆格子空間の波数ベクトルで指定される周期的な軌道である。電子-フォノン相互作用とは、電子とフォノン（格子振動量子）との間に働く相互作用のこと。電子-フォノン相互作用は、フォノンの種類や波長によって異なる効果を持ち、例えば、音響フォノンによる変形ポテンシャル相互作用は、電子の散乱や移動度に影響する。光学フォノンによるフレーリッヒ相互作用は、電子のポラリザビリティや誘電率に影響し、超伝導や熱電効果などの現象の原因となる。<br>
+                補足2：EPWコードは、特殊変位法という別の方法を用いて、ワニエ-フーリエ補間を使わずに電子-フォノン相互作用を計算することができる。この方法は、有限温度での電子構造や光学スペクトルなどを計算する際に有用である。また、EPWコードは、極性材料や長距離クーロン相互作用を持つ材料においても、電子-フォノン相互作用を正確に取り扱うことができる。これは、Born効果電荷や動的四重極子などの格子スクリーニング効果や、自由キャリアや不純物による電気的スクリーニング効果を考慮することで実現されている。<br>
+                補足3：Born効果電荷とは、原子核の周りにある電子が、原子核の正電荷を部分的に遮蔽することで、原子核の有効電荷を減少させる効果。Born効果電荷は、原子の半径やイオン化エネルギーなどの物理的・化学的性質に影響を与える。動的四重極子とは、物体の電荷分布が二つの正負の双極子からなる場合の量が時間によって変化する物体のこと。格子スクリーニング効果とは、固体中の電子が、外部から加えられた電場に対して反応して、内部で逆向きの電場を発生させることで、外部電場の影響を減少させる効果であり、電気的スクリーニング効果とは、ある物質が他の物質から受ける電気的な影響を減少させる効果。
+              </div>
+              <div class="description10">
+                  25 Aug 2023<br>
+                  Electron–phonon physics from first principles using the EPW code<br>
+                  Hyungjun Lee et al. (The University of Texas at Austin, USA)<br>
+                <a href="https://www.nature.com/articles/s41524-023-01107-3" target="_blank" class="link2 link2--nav2">
+                  npj Computational Materials volume 9, Article number: 156 (2023) </a>
+              </div><div class="img_align">
+                  <img src="../review/img/202308-17-1.png" class="img300">
+                  <img src="../review/img/202308-17-2.png" class="img300">
+              </div>
+            </div><br><br>
+            <div id="18"><h4 class="indent2">18. X線回折パターンを再現する結晶構造の作成法</h4>
+              <div class="description2">
+                ・与えられたX線回折パターンと同じX線回折パターンを持つ結晶構造を作成するための組み合わせ型逆設計法を提案した。この方法は、進化的アルゴリズムと結晶モーフィング（Evolv&Morph）をベイズ最適化で支援したものである。<br>
+                ・進化的アルゴリズムは、遺伝的演算子を用いてデータベースに依存せずに様々な結晶構造を自動的に生成する。結晶モーフィングは、進化的アルゴリズムで得られた入力構造間の中間構造を生成する。これらの方法は、作成された結晶構造のX線回折パターンと目標となるX線回折パターンとの類似度スコア（コサイン類似度）を最大化することを目的としている。<br>
+                ・12種類の二元および三元系で、ICSDから得られた結晶構造からシミュレートされたX線回折パターンを目標として用いた。Evolv&Morphは、10種類の系で平均95%以上、最大99%以上の類似度スコアを達成した。さらに、4種類の粉末X線回折パターンに対しても、背景ノイズを除去した後に96%以上の類似度スコアを達成した。<br>
+                ・Evolv&Morphがデータベースに依存せずに未知の結晶構造を同定するだけでなく、特定の性質を持つ材料を設計するための逆設計法としても応用可能であることを示唆した。<br>
+                ・Evolv&Morphが通常のパーソナルコンピュータで実行可能であり、高い効率性と汎用性を持つことを強調した。
+              </div>
+              <div class="description6">
+                コメント：結晶構造の熱力学的安定性や対称性を考慮したモデルを組んでより現実的な候補構造を提案している点で参考になる。<br>
+                補足：進化的アルゴリズムとベイズ最適化は、ともに最適化問題を解くための有効な手法です。進化的アルゴリズムは、生物の進化の仕組みに着想を得たアルゴリズムで、個体群ベースのメタヒューリスティックな最適化アルゴリズムの総称です。ベイズ最適化は、未知の関数の最大値（または最小値）を効率的に発見するために、ベイズ統計学とガウス過程を用いて次に観測するべき点を決定する逐次最適化手法です。進化的アルゴリズムの例としては、遺伝的アルゴリズム、遺伝的プログラミング、進化戦略、進化的プログラミングなどがあります13。これらの手法は、個体群を生成し、選択、交叉、突然変異などの操作を繰り返して、最適解に近づけていきます。これらの手法は、データベースに依存せずに多様な解空間を探索できるという利点がありますが、計算コストが高いという欠点もあります。ベイズ最適化では、関数の形状やパラメータを事前知識として与える必要がありません。関数の予測値と不確実性をガウス過程で表現し、それらから獲得関数と呼ばれる関数を定義します。獲得関数は、最適解が存在する確率や期待値を表す関数であり、獲得関数が最大となる点を次の観測点として選択します。これにより、評価回数を少なくして最適解に近づけることができます。
+              </div>
+              <div class="description10">
+                  05 Aug 2023<br>Creation of crystal structure reproducing X-ray diffraction pattern without using database<br>Joohwi Lee et al. (Toyota Central R&D Labs., Inc., Japan)<br>
+                <a href="https://www.nature.com/articles/s41524-023-01096-3" target="_blank" class="link2 link2--nav2">
+                  npj Computational Materials 9, 135 (2023) </a>
+              </div><div class="img_align">
+                  <img src="../review/img/202308-18-1.png" class="img300">
+                  <img src="../review/img/202308-18-2.png" class="img300c">
+              </div>
+            </div><br><br>
+            <div id="19"><h4 class="indent2">19. 高速で頑健なEBSDデータ収集のための軽量トランスフォーマー</h4>
+              <div class="description2">
+                3次元電子後方散乱回折（EBSD）顕微鏡法は、材料の結晶学的構造を研究するための技術であるが、特にシリアルセクショニングによるデータ収集過程では、データ品質が大きく変動することがある。<br>
+                ・3次元EBSDデータは本質的に順序性があるため、多くの分野で画期的な成果を挙げている最先端の深層学習アーキテクチャであるトランスフォーマーを用いて、データ処理と回復を行うことができる。エラーに対してより頑健で、3次元EBSDデータ収集を高速化するために、欠損したスライスを回復するための2段階の方法を提案する。この方法は、効率的なトランスフォーマーモデルと、トランスフォーマーの出力を処理する投影アルゴリズムを用いている。高次元データに対する深層学習の計算的・実用的な課題を克服し、自己教師あり学習を用いて合成された3次元EBSDデータだけでモデルを訓練し、既存の方法と比較して、実際の3次元EBSDデータに対する回復精度が優れていることを示す。<br>
+                ・Evolv&Morphが通常のパーソナルコンピュータで実行可能であり、高い効率性と汎用性を持つことを強調した。また、本手法により、3次元EBSDデータ収集時間を大幅に短縮する可能性があることも示唆する。
+              </div>
+              <div class="description6">
+                コメント：EBSDの画像解析論文きた。EBSDには本当に沢山の情報が入っているので、この分野が発展するのを願いかです。<br>
+                用語：EBSD（電子後方散乱回折）：走査型電子顕微鏡（SEM）において、試料表面から後方に散乱した電子ビームが形成する回折パターンを検出し、試料の結晶学的構造や組織情報を分析する技術である。EBSDは材料科学や地質学などの分野で広く利用されている。トランスフォーマー：深層学習の分野で開発されたニューラルネットワークの一種である。トランスフォーマーは再帰や畳み込みを用いずに、自己注意（self-attention）と呼ばれるメカニズムで入力シーケンス間の関連性を捉えることができる。トランスフォーマーは自然言語処理やコンピュータビジョンなどの分野で高い性能を発揮している。キュボコリック座標：3次元回転を表現するための座標系の一つである。キュボコリック座標はSO(3)空間（回転群）を等体積に写像した立方体グリッド上に定義されており、オイラー角や四元数など他の回転表現と比較して、ユークリッド距離が回転角度と近似的に対応するという特徴がある。<br>
+                手法：第一段階では、軽量なトランスフォーマーモデルを用いて、欠損したスライスのキュボコリック座標を予測する。このモデルは、合成された3次元EBSDデータを用いて自己教師あり学習を行う。具体的には、入力として3次元EBSDデータの一部を与え、その中からランダムに一つのスライスをマスク（欠損）する。そして、マスクされたスライスのみに対して、モデルの出力と真の値との平均二乗誤差（MSE）を最小化するように訓練する。この際、粒界（grain boundary）のみに注目してMSEを計算することで、難易度の高い部分に重点を置く。第二段階では、トランスフォーマーモデルの出力を投影アルゴリズムによって後処理する。このアルゴリズムは、欠損したスライスの前後のスライスから得られる粒子ID（grain ID）とキュボコリック座標の辞書を用いて、各ボクセル（voxel）に最も近い粒子IDを割り当てる。この際、前後のスライスで同じ粒子IDを持つ近傍ボクセルがある場合は、その粒子IDを優先的に割り当てることで、粒子の連結性を高める。また、近傍ボクセルの数が多い順に割り当てを行うことで、効率的に投影を行う。
+              </div>
+              <div class="description10">
+                  18 Aug 2023<br>A Lightweight Transformer for Faster and Robust EBSD Data Collection<br>
+                  Harry Dong et al. (Carnegie Mellon University, USA)<br>
+                <a href="https://arxiv.org/abs/2308.09693" target="_blank" class="link2 link2--nav2">
+                  arxiv.org/abs/2308.09693 (cs.CV)</a>
+              </div><div class="img_align">
+                  <img src="../review/img/202308-19-1.png" class="img300">
+                  <img src="../review/img/202308-19-2.png" class="img300">
+              </div>
+            </div><br><br>
+            <div id="20"><h4 class="indent2">20. 非均質音響結晶における三次元フラットランダウレベル</h4>
+              <div class="description2">
+                三次元（3D）系では、ランダウ準位や他のタイプの平坦バンドを実現することは困難であり、これまでに実験的に示された例はない。研究では、音響結晶という人工的なメタマテリアルを用いて、3D平坦ランダウ準位を実現した。音響結晶の構造を不均一に歪めることで、擬磁場（PMF）を発生させ、ノードリングと呼ばれるバンド接触点がランダウ準位に分裂することを示した。ランダウ準位のうち、ゼロ番目のランダウ準位（0LL）はすべての方向に沿って完全に分散がなく、3D系で平坦バンドを生成する新しいメカニズムを示唆している。この3D平坦バンドは、非線形性や逆アンダーソン局在などの興味深い3D現象にアクセスする可能性がある。
+              </div>
+              <div class="description6">
+                コメント：バルクで平坦なランダウ準位の観測に成功している！というが、データ的に正しいのだろうか。そして、これは新しいメタマテリアルの創成と機能開拓に繋がるということなのか。<br>
+                用語：ランダウ準位：一様な磁場下で運動する電子の量子力学的なエネルギー準位。2D系では、ランダウ準位はエネルギーが等間隔に並んだ平坦バンドとなり、量子ホール効果の基礎となる。擬磁場：格子の歪みによって誘起される人工的な磁場。実際の磁場とは異なり、時間反転対称性を破らない。グラフェンや関連する材料では、歪み工学によって擬磁場を発生させることができる。擬磁場は非常に高い有効磁場強度に達する可能性がある。ノードリング：3D系で発生するバンド接触点の一種。2つのバンドがモメンタム空間でリング状に接触する。ノードリングは様々な形状を持つことができるが、本研究では円形のノードリングを考えている。ノードリングはトポロジカル不変量を持ち、ドラムヘッド型の表面状態を伴うことがある。<br>
+                手法：まず、理論的に、非等方的なダイヤモンド格子のタイトバインディングモデルを考える。この格子では、最近接サイト間の結合強度tがパラメータとして変化することで、円形のノードリングが発生することが知られている。次に、tを空間方向x3に沿って変化させることで、ノードリングの半径がx3に比例して増加するように設計する。これにより、擬磁場A(x3, ϕ) = Bx3(cos ϕ, sin ϕ, 0)が発生し、ノードリングはランダウ準位に分裂することが予想される。この理論的な設計を実現するために、音響結晶という人工的なメタマテリアルを用いる。音響結晶は、球状の空洞と円筒状のチューブで構成され、空気で満たされている。球状の空洞は2つのサブ格子に対応し、チューブは結合強度を制御する。チューブの半径比ξをx3方向に沿って変化させることで、ノードリングの半径が変化するように設計する。音響結晶のバンド構造とランダウ準位を数値的に計算し、理論的な予測と一致することを確認する。また、0LLの波動関数が3D系で完全に局在していることを示す。実際に、音響結晶のサンプルを作製し、ポンプ・プローブ法によってランダウ準位の周波数を測定する。擬磁場の強度に応じて、ランダウ準位の間隔が変化することを観測する。また、ランダウ準位やギャップ周波数で励起された音場分布を可視化し、擬磁場の効果を直接観察する。
+              </div>
+              <div class="description10">
+                  28 Aug 2023<br>Three-dimensional flat Landau levels in an inhomogeneous acoustic crystal<br>
+                  Zheyu Cheng et al. (Nanyang Technological University, Singapore)<br>
+                <a href="http://arxiv.org/abs/2308.14313" target="_blank" class="link2 link2--nav2">
+                  arxiv.org/abs/2308.14313 (cs.CV)</a>
+              </div><div class="img_align">
+                  <img src="../review/img/202308-20-1.png" class="img300">
+                  <img src="../review/img/202308-20-2.png" class="img300c">
+              </div>
+            </div><br><br>
+            <div id="21"><h4 class="indent2">21. 高スループットスクリーニングのための次元削減によるトポロジカル材料のニューラルネットワーク学習の加速</h4>
+              <div class="description2">
+                トポロジカル材料は表面や境界で特異な電子状態や光学的性質を持つ物質であり、多くの応用が期待される。しかし、トポロジカル性質を計算するには高い計算コストがかかるため、既存のデータベースから機械学習を用いて予測する方法を提案する。物質の原子的な特徴量を12個選択し、高次元の特徴空間を構築する。この特徴空間は主成分分析で低次元に変換し、決定木ベースのモデルで最適な次元数を決定する。次元削減により、ニューラルネットワークの学習時間を大幅に短縮することができる。ニューラルネットワークは非線形な関数近似やパターン認識に優れたモデルであるが、多くのハイパーパラメータを調整する必要がある。Optunaというフレームワークを用いて、自動的にハイパーパラメータの探索範囲や探索順序を決めることができる。予測したトポロジカル材料はSymTopoパッケージで検証する。SymTopoは対称性指標と呼ばれるトポロジカル不変量を計算することで、物質がトポロジカル絶縁体やトポロジカル結晶絶縁体であるかどうかを判定することができる。予測した物質の中には正しくトポロジカル材料と判定されたものも多く存在したことがわかった。
+              </div>
+              <div class="description6">
+                コメント：バルクで平坦なランダウ準位の観測に成功している！というが、データ的に正しいのだろうか。そして、これは新しいメタマテリアルの創成と機能開拓に繋がるということなのか。<br>
+                用語：トポロジカル材料：表面や境界で特異な電子状態や光学的性質を持つ物質のこと。トポロジーとは変形しても不変な性質を扱う数学の分野であり、トポロジカル材料はそのような性質を持つ。例えば、トポロジカル絶縁体は内部は絶縁体であるが、表面では電流が抵抗なく流れる。<br>
+
+                手法論： 本研究では、以下の手順でトポロジカル材料の予測モデルを構築した。まず、<a href="http://materiae.iphy.ac.cn/" target="_blank" class="link2 link2--nav2">Materiae</a>と<a href="https://arxiv.org/abs/2308.12722" target="_blank" class="link2 link2--nav2">Materials Project</a>という二つのオンラインデータベースからトポロジカル材料のデータを取得した。Materiaeはトポロジカル性質を計算したデータベースであり、Materials Projectは物質の構造や電子構造などを計算したデータベースである。次に、物質を空間群やサイト数などで分類し、それぞれに対して別々の予測モデルを作成することにした。これは、同じ分類内ではサイト置換によって物質が関連していると考えられるからである。さらに、各物質に対して12個の特徴量（電気陰性度や原子半径など）を選択し、特徴空間を構築した。この特徴空間は高次元であるため、主成分分析を用いて低次元に変換した。主成分分析では、データの分散が最大になるように新しい座標軸を見つけることで、データの重要な情報を保持しながら次元削減を行うことができる。また、主成分分析後のデータに対して、決定木ベースのモデルであるAdaBoostを適用し、最適な次元数を決定した。AdaBoostは、弱い学習器（決定木）を逐次的に組み合わせて強い学習器を作るアンサンブル学習の一種である。AdaBoostでは、次元数を変えながら交差検証法でモデルの精度と学習時間を評価し、生データと比較した。その結果、3から6次元程度で生データと同程度の精度を達成しながら、学習時間を大幅に短縮することができた。最後に、ニューラルネットワークを用いて予測モデルを構築した。ニューラルネットワークは、人工ニューロンと呼ばれる単位が層状につながったモデルであり、非線形な関数近似やパターン認識に優れている。ニューラルネットワークでは、多くのハイパーパラメータ（学習率や隠れ層の数など）を調整する必要があるが、<a href="https://optuna.org/" target="_blank" class="link2 link2--nav2">Optuna</a>というフレームワークを用いて最適化した。Optunaは、ベイズ最適化や進化戦略などの手法を用いて、自動的にハイパーパラメータの探索範囲や探索順序を決めることができる。予測したトポロジカル材料は、<a href="http://materiae.iphy.ac.cn/symtopo" target="_blank" class="link2 link2--nav2">SymTopoパッケージ</a>で検証した。SymTopoは、対称性指標と呼ばれるトポロジカル不変量を計算することで、物質がトポロジカル絶縁体やトポロジカル結晶絶縁体であるかどうかを判定することができる。SymTopoの結果から、予測した物質の中には正しくトポロジカル材料と判定されたものも多く存在したことがわかった。
+              </div>
+              <div class="description10">
+                  24 Aug 2023<br>Accelerated Neural Network Training through Dimensionality Reduction for High-Throughput Screening of Topological Materials<br>
+                  Ruman Moulik et al. (Indian Institute of Technology Delhi, India)<br>
+                <a href="https://arxiv.org/abs/2308.12722" target="_blank" class="link2 link2--nav2">
+                  arxiv.org/abs/2308.12722 (cond-mat.mtrl-sci)</a>
+              </div><div class="img_align">
+                  <img src="../review/img/202308-21-1.png" class="img300v">
+                  <img src="../review/img/202308-21-2.png" class="img300">
+              </div>
+            </div><br><br>
+            <div id="22"><h4 class="indent2">22. 実験データとシミュレーションデータの融合による機械学習力場の精度向上</h4>
+              <div class="description2">
+                機械学習力場（MLFF）は、高精度な量子力学計算に代わるコスト効率的な分子動力学シミュレーションの手法である。MLFFは、通常、密度汎関数理論（DFT）計算から得られたエネルギー、力、応力などのデータに基づいて学習されるが、DFT計算には誤差や限界がある。本研究では、チタンのMLFFを、DFTデータだけでなく、実験で測定された温度依存性の機械的特性や格子定数などのデータも用いて学習させた。DFTデータと実験データを融合させることで、MLFFは両方の目標を同時に満たすことができ、DFT計算や実験の誤差を補正することができた。融合学習したMLFFは、目標以外の特性や状態に対しても高い精度と一般化能力を示し、任意の材料に適用可能な一般的な戦略として提案された。
+              </div>
+              <div class="description6">
+                コメント：バルクで平坦なランダウ準位の観測に成功している！というが、データ的に正しいのだろうか。そして、これは新しいメタマテリアルの創成と機能開拓に繋がるということなのか。<br>
+                用語：MLFF：機械学習力場。原子間相互作用をニューラルネットワークなどの機械学習モデルで表現する力場。高次元的で非線形的なポテンシャルエネルギー面を近似することができる。DFT：密度汎関数理論。電子密度を基本変数として電子系のエネルギーを計算する量子力学的手法。原子間相互作用を厳密に扱うことができるが、計算コストが高く、近似汎関数に依存する。DiffTRe：微分可能な軌道再重み付け法。時間非依存性の観測量に対してMDシミュレーションを微分することを回避する方法。熱力学的摂動理論を利用して勾配爆発を防ぎ、トップダウン型の学習において勾配計算の高速化を実現する。<br>
+                手法論：MLFFはグラフニューラルネットワーク（GNN）を用いて構築した。GNNは原子間距離や角度などの特徴量を隣接原子から受け取り、メッセージパッシングと呼ばれる操作を繰り返すことでポテンシャルエネルギーを出力する。MLFFはDFTトレーナーとEXPトレーナーという二つの最適化手法を交互に適用することで学習した。DFTトレーナーはDFT計算から得られたエネルギー、力、応力などのデータに基づいてMLFFのパラメータを調整する。EXPトレーナーは実験で測定された機械的特性や格子定数などのデータに基づいてMLFFのパラメータを調整する。EXPトレーナーではDiffTRe法を用いて勾配を計算した。MLFFの性能を評価するために、目標となる特性や状態だけでなく、目標とならない特性や状態に対してもMDシミュレーションを行い、実験やDFT計算と比較した。その結果、融合学習したMLFFはDFTデータだけで学習したMLFFよりも実験との一致度が高く、かつ目標以外の特性や状態に対しても高い精度と一般化能力を示した。
+              </div>
+              <div class="description10">
+                  17 Aug 2023<br>Accurate machine learning force fields via experimental and simulation data fusion<br>
+                  Sebastien Röcken et al. (Technical University of Munich, Germany)<br>
+                <a href="https://arxiv.org/abs/2308.09142" target="_blank" class="link2 link2--nav2">
+                  arxiv.org/abs/2308.09142 (physics.chem-ph)</a>
+              </div><div class="img_align">
+                  <img src="../review/img/202308-22-1.png" class="img300">
+                  <img src="../review/img/202308-22-2.png" class="img300">
+              </div>
+            </div><br><br>
+            <div id="23"><h4 class="indent2">23. 強いスピン軌道結合磁性体におけるキタエフ物理学を超えて</h4>
+              <div class="description2">
+                d^5 と d^7 のイリジウム化合物や類似の物質における最も関連性の高い交換相互作用を包括的に概観し、その微視的起源を明らかにした。また、強力な対称性と双対変換、および幅広い解析的・数値的研究から得られた洞察に導かれて、多次元パラメータ空間の最も興味深い相関領域を系統的に探索した。キタエフスピン液体点を超えた物理学に特に焦点を当て、準1次元モデルの最近の興味深い結果を調査し、高次元モデルとの関連性を議論した。
+              </div>
+              <div class="description6">
+                コメント：最近話題にあがるキタエフ物理の40pレビュー。シンプルなイジングモデル、3D的なハイゼンベルクモデルに続き、特定のハニカム構造で強相関系においてのみ現れるキタエフモデル。量子スピン液体等と絡めたしっかり読み込みたい1本。<br>
+                用語：キタエフモデル：三配位格子上のスピン1/2粒子が結合方向に応じて異なるイジング型相互作用を持つモデルで、厳密に解くことができる。このモデルは、分数化された励起を持つ量子スピン液体（QSL）という非常に特異な量子相を示す。1スピン軌道結合（SOC）：電子のスピンと軌道運動が結合する現象で、電子の波動関数や磁気相互作用に異方性をもたらす。SOCは特に4dや5d遷移金属化合物で重要であり、キタエフ相互作用の起源となる。Γ相互作用：最近提案されたキタエフ相互作用と同じく結合方向に依存するオフダイアゴナルな交換相互作用で、t2g軌道間の直接ホッピングと配位子介在ホッピングの両方から寄与される。この相互作用はキタエフ物質でしばしば第二位の強さを持ち、キタエフ相互作用と競合して多様な磁気秩序やQSLを引き起こす。<br>
+                方法論：ハバード模型から有効スピン模型への摂動展開法を用いて、d^5 と d^7 の系における最近接サイト間の交換相互作用を導出した。この方法では、電子間相互作用（クーロン力やハント則）やSOCが運動エネルギー（ホッピング）よりも十分に強いと仮定し、低エネルギー準位の波動関数を求めた。その後、ホッピング項を摂動として扱い、二次摂動までの寄与を計算した。この結果、キタエフ相互作用やΓ相互作用などの異方的な交換相互作用が得られた。
+                対称性や双対変換を用いて、2次元ハニカム格子上のJ-K-Γ-Γ’模型の様々な（局所的および大域的な）対称性点や隠れたSU(2)対称性点を特定した。これらの点は、パラメータ空間の高相関領域や「隠れた」等方的な点を探索するのに有用である。半古典的手法や量子モンテカルロ法などの解析的・数値的手法を用いて、J-K-Γ-Γ’模型の相図を探索した。特に、キタエフスピン液体と純粋Γモデルの古典スピン液体という二つの既知のスピン液体相の相互作用に注目した。また、準1次元K-Γモデルについても最近の発展をレビューし、2次元モデルとの関連性について議論した。
+              </div>
+              <div class="description10">
+                  3 Aug 2023<br>Beyond Kitaev physics in strong spin-orbit coupled magnets<br>
+                  Ioannis Rousochatzakis et al. (Loughborough University, United Kingdom)<br>
+                <a href="https://arxiv.org/abs/2308.01943" target="_blank" class="link2 link2--nav2">
+                  arxiv.org/abs/2308.01943 (cond-mat.str-el)</a>
+              </div><div class="img_align">
+                  <img src="../review/img/202308-23-1.png" class="img300">
+                  <img src="../review/img/202308-23-2.png" class="img300c">
+                  <img src="../review/img/202308-23-3.png" class="img300c">
+                  <img src="../review/img/202308-23-4.png" class="img300c">
+              </div>
+            </div><br><br>
+            <div id="24"><h4 class="indent2">24. ひずみ工学により2D MoTe2を用いた高性能相変化メモリスタが実現</h4>
+              <div class="description2">
+                - 多層の1T'-MoTe2にひずみ工学を適用することで、電界によって半金属から半導体への相変化を制御できるメモリスタを作製した。<br>
+                - このメモリスタは、形成工程が不要で、バイポーラーな抵抗スイッチング特性を示した。<br>
+                - このメモリスタは、オンオフ比が10^8以上、スイッチング電圧が90 mV以下、スイッチング速度が5 ns以下、スイッチングエネルギーが150 aJ以下という優れた性能を達成した。<br>
+                - このメモリスタの性能は、コンタクト金属のひずみ量や方向によって調整可能であり、ラマン分光法や第一原理計算によってそのメカニズムが解明された。<br>
+                - このメモリスタは、従来の2D材料を用いたメモリスタよりも高い性能を示し、相変化メカニズムを利用することでメモリやニューロモーフィックコンピューティングの応用に有望であることを示唆した。
+              </div>
+              <div class="description6">
+                コメント：相変化材料のニューロモロフィック応用であるメモリスタが今ホットらしい。<br>
+                用語：
+                - メモリスタ：電圧や電流などの外部刺激に応じて抵抗値を変化させることができる素子である。抵抗値の変化は不揮発性であり、記憶素子やニューロン素子として利用できる。メモリスタは、欠失していた回路素子の一つとして1971年にチュアによって提唱されたが、実現は2008年にストルコフらによって行われた。
+                - 相変化：物質の結晶構造や電子状態が外部刺激によって変化する現象である。相変化は物質の物理的・化学的な性質に大きな影響を与える。相変化メモリスタは、相変化材料を用いて電界や温度などによって相変化を起こし、抵抗値を制御する素子である。
+                - ひずみ工学：物質に機械的なひずみを与えることで、そのバンド構造やキャリア移動度などの電子的な性質を改善する技術である。ひずみ工学は、CMOSトランジスタの性能向上に広く用いられてきたが、近年では2D材料にも適用されている。<br>
+                方法論：
+                - まず、MgO基板上に1T'-MoTe2のフレークを剥離し、その上にAg, Ag/Ni, Ag/Cr, Cr/Auなどの金属薄膜をコンタクトとしてパターニングした。金属薄膜は、フレークに対して一定のひずみを与える役割も果たす。
+                - 次に、作製したデバイスの電流-電圧特性を測定し、抵抗スイッチングの有無やオンオフ比、スイッチング電圧などの性能指標を評価した。また、保持特性や耐久性、スイッチング速度なども測定した。
+                - さらに、ラマン分光法を用いて、金属薄膜からフレークに伝達されるひずみのプロファイルや方向依存性を調べた。また、第一原理計算を用いて、1T'-MoTe2と2H-MoTe2の相図を求めた。
+                - 最後に、実験結果と理論計算から、デバイスの抵抗スイッチングが金属薄膜からフレークに与えられたひずみによって誘起された相変化に基づくことを明らかにした。また、金属薄膜のひずみ量や方向がデバイスの性能に影響することを示した。<br>
+                学術的意義：
+                - 2D MoTe2を用いた相変化メモリスタの性能をひずみ工学によって大幅に向上させたこと。ひずみ工学はCMOSトランジスタの性能向上に広く用いられてきたが、2D相変化メモリスタに適用した例は初めてである。
+                - 金属薄膜のひずみ量や方向を変えることで、メモリスタのオンオフ比やスイッチング電圧などの性能指標を調整可能にしたこと。これにより、デバイスの設計や最適化が容易になる。
+                - ラマン分光法や第一原理計算を用いて、ひずみ工学がメモリスタの相変化メカニズムに及ぼす影響を定量的に解明したこと。これにより、ひずみ工学の原理や効果が理解しやすくなる。
+              </div>
+              <div class="description10">
+                  2023-08-25<br>Beyond Kitaev physics in strong spin-orbit coupled magnets<br>
+                  Wenhui Hou et al. (University of Rochester, USA)<br>
+                <a href="https://arxiv.org/abs/2308.13637" target="_blank" class="link2 link2--nav2">
+                  arxiv.org/abs/2308.13637 (physics.app-ph)</a>
+              </div><div class="img_align">
+                  <img src="../review/img/202308-24-1.png" class="img300">
+                  <img src="../review/img/202308-24-2.png" class="img300c">
+              </div>
+            </div><br><br>
+
+          </section>
+        </section>
+      </main>
+      
+      <!-- Sidebar -->
+      <aside id="sidebar" class="sidebar"></aside>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftyamazaki.com%2Freview%2F202308&count_bg=%2318B41D&title_bg=%23555555&icon=atom.svg&icon_color=%23E7E7E7&title=Thanks:)&edge_flat=false"/><br><br>Copyright © 2022-2023 <a href="../">tyamazaki.com</a> | All rights reserved.
+    </footer>
+
+    <div class="scroll-container">
+      <div class="scroll-top">
+        <a aria-label="Scroll up" href="#top">
+          <i aria-hidden="true" class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+      <div class="scroll-down">
+        <a aria-label="Scroll down" href="#bottom">
+            <i aria-hidden="true" class="fas fa-arrow-down"></i>
+        </a>
+      </div>
+    </div>
+    <script src="../script.js"></script>
+    <div id="bottom"></div>
+  </body>
+</html>

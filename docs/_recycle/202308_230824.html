@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en jp">
+  <head>
+    <title>ty/review/202308</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 "/>
+    <meta name="description" content="This portfolio website is designed by tyamazaki (Takahiro Yamazaki), who is a materials scientist/researcher" />
+    <meta name="keywords" content="tyamazaki, Takahiro, Yamazaki, portfolio, homepage, website, materials, Scientist, researcher, professor, physics, magnetism, machine learning, Barkhausen, Non-equilibrium, functional, projects, publications, notes, blog" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../img/favicon.png">
+    <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous">
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NYGV5L0T7N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NYGV5L0T7N');
+    </script>
+  </head>
+  <!-- body -->
+  <body class="light" id="top">
+
+    <!-- header -->
+    <header class="header center">
+      <h3><a href="../" class="link">tyamazaki.com</a></h3>
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="../">top</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../review">review</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../blog">blog</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../publications">publications</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../projects">projects</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../notes">notes</a>
+          </li>
+        </ul>
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+        <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger"> 
+          <i aria-hidden="true" id="btn-navigation" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+       
+    <!-- Main contents -->
+    <main>
+      <div class="about4 center">
+        <h2>論文紹介</h2>
+        <h5>2023年8月の注目論文（随時更新中）</h5>
+      </div>
+
+      <!-- <a href="../review" class="link2 link2--nav2"><i>論文紹介TOP </i></a>
+      < <a href="../review/202308" class="link2 link2--nav2"><i>2023年8月</i></a> -->
+
+      <!-- 2023 -->
+      <section id="2023">
+        <h3 class="section__title3">今月の注目論文と傾向のまとめ</h3>
+          <div class="description2">
+            先月報告されたPb10-xCux(PO4)6Oに関する常温常圧超伝導に関する再試論文が多いが、とうとうScience誌やNature誌からLK-99 isn’t a superconductorという判断が下されたようだ。中国やアメリカから多くの再試実験が報告される一方で日本勢からは1本も論文が出ないのは、日本におけるアカデミアの余裕のなさが垣間見えるのか、ただ興味が薄いのか、それとも予め超伝導でないと見切りをつけていたのか。その他、個人的に気になる論文をピックアップして紹介しています。
+          </div>
+        </section><br>
+
+        <!-- ピックアップ論文 -->
+        <section>     
+          <h4 class="under">8月の気になった論文一覧</h4>
+          <ol>
+            <li class="description22"><a href="#1">
+              室温常圧で超伝導を示す銅ドープ鉛アパタイト構造の合成と機構</a></li>
+            <li class="description22"><a href="#2">
+              多元素合金の機械的性質予測のための原始的な機械学習ツール</a></li>
+            <li class="description22"><a href="#3">
+              弾性カロリック効果によるフェロ四極子金属TmAg2のネマティック感受性の測定</a></li>
+            <li class="description22"><a href="#4">
+              単層CrSBrにおける電場誘起ハーフメタル</a></li>
+            <li class="description22"><a href="#5">
+              キラル磁気ソリトンの発見と制御：ランダウ・リフシッツ・ギルバート方程式の厳密解</a></li>
+            <li class="description22"><a href="#6">
+              高圧下でのNd2CoFeO6二重ペロブスカイトの構造相転移と磁気弾性結合</a></li>
+            <li class="description22"><a href="#7">
+              多発性TbMnO3のスピン波分散とマグノンキラリティ</a></li>
+            <li class="description22"><a href="#8">
+              室温付近での磁気冷却効果の基礎と応用：RMn6Sn6系列の磁気構造と高エントロピー合金化の影響</a></li>
+          </ol>
+        </section><br>
+
+        <section>
+          <!-- 論文1 -->
+          <div id="1"><h4>1. 室温常圧で超伝導を示す銅ドープ鉛アパタイト構造の合成と機構</h4>
+            <div class="description2">
+              ・固相法を用いて、鉛アパタイト(Pb10(PO4)6O)に銅を部分的に置換したLK-99®という物質を合成した。この物質は、室温常圧で電気抵抗がゼロになる超伝導体であることを示した。<br>
+              ・LK-99®の結晶構造は、X線回折(XRD)により修飾鉛アパタイト(MLA)構造であることが分かった。銅のドープにより、結晶格子の体積収縮が起こり、絶縁体から金属への相転移(IMT)が引き起こされた。<br>
+              ・LK-99®の超伝導性は、温度や磁場に依存する磁化率やI-V特性を測定することで確認した。特に、室温常圧で物質が磁石の上で部分的に浮上するメイスナー効果を観察した。<br>
+              ・LK-99®の超伝導機構は、1次元的なCu2+−O1/2−Cu2+チェーンにおける電荷密度波(CDW)とオンサイトクーロン反発エネルギー(Uc)によるバイポーラロン形成とトンネル効果に基づくと考えられる。これは、BR-BCS理論により説明できる。
+            </div>
+            <div class="description6">
+              コメント：LK-99が常温常圧超伝導じゃないのは残念だけど、盛り上がり自体は好き。次に期待。
+            </div>
+            <div class="description6">
+              関連記事：<a href="https://www.science.org/content/blog-post/breaking-superconductor-news" target="_blank" class="link2 link2--nav2">サイエンス誌が最初に取り上げた記事：Breaking Superconductor News（27 Jul 2023）, </a>
+
+              <a href="https://www.science.org/content/blog-post/room-temperature-superconductor-new-developments" target="_blank" class="link2 link2--nav2">サイエンス誌が2度目に取り上げた記事：A Room-Temperature Superconductor? New Developments（1 Aug 2023）, </a>
+
+              <a href="https://www.nature.com/articles/d41586-023-02481-0" target="_blank" class="link2 link2--nav2">Nature誌が最初に取り上げた記事：LK-99 isn’t a superconductor — how science sleuths solved the mystery（4 Aug 2023）, </a>
+
+              <a href="https://twitter.com/alexkaplan0/status/1688731316777275392" target="_blank" class="link2 link2--nav2">超伝導でないと決定づけたAlex Kaplan（誰？）のツイート（8 Aug 2023）, </a>
+
+              <a href="https://www.science.org/content/article/short-spectacular-life-viral-room-temperature-superconductivity-claim" target="_blank" class="link2 link2--nav2">サイエンス誌が3度目に取り上げた記事：The short, spectacular life of that viral room-temperature superconductivity claim（8 Aug 2023）, </a>
+
+              <a href="https://www.nature.com/articles/d41586-023-02585-7" target="_blank" class="link2 link2--nav2">最近Nature誌で報告された超伝導でないとする記事：Claimed superconductor LK-99 is an online sensation — but replication efforts fall short（16 Aug 2023）</a>
+            </div>
+            <div class="description10">
+              DATE: 11 Aug 2023 (v3), 26 Jul 2023 (v1)<br>
+              Superconductor Pb10−xCux(PO4)6O showing levitation at room temperature and atmospheric pressure and mechanism<br>
+              Sukbae Lee et al. (Quantum Energy Research Centre, South Korea)<br>
+              <a href="https://arxiv.org/abs/2307.12037" target="_blank" class="link2 link2--nav2">
+                arXiv:2307.12037 (cond-mat.supr-con)</a>
+            </div><div class="img_align">
+              <img src="../review/img/202308-1-1.png" class="img300">
+              <img src="../review/img/202308-1-2.png" class="img300">
+            </div>
+          </div><br><br>
+
+          <!-- 論文2 -->
+          <div id="2"><h4>2. 多元素合金の機械的性質予測のための原始的な機械学習ツール</h4>
+            <div class="description2">
+              ・多元素合金（MPEA）の組成と6つの機械的性質（硬さ、降伏強度、引張強度、伸び、圧縮強度、塑性）を含むデータセットを作成した。<br>
+              ・MPEAの組成を機械学習モデルの入力ベクトルに変換するために、パーサーというツールを開発した。<br>
+              ・線形回帰、K近傍回帰、サポートベクター回帰、ランダムフォレスト回帰などのさまざまな機械学習モデルを適用して、MPEAの機械的性質を予測した。<br>
+              ・Gradioというライブラリを使って、機械学習モデルの予測結果を視覚化し、ユーザーと対話できるインターフェースを作成した。</div>
+            <div class="description6">
+                コメント：マテインフォ系のGUIの優れたソフトが最近色々な特性解析に拡張しているような気がする。
+            </div>
+            <div class="description10">
+              DATE: 15 Aug 2023<br>A primitive machine learning tool for the mechanical property prediction of multiple principal element alloys<br>R. Tan et al. (The Australian National University, Australia)<br>
+              <a href="https://arxiv.org/abs/2308.07649v1" target="_blank" class="link2 link2--nav2">
+              arXiv:2308.07649v1 (cond-mat)</a>
+            </div><div class="img_align">
+                <img src="../review/img/202308-2-1.png" class="img300">
+                <img src="../review/img/202308-2-2.png" class="img300">
+            </div>
+          </div>
+
+          <!-- 論文3 -->
+          <div id="3"><h4>3. 弾性カロリック効果によるフェロ四極子金属TmAg2のネマティック感受性の測定</h4>
+            <div class="description2">
+              ・TmAg2は、4f電子がフェロ四極子秩序を形成し、4回対称性を破る電子ネマティック相転移を5Kで起こす金属物質である。<br>
+              ・c軸に沿った磁場は、フェロ四極子秩序パラメータに対する有効な横場として機能し、相転移温度を3.2Tで完全に抑制する。<br>
+              ・弾性カロリック効果は、物質が経験するひずみによって誘起される温度変化を測定する技術であり、フェロ四極子-ひずみ感受性を直接探ることができる。<br>
+              ・弾性カロリック効果から得られたネマティック感受性は、弾性定数の測定と一致し、横場イジング模型によって定量的に説明される。
+            </div>
+            <div class="description6">
+                コメント：弾性カロリック効果とフェロ四極子とc軸磁場の関係は興味深い
+            </div>
+            <div class="description10">
+                DATE: 10 Aug 2023<br>The nematic susceptibility of the ferroquadrupolar metal TmAg2 measured via the elastocaloric effect<br>Elliott W et al. (Stanford University, USA)<br>
+              <a href="https://arxiv.org/abs/2308.05312v1" target="_blank" class="link2 link2--nav2">
+                arXiv:2308.05312v1 (cond-mat)</a>
+            </div><div class="img_align">
+                <img src="../review/img/202308-3-1.png" class="img300">
+                <img src="../review/img/202308-3-2.png" class="img300">
+            </div><br><br>
+          </div>
+
+          <!-- 論文4 -->
+          <div id="4"><h4>4. 単層CrSBrにおける電場誘起ハーフメタル</h4>
+            <div class="description2">
+              ・2層の磁性原子を持つ2次元（2D）強磁性（FM）材料に垂直電場をかけることで、ハーフメタル性（一方のスピンチャネルが金属で、もう一方が絶縁体または半導体である性質）を実現する新しいメカニズムを提案した。電場により、異なる層の電子バンドがずれることで、ハーフメタル性が誘起される。<br>
+              ・単層CrSBrは正方晶系の結晶構造を持ち、SとBr原子によって形成された歪んだ八面体配位にある2層のCr原子が磁性を持つ。第一原理計算により、CrSBrは電場なしではFM半導体であるが、適切な範囲の電場をかけるとFMハーフメタルになることを見出した。<br>
+              ・ハーフメタル性を誘起するために必要な電場強度は約0.4 V/Å程度であり、実験的に達成可能な値であることを示した。また、ハーフメタル性を定義するギャップは0.33 eV以上であり、スピン反転励起のエネルギーが十分に高いことを確認した。<br>
+              ・CrSBr単層を用いて、電場のオンオフによってデータ書き込みと読み出しを行う可能なスピントロニクスデバイスの概念図を示した。また、同じ構造とFM配位を持つ他の単層材料（VSF, VSeF, VSeBr, CrSCl, CrSI, CrSeBr, CrSeI）にも本研究の方法や分析が適用可能であることを指摘した。
+            </div>
+            <div class="description6">
+              コメント：ハーフメタル性を定義するギャップの閾値は0.33eVだったのか。これを電場誘起で発現させるのは興味深い。
+            </div>
+            <div class="description10">
+                DATE: 7 Aug 2023<br>Electric-field induced half-metal in monolayer CrSBr<br>Hao-Tian Guo et al. (Xi’an University of Posts and Telecommunications, China)<br>
+              <a href="https://arxiv.org/abs/2308.03430v1" target="_blank" class="link2 link2--nav2">
+                arXiv:2308.03430v1 (cond-mat)</a>
+            </div><div class="img_align">
+                <img src="../review/img/202308-4-1.png" class="img300">
+                <img src="../review/img/202308-4-2.png" class="img300">
+            </div><br><br>
+          </div>
+
+          <!-- 論文5 -->
+          <div id="5"><h4>5. キラル磁気ソリトンの発見と制御：ランダウ・リフシッツ・ギルバート方程式の厳密解</h4>
+            <div class="description2">
+              ・ランダウ・リフシッツ・ギルバート方程式（LLG方程式）と一般化非線形シュレーディンガー方程式（GNLS方程式）との間に幾何学的な対応関係を見出し、LLG方程式を厳密に解くことができることを示した。<br>
+              ・ダルブー変換を用いて、等方性強磁性ナノワイヤー中に存在するキラル磁気ソリトンという新しい磁化構造の解析的な形式を導出した。キラル磁気ソリトンは、空間的に局在する孤立した波の一種で、鏡像対称性と位相ジャンプを持ち、左巻き、右巻き、中立の三種類に分類できる。スピンが360°回転する構造を持つ磁化構造を有する。<br>
+              ・スピン偏極電流の注入によって、キラル磁気ソリトンの運動を任意に操作できることを理論的にも数値的にも確認した。電流の強度や方向に応じて、ソリトンの速度や進行方向を変えたり、停止させたりできる。<br>
+              ・ギルバート減衰の影響を考慮すると、キラル磁気ソリトンは伝播中にエネルギーを失って均一な磁化状態に崩壊することを示した。しかし、適切なスピン電流を加えることで、非断熱的なスピントルクが減衰効果に対抗して、ソリトンの長距離伝播を可能にすることができる。
+            </div>
+            <div class="description6">
+              コメント：この研究では、交換場だけを考慮してキラル磁気ソリトンを解析しているようだが、他の有効場や異方性、不均一性などの要素が加わった場合にどうなるのか興味あり。
+            </div>
+            <div class="description10">
+                DATE: 16 Aug 2023<br>Discovery and regulation of chiral magnetic solitons: Exact solution from Landau-Lifshitz-Gilbert equation<br>Xin-Wei Jin et al. (Northwest University, China)<br>
+              <a href="https://arxiv.org/abs/2308.08331" target="_blank" class="link2 link2--nav2">
+                arXiv:2308.08331 (cond-mat)</a>
+            </div><div class="img_align">
+                <img src="../review/img/202308-5-1.png" class="img300">
+                <img src="../review/img/202308-5-2.png" class="img300">
+              </p>
+            </div><br><br>
+          </div>
+
+          <!-- 論文6 -->
+          <div id="6"><h4>6. 高圧下でのNd2CoFeO6二重ペロブスカイトの構造相転移と磁気弾性結合</h4>
+            <div class="description2">
+              ・高圧XRD測定：Nd2CoFeO6 (NCFO)は、高圧下で正方晶から単斜晶への構造相転移を約13.8 GPaで起こすことがXRD測定によって明らかになった。相転移は、(Fe/Co)O6八面体の歪みが圧力によって増加し、格子ひずみを緩和するために起こる。また、約1.1 GPaで体積圧縮率と体積弾性率に異常が見られたが、これは電子的な異常によるものと考えられる。<br>
+              ・低温ラマン分析：NCFOのラマンスペクトルは、温度が低下すると青方偏移するが、約47 Kで急激に赤方偏移することが低温ラマン分析によって示された。この赤方偏移は、スピン再配向転移に関連していると考えられる。また、約240 Kでラマンモード周波数に突然の飛びが見られたが、これは反強磁性転移温度TNと一致する。<br>
+              ・高圧ラマン分析：高圧下でのラマンスペクトルは、約27.4 GPaまで大きな変化は見られなかった。しかし、AgとBgモードのピーク位置は、約1 GPaと約13.1 GPaで傾きの変化を示した。13.1 GPa以上では、正方晶から単斜晶への構造相転移に関連して傾きが減少した。1 GPa以下では、圧力に対する傾きが半分以下に減少したが、これは新しいスピン配列によるものと推測される。<br>
+              ・磁場下での高圧ラマン分析：外部磁場を印加すると、Bgモードは圧力に伴って硬化した。この硬化は、スピンと磁場との強い相互作用によってスピンフォノン相互作用が影響を受けるためだと考えられる。また、磁場を切った後もラマンスペクトルは元の振る舞いに戻らなかった。この現象は詳細な理論的研究が必要である。
+            </div>
+            <div class="description6">
+              コメント：電子的な相転移や構造的な相転移を評価するのに歪み印加は有効のようだ。
+            </div>
+            <div class="description10">
+                DATE: 18 Aug 2023<br>
+                Pressure-induced softening in bulk modulus due to magneto-elastic coupling in Nd2CoFeO6 double Perovskite<br>
+                Bidisha Mukherjee et al. (Indian Institute of Science Education and Research Kolkata, India)<br>
+              <a href="https://arxiv.org/abs/2308.09651v1" target="_blank" class="link2 link2--nav2">
+                arXiv:2308.09651v1 (cond-mat)</a>
+            </div><div class="img_align">
+                <img src="../review/img/202308-6-1.png" class="img300">
+                <img src="../review/img/202308-6-2.png" class="img300">
+            </div><br><br>
+          </div>
+
+          <!-- 論文7 -->
+          <div id="7"><h4>7. 多発性TbMnO3のスピン波分散とマグノンキラリティ</h4>
+            <div class="description2">
+              ・多発性TbMnO3は、複雑な磁気構造によって電気分極を直接誘起するタイプII多発性物質の代表例である。<br>
+              ・中性子散乱実験と線形スピン波理論を用いて、多発性相でのマグノン分散と強度分布を詳細に調べた。<br>
+              ・楕円形スピンサイクロイドと単一イオン異方性を考慮したモデルが、実験データとよく一致し、交換相互作用やダイナミックキラリティのパラメーターを決定した。<br>
+              ・電場効果やTbモーメントの秩序化（Tb3+の4f電子がMn3+の3d電子と結合）が、マグノン分散やキラリティに影響を与えることを示し、多発性結合機構や電磁マグノンについて議論した。<br>
+              ・Tbモーメントは、マグノン分散やキラリティにも影響を与え、特に、Tbモーメントの秩序化が起こる低温領域では、マグノン分散がギャップを開き、キラリティが反転する。これは、Tbモーメントが逆DM相互作用を強めることで、マグノンのエネルギーとキラリティに影響を与えることを示している。
+            </div>
+            <div class="description6">
+              コメント：4f電子と3d電子の相互作用の効果はまだまだ未知領域で興味深い。
+            </div>
+            <div class="description10">
+                DATE: 18 Aug 2023<br>
+                Spin-wave dispersion and magnon chirality in multiferroic TbMnO3<br>
+                S. Holbein et al. (Universit¨at zu K¨oln, Germany)<br>
+              <a href="https://arxiv.org/abs/2308.09651v1" target="_blank" class="link2 link2--nav2">
+                arXiv:2308.09651v1 (cond-mat)</a>
+            </div><div class="img_align">
+                <img src="../review/img/202308-7-1.png" class="img300">
+                <img src="../review/img/202308-7-2.png" class="img300">
+            </div><br><br>
+          </div>
+
+          <!-- 論文8 -->
+          <div id="8"><h4>8. 室温付近での磁気冷却効果の基礎と応用：RMn6Sn6系列の磁気構造と高エントロピー合金化の影響</h4>
+            <div class="description2">
+                ・RMn6Sn6はカゴメ格子を形成するMn原子と三角格子を形成する希土類原子Rからなる物質で、RKKY相互作用によって磁気構造がRの選択に敏感に変化することが示された。<br>
+                ・RMn6Sn6は室温付近でFM、FIM、AFMの異なる磁気秩序を示し、それぞれに対応する磁気冷却効果（MCE）を評価した。FMやFIMの秩序を持つ物質（例えばHoMn6Sn6）はAFMの秩序を持つ物質（例えばLuMn6Sn6）よりも大きなMCEを示した。<br>
+                ・MCEの効率は最大エントロピー変化（∆SMAX）だけでなく、磁気転移の幅（FWHM）や冷却容量（RC）にも依存することが分かった。FWHMが大きいほどRCが大きくなり、MCEが高効率になることが示された。<br>
+                ・高エントロピー合金化はRKKY相互作用をランダム化し、磁気転移を広げることでRCを増加させる可能性があると考えられた。しかし、本研究では4種類や5種類の希土類元素を混合した高エントロピー合金（HEA）を作製しても、純粋なRMn6Sn6と比較してMCEに顕著な改善は見られなかった。
+            </div>
+            <div class="description6">
+                コメント：RKKY相互作用や高エントロピー合金化が磁気冷却効果に与える影響についてよくわかった。希土類元素の選択は重要だが、その何が効いてくるのか気になる。
+            </div>
+            <div class="description10">
+                DATE: 17 Aug 2023<br>
+                Rare-earth Engineering of the Magnetocaloric Effect in RMn6Sn6<br>
+                Kyle Fruhling et al. (Boston College, USA)<br>
+              <a href="https://arxiv.org/abs/2308.09161" target="_blank" class="link2 link2--nav2">
+                arXiv:2308.09161 (cond-mat)</a>
+            </div><div class="img_align">
+                <img src="../review/img/202308-8-1.png" class="img300">
+                <img src="../review/img/202308-8-2.png" class="img300">
+            </div><br><br>
+          </div>
+
+        </section>
+
+        <section>
+          <div class="description3">随時更新中</div>
+          <div class="description6">#ChatGPTによる要約と追加コメントを記述</div>
+        </section>
+
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+      © 2023 <a href="../" class="link footer__link">tyamazaki</a>. All rights reserved.<br><br>
+      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftyamazaki.com%2Freview%2F202308&count_bg=%2318B41D&title_bg=%23555555&icon=atom.svg&icon_color=%23E7E7E7&title=Thanks:)&edge_flat=false"/>
+    </footer>
+
+    <div class="scroll-container">
+      <div class="scroll-top">
+        <a aria-label="Scroll up" href="#top">
+          <i aria-hidden="true" class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+      <div class="scroll-down">
+        <a aria-label="Scroll down" href="#bottom">
+            <i aria-hidden="true" class="fas fa-arrow-down"></i>
+        </a>
+    </div>
+    </div>
+    <script src="../script.js"></script>
+    <div id="bottom"></div>
+  </body>
+</html>

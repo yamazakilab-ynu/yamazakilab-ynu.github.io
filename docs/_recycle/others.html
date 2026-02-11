@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en jp">
+  <head>
+    <title>ty/review/others</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 "/>
+    <meta name="description" content="This portfolio website is designed by tyamazaki (Takahiro Yamazaki), who is a materials scientist/researcher" />
+    <meta name="keywords" content="tyamazaki, Takahiro, Yamazaki, portfolio, homepage, website, materials, Scientist, researcher, professor, physics, magnetism, machine learning, Barkhausen, Non-equilibrium, functional, projects, publications, notes, blog" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../img/favicon.png">
+    <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous">
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NYGV5L0T7N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NYGV5L0T7N');
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(function() {
+        $("#sidebar").load("./sidebar.html");
+      });
+    </script>
+  </head>
+  <!-- body -->
+  <body class="light" id="top">
+    <!-- header -->
+    <header class="header center">
+      <h3><a href="../" class="link">tyamazaki.com</a></h3>
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="../">top</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../review">review</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../blog">blog</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../publications">publications</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../projects">projects</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../notes">notes</a>
+          </li>
+        </ul>
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+        <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger"> 
+          <i aria-hidden="true" id="btn-navigation" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+    
+    <div class="about4 center">
+      <h2>マテリアル見聞録</h2>
+      <h5>その他：注目論文と傾向のまとめ</h5>
+    </div>
+    <div class="container">
+      <main class="main-content">
+        <section id="others">
+
+          <!-- 論文タイトル一覧 -->
+          <section>     
+            <h4 class="under3">論文タイトル一覧</h4>
+            <ol class="indent">
+              <li class="description22"><a href="#1">
+                化学ツールを組み込んだ大規模言語モデル：ChemCrowという化学エージェントの開発と評価</a></li>
+              <li class="description22"><a href="#2">
+                GPT-4を用いた化学研究の可能性と限界</a></li>
+              <!-- <li class="description22"><a href="#3">
+                GPT-4を用いた化学研究の可能性と限界</a></li>
+              <li class="description22"><a href="#3">
+                GPT-4を用いた化学研究の可能性と限界</a></li> -->
+            </ol>
+          </section><br>
+
+          <section>
+            <div id="1"><h4>1. 化学ツールを組み込んだ大規模言語モデル：ChemCrowという化学エージェントの開発と評価</h4>
+              <div class="description2">
+                ・大規模言語モデル（LLM）と化学分野の専門的なツールを統合することで、有機合成、薬物発見、材料設計などの化学関連のタスクを自動的に解決することができる化学エージェント（ChemCrow）を開発した。<br>
+                ・ChemCrowは、LLMに与えられたタスクとツールのリストから、思考・行動・観察の形式で自律的な推論プロセスを展開し、最終的な回答に到達する。ツールは、LLMが化学的に正確かつ効率的な情報を得るために必要な場合に呼び出される。<br>
+                ・ChemCrowは、GPT-4という最新のLLMを用いて、さまざまな難易度の14個のタスクに対して評価された。専門家による評価では、ChemCrowはGPT-4よりも化学的な正確さ、推論の質、タスクの完了度において優れていることが示された。特に複雑なタスクでは、ChemCrowはGPT-4が苦手とする化学的な知識や理解をツールを通して補うことができた。<br>
+                ・ChemCrowの開発と利用には、二重使用や安全性や倫理性などの潜在的なリスクが伴うことを認識し、それらを軽減するための戦略を提案した。例えば、危険な物質や反応に対しては警告やエラーを出すツールを組み込んだり、人間のフィードバックやレビューを求めたりすることである。
+              </div>
+              <div class="description6">
+                コメント：GPT-4を用いた最近注目される材料設計ツール。人間言語と機械言語を繋ぐ材料設計の実現に期待。マテリアルズインフォマティクスは有機よりも無機の方が進んでいる理解であったが、言語モデルを利用したツールは有機からスタートするのは少し驚き。
+              </div>
+              <div class="description10">
+                DATE: 21 Jun 2023 (v4), 11 Apr 2023 (v1)<br>
+                Augmenting large language models with chemistry tools<br>
+                Andres M. Bran et al. (Laboratory of Artificial Chemical Intelligence (LIAC), ISIC, EPFL, Switzerland)<br>
+                <a href="https://arxiv.org/abs/2304.05376" target="_blank" class="link2 link2--nav2">
+                  arXiv:2304.05376 (chem-ph)</a>
+              </div><div class="img_align">
+                <img src="../review/img/others-1-1.png" class="img300">
+                <img src="../review/img/others-1-2.png" class="img300">
+              </div>
+            </div><br><br>
+
+            <div id="2">
+              <h4>2. GPT-4を用いた化学研究の可能性と限界</h4>
+              <div class="description2">
+                ・この文書は、GPT-4という大規模な言語モデルが化学研究にどのように応用できるかを検証したものである。<br>
+                ・GPT-4は、有機化学、化学情報学、数学、物理化学などの分野において、一般的な教科書レベルの知識を持っていることが示された。<br>
+                ・GPT-4は、少量のデータから新しい知識を学習し、推論問題や説明変数の選択、沸点や多変数関数の探索などのタスクに対処できることが示された。<br>
+                ・GPT-4は、分子構造や実験データなどの非言語データの扱いに課題があり、専門的な内容や最新の情報に対応できない場合があることが示された。
+              </div>
+              <div class="description6">
+                コメント：GPTを用いた科学研究の有用性と限界の一例を見れて大変参考になった。非言語データの扱いへの対応の向上により、GPT-4を用いた自動化実験技術の普及にも期待したい。<br>
+                関連記事：<a href="https://www.nature.com/articles/s41578-023-00588-4" target="_blank" class="link2 link2--nav2">Zhichu Ren et al., Nature Reviews Materials (2023)</a>：AIとアクティブラーニングを用いた自律実験の課題と展望
+              </div><div class="description10">
+                DATE: 5 Jun 2023<br>
+                Prompt engineering of GPT-4 for chemical research: what can/cannot be done?<br>
+                Kan Hatakeyama-Sato et al. (Tokyo Institute of Technology, Japan)<br>
+                <a href="https://chemrxiv.org/engage/chemrxiv/article-details/647d305dbe16ad5c577b6627" target="_blank" class="link2 link2--nav2">
+                  10.26434/chemrxiv-2023-s1x5p</a>
+              </div><div class="img_align">
+                <img src="../review/img/others-2-1.png" class="img300">
+                <img src="../review/img/others-2-2.png" class="img300">
+              </div>
+            </div><br><br>
+
+            <!-- <div id="3">
+              <h4>3. GPT-4を用いた化学研究の可能性と限界</h4>
+              <div class="description2">
+                ・この文書は、GPT-4という大規模な言語モデルが化学研究にどのように応用できるかを検証したものである。<br>
+                ・GPT-4は、有機化学、化学情報学、数学、物理化学などの分野において、一般的な教科書レベルの知識を持っていることが示された。<br>
+                ・GPT-4は、少量のデータから新しい知識を学習し、推論問題や説明変数の選択、沸点や多変数関数の探索などのタスクに対処できることが示された。<br>
+                ・GPT-4は、分子構造や実験データなどの非言語データの扱いに課題があり、専門的な内容や最新の情報に対応できない場合があることが示された。
+              </div>
+              <div class="description6">
+                コメント：GPTを用いた科学研究の有用性と限界の一例を見れて大変参考になった。非言語データの扱いへの対応の向上により、GPT-4を用いた自動化実験技術の普及にも期待したい。<br>
+                関連記事：<a href="https://www.nature.com/articles/s41578-023-00588-4" target="_blank" class="link2 link2--nav2">Nature Reviews Materials (2023)</a>：AIとアクティブラーニングを用いた自律実験の課題と展望
+              </div><div class="description10">
+                DATE: 5 Jun 2023<br>
+                Prompt engineering of GPT-4 for chemical research: what can/cannot be done?<br>
+                Kan Hatakeyama-Sato et al. (Tokyo Institute of Technology, Japan)<br>
+                <a href="https://chemrxiv.org/engage/chemrxiv/article-details/647d305dbe16ad5c577b6627" target="_blank" class="link2 link2--nav2">
+                  10.26434/chemrxiv-2023-s1x5p</a>
+              </div><div class="img_align">
+                <img src="../review/img/others-3-1.png" class="img300">
+                <img src="../review/img/others-3-2.png" class="img300">
+              </div>
+            </div><br><br> -->
+
+          </section>
+
+          <section>
+            <p class="description3">随時更新中</p>
+            <p class="description6">#ChatGPTによる要約と追加コメントを記述</p>
+          </section>
+
+        </section>
+      </main>
+
+      <!-- Sidebar -->
+      <aside id="sidebar" class="sidebar"></aside>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+      © 2023 <a href="../" class="link footer__link">tyamazaki</a>. All rights reserved.<br><br>
+      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftyamazaki.com%2Freview%2Fothers&count_bg=%2318B41D&title_bg=%23555555&icon=atom.svg&icon_color=%23E7E7E7&title=Thanks:)&edge_flat=false"/>
+    </footer>
+
+    <div class="scroll-container">
+      <div class="scroll-top">
+        <a aria-label="Scroll up" href="#top">
+          <i aria-hidden="true" class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+      <div class="scroll-down">
+        <a aria-label="Scroll down" href="#bottom">
+            <i aria-hidden="true" class="fas fa-arrow-down"></i>
+        </a>
+    </div>
+    </div>
+    <script src="../script.js"></script>
+    <div id="bottom"></div>
+  </body>
+</html>

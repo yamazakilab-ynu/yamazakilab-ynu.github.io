@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>Album - Yamazaki Laboratory</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="私たちは、実験・計算・機械学習を融合させることで、物質の電子状態から微細構造、さらには機能発現に至るまでを統一的に理解し、新しい材料研究開発の道を切り拓いています。"/>
+    <meta name="keywords" content="山崎研究室, yamazaki lab, 物性情報材料学研究室, physics-informed materials science laboratory, 山崎貴大, Takahiro, Yamazaki, 研究者, researcher, 大学教員, professor, 放射光, synchrotron, 材料物理, 物性物理, 材料工学, データサイエンス, マテリアルズ・インフォマティクス, バルクハウゼンノイズ, portfolio, homepage, website, materials, physics, magnetism, data science, machine learning, Barkhausen noise"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./img/favicon2.png" sizes="any">
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-P6D76HT5');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- album専用のscript -->
+    <script>
+      function openModal(imgEl){
+        const modal    = document.getElementById('albumModal');
+        const modalImg = document.getElementById('modalImg');
+        const modalCap = document.getElementById('modalCap');
+
+        modalImg.src = imgEl.dataset.full || imgEl.src;
+
+        const card  = imgEl.closest('.card');
+        const title = card?.dataset?.title || card?.dataset?.caption || imgEl.alt || '';
+        const note  = card?.dataset?.note  || '';
+        modalCap.innerHTML = '';
+        if (title){ const t=document.createElement('div'); t.className='cap-title'; t.textContent=title; modalCap.appendChild(t); }
+        if (note){  const n=document.createElement('div'); n.className='cap-note';  n.textContent=note;  modalCap.appendChild(n); }
+
+        modal.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function closeModal(){
+        const modal = document.getElementById('albumModal');
+        modal.classList.remove('is-open');
+        document.body.style.overflow = '';
+      }
+
+      // 背景クリック / × / Esc で閉じる
+      document.addEventListener('DOMContentLoaded', () => {
+        const modal   = document.getElementById('albumModal');
+        const content = modal.querySelector('.modal__content');
+        const btn     = modal.querySelector('.modal__close');
+        modal.addEventListener('click', (e)=>{ if(e.target===modal) closeModal(); });
+        btn.addEventListener('click', closeModal);
+        content.addEventListener('click', (e)=> e.stopPropagation());
+        document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && modal.classList.contains('is-open')) closeModal(); });
+      });
+    </script>
+  </head>
+
+  <body class="light" id="top">
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- =================================================================================================== -->
+
+    <!-- Main -->
+    <main>
+      <section class="hero2" aria-label="Portfolio hero">
+        <div class="hero__slides">
+          <div class="hero__slide is-active" style="--bg:url('./img/crystals4.jpg')">
+            <div class="hero__overlay">
+              <div class="hero__panel">
+                <h3 class="hero__title">Album</h3>
+                <p class="hero__desc">研究室のアルバム</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="profiles" class="section1 section-divider2 album">
+        
+        <p class="section__subtitle2">PAST</p>
+        <div class="section-card2">
+          <figure class="card" 
+            data-title="日本米国工学会シンポジウム"
+            data-note="日米を代表する工学研究者が集う活気あふれる会議でした">
+            <img src="./album/album_resized/jafoe.jpg" alt="" loading="lazy" decoding="async" onclick="openModal(this)">
+          </figure>
+
+          <figure class="card" 
+                  data-title="打合せ"
+                  data-note="研究計画と進捗のディスカッション">
+            <img src="./album/album_resized/meeting.jpg" alt="meeting" loading="lazy" decoding="async" onclick="openModal(this)">
+          </figure>
+
+          <figure class="card" 
+                  data-title="SPring-8 実験（4）"
+                  data-note="測定装置セッティングの記録">
+            <img src="./album/album_resized/sp8-4.jpg" alt="sp8-4" loading="lazy" decoding="async" onclick="openModal(this)">
+          </figure>
+
+          <!-- <figure class="card" 
+            data-title="磁歪装置（名大）"
+            data-note="光てこ法を用いた磁歪測定システムです">
+            <img src="./album/album_resized/measure-1.jpg" alt="" loading="lazy" decoding="async" onclick="openModal(this)">
+          </figure>
+
+          <figure class="card" 
+            data-title="磁歪装置2（名大）"
+            data-note="光てこ法による磁歪測定の追加ユニット">
+            <img src="./album/album_resized/measure-2.jpg" alt="measure-2" loading="lazy" decoding="async" onclick="openModal(this)">
+          </figure>
+          <figure class="card" 
+                  data-title="XRD装置"
+                  data-note="X線回折により結晶構造・配向を評価">
+            <img src="./album/album_resized/xrd.jpg" alt="xrd" loading="lazy" decoding="async" onclick="openModal(this)">
+          </figure> -->
+          <!-- <figure class="card" 
+                  data-title="コイル治具"
+                  data-note="巻線固定と試料実装のための治具">
+            <img src="./album/album_resized/jig.jpg" alt="jig" loading="lazy" decoding="async" onclick="openModal(this)">
+          </figure>
+
+          <figure class="card" 
+                  data-title="マイクロスケールシミュレーション"
+                  data-note="磁区構造の数値解析結果の可視化">
+            <img src="./album/album_resized/microsim.jpg" alt="microsim" loading="lazy" decoding="async" onclick="openModal(this)">
+          </figure> -->
+
+          <!-- <figure class="card" 
+                  data-title="SPring-8 実験（5）"
+                  data-note="大型放射光施設でのビームライン実験の様子">
+            <img src="./album/album_resized/sp8-5.jpg" alt="sp8-5" loading="lazy" decoding="async" onclick="openModal(this)">
+          </figure> -->
+
+          <!-- <figure class="card" 
+                  data-title="SPring-8 実験（3）"
+                  data-note="試料交換と測定条件の最適化">
+            <img src="./album/album_resized/sp8-3.jpg" alt="sp8-3" loading="lazy" decoding="async" onclick="openModal(this)">
+          </figure>
+
+          <figure class="card" 
+                  data-title="SPring-8 実験（2）"
+                  data-note="データ取得中のビームライン風景">
+            <img src="./album/album_resized/sp8-2.jpg" alt="sp8-2" loading="lazy" decoding="async" onclick="openModal(this)">
+          </figure>
+
+          <figure class="card" 
+                  data-title="SPring-8 実験（1）"
+                  data-note="立ち上げ時の装置チェック">
+            <img src="./album/album_resized/sp8-1.jpg" alt="sp8-1" loading="lazy" decoding="async" onclick="openModal(this)">
+          </figure>
+
+          <figure class="card" 
+                  data-title="基板（Substrate）"
+                  data-note="薄膜作製に用いる基板とパターニング">
+            <img src="./album/album_resized/sub.jpg" alt="sub" loading="lazy" decoding="async" onclick="openModal(this)">
+          </figure>
+
+          <figure class="card" 
+                  data-title="磁区（Domain）"
+                  data-note="磁区構造の観察画像">
+            <img src="./album/album_resized/domain.jpg" alt="domain" loading="lazy" decoding="async" onclick="openModal(this)">
+          </figure>
+
+          <figure class="card" 
+                  data-title="スキルミオン"
+                  data-note="磁気スキルミオンの観察結果">
+            <img src="./album/album_resized/skyrmion.jpg" alt="skyrmion" loading="lazy" decoding="async" onclick="openModal(this)">
+          </figure>
+
+          <figure class="card" 
+                  data-title="コンビナトリアル試料"
+                  data-note="組成勾配を持つサンプルで迅速スクリーニング">
+            <img src="./album/album_resized/combi.jpg" alt="combi" loading="lazy" decoding="async" onclick="openModal(this)">
+          </figure>
+
+          <figure class="card" 
+                  data-title="加熱実験"
+                  data-note="温度依存測定のセットアップ">
+            <img src="./album/heating.jpg" alt="heating" loading="lazy" decoding="async" onclick="openModal(this)">
+          </figure>
+
+          <figure class="card" 
+                  data-title="コイル試作"
+                  data-note="磁場印加用のコイルアセンブリ">
+            <img src="./album/album_resized/coil.jpg" alt="coil" loading="lazy" decoding="async" onclick="openModal(this)">
+          </figure> -->
+
+        </div>
+      </section>
+
+      <!-- <section id="profiles" class="section1 section-divider2 album">
+        <p class="section__subtitle2">2020年度以前</p>
+        <div class="section-card2">
+          <figure class="card"
+                  data-title="TEM（透過電子顕微鏡）"
+                  data-note="微細構造の観察と結晶性評価に使用">
+            <img src="./album/album_resized/tem.jpg" alt="tem" loading="lazy" decoding="async" onclick="openModal(this)">
+          </figure>
+
+          <figure class="card"
+                  data-title="輪講・勉強会"
+                  data-note="論文・教科書の輪読で基礎と最新知見をキャッチアップ">
+            <img src="./album/album_resized/study.jpg" alt="study" loading="lazy" decoding="async" onclick="openModal(this)">
+          </figure>
+
+          <figure class="card"
+                  data-title="横浜の風景"
+                  data-note="研究の合間にリフレッシュできる港町の眺め">
+            <img src="./album/album_resized/yokohama.jpg" alt="yokohama" loading="lazy" decoding="async" onclick="openModal(this)">
+          </figure>
+
+          <figure class="card"
+                  data-title="結晶（Crystal）"
+                  data-note="成長した単結晶の外観と評価">
+            <img src="./album/album_resized/crystal.jpg" alt="crystal" loading="lazy" decoding="async" onclick="openModal(this)">
+          </figure>
+        </div>
+      </section><br> -->
+
+    </main>
+
+    <div id="albumModal" class="modal" onclick="closeModal(event)">
+      <div class="modal__content" onclick="event.stopPropagation()">
+        <img id="modalImg" src="" alt="">
+        <figcaption id="modalCap"></figcaption>
+        <button class="modal__close" aria-label="Close" onclick="closeModal(event)">×</button>
+      </div>
+    </div>
+
+    <!-- =================================================================================================== -->
+
+    <button type="button" class="to-top" aria-label="ページ先頭へ" data-to-top>
+      <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <script src="./common.js"></script>
+  </body>
+</html>

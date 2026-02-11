@@ -1,0 +1,2893 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>Publications - Yamazaki Laboratory</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="私たちは、実験・計算・機械学習を融合させることで、物質の電子状態から微細構造、さらには機能発現に至るまでを統一的に理解し、新しい材料研究開発の道を切り拓いています。"/>
+    <meta name="keywords" content="山崎研究室, yamazaki lab, 物性情報材料学研究室, physics-informed materials science laboratory, 山崎貴大, Takahiro, Yamazaki, 研究者, researcher, 大学教員, professor, 放射光, synchrotron, 材料物理, 物性物理, 材料工学, データサイエンス, マテリアルズ・インフォマティクス, バルクハウゼンノイズ, portfolio, homepage, website, materials, physics, magnetism, data science, machine learning, Barkhausen noise"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./img/favicon2.png" sizes="any">
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-P6D76HT5');</script>
+    <!-- End Google Tag Manager -->
+
+    <!-- publication専用のscript -->
+    <script defer>
+    window.addEventListener('DOMContentLoaded', () => {
+      const sections = Array.from(document.querySelectorAll('.pub-section[data-cat]'));
+      const filters  = Array.from(document.querySelectorAll('.pub-filter'));
+
+      // そもそも対象が無ければ何もしない
+      if (!sections.length || !filters.length) return;
+
+      const closeAllMenus = () => {
+        document.querySelectorAll('.pub-filter__menu.show').forEach((m) => m.classList.remove('show'));
+        document.querySelectorAll('.pub-filter__btn[aria-expanded="true"]').forEach((b) =>
+          b.setAttribute('aria-expanded', 'false')
+        );
+      };
+
+      const setAllLabels = (title) => {
+        document.querySelectorAll('.pub-filter__label').forEach((lab) => {
+          lab.textContent = title;
+        });
+      };
+
+      const setPubCategory = (cat) => {
+        sections.forEach((sec) => sec.classList.add('is-hidden'));
+        const target = document.querySelector(`.pub-section[data-cat="${cat}"]`);
+        if (target) target.classList.remove('is-hidden');
+      };
+
+      // 各ドロップダウンを初期化
+      filters.forEach((filter) => {
+        const btn   = filter.querySelector('.pub-filter__btn');
+        const menu  = filter.querySelector('.pub-filter__menu');
+        const label = filter.querySelector('.pub-filter__label');
+        const items = Array.from(filter.querySelectorAll('.pub-filter__menu li[role="menuitem"]'));
+
+        if (!btn || !menu || !label || !items.length) return;
+
+        const isOpen = () => menu.classList.contains('show');
+
+        const open = () => {
+          closeAllMenus();
+          menu.classList.add('show');
+          btn.setAttribute('aria-expanded', 'true');
+        };
+
+        const close = () => {
+          menu.classList.remove('show');
+          btn.setAttribute('aria-expanded', 'false');
+        };
+
+        btn.addEventListener('click', (e) => {
+          e.stopPropagation();
+          isOpen() ? close() : open();
+        });
+
+        items.forEach((li) => {
+          li.addEventListener('click', (e) => {
+            e.stopPropagation();
+
+            const cat   = li.dataset.cat;                         // menu側 data-cat
+            const title = li.dataset.title || li.textContent.trim();
+
+            if (cat) setPubCategory(cat);
+            setAllLabels(title);
+
+            closeAllMenus();
+          });
+        });
+      });
+
+      // 外側クリックで閉じる（メニュー内クリックは stopPropagation しているので閉じない）
+      document.addEventListener('click', closeAllMenus);
+
+      // ESCで閉じる
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeAllMenus();
+      });
+
+      // 任意：初期表示を現在の表示（is-hiddenでない最初のセクション）に合わせてラベルも同期
+      const firstVisible = sections.find((sec) => !sec.classList.contains('is-hidden')) || sections[0];
+      if (firstVisible) {
+        const initCat = firstVisible.dataset.cat;
+        const initItem = document.querySelector(`.pub-filter__menu li[data-cat="${initCat}"]`);
+        if (initItem) setAllLabels(initItem.dataset.title || initItem.textContent.trim());
+        setPubCategory(initCat);
+      }
+
+    });
+    </script>
+
+
+  </head>
+
+  <body class="light" id="top">
+    <!-- Header -->
+    <div id="header"></div>
+
+    <!-- =================================================================================================== -->
+
+    <!-- Main -->
+    <main>      
+      <section class="hero2" aria-label="Portfolio hero">
+        <div class="hero__slides">
+          <div class="hero__slide is-active" style="--bg:url('./img/top8.jpg')">
+            <div class="hero__overlay">
+              <div class="hero__panel">
+                <h3 class="hero__title">Publifications</h3>
+                <p class="hero__desc">研究業績</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+        
+      <section id="profiles" class="section1 section-divider2">        
+        <div class="section-card3">
+          <p class="about-text">
+          以下の研究業績は山崎がこれまでに在籍した横浜国立大学以外の教育・研究機関での業績を含みます。詳細については、Researchmapをご覧ください。
+          </p><br><br>
+          <ul class="achievement-list">
+            <li class="achievement-item2">
+              <span class="label">&nbsp;Researchmap</span>
+              <span class="count">
+              <a href="https://researchmap.jp/takahiro_yamazaki"
+                  class="link footer__link2" target="_blank">Takahiro YAMAZAKI
+                  <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+              </a>
+              </span>
+            </li>
+          </ul>
+        </div>
+      </section><br><br>
+
+      <!-- カテゴリ選択（ヘッダーのすぐ下など好きな場所に） -->
+      <div class="pub-filter-row">
+        <span class="pub-filter-caption">Category　</span>
+        <div class="pub-filter" id="pubFilter">
+          <button type="button" class="pub-filter__btn" aria-haspopup="true" aria-expanded="false">
+            <span class="pub-filter__label">原著論文</span>
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <ul class="pub-filter__menu" role="menu" aria-label="Category list">
+            <li role="menuitem" data-cat="articles"   data-title="原著論文"         data-sub="Number of Articles : 036">原著論文</li>
+            <li role="menuitem" data-cat="proceedings" data-title="国際会議論文"     data-sub="Number of Proceedings : 013">国際会議論文</li>
+            <li role="menuitem" data-cat="books"       data-title="著書"             data-sub="Number of Books : 000">著書</li>
+            <li role="menuitem" data-cat="reviews"     data-title="総説・解説"       data-sub="Number of Reviews : 005">総説・解説</li>
+            <li role="menuitem" data-cat="invited"     data-title="招待講演"         data-sub="Number of Talks : 009">招待講演</li>
+            <li role="menuitem" data-cat="intl-talks"  data-title="国際会議発表"     data-sub="Number of Talks : 049">国際会議発表</li>
+            <li role="menuitem" data-cat="domestic"    data-title="国内学会発表"     data-sub="Number of Talks : 095">国内学会発表</li>
+            <li role="menuitem" data-cat="awards"      data-title="受賞"             data-sub="Number of Talks : 013">受賞</li>
+            <li role="menuitem" data-cat="patents"     data-title="発明・特許"       data-sub="Number of Patents : 002">発明・特許</li>
+            <li role="menuitem" data-cat="fundings"     data-title="競争的研究費"       data-sub="Number of Fundings : 009">競争的研究費</li>
+            <li role="menuitem" data-cat="thesis"     data-title="博士・修士・学士論文" data-sub="Number of Thesis : 020">博士・修士・学士論文</li>
+          </ul>
+        </div>
+      </div>
+
+      <section id="articles" class="section1 section-divider2 pub-section" data-cat="articles">
+        <div class="section-head section-head--row">
+          <div>
+            <p class="eyebrow">Journal Articles</p>
+            <h3 class="title">原著論文</h3>
+          </div>
+          <div class="pub-count">Number of publications : <strong>38</strong></div>
+        </div><br>
+        
+        <ol class="pub-list">
+
+          <p class="section__subtitle2">2025年度</p>
+
+          <li class="pub-item"><span class="number">38</span>
+            <div class="pub-body">
+              <p class="pub-authors">K. Masuzawa, A. L. Foggiatto, S. Kunii, R. Nagaoka, M. Taniwaki, T. Yamazaki, C. Mitsumata, I. Obayashi, Y. Hiraoka, and M. Kotsugi*,</p>
+              <p class="pub-title">“Explainable analysis of the complex maze magnetic domain structure through extension of the Landau free energy model by adding an entropy feature,”</p>
+              <p class="pub-journal"><a class="pub-link" href="" target="_blank">
+                Scientific Report, accepted (Feb. 2026).
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+          
+          <li class="pub-item"><span class="number">37</span>
+            <div class="pub-body">
+              <p class="pub-authors">D. Ishikawa, K. Fuku*, Y. Miura, Y. Igarashi, Y. Iwasaki, Y. Sakuraba, K. Yaji, A.L. Foggiatto, V. Arpita, T. Yamazaki, N. Nagamura, M. Kotsugi,</p>
+              <p class="pub-title">“Anomaly Detection of Fermi Surface Morphology in Co2MnGaxGe1-x via Interpretable Machine Learning,”</p>
+              <p class="pub-journal"><a class="pub-link" href="" target="_blank">
+                Scientific Report, accepted (Feb. 2026).
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">36</span>
+            <div class="pub-body">
+              <p class="pub-authors">R. Hasegawa, A. Varadwaj*, A.L. Foggiatto, M. Niibe, T. Yamazaki, I. Matsuda, and M. Kotsugi,</p>
+              <p class="pub-title">“Automated Elucidation of Crystal and Electronic Structures in Boron Nitride from X-ray Absorption Spectra Using Uniform Manifold Approximation and Projection,”</p>
+              <p class="pub-journal"><a class="pub-link" href="https://doi.org/10.1038/s41598-025-18580-z" target="_blank">
+                Scientific Report, vol. 15, article no. 37736, pp. 1-12 (Oct. 2025)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+              <p class="pub-notes"><a class="pub-link2" href="https://www.tus.ac.jp/today/archive/20251104_1297.html" target="_blank">
+                [プレスリリース(2025.11.10)]：AIの力で複雑なスペクトルの自動解析が可能に！～X線データから材料の構造・欠陥・電子状態を高精度で判別～
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+              <p class="pub-notes"><a class="pub-link2" href="https://www.nikkei.com/article/DGXZRSP699220_Q5A111C2000000/" target="_blank">
+                [メディア]：日本経済新聞、東京理科大など、機械学習法を用いて複雑なX線吸収スペクトルから結晶構造や欠陥の種類を高精度で自動解析することに成功<i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+          
+          <li class="pub-item"><span class="number">35</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Yamazaki*, S. Tamaru, and M. Kotsugi,</p>
+              <p class="pub-title">“Analysis of Magnetic Barkhausen Noise to Reveal Domain Wall Dynamics in Amorphous/Nanocrystalline Ribbons,”</p>
+              <p class="pub-journal"><a class="pub-link" href="https://doi.org/10.1109/ACCESS.2025.3596507" target="_blank">
+                IEEE Access, vol. 3, pp. 140079–140086 (Aug. 2025)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+              <p class="pub-notes"><a class="pub-link2" href="https://www.tus.ac.jp/today/archive/20250903_6874.html" target="_blank">
+                [プレスリリース(2025.09.05)]：磁気バルクハウゼンノイズによる磁壁緩和ダイナミクスの直接観測～次世代の低損失磁性材料の設計指針となる有用な知見～
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+              <p class="pub-notes"><a class="pub-link2" href="https://www.nikkei.com/article/DGXZRSP696395_V00C25A9000000/" target="_blank">
+                [メディア]：日本経済新聞<i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">34</span>
+            <div class="pub-body">
+              <p class="pub-authors">M. Taniwaki, R. Nagaoka, K. Masuzawa, S. Sato, A.L. Foggiatto, C. Mitsumata, T. Yamazaki, I. Obayashi, Y. Hiraoka, Y. Igarashi, Y. Mizutori, S.A. Hossein, T. Ohkubo, H. Mogi, and M. Kotsugi*,</p>
+              <p class="pub-title">“Automated identification of the origin of energy loss in nonoriented electrical steel by feature extended Ginzburg–Landau free energy framework,”</p>
+              <p class="pub-journal"><a class="pub-link" href="https://doi.org/10.1038/s41598-025-00357-z" target="_blank">
+                Scientific Reports, vol. 15, article no. 23758, pp. 1–13 (Jul. 2025)<i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+              <p class="pub-notes"><a class="pub-link2" href="https://www.tus.ac.jp/today/archive/20250715_8098.html" target="_blank">
+                [プレスリリース(2025.07.15)]：次世代AIで磁性材料のエネルギー損失の原因を解明～省エネルギーな次世代EV開発への応用に期待～
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+              <p class="pub-notes"><a class="pub-link2" href="https://www.nikkei.com/article/DGXZRSP694024_W5A710C2000000/" target="_blank">
+                [メディア]：日本経済新聞<i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">33</span>
+            <div class="pub-body">
+              <p class="pub-authors">K. Nakamura, D. Furuya, Y. Miura, T. Yamazaki, A.L. Foggiatto, Y. Iwasaki, and M. Kotsugi*,</p>
+              <p class="pub-title">“Efficient Discovery of Large Magnetic Anisotropy with Thermodynamically Stable Materials via Multi-Objective Bayesian Optimization,”</p>
+              <p class="pub-journal"><a class="pub-link" href="https://doi.org/10.1080/27660400.2025.2485025" target="_blank">
+                Science and Technology of Advanced Materials: Methods, vol. 5, no. 1, article 2485025, pp. 1–11 (Apr. 2025)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <p class="section__subtitle2">2024年度</p>
+          <li class="pub-item"><span class="number">32</span>
+            <div class="pub-body">
+              <p class="pub-authors">Y. Shima, T. Yamazaki*, A.L. Foggiatto, C. Mitsumata, and M. Kotsugi,</p>
+              <p class="pub-title">“Iron Loss analysis in Soft Magnetic Materials via Maxwell Equations-Coupled Multiscale Micromagnetic Simulations,”</p>
+              <p class="pub-journal"><a class="pub-link" href="https://doi.org/10.1063/5.0237895" target="_blank">
+                Journal of Applied Physics, vol. 137, article no. 123906, pp. 1–11 (Mar. 2025)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">31</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Yamazaki*, T. Kawasaki, A.L. Foggiatto, R. Toyama, Y. Sakuraba, Y. Igarashi, C. Mitsumata, Y. Iwasaki, and M. Kotsugi,</p>
+              <p class="pub-title">“Uncovering the origin of Magnetic Moment Enhancement in Fe-Co-Ir Alloys via High-Throughput XMCD,”</p>
+              <p class="pub-journal"><a class="pub-link" href="https://doi.org/PhysRevMaterials.9.034408" target="_blank">
+                Physical Review Materials, vol. 9, no. 3, article 034408, pp. 1–10 (Mar. 2025)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+              <p class="pub-notes"><a class="pub-link2" href="https://www.tus.ac.jp/today/archive/20250307_2573.html" target="_blank">
+                [プレスリリース(2025.03.21)]：イリジウム添加による鉄-コバルト合金の磁気特性の増強メカニズムを解明～放射光計測と高品質薄膜技術で磁性材料の精密評価を実現～
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+              <p class="pub-notes"><a class="pub-link2" href="https://www.nikkei.com/article/DGXZRSP688620_R20C25A3000000/" target="_blank">
+                [メディア]：日本経済新聞<i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">30</span>
+            <div class="pub-body">
+              <p class="pub-authors">K. Sano, T. Yamazaki*, Y. Nakamura, M. Ohtake, C. Oka, J. Sakurai, and S. Hata,</p>
+              <p class="pub-title">“Tuning magnetic properties by microstructure control of nanocrystalline thin films for compact vibration energy harvesters,”</p>
+              <p class="pub-journal"><a class="pub-link" href="https://doi.org/10.1587/elex.22.20250031" target="_blank">
+                IEICE Electronics Express, vol. 22, no. 6, pp. 1–6 (Feb. 2025)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">29</span>
+            <div class="pub-body">
+              <p class="pub-authors">Y. Iwasaki*, R. Toyama, T. Yamazaki, Y. Igarashi, M. Kotsugi, and Y. Sakuraba,</p>
+              <p class="pub-title">“Autonomous search for half-metallic materials with B2 structure,”</p>
+              <p class="pub-journal"><a class="pub-link" href="https://doi.org/10.1080/27660400.2024.2403966" target="_blank">
+                Science and Technology of Advanced Materials: Methods, vol. 4, no. 1, article 2403966, pp. 1–8 (Sep. 2024)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">28</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Kato, R. Morisaki, T. Yamazaki, C. Oka, J. Sakurai, and S. Hata*,</p>
+              <p class="pub-title">“Prototype of parallel plate type fast atom beam source and its improvement of irradiation characteristics,”</p>
+              <p class="pub-journal"><a class="pub-link" href="https://doi.org/10.20965/ijat.2024.p0513" target="_blank">
+                International Journal of Automation Technology, vol. 18, no. 4, pp. 513–520 (Jul. 2024)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">27</span>
+            <div class="pub-body">
+              <p class="pub-authors">K. Omae, T. Yamazaki*, K. Sano, C. Oka, J. Sakurai, and S. Hata,</p>
+              <p class="pub-title">“Effect of Noise on Accuracy of Grain Size Evaluation by Magnetic Barkhausen Noise Analysis,”</p>
+              <p class="pub-journal"><a class="pub-link" href="https://doi.org/10.20965/ijat.2024.p0528" target="_blank">
+                International Journal of Automation Technology, vol. 18, no. 4, pp. 528–536 (Jul. 2024)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">26</span>
+            <div class="pub-body">
+              <p class="pub-authors">R. Nagaoka, K. Masuzawa, A.L. Foggiatto, T. Yamazaki, I. Obayashi, Y. Hiraoka, C. Mitsumata, and M. Kotsugi*,</p>
+              <p class="pub-title">“Quantification of the coercivity factor in soft magnetic materials at different frequencies using topological data analysis,”</p>
+              <p class="pub-journal"><a class="pub-link" href="https://doi.org/10.1109/TMAG.2024.3408002" target="_blank">
+                IEEE Transactions on Magnetics, vol. 60, no. 9, article no. 4000305, pp. 1–5 (Sep. 2024)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">25</span>
+            <div class="pub-body">
+              <p class="pub-authors">A.L. Foggiatto*, R. Nagaoka, M. Taniwaki, T. Yamazaki, T. Ogasawara, I. Obayashi, Y. Hiraoka, C. Mitsumata, and M. Kotsugi,</p>
+              <p class="pub-title">“Analysis of the excess loss in high-frequency magnetization process through machine learning and topological data analysis,”</p>
+              <p class="pub-journal"><a class="pub-link" href="https://doi.org/10.1109/TMAG.2024.3406717" target="_blank">
+                IEEE Transactions on Magnetics, vol. 60, no. 9, article no. 7001305, pp. 1–5 (Sep. 2024)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <p class="section__subtitle2">2023年度</p>
+          <li class="pub-item"><span class="number">24</span>
+            <div class="pub-body">
+              <p class="pub-authors">K. Sano, T. Yamazaki*, C. Oka, J. Sakurai, and S. Hata,</p>
+              <p class="pub-title">“Soft Magnetostrictive Materials: Enhanced Magnetostriction of Fe-Based Nanocrystalline Alloys via Ga Doping,”</p>
+              <p class="pub-journal"><a class="pub-link" href="https://doi.org/10.1016/j.scriptamat.2023.115956" target="_blank">
+                Scripta Materialia, vol. 242, no. 15, article 115956, pp. 1–6 (Mar. 2024)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+              <p class="pub-notes"><a class="pub-link2" href="https://www.tus.ac.jp/today/archive/20240301_1827.html" target="_blank">
+                [プレスリリース(2024.03.01)]：環境振動発電応用に向けた新奇磁歪材料の開発指針を提示～磁気的に軟らかい「ナノ組織」と大きくひずむ「ナノ結晶」の組み合わせ～
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+              <p class="pub-notes"><a class="pub-link2" href="https://www.nikkei.com/article/DGXZRSP688620_R20C25A3000000/" target="_blank">
+                [メディア]：日本経済新聞<i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">23</span>
+            <div class="pub-body">
+              <p class="pub-authors">A.L. Foggiatto*, Y. Mizutori, T. Yamazaki, S. Sato, K. Masuzawa, R. Nagaoka, M. Taniwaki, S. Fujieda, S. Suzuki, K. Ishiyama, T. Fukuda, Y. Igarashi, C. Mitsumata, and M. Kotsugi,</p>
+              <p class="pub-title">“Visualization of the Magnetostriction Mechanism in Fe-Ga alloy Single Crystal Using Dimensionality Reduction Techniques,”</p>
+              <p class="pub-journal"><a class="pub-link" href="https://doi.org/TMAG.2023.3312372" target="_blank">
+                IEEE Transactions on Magnetics, vol. 59, no. 11, article no. 2501604, pp. 1–4 (Nov. 2023)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+          
+          <li class="pub-item"><span class="number">22</span>
+            <div class="pub-body">
+              <p class="pub-authors">R. Toyama, S. Kokado, K. Masuda, Z. Li, V. K. Kushwaha, T.T. Sasaki, L. S. R. Kunara, T. Koganezawa, H. Tajiri, T. Yamazaki, M. Kotsugi, Y. Iwasaki, and Y. Sakuraba*,</p>
+              <p class="pub-title">“Origin of negative anisotropic magnetoresistance effect in Fe0.75Co0.25 single-crystal thin films upon Ir addition,”</p>
+              <p class="pub-journal"><a class="pub-link" href="https://doi.org/10.1103/PhysRevMaterials.7.084401" target="_blank">
+                Physical Review Materials, vol. 7, no. 8, article no. 084401, pp. 1–9 (Aug.2023)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">21</span>
+            <div class="pub-body">
+              <p class="pub-authors">K. Omae, T. Yamazaki*, C. Oka, J. Sakurai, and S. Hata,</p>
+              <p class="pub-title">“Strain measurement based on Magnetic Barkhausen noise for thin films,”</p>
+              <p class="pub-journal"><a class="pub-link" href="https://doi.org/10.1016/j.mee.2023.112057" target="_blank">
+                Microelectronic Engineering, vol. 279, no. 15, article no. 112057, pp. 1–6 (Jul. 2023)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">20</span>
+            <div class="pub-body">
+              <p class="pub-authors">S. Takase, T. Yamazaki, C. Oka, J. Sakurai, and S. Hata*,</p>
+              <p class="pub-title">“Novel measurement method of internal stress in thin films using micro spring structure,”</p>
+              <p class="pub-journal"><a class="pub-link" href="https://doi.org/10.1299/mej.23-00074" target="_blank">
+                Mechanical Engineering Journal, vol. 10, no. 4, article 23-00074, pp. 1–7 (May 2023)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">19</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Yamazaki*, A. L. Montagnoli, M. L. Young, and I. Takeuchi,</p>
+              <p class="pub-title">“Tuning the Temperature Range of Superelastic Ni-Ti Alloys for Elastocaloric Cooling via Thermal Processing,”</p>
+              <p class="pub-journal">
+                <a class="pub-link" href="https://doi.org/10.1088/2515-7655/accd21" target="_blank" rel="noopener noreferrer">
+                  Journal of Physics: Energy, vol. 5, no. 2, article 024020, pp. 1–10 (Apr. 2023)
+                  <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <p class="section__subtitle2">2022年度</p>
+          <li class="pub-item">
+            <span class="number">18</span>
+            <div class="pub-body">
+              <p class="pub-authors">S. Inoue, T. Yamazaki, C. Oka, S. Hata, and J. Sakurai*,</p>
+              <p class="pub-title">“Combinatorial search for Ti-Ni-Hf high formable shape memory alloys,”</p>
+              <p class="pub-journal">
+                <a class="pub-link" href="https://doi.org/10.35848/1347-4065/ac6a97" target="_blank" rel="noopener noreferrer">
+                  Japanese Journal of Applied Physics, vol. 61, no. 6, article 065507, pp. 1–8 (May 2022)
+                  <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item">
+            <span class="number">17</span>
+            <div class="pub-body">
+              <p class="pub-authors">F. Haga, T. Yamazaki, C. Oka, S. Hata, Y. Hoshino, and J. Sakurai*,</p>
+              <p class="pub-title">“Effect of structural relaxation at bellow crystallization temperature on internal stress of Ni-Nb-Zr thin-film amorphous alloys diaphragm for Micro electromechanical systems sensors,”</p>
+              <p class="pub-journal">
+                <a class="pub-link" href="https://doi.org/10.35848/1347-4065/ac5d12" target="_blank" rel="noopener noreferrer">
+                  Japanese Journal of Applied Physics, vol. 61, no. SD, article SD1027, pp. 1–6 (May 2022)
+                  <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <p class="section__subtitle2">2021年度</p>
+          <li class="pub-item">
+            <span class="number">16</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Yamazaki*, Y. Furuya, S. Hata, and W. Nakao,</p>
+              <p class="pub-title">“Stress-driven magnetic Barkhausen noise generation in FeCo magnetostrictive alloy,”</p>
+              <p class="pub-journal">
+                <a class="pub-link" href="https://doi.org/10.1109/TMAG.2021.3126898" target="_blank" rel="noopener noreferrer">
+                  IEEE Transactions on Magnetics, vol. 58, no. 1, article 4000308, pp. 1–8 (Jan. 2022)
+                  <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item">
+            <span class="number">15</span>
+            <div class="pub-body">
+              <p class="pub-authors">D. Yamada, S. Hori, S. Abe, Y. Kumeno, T. Yamazaki, C. Oka, J. Sakurai, and S. Hata*,</p>
+              <p class="pub-title">“Examination of Mechanical Properties and Photoelastic Properties of Gel Material for Blood Vessel Mimics,”</p>
+              <p class="pub-journal">
+                <a class="pub-link" href="https://doi.org/10.1115/1.4051516" target="_blank" rel="noopener noreferrer">
+                  Journal of Medical Devices, vol. 15, no. 3, article 031011, pp. 1–7 (Sep. 2021)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item">
+            <span class="number">14</span>
+            <div class="pub-body">
+              <p class="pub-authors">K. Nambara, T. Yamazaki, C. Oka, S. Hata, and J. Sakurai*,</p>
+              <p class="pub-title">“Fabrication and Evaluation of Actuators for Reaction Force Variable Passive-type Tactile Displays,”</p>
+              <p class="pub-journal">
+                <a class="pub-link" href="https://doi.org/10.1541/ieejsmas.141.304" target="_blank" rel="noopener noreferrer">
+                  IEEJ Transactions on Sensors and Micromachines, vol. 141, no. 9, pp. 304–309 (Sep. 2021)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item">
+            <span class="number">13</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Yamazaki*, T. Tomita, K. Uji, H. Kuwata, K. Sano, C. Oka, J. Sakurai, and S. Hata,</p>
+              <p class="pub-title">“Combinatorial synthesis of nanocrystalline FeSiBPCuC–Ni–(Nb,Mo) soft magnetic alloys with high corrosion resistance,”</p>
+              <p class="pub-journal">
+                <a class="pub-link" href="https://doi.org/10.1016/j.jnoncrysol.2021.120808" target="_blank" rel="noopener noreferrer">
+                  Journal of Non-Crystalline Solids, vol. 563, article 120808, pp. 1–8 (Jul. 2021)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <p class="section__subtitle2">2020年度</p>
+          <li class="pub-item">
+            <span class="number">12</span>
+            <div class="pub-body">
+              <p class="pub-authors">R. Morisaki, T. Yamazaki, C. Oka, J. Sakurai, T. Hirai, T. Takahashi, H. Tsuji, N. Ohno, and S. Hata*,</p>
+              <p class="pub-title">“Particle-in-cell-Monte Carlo collision simulation and experimental measurement of Ar plasma in a fast atom beam source for surface-activated bonding,”</p>
+              <p class="pub-journal">
+                <a class="pub-link" href="https://doi.org/10.35848/1347-4065/abe683" target="_blank" rel="noopener noreferrer">
+                  Japanese Journal of Applied Physics, vol. 60, no. SC, article SCCB01, pp. 1–6 (Mar. 2021)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item">
+            <span class="number">11</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Yamazaki*, K. Katabira, F. Narita, Y. Furuya, and W. Nakao,</p>
+              <p class="pub-title">“Microstructure-enhanced inverse magnetostrictive effect in Fe-Co alloy wires,”</p>
+              <p class="pub-journal">
+                <a class="pub-link" href="https://doi.org/10.1002/adem.202000026" target="_blank" rel="noopener noreferrer">
+                  Advanced Engineering Materials, vol. 22, no. 10, article 2000026, pp. 1–9 (Oct. 2020)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item">
+            <span class="number">10</span>
+            <div class="pub-body">
+              <p class="pub-authors">R. Morisaki*, Y. Hirai, C. Oka, M. Mizoshiri, T. Yamazaki, J. Sakurai, T. Hirai, T. Takahashi, H. Tsuji, and S. Hata,</p>
+              <p class="pub-title">“Development of a Fast Atom Beam Gun for Surface-Activated Bonding,”</p>
+              <p class="pub-journal">
+                <a class="pub-link" href="https://doi.org/10.1016/j.precisioneng.2019.11.006" target="_blank" rel="noopener noreferrer">
+                  Precision Engineering, vol. 62, pp. 106–112 (Mar. 2020)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <p class="section__subtitle2">2019年度</p>
+          <li class="pub-item">
+            <span class="number">09</span>
+            <div class="pub-body">
+              <p class="pub-authors">K. Katabira, N. Kimura, T. Yamazaki, and F. Narita*,</p>
+              <p class="pub-title">“Evaluation of the inverse magnetostrictive effect in heat-treated Fe-Co wire/polymer composites,”</p>
+              <p class="pub-journal">
+                <a class="pub-link" href="https://doi.org/10.1002/mdp2.81" target="_blank" rel="noopener noreferrer">
+                  Material Design and Processing Communication, vol. 1, no. 5, article e81, pp. 1–8 (May 2019)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item">
+            <span class="number">08</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Yamazaki*, Y. Furuya, and W. Nakao,</p>
+              <p class="pub-title">“Experimental evaluation of domain wall dynamics by Barkhausen noise analysis in Fe30Co70 magnetostrictive alloy wire,”</p>
+              <p class="pub-journal">
+                <a class="pub-link" href="https://doi.org/10.1016/j.jmmm.2018.11.011" target="_blank" rel="noopener noreferrer">
+                  Journal of Magnetism and Magnetic Materials, vol. 475, pp. 240–248 (Apr. 2019)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <p class="section__subtitle2">2018年度以前</p>
+          <li class="pub-item">
+            <span class="number">07</span>
+            <div class="pub-body">
+              <p class="pub-authors">D. Shigeoka, T. Yamazaki, T. Ishikawa, K. Miike, K. Fujiwara, T. Ide, A. Oshima, T. Hashimoto, D. Aihara, K. Kanda, A. Usui, Y. Hosokai, H. Saito, and Y. Ichiyanagi*,</p>
+              <p class="pub-title">“Functionalization and Magnetic Relaxation of Ferrite Nanoparticles for Theranostics,”</p>
+              <p class="pub-journal">
+                <a class="pub-link" href="https://doi.org/10.1109/TMAG.2018.2845132" target="_blank" rel="noopener noreferrer">
+                  IEEE Transactions on Magnetics, vol. 54, no. 11, pp. 1–7 (Jul. 2018)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item">
+            <span class="number">06</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Yamazaki*, S. Morimoto, K. Hyodo, T. Ishikawa, and Y. Ichiyanagi,</p>
+              <p class="pub-title">“Effect of cobalt-doping on the magnetic properties and crystal structure of delafossite AgFeO<sub>2</sub> nanoparticles,”</p>
+              <p class="pub-journal">
+                <a class="pub-link" href="https://doi.org/10.1016/j.jallcom.2018.02.261" target="_blank" rel="noopener noreferrer">
+                  Journal of Alloys and Compounds, vol. 745, pp. 631–636 (May 2018)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item">
+            <span class="number">05</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Yamazaki*, T. Yamamoto, Y. Furuya, and W. Nakao,</p>
+              <p class="pub-title">“Magnetic and magnetostrictive properties in heat-treated Fe-Co wire for smart material/device,”</p>
+              <p class="pub-journal">
+                <a class="pub-link" href="https://doi.org/10.1299/mej.17-00569" target="_blank" rel="noopener noreferrer">
+                  Mechanical Engineering Journal, vol. 5, no. 2, article 17-00569, pp. 1–9 (Apr. 2018)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item">
+            <span class="number">04</span>
+            <div class="pub-body">
+              <p class="pub-authors">S. Morimoto, T. Ishikawa, K. Hyodo, T. Yamazaki, S. Taira, K. Tsuneyama, and Y. Ichiyanagi,</p>
+              <p class="pub-title">“Preparation and characterization of newly developed matrix using functional γ-Fe<sub>2</sub>O<sub>3</sub> nanoparticles for mass spectrometry in small molecules,”</p>
+              <p class="pub-journal">
+                <a class="pub-link" href="https://doi.org/10.1002/sia.6100" target="_blank" rel="noopener noreferrer">
+                  Surface and Interface Analysis, vol. 48, no. 11, pp. 1127–1131 (Nov. 2016)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item">
+            <span class="number">03</span>
+            <div class="pub-body">
+              <p class="pub-authors">K. Mori, M. Hachisu, K. Hyodo, S. Morimoto, T. Yamazaki, and Y. Ichiyanagi,</p>
+              <p class="pub-title">“Characterization of local structure and heat dissipation of iron oxide nanoparticles for magnetic hyperthermia treatment,”</p>
+              <p class="pub-journal">
+                <a class="pub-link" href="https://doi.org/10.14723/tmrsj.41.25" target="_blank" rel="noopener noreferrer">
+                  Transactions of the Materials Research Society of Japan, vol. 41, no. 1, pp. 25–28 (Mar. 2016)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item">
+            <span class="number">02</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Kondo, K. Mori, M. Hachisu, T. Yamazaki, D. Okamoto, M. Watanabe, K. Gonda, H. Tada, Y. Hamada, M. Takano, N. Ohuchi, and Y. Ichiyanagi,</p>
+              <p class="pub-title">“AC Magnetic Susceptibility and Heat Dissipation by Mn<sub>1−x</sub>Zn<sub>x</sub>Fe<sub>2</sub>O<sub>4</sub> Nanoparticles for Hyperthermia Treatment,”</p>
+              <p class="pub-journal">
+                <a class="pub-link" href="https://doi.org/10.1063/1.4919327" target="_blank" rel="noopener noreferrer">
+                  Journal of Applied Physics, vol. 117, no. 17, article 17D157, pp. 1–4 (May 2015)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item">
+            <span class="number">01</span>
+            <div class="pub-body">
+              <p class="pub-authors">K. Mori, M. Hachisu, T. Yamazaki, and Y. Ichiyanagi,</p>
+              <p class="pub-title">“Magnetic properties of CuFe<sub>1−x</sub>Cr<sub>x</sub>O<sub>2</sub> nanoparticles surrounded by amorphous SiO<sub>2</sub>,”</p>
+              <p class="pub-journal">
+                <a class="pub-link" href="https://doi.org/10.1063/1.4919328" target="_blank" rel="noopener noreferrer">
+                  Journal of Applied Physics, vol. 117, no. 17, article 17C756, pp. 1–4 (Apr. 2015)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+        </ol>
+      </section>
+
+      <section id="proceedings" class="section1 section-divider2 pub-section is-hidden" data-cat="proceedings">
+        <div class="section-head section-head--row">
+          <div>
+            <p class="eyebrow">Proceedings</p>
+            <h3 class="title">国際会議論文</h3>
+          </div>
+          <div class="pub-count">Number of proceedings : <strong>13</strong></div>
+        </div><br>
+        <ol class="pub-list">
+
+          <p class="section__subtitle2">2025年度</p>
+          <li class="pub-item"><span class="number">13</span>
+            <div class="pub-body">
+              <p class="pub-authors">K. Nakazawa, K. Niitsu, and T. Yamazaki,</p>
+              <p class="pub-title">“Observation of Crystallization Process in Fe-base Amorphous via 5D-STEM,”</p>
+              <p class="pub-journal"><a class="pub-link" href="https://doi.org/10.1093/mam/ozaf048.797" target="_blank">
+                Microscopy and Microanalysis, vol. 31, no. 7, pp. 1551–1552 (Jul. 2025)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <p class="section__subtitle2">2024年度</p>
+          <li class="pub-item"><span class="number">12</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Yamazaki, A.L. Foggiatto, R. Toyama, K. Fuku, K. Yamagami, H. Ohsawa, T. Ohkochi, Y. Iwasaki, Y. Sakuraba, and M. Kotsugi,</p>
+              <p class="pub-title">“Unveiling High Spin Polarization in Mn-Rich Co-Mn-Ge Heusler Alloys via High-Throughput XMCD Analysis,”</p>
+              <p class="pub-journal">The 2024 MRS Fall Meeting, abstract book pp. 1098–1099 (Dec. 2024).</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">11</span>
+            <div class="pub-body">
+              <p class="pub-authors">M. Okada, T. Yamazaki, A.L. Foggiatto, K. Fuku, and M. Kotsugi,</p>
+              <p class="pub-title">“Tuning Ferrimagnetic Response in Compositionally Spread Gd-Fe-B Amorphous Thin Films,”</p>
+              <p class="pub-journal">The 2024 MRS Fall Meeting, abstract book pp. 1482–1483 (Dec. 2024).</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">10</span>
+            <div class="pub-body">
+              <p class="pub-authors">A.L. Foggiatto, R. Nagaoka, M. Taniwaki, T. Yamazaki, T. Ogasawara, I. Obayashi, Y. Hiraoka, C. Mitsumata, and M. Kotsugi,</p>
+              <p class="pub-title">“Analysis of the high-frequency magnetization process through machine learning and topological data techniques,”</p>
+              <p class="pub-journal"><a class="pub-link" href="https://doi.org/10.1109/INTERMAGShortPapers61879.2024.10576971" target="_blank">
+                2024 IEEE International Magnetic Conference - Short papers, pp. 1–2 (Jul. 2024)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">9</span>
+            <div class="pub-body">
+              <p class="pub-authors">A.L. Foggiatto, S. Sato, R. Seni, T. Yamazaki, C. Mitsumata, M. Kotsugi,</p>
+              <p class="pub-title">“Analyzing Magnetic Domain Structures in Ferromagnetic Shape Memory Alloys Through Machine Learning,”</p>
+              <p class="pub-journal">The 22nd International Conference on Magnetism (ICM2024), 5.06, 2179 (Jul. 2024).</p>
+            </div>
+          </li>
+
+          <p class="section__subtitle2">2023年度以前</p>
+          <li class="pub-item"><span class="number">8</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Kawasaki, T. Yamazaki, A.L. Foggiatto, K. Fuku, R. Toyama, V.K. Kushwaha, Y. Sakuraba, Y. Iwasaki, Y. Kotani, T. Ohkochi, K. Higashi, N. Kawamura, and M. Kotsugi,</p>
+              <p class="pub-title">“Origin of magnetic moment increase in (Fe75Co25)100-xIrx studied by magnetic circular dichroism (MCD),”</p>
+              <p class="pub-journal"><a class="pub-link" href="https://doi.org/10.14886/jvss.2023.0_2Bp08" target="_blank">
+                Annual Meeting of the Japan Society of Vacuum and Surface Science 2023 (JVSS2023), 2Bp08, pp. 1–1 (Nov. 2023)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">7</span>
+            <div class="pub-body">
+              <p class="pub-authors">M. Taniwaki, A.L. Foggiatto, C. Mitsumata, T. Yamazaki, I. Obayashi, Y. Hiraoka, Y. Igarashi, Y. Mizutori, S. A. Hossein, T. Ohkubo, and M. Kotsugi,</p>
+              <p class="pub-title">“Analysis of Magnetization Reversal Process of Non-Oriented Electromagnetic Steel Sheet by Extended Landau Free Energy Model,”</p>
+              <p class="pub-journal"><a class="pub-link" href="https://doi.org/10.1109/INTERMAGShortPapers58606.2023.10228817" target="_blank">
+                2023 IEEE International Magnetic Conference - Short papers, pp. 1–2 (Sep. 2023)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">6</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Takahashi, J. Sakurai, C. Oka, H. Tsuji, T. Yamazaki, S. Hata, R. Morisaki, T. Akao, and N. Ohno,</p>
+              <p class="pub-title">“New Long Life Fast Atom Beam Source for Surface Activated Bonding,”</p>
+              <p class="pub-journal"><a class="pub-link" href="https://doi.org/10.1109/LTB-3D53950.2021.9598414" target="_blank">
+                2021 7th International Workshop on Low Temperature Bonding for 3D Integration (LTB-3D), pp. 8–8 (Oct. 2021)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">5</span>
+            <div class="pub-body">
+              <p class="pub-authors">M. Murase, K. Nambara, T. Yamazaki, C. Oka, S. Hata, and J. Sakurai,</p>
+              <p class="pub-title">“Fabrication and Evaluation of a Novel Actuator for Reaction Force Variable Passive-Type Tactile Displays,”</p>
+              <p class="pub-journal"><a class="pub-link" href="https://doi.org/10.1109/Transducers50396.2021.9495608" target="_blank">
+                2021 21st International Conference on Solid-State Sensors, Actuators and Microsystems (Transducers), pp. 663–666 (Jun. 2021)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">4</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Yamazaki, Y. Furuya, W. Nakao, and S. Hata,</p>
+              <p class="pub-title">“Novel dynamic force sensing system using magnetostrictive energy harvester,”</p>
+              <p class="pub-journal"><a class="pub-link" href="https://doi.org/10.1109/MHS48134.2019.9249081" target="_blank">
+                Micro-NanoMechatronics and Human Science (MHS2020), 2071, pp. 281–284 (Nov. 2020)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">3</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Yamazaki, T. Yamamoto, Y. Furuya, W. Nakao,</p>
+              <p class="pub-title">“Magnetic and magnetostrictive properties in heat-treated Co-Fe wire for design of smart material/device,”</p>
+              <p class="pub-journal">Proceedings of the 2017 International Conference on Materials & Processing, 4427, pp. 1–5 (Jun. 2017).</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">2</span>
+            <div class="pub-body">
+              <p class="pub-authors">K. Hyodo, S. Morimoto, T. Yamazaki, T. Ishikawa, and Y. Ichiyanagi,</p>
+              <p class="pub-title">“Local structure analysis of diluted magnetic semiconductor Co and Al co-doped ZnO nanoparticles,”</p>
+              <p class="pub-journal"><a class="pub-link" href="https://doi.org/10.1063/1.4941203" target="_blank">
+                Proceedings of the American Institute of Physics, vol. 1709, no. 1 article 020004, pp. 1–8 (Feb. 2016)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">1</span>
+            <div class="pub-body">
+              <p class="pub-authors">M. Hachisu, K. Mori, K. Hyodo, S. Morimoto, T. Yamazaki, and Y. Ichiyanagi,</p>
+              <p class="pub-title">“Room-temperature ferromagnetism in Co and Nb co-doped TiO2 nanoparticles,”</p>
+              <p class="pub-journal"><a class="pub-link" href="https://doi.org/10.1063/1.4913539" target="_blank">
+                AIP Conference Proceedings, vol. 1649, no. 1, pp. 20–26 (Feb. 2015)
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+
+
+
+        </ol>
+      </section>
+
+      <section id="books" class="section1 section-divider2 pub-section is-hidden" data-cat="books">
+        <div class="section-head section-head--row">
+          <div>
+            <p class="eyebrow">Books</p>
+            <h3 class="title">著書</h3>
+          </div>
+          <div class="pub-count">Number of Books : <strong>0</strong></div>
+        </div><br>
+        <ol class="pub-list">
+          <!-- <li class="pub-item"><span class="number">3</span>
+            <div class="pub-body">
+              <p class="pub-authors">M. Kotsugi, T. Yamazaki, T. Ohkochi, A.L. Foggiatto, and C. Mitsumata,</p>
+              <p class="pub-title">“Measurement Informatics - Observation, Understanding, and Design in Materials Science and Engineering,”</p>
+              <p class="pub-journal">Springer Nature, in preparation, 2027.</a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">2</span>
+            <div class="pub-body">
+              <p class="pub-authors">小嗣 真人，山崎貴大，A.L. Foggiatto，遠山 貴巳，渡邉 敏行,</p>
+              <p class="pub-title">「デザイン思考ではじめるマテリアルズ・インフォマティクス」,</p>
+              <p class="pub-journal">共立出版，出版準備中，2026年1月.</a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">1</span>
+            <div class="pub-body">
+              <p class="pub-authors">公益社団法人日本磁気学会編（山崎 貴大他）,</p>
+              <p class="pub-title">「みんなが知りたいシリーズ 磁石と磁気の疑問50」,</p>
+              <p class="pub-journal">成山堂書店，出版準備中，2026.</a>
+              </p>
+            </div>
+          </li> -->
+        </ol>
+      </section>
+
+      <section id="reviews" class="section1 section-divider2 pub-section is-hidden" data-cat="reviews">
+        <div class="section-head section-head--row">
+          <div>
+            <p class="eyebrow">Reviews</p>
+            <h3 class="title">総説・解説</h3>
+          </div><br>
+          <div class="pub-count">Number of Reviews : <strong>5</strong></div>
+        </div>
+        <ol class="pub-list">
+          <li class="pub-item"><span class="number">5</span>
+            <div class="pub-body">
+              <p class="pub-authors">山崎 貴大，杉田 涼介，小嗣 真人，</p>
+              <p class="pub-title">「ハーフメタルホイスラー合金の XMCD 測定と機械学習を活用したスペクトル解析」,</p>
+              <p class="pub-journal"><a class="pub-link" href="https://ken.ieice.org/ken/paper/20250307EcJz/" target="_blank">
+                電子情報通信学会技術研究報告, vol. 124, no. 423, MRIS2024-37, pp. 17–20, 2025年3月
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">4</span>
+            <div class="pub-body">
+              <p class="pub-authors">山崎 貴大，</p>
+              <p class="pub-title">「メリーランド滞在記」,</p>
+              <p class="pub-journal"><a class="pub-link" href="https://member.ceramic.or.jp/journal/vol_no/58/09/58_09.html" target="_blank">
+                日本セラミックス協会「セラミックス」, 第58巻第9号, 2023年9月
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">3</span>
+            <div class="pub-body">
+              <p class="pub-authors">山崎 貴大，</p>
+              <p class="pub-title">「高耐食性ナノ結晶合金のコンビナトリアル合成」,</p>
+              <p class="pub-journal"><a class="pub-link" href="https://doi.org/10.2320/materia.62.600" target="_blank">
+                日本金属学会「まてりあ」, 第62巻第9号, pp. 600–605, 2023年9月
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">2</span>
+            <div class="pub-body">
+              <p class="pub-authors">森本 翔大，兵藤 公美典，山崎 貴大，石川 智也，平 修，常山 幸一，一柳 優子，</p>
+              <p class="pub-title">「機能化した磁性ナノ微粒子を用いたマウス肝臓質量分析イメージング」,</p>
+              <p class="pub-journal"><a class="pub-link" href="https://plaza.umin.ac.jp/nano/bulletin_14-1.html" target="_blank">
+                ナノ学会 “The Bulletin of the Nano Science and Technology”, 第14巻, 第1号, pp. 1–6, 2015年10月
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">1</span>
+            <div class="pub-body">
+              <p class="pub-authors">山崎 貴大，兵藤 公美典，森本 翔大，石川 智也，一柳 優子，</p>
+              <p class="pub-title">「Coドープ効果によるAgFeO<sub>2</sub> ナノ微粒子の磁気特性と局所構造解析」,</p>
+              <p class="pub-journal"><a class="pub-link" href="https://plaza.umin.ac.jp/nano/bulletin_14-1.html" target="_blank">
+                ナノ学会 “The Bulletin of the Nano Science and Technology”, 第14巻, 第1号, pp. 25–29, 2015年10月
+                <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+              </p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section id="invited" class="section1 section-divider2 pub-section is-hidden" data-cat="invited">
+        <div class="section-head section-head--row">
+          <div>
+            <p class="eyebrow">Invited Talks</p>
+            <h3 class="title">招待講演</h3>
+          </div>
+          <div class="pub-count">Number of Invited Talks : <strong>9</strong></div>
+        </div><br>
+        <ol class="pub-list">
+
+          <p class="section__subtitle2">2025年度</p>
+          <li class="pub-item"><span class="number">9</span>
+            <div class="pub-body">
+              <p class="pub-authors">山崎 貴大，</p>
+              <p class="pub-title">「放射光分光による Co 基ホイスラー合金の電子状態解析と輸送特性」,</p>
+              <p class="pub-journal">次世代材料の創製に向けたジョイントセミナー2025，東京理科大学，2025年8月28日.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">8</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Yamazaki,</p>
+              <p class="pub-title">“Machine Learning-Assisted Synchrotron X-ray Analysis of Heusler Alloys,”</p>
+              <p class="pub-journal">The 278th Special Center for Magnetic and Spintronic Materials (CMSM)-DXMag joint seminar, Tsukuba, Japan, May 22, 2025.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">7</span>
+            <div class="pub-body">
+              <p class="pub-authors">S. Tamaru and T. Yamazaki,</p>
+              <p class="pub-title">“Study of domain wall dynamics in soft magnetic materials using magnetic Barkhausen noise measurements,”</p>
+              <p class="pub-journal">International Conference of Asian Union of Magnetics Societies (IcAUMS) 2025, Okinawa Convention Center, Okinawa, Japan, Apr. 21–24, 2025.</p>
+            </div>
+          </li>
+
+          <p class="section__subtitle2">2024年度</p>
+          <li class="pub-item"><span class="number">6</span>
+            <div class="pub-body">
+              <p class="pub-authors">山崎 貴大，杉田 涼介，小嗣 真人，</p>
+              <p class="pub-title">「ハーフメタルホイスラー合金のXMCD測定と機械学習を活用したスペクトル解析」,</p>
+              <p class="pub-journal">磁気記録・情報ストレージ研究会，名古屋大学 (MRIS, IEE-MAG)，2025年3月7日.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">5</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Yamazaki,</p>
+              <p class="pub-title">“Machine Learning Assisted XMCD Spectra Analysis in High Spin-Polarized Co<sub>2</sub>MnGa<sub>x</sub>Ge<sub>1-x</sub> Heusler Alloys,”</p>
+              <p class="pub-journal">2nd NSF Global Center Meeting, Morito memorial hall, Tokyo, Dec 20, 2024.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">4</span>
+            <div class="pub-body">
+              <p class="pub-authors">田丸 慎吾，山崎 貴大，</p>
+              <p class="pub-title">「磁気バルクハウゼンノイズ(MBN)測定による軟磁性体中の磁壁ダイナミクスの解析」,</p>
+              <p class="pub-journal">日本金属学会第2分野主催「情報・デバイス」と「材料」研究会，東北大学，2024年11月8日.</p>
+            </div>
+          </li>
+
+          <p class="section__subtitle2">2023年度以前</p>
+          <li class="pub-item"><span class="number">3</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Yamazaki,</p>
+              <p class="pub-title">“Sustainable energy harvesting using functional magnetic materials,”</p>
+              <p class="pub-journal">2023 Japan-America Frontiers of Engineering (JAFOE) Symposium, P53, Tokyo, Japan, Jul. 17–20, 2023.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">2</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Yamazaki, K. Sano, S. Hata, and M. Kotsugi,</p>
+              <p class="pub-title">“Design of large and sensitive magnetostrictive composites for vibration energy harvesters,”</p>
+              <p class="pub-journal">Integrated Nanocomposites for Thermal and Kinetic Energy Harvesting (INTAKE) Seminar 2022, Tohoku University, Nov. 22, 2022.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">1</span>
+            <div class="pub-body">
+              <p class="pub-authors">山崎 貴大，</p>
+              <p class="pub-title">「センサ応用に向けた磁歪材料のバルクハウゼンノイズ解析」,</p>
+              <p class="pub-journal">マテリアルズ・インフォマティクス懇談会第4回研究会，東京，2019年11月1日.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section id="intl-talks" class="section1 section-divider2 pub-section is-hidden" data-cat="intl-talks">
+        <div class="section-head section-head--row">
+          <div>
+            <p class="eyebrow">International Conference</p>
+            <h3 class="title">国際会議発表</h3>
+          </div>
+          <div class="pub-count">Number of International presentations : <strong>49</strong></div>
+        </div><br>
+        <ol class="pub-list">
+
+          <p class="section__subtitle2">2025年度</p>
+          <li class="pub-item"><span class="number">52</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Yamazaki, A.L. Foggiatto, Y. Hashimoto, T. Matsushita, and M. Kotsugi,</p>
+              <p class="pub-title">“Machine Learning-Assisted Synchrotron X-ray Analysis of Atomic Structures in Heusler Alloys,”</p>
+              <p class="pub-journal">Changwon–YNU Symposium 2026, Changwon National University, Changwon, Korea, Feb. 22, 2026.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">51</span>
+            <div class="pub-body">
+              <p class="pub-authors">S. Takase, D. Ishikawa, K. Fuku, Y. Miura, Y. Igarashi, Y. Iwasaki, Y. Sakuraba, K. Yaji, A.L. Foggiatto, A. Varadwaj, T. Yamazaki, N. Nagamura, and M. Kotsugi,</p>
+              <p class="pub-title">“Predicting Spin-Dependent Properties from Spin-Unresolved Fermi Surface Data via Machine Learning,”</p>
+              <p class="pub-journal">The 2025 Materials Research Society (MRS) Fall Meeting &amp; Exhibit, MT03.09.15, Boston, MA, US, Nov. 30–Dec. 5, 2025, Poster.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">50</span>
+            <div class="pub-body">
+              <p class="pub-authors">K. Nishioka, T. Ogasawara, R. Nagaoka, M. Taniwaki, A.L. Foggiatto, T. Yamazaki, C. Mitsumata, and M. Kotsugi,</p>
+              <p class="pub-title">“Topological Data Analysis of Iron Loss and Magnetization Dynamics of Fe-Based Amorphous and Nanocrystalline Ribbons,”</p>
+              <p class="pub-journal">The 2025 Materials Research Society (MRS) Fall Meeting &amp; Exhibit, MT01.05.05, Boston, MA, US, Nov. 30–Dec. 5, 2025, Poster.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">49</span>
+            <div class="pub-body">
+              <p class="pub-authors">Y. Shima, T. Yamazaki, S. Tamaru, C. Mitsumata, A.L. Foggiatto, and M. Kotsugi,</p>
+              <p class="pub-title">“Analysis of Domain Wall Pinning and Anomalous Eddy Current Losses via Multiscale Magnetic Simulations,”</p>
+              <p class="pub-journal">The 70th Annual Conference on Magnetism and Magnetic Materials (MMM2025), Palm Beach, Florida, US, Oct. 27–31, 2025, Oral.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">48</span>
+            <div class="pub-body">
+              <p class="pub-authors">K. Nakazawa, K. Niitsu, and T. Yamazaki,</p>
+              <p class="pub-title">“Observation of Crystallization Process in Fe-base Amorphous via 5D-STEM,”</p>
+              <p class="pub-journal">Microscopy and Microanalysis (M&M) 2025, P08.2, Salt Lake City, UT, US, Jul. 27–31, 2025, Oral.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">47</span>
+            <div class="pub-body">
+              <p class="pub-authors">R. Nagaoka, A.L. Foggiatto, T. Yamazaki, C. Mitsumata, and M. Kotsugi,</p>
+              <p class="pub-title">“Machine Learning Analysis of Temperature- and Frequency-Dependent Self-Organization Mechanisms in YIG Magnetic Domain Structures,”</p>
+              <p class="pub-journal">International Conference of Asian Union of Magnetics Societies (IcAUMS) 2025, 22aPS-2, Okinawa Convention Center, Okinawa, Japan, Apr. 21–24, 2025, Poster.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">46</span>
+            <div class="pub-body">
+              <p class="pub-authors">S. Tamaru and T. Yamazaki,</p>
+              <p class="pub-title">“Study of domain wall dynamics in soft magnetic materials using magnetic Barkhausen noise measurements,”</p>
+              <p class="pub-journal">International Conference of Asian Union of Magnetics Societies (IcAUMS) 2025, 22pD-4, Okinawa Convention Center, Okinawa, Japan, Apr. 21–24, 2025, Oral.</p>
+            </div>
+          </li>
+
+          <p class="section__subtitle2">2024年度</p>
+          <li class="pub-item"><span class="number">45</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Yamazaki,</p>
+              <p class="pub-title">“Machine Learning Assisted XMCD Spectra Analysis in High Spin-Polarized Co<sub>2</sub>MnGa<sub>x</sub>Ge<sub>1-x</sub> Heusler Alloys,”</p>
+              <p class="pub-journal">2nd NSF Global Center Meeting, Morito memorial hall, Tokyo, Japan, Dec. 20, 2024, Oral.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">44</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Yamazaki, A.L. Foggiatto, R. Toyama, K. Fuku, K. Yamagami, H. Ohsawa, T. Ohkochi, Y. Iwasaki, Y. Sakuraba, and M. Kotsugi,</p>
+              <p class="pub-title">“Unveiling High Spin Polarization in Mn-Rich Co-Mn-Ge Heusler Alloys via High-Throughput XMCD Analysis,”</p>
+              <p class="pub-journal">The 2024 Materials Research Society (MRS) Fall Meeting & Exhibit, QT02.14.03, Boston, US, Dec. 1–6, 2024, Oral.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">43</span>
+            <div class="pub-body">
+              <p class="pub-authors">M. Okada, T. Yamazaki, A.L. Foggiatto, K. Fuku, and M. Kotsugi,</p>
+              <p class="pub-title">“Tuning Ferrimagnetic Response in Compositionally Spread Gd-Fe-B Amorphous Thin Films,”</p>
+              <p class="pub-journal">The 2024 Materials Research Society (MRS) Fall Meeting & Exhibit, SF05.07.01, Boston, US, Dec. 1–6, 2024, Poster.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">42</span>
+            <div class="pub-body">
+              <p class="pub-authors">A.L. Foggiatto, S. Sato, R. Seni, T. Yamazaki, C. Mitsumata, and M. Kotsugi,</p>
+              <p class="pub-title">“Analyzing Magnetic Domain Structures in Ferromagnetic Shape Memory Alloys Through Machine Learning,”</p>
+              <p class="pub-journal">The 22nd International Conference on Magnetism (ICM2024), T 5.06, Bologna, Italy, Jun. 30–Jul. 5, 2024, Oral.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">41</span>
+            <div class="pub-body">
+              <p class="pub-authors">A.L. Foggiatto, R. Nagaoka, M. Taniwaki, T. Yamazaki, T. Ogasawara, I. Obayashi, Y. Hiraoka, C. Mitsumata, and M. Kotsugi,</p>
+              <p class="pub-title">“Analysis of the high-frequency magnetization process through machine learning and topological data techniques,”</p>
+              <p class="pub-journal">2024 IEEE International Magnetic Conference (INTERMAG), AP-11, Rio de Janeiro, Brazil, May 5–10, 2024, Oral.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">40</span>
+            <div class="pub-body">
+              <p class="pub-authors">R. Nagaoka, K. Masuzawa, A.L. Foggiatto, T. Yamazaki, I. Obayashi, Y. Hiraoka, C. Mitsumata, and M. Kotsugi,</p>
+              <p class="pub-title">“Interpretation in physics on magnetic domain structure dynamics in soft magnetic materials using feature extended energy landscape,”</p>
+              <p class="pub-journal">2024 IEEE International Magnetic Conference (INTERMAG), AP-09, Rio de Janeiro, Brazil, May 5–10, 2024, Oral.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">39</span>
+            <div class="pub-body">
+              <p class="pub-authors">S. Tamaru and T. Yamazaki,</p>
+              <p class="pub-title">“Measurement of Magnetic Barkhausen Noise on Alloy Foils Used for Inductor Core in Power Electronics Applications,”</p>
+              <p class="pub-journal">2024 IEEE International Magnetic Conference (INTERMAG), GF-07, Rio de Janeiro, Brazil, May 5–10, 2024, Oral.</p>
+            </div>
+          </li>
+
+          <p class="section__subtitle2">2023年度以前</p>
+          <li class="pub-item"><span class="number">38</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Kawasaki, T. Yamazaki, A.L. Foggiatto, K. Fuku, R. Toyama, V.K. Kushwaha, Y. Sakuraba, Y. Iwasaki, Y. Kotani, T. Ohkochi, K. Higashi, N. Kawamura, and M. Kotsugi,</p>
+              <p class="pub-title">“Origin of magnetic moment increase in (Fe<sub>75</sub>Co<sub>25</sub>)<sub>100-x</sub>Ir<sub>x</sub> studied by magnetic circular dichroism (MCD),”</p>
+              <p class="pub-journal">Annual Meeting of the Japan Society of Vacuum and Surface Science (JVSS) 2023, 2Bp08, Nagoya, Japan, Oct. 31–Nov. 2, 2023, Oral.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">37</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Yamazaki,</p>
+              <p class="pub-title">“Sustainable energy harvesting using functional magnetic materials,”</p>
+              <p class="pub-journal">2023 Japan-America Frontiers of Engineering (JAFOE) Symposium, P53, Tokyo, Japan, Jul. 17–20, 2023, Poster.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">36</span>
+            <div class="pub-body">
+              <p class="pub-authors">K. Omae, T. Yamazaki, C. Oka, J. Sakurai, and S. Hata,</p>
+              <p class="pub-title">“Grain Size Estimation Based on Magnetic Barkhausen Noise Analysis Using Machine Learning,”</p>
+              <p class="pub-journal">JMSE International Conference on Leading Edge Manufacturing/Materials & Processing (LEM&P2023), P06-1, Rutgers University, New Brunswick, NJ, US, Jun. 12–16, 2023, Poster.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">35</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Kato, R. Morisaki, T. Yamazaki, C. Oka, J. Sakurai, and S. Hata,</p>
+              <p class="pub-title">“Prototype of parallel plate type fast atom beam source and improvement of irradiation characteristics,”</p>
+              <p class="pub-journal">JMSE International Conference on Leading Edge Manufacturing/Materials and Processing (LEM&P2023), P03-3, Rutgers University, New Brunswick, NJ, US, Jun. 12–16, 2023, Oral.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">34</span>
+            <div class="pub-body">
+              <p class="pub-authors">A.L. Foggiatto, Y. Mizutori, T. Yamazaki, S. Sato, K. Masuzawa, R. Nagaoka, M. Taniwaki, S. Fujieda, S. Suzuki, K. Ishiyama, T. Fukuda, Y. Igarashi, C. Mitsumata, and M. Kotsugi,</p>
+              <p class="pub-title">“Visualization of the Magnetostriction Mechanism Using Machine Learning,”</p>
+              <p class="pub-journal">2023 IEEE International Magnetic Conference (INTERMAG), FQ-04 (YPA-04), Tohoku University, May 15–19, 2023, Poster.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">33</span>
+            <div class="pub-body">
+              <p class="pub-authors">M. Taniwaki, F.L. Alexandre, C. Mitsumata, T. Yamazaki, I. Obayashi, Y. Hiraoka, Y. Igarashi, Y. Mizutori, S. A. Hossein, T. Ohkubo, and M. Kotsugi,</p>
+              <p class="pub-title">“Analysis of Magnetization Reversal Process of Non-Oriented Electromagnetic Steel Sheet by Extended Landau Free Energy Model,”</p>
+              <p class="pub-journal">2023 IEEE International Magnetic Conference (INTERMAG), HC-07 (YOA-10), Tohoku University, May 15–19, 2023, Oral.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">32</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Yamazaki, K. Sano, and S. Hata,</p>
+              <p class="pub-title">“Design of large and sensitive magnetostrictive composites for vibration energy harvesters,”</p>
+              <p class="pub-journal">2022 Integrated Nanocomposites for Thermal and Kinetic Energy Harvesting (INTAKE), 02, Nov. 18–22, 2022, Oral.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">31</span>
+            <div class="pub-body">
+              <p class="pub-authors">K. Sano, C. Oka, J. Sakurai, T. Yamazaki, and S. Hata,</p>
+              <p class="pub-title">“Al addition to Fe-based nanocrystalline soft materials for large magnetostriction,”</p>
+              <p class="pub-journal">International Conference on Materials & Processing 2022 (ICM&P 2022), Th-1C-3, Okinawa Shichoson Jichi Kaikan, Okinawa, Japan, Nov. 6–10, 2022, Oral.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">30</span>
+            <div class="pub-body">
+              <p class="pub-authors">K. Sano, T. Yamazaki, C. Oka, J. Sakurai, and S. Hata,</p>
+              <p class="pub-title">“Magnetostrictive Properties of Fe-Based Nanocrystalline Soft Magnetic Alloys with Ga Addition,”</p>
+              <p class="pub-journal">2023 IEEE International Magnetic Conference (INTERMAG), ED-03 (QOB-08), Tohoku University, May 15–19, 2023, Oral.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">29</span>
+            <div class="pub-body">
+              <p class="pub-authors">M. Murase, K. Nambara, T. Yamazaki, C. Oka, S. Hata, and J. Sakurai,</p>
+              <p class="pub-title">“Effect of tactile pin height on driving characteristics using high formable shape‐memory alloy for reaction force variable tactile displays,”</p>
+              <p class="pub-journal">International Conference on Materials and Processing 2022 (ICM&P 2022), P1-17, Okinawa, Japan, Nov. 6–10, 2022, Poster.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">28</span>
+            <div class="pub-body">
+              <p class="pub-authors">J. Xie, F. Haga, T. Yamazaki, C. Oka, S. Hata, and J. Sakurai,</p>
+              <p class="pub-title">“Controlling internal stress of Ni‐Nb‐Zr thin film amorphous alloy diaphragms by beta‐relaxation annealing,”</p>
+              <p class="pub-journal">International Conference on Materials and Processing 2022 (ICM&P 2022), P2-27, Okinawa, Japan, Nov. 6–10, 2022, Poster.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">27</span>
+            <div class="pub-body">
+              <p class="pub-authors">K. Omae, T. Yamazaki, C. Oka, J. Sakurai, and S. Hata,</p>
+              <p class="pub-title">“Wireless Strain Measurement Method Using Magnetic Barkhausen Noise Analysis,”</p>
+              <p class="pub-journal">International Conference on Materials and Processing 2022 (ICM&P 2022), Tu-3D-3, Okinawa, Japan, Nov. 6–10, 2022, Oral.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">26</span>
+            <div class="pub-body">
+              <p class="pub-authors">K. Sano, C. Oka, J. Sakurai, T. Yamazaki, and S. Hata,</p>
+              <p class="pub-title">“Al addition to Fe- based nanocrystalline soft materials for large magnetostriction,”</p>
+              <p class="pub-journal">International Conference on Materials and Processing 2022 (ICM&P 2022), Th-1C-3, Okinawa, Japan, Nov. 6–10, 2022, Oral.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">25</span>
+            <div class="pub-body">
+              <p class="pub-authors">S. Takase, T. Yamazaki, C. Oka, J. Sakurai, and S. Hata,</p>
+              <p class="pub-title">“Novel Measurement Method of Internal Stress in Thin Films Using Micro Spring Structure,”</p>
+              <p class="pub-journal">International Conference on Materials & Processing 2022 (ICM&P 2022), Tu-3D-2, Okinawa, Japan, Nov. 6–10, 2022, Oral.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">24</span>
+            <div class="pub-body">
+              <p class="pub-authors">K. Sato, T. Yamazaki, C. Oka, S. Hata, and J. Sakurai,</p>
+              <p class="pub-title">“Fabrication of high formable shape memory alloy nano cilium using thermal nanoimprint,”</p>
+              <p class="pub-journal">International Conference on Materials & Processing 2022 (ICM&P 2022), P1-13, Okinawa, Japan, Nov. 6–10, 2022, Poster.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">23</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Kato, R. Morisaki, T. Yamazaki, C. Oka, J. Sakurai, and S. Hata,</p>
+              <p class="pub-title">“Prototype of parallel plate type fast atom beam source,”</p>
+              <p class="pub-journal">International Conference on Materials & Processing 2022 (ICM&P 2022), P1-14, Okinawa, Japan, Nov. 6–10, 2022, Poster.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">22</span>
+            <div class="pub-body">
+              <p class="pub-authors">A. Montagnoli, T. Yamazaki, I. Takeuchi, and M. L. Young,</p>
+              <p class="pub-title">“Transformation Tunning of Shape Memory Alloys for Thermoelastic Active Regenerators with Giant ΔT,”</p>
+              <p class="pub-journal">19th U.S. National Congress on Theoretical and Applied Mechanics (USNC/TAM 2022), University of Texas, US, Jun. 19–24, 2022, Oral.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">21</span>
+            <div class="pub-body">
+              <p class="pub-authors">F. Haga, T. Yamazaki, C. Oka, S. Hata, and J. Sakurai,</p>
+              <p class="pub-title">“Investigation of mechanical properties of Ni-Nb-Zr thin film amorphous alloys after structural relaxation,”</p>
+              <p class="pub-journal">32nd 2021 International Symposium on Micro-Nano Mechatronics and Human Science (MHS2021), TA2-1 2141, Dec. 6–8, 2021, Oral (online).</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">20</span>
+            <div class="pub-body">
+              <p class="pub-authors">S. Inoue, T. Yamazaki, C. Oka, S. Hata, and J. Sakurai,</p>
+              <p class="pub-title">“Combinatorial search of new Ti-Ni-Hf high formable shape memory alloys,”</p>
+              <p class="pub-journal">32nd 2021 International Symposium on Micro-Nano Mechatronics and Human Science (MHS2021), Session TA2-1 2142, Dec. 6–8, 2021, Oral (online).</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">19</span>
+            <div class="pub-body">
+              <p class="pub-authors">S. Inoue, T. Yamazaki, C. Oka, S. Hata, J. Sakurai, and H. Hosoda,</p>
+              <p class="pub-title">“Combinatorial Searching of Ti-Ni-Hf High Formable Shape Memory Alloys for Medical Devices,”</p>
+              <p class="pub-journal">The 6th International Symposium on Biomedical Engineering (ISBE2021), V1-02, Dec. 2–3, 2021, Oral (online).</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">18</span>
+            <div class="pub-body">
+              <p class="pub-authors">R. Morisaki, T. Yamazaki, C. Oka, J. Sakurai, T. Akao, T. Takahashi, H. Tsuji, N. Ohno, and S. Hata,</p>
+              <p class="pub-title">“Characterization of Ar beam from the new fast atom beam source,”</p>
+              <p class="pub-journal">34th International Microprocesses and Nanotechnology Conference (MNC2021), 29A-4-3, Oct. 25–29, 2021, Oral (online).</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">17</span>
+            <div class="pub-body">
+              <p class="pub-authors">F. Haga, T. Yamazaki, C. Oka, S. Hata, Y. Hoshino, and J. Sakurai,</p>
+              <p class="pub-title">“Characteristics of Ni-Nb-Zr thin film amorphous alloy diaphragms annealed below crystallization temperature,”</p>
+              <p class="pub-journal">34th International Microprocesses and Nanotechnology Conference (MNC2021), P5-1, Oct. 25–29, 2021, Poster (online).</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">16</span>
+            <div class="pub-body">
+              <p class="pub-authors">R. Morisaki, J. Sakurai, C. Oka, T. Yamazaki, T. Akao, T. Takahashi, H. Tsuji, N. Ohno, and S. Hata,</p>
+              <p class="pub-title">“New Long Life Fast Atom Beam Source for Surface Activated Bonding,”</p>
+              <p class="pub-journal">2021 7th International Workshop on Low Temperature Bonding for 3D Integration (LTB-3D 2021), 5A-08, Oct. 5–7 and 11, 2021, Oral (online).</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">15</span>
+            <div class="pub-body">
+              <p class="pub-authors">M. Murase, K. Nambara, T. Yamazaki, C. Oka, S. Hata, and J. Sakurai,</p>
+              <p class="pub-title">“Fabrication and Evaluation of a Novel Actuator for Reaction Force Variable Passive-Type Tactile Displays,”</p>
+              <p class="pub-journal">2021 21st International Conference on Solid-State Sensors, Actuators and Microsystems (Transducers), B5-504a, Jun. 19–25, 2021, Poster (online).</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">14</span>
+            <div class="pub-body">
+              <p class="pub-authors">K. Sano, T. Tomita, C. Oka, J. Sakurai, S. Hata, and T. Yamazaki,</p>
+              <p class="pub-title">“New soft magnetostrictive materials design based on nanocrystalline/amorphous mixed-phase structure,”</p>
+              <p class="pub-journal">The 8th International Symposium on Organic and Inorganic Electronic Materials and Related Nanotechnologies (EM-NANO2021), P2-08, Jun. 1–3, 2021, Poster (online).</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">13</span>
+            <div class="pub-body">
+              <p class="pub-authors">K. Omae, C. Oka, J. Sakurai, S. Hata, and T. Yamazaki,</p>
+              <p class="pub-title">“Simpler Microstructural Estimation Using Machine Learning-assisted Magnetic Barkhausen Noise Analysis,”</p>
+              <p class="pub-journal">The 8th International Symposium on Organic and Inorganic Electronic Materials and Related Nanotechnologies (EM-NANO2021), P2-11, Jun. 1–3, 2021, Poster (online).</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">12</span>
+            <div class="pub-body">
+              <p class="pub-authors">R. Morisaki, J. Sakurai, C. Oka, T. Yamazaki, T. Hirai, T. Takahashi, H. Tsuji, N. Ohno, and S. Hata,</p>
+              <p class="pub-title">“Plasma analysis of the FAB source for the SAB process by PIC-MCC simulation,”</p>
+              <p class="pub-journal">33rd International Microprocesses and Nanotechnology Conference (MNC2020), 2020-12-2, Nov. 9–12, 2020, Oral (online).</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">11</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Yamazaki and S. Hata,</p>
+              <p class="pub-title">“Machine learning-based magnetic Barkhausen noise analysis for microstructure-property optimization,”</p>
+              <p class="pub-journal">Machine Learning for Materials Research Bootcamp 2019 & Workshop on Autonomous Materials Research (MLMR2019), University of Maryland, US, Aug. 8, 2019, Poster.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">10</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Yamazaki, Y. Furuya, W. Nakao, and S. Hata,</p>
+              <p class="pub-title">“Novel dynamic force sensing system using magnetostrictive energy harvester,”</p>
+              <p class="pub-journal">30th 2019 International Symposium on Micro-Nano Mechatronics and Human Science (MHS2019), 2071, Nagoya, Dec. 4, 2019, Oral.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">9</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Yamazaki, Y. Furuya, and W. Nakao,</p>
+              <p class="pub-title">“Barkhausen noise analysis on a high-magnetostrictive Fe-Co alloy for stress/accumulated damage sensors,”</p>
+              <p class="pub-journal">11th HOPE Meeting with Nobel Laureates, JP-12, Okinawa, Japan, Mar. 6, 2018, Poster.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">8</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Yamazaki, Y. Furuya, and W. Nakao,</p>
+              <p class="pub-title">“Barkhausen noise analysis in Fe-Co magnetostrictive alloy wire for monitoring stress and damage accumulation,”</p>
+              <p class="pub-journal">21st International Conference on Magnetism (ICM2018), Q7-11, San Francisco, US, Jul. 18, 2018, Poster.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">7</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Yamazaki, Y. Furuya, and W. Nakao,</p>
+              <p class="pub-title">“Magnetostriction and domain wall movement behavior in heat-treated Fe-Co wire for application of stress sensor,”</p>
+              <p class="pub-journal">The 15th International Conference on Advanced Materials, 3173, Kyoto, Japan, Aug. 28, 2017, Oral.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">6</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Yamazaki, T. Yamamoto, Y. Furuya, and W. Nakao,</p>
+              <p class="pub-title">“Magnetic and magnetostrictive properties in heat-treated Co-Fe wire for design of smart material/ device,”</p>
+              <p class="pub-journal">The 2017 International Conference on Materials & Processing, 4427, Los Angeles, US, Jun. 3, 2017, Oral.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">5</span>
+            <div class="pub-body">
+              <p class="pub-authors">K. Hyodo, S. Morimoto, T. Yamazaki, T. Ishikawa, and Y. Ichiyanagi,</p>
+              <p class="pub-title">“Local structure analysis of diluted magnetic semiconductor Co and Al co-doped ZnO nanoparticles,”</p>
+              <p class="pub-journal">The IRAGO Conference 2015, 1709, Aichi, Japan, Oct. 22–23, 2015, Oral.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">4</span>
+            <div class="pub-body">
+              <p class="pub-authors">S. Morimoto, T. Ishikawa, K. Hyodo, T. Yamazaki, S. Taira, K. Tsuneyama, and Y. Ichiyanagi,</p>
+              <p class="pub-title">“Mass spectrometry imaging of mouse liver using functional γ-Fe<sub>2</sub>O<sub>3</sub> nanoparticles,”</p>
+              <p class="pub-journal">10th International Symposium on Atomic Level Characterization for New Materials and Devices (ALC 2015), Matsue, Japan, Oct. 25–30, 2015, Oral.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">3</span>
+            <div class="pub-body">
+              <p class="pub-authors">M. Hachisu, K. Mori, K. Hyodo, S. Morimoto, T. Yamazaki, and Y. Ichiyanagi,</p>
+              <p class="pub-title">“Room-temperature ferromagnetism in Co and Nb co-doped TiO<sub>2</sub> nanoparticles,”</p>
+              <p class="pub-journal">The IRAGO Conference 2014, 1649, AIST, Tsukuba, Japan, Nov. 6–7, 2014, Oral.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">2</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Yamazaki and Y. Ichiyanagi,</p>
+              <p class="pub-title">“Analysis of Apoptosis and Necrosis by Magnetic Hyperthermia,”</p>
+              <p class="pub-journal">A3 Foresight 3rd Meeting, P15, Beijing, China, Jan. 19, 2015, Oral.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">1</span>
+            <div class="pub-body">
+              <p class="pub-authors">T. Yamazaki, K. Mori, M. Hachisu, S. Morimoto, K. Hyodo, and Y. Ichiyanagi,</p>
+              <p class="pub-title">“Synthesis of Co doped AgFeO<sub>2</sub> delafossite nanoparticles,”</p>
+              <p class="pub-journal">20th International Conference on Magnetism, TU. F-P10, Barcelona, Spain, Jul. 5–10, 2015, Poster.</p>
+            </div>
+          </li>
+
+
+
+
+
+        </ol>
+      </section>
+
+      <section id="domestic" class="section1 section-divider2 pub-section is-hidden" data-cat="domestic">
+        <div class="section-head section-head--row">
+          <div>
+            <p class="eyebrow">Domestic Conference</p>
+            <h3 class="title">国内学会発表</h3>
+          </div>
+          <div class="pub-count">Number of Domestic presentations : <strong>95</strong></div>
+        </div><br>
+        <ol class="pub-list">
+
+          <p class="section__subtitle2">2025年度</p>
+          <li class="pub-item"><span class="number">108</span>
+            <div class="pub-body">
+              <p class="pub-authors">長岡 竜之輔，山崎 貴大，A.L. Foggiatto，三俣 千春，小嗣 真人，</p>
+              <p class="pub-title">「拡張型自由エネルギーモデルによる磁区相図のデータ駆動解析」，</p>
+              <p class="pub-journal">2026年第73回応用物理学会春季学術講演会，xxxx，東京科学大学，2026年3月15-18日，口頭.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">107</span>
+            <div class="pub-body">
+              <p class="pub-authors">鯨井 海斗，西岡 宏祐，長岡 竜之輔，谷脇 三千輝，山崎 貴大，小笠原 剛，磯貝 直希，大竹 充，大林 一平，平岡 裕章，小嗣 真人，</p>
+              <p class="pub-title">「拡張型ランダウ自由エネルギーモデルによるナノ結晶軟磁性材料のエネルギー損失解析」，</p>
+              <p class="pub-journal">2026年第73回応用物理学会春季学術講演会，xxxx，東京科学大学，2026年3月15-18日，口頭.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">106</span>
+            <div class="pub-body">
+              <p class="pub-authors">森田 隆寛，山崎 貴大，島 侑一郎，野﨑 岳人，小嗣 真人，</p>
+              <p class="pub-title">「渦電流及び磁歪を考慮したマルチフィジックスシミュレーションによる余剰損解析」，</p>
+              <p class="pub-journal">2026年第73回応用物理学会春季学術講演会，xxxx，東京科学大学，2026年3月15-18日，ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">105</span>
+            <div class="pub-body">
+              <p class="pub-authors">長谷川 美晴，山崎 貴大，Alexandre Lira Foggiatto，髙瀨 颯一，石川 大地，松下 智裕，橋本 由介，山本 裕太，山神 光平，遠山 諒，桜庭 裕弥，岩崎 悠真，小嗣 真人，</p>
+              <p class="pub-title">「マルチモーダル計測とマルチモーダル機械学習解析によるCo₂MnₓGe₂₋ₓの構造と結合状態―AMR比の包括的解析」，</p>
+              <p class="pub-journal">2026年第73回応用物理学会春季学術講演会，xxxx，東京科学大学，2026年3月15-18日，口頭.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">104</span>
+            <div class="pub-body">
+              <p class="pub-authors">伊藤 慶，山崎 貴大，早川 聡，小嗣 真人，</p>
+              <p class="pub-title">「第一原理計算によるFe-Si合金の磁気弾性定数の組成依存性と電子論的起源」，</p>
+              <p class="pub-journal">2026年第73回応用物理学会春季学術講演会，xxxx，東京科学大学，2026年3月15-18日，ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">103</span>
+            <div class="pub-body">
+              <p class="pub-authors">高嶋 幸作，山崎 貴大，小嗣 真人，</p>
+              <p class="pub-title">「鉄系カルコゲナイド磁性体Fe₃₊ₓGaTe₂薄膜の相変化挙動とXMCD特性」，</p>
+              <p class="pub-journal">2026年第73回応用物理学会春季学術講演会，xxxx，東京科学大学，2026年3月15-18日，ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">102</span>
+            <div class="pub-body">
+              <p class="pub-authors">小野澤 由悟，山崎 貴大，吉川 大貴，塚本 新，小嗣 真人，</p>
+              <p class="pub-title">「希土類-遷移金属アモルファス合金薄膜における磁気モーメント秩序制御」，</p>
+              <p class="pub-journal">2026年第73回応用物理学会春季学術講演会，xxxx，東京科学大学，2026年3月15-18日，ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">101</span>
+            <div class="pub-body">
+              <p class="pub-authors">長谷川 礼佳，Arpita Varadwaj，Alexandre Lira Foggiatto，新部 正人，山崎 貴大，堀尾 眞史，安藤 康伸，近藤 剛弘，松田 巌，小嗣 真人，</p>
+              <p class="pub-title">「多様体学習による窒化ホウ素のXASスペクトルの自動解析」，</p>
+              <p class="pub-journal">第39回日本放射光学会年会・放射光科学合同シンポジウム，9C2-02，2026年1月7-9日，仙台，口頭.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">100</span>
+            <div class="pub-body">
+              <p class="pub-authors">石川 大地，福 健太郎，三浦 良雄，五十嵐 康彦，岩崎 悠真，桜庭 裕弥，矢治 光一郎，Alexandre Lira Foggiatto，山崎 貴大，永村 直佳，小嗣 真人，</p>
+              <p class="pub-title">「教師なし機械学習を用いたARPESデータからのトポロジカル電子物性の自動解析」，</p>
+              <p class="pub-journal">第39回日本放射光学会年会・放射光科学合同シンポジウム，9C2-03，2026年1月7-9日，仙台，口頭.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">99</span>
+            <div class="pub-body">
+              <p class="pub-authors">髙瀨 颯一，石川 大地，福 健太郎，三浦 良雄，五十嵐 康彦，岩崎 悠真，桜庭 裕弥，矢治 光一郎，Alexandre Lira Foggiatto，山崎 貴大，永村 直佳，小嗣 真人，</p>
+              <p class="pub-title">「Co基ホイスラー合金における異常輸送特性のフェルミ面データ駆動型解析」，</p>
+              <p class="pub-journal">第39回日本放射光学会年会・放射光科学合同シンポジウム，9C2-03，2026年1月7-9日，仙台，口頭.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">98</span>
+            <div class="pub-body">
+              <p class="pub-authors">S. Takase, D. Ishikawa, K. Fuku, Y. Miura, Y. Igarashi, Y. Iwasaki, Y. Sakuraba, K. Yaji, A.L. Foggiatto, A. Varadwaj, T. Yamazaki, N. Nagamura, M. Kotsugi,</p>
+              <p class="pub-title">Predicting and detecting spin-dependent properties from fermi surface data by Machine Learning,</p>
+              <p class="pub-journal">2025年日本表面真空学会学術講演会（JVSS2025），1P08，つくば国際会議場，2025年10月20-22日，ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">97</span>
+            <div class="pub-body">
+              <p class="pub-authors">D. Ishikawa, K. Fuku, Y. Miura, Y. Igarashi, Y. Iwasaki, Y. Sakuraba, K. Yaji, A.L. Foggiatto, A. Varadwaj, T. Yamazaki, N. Nagamura, M. Kotsugi,</p>
+              <p class="pub-title">Automated detection of topological features in fermi surfaces via interpretable machine learning,</p>
+              <p class="pub-journal">2025年日本表面真空学会学術講演会（JVSS2025），1P09，つくば国際会議場，2025年10月20-22日，ポスター, <strong>講演奨励賞</strong>.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">96</span>
+            <div class="pub-body">
+              <p class="pub-authors">R. Hasegawa, A. Varadwaj, A.L. Foggiatto, M. Niibe, T. Yamazaki, M. Horio, Y. Ando, T. Kondo, I. Matsuda, M. Kotsugi,</p>
+              <p class="pub-title">Unsupervised classification of boron nitride structures via UMAP of X-ray absorption spectra,</p>
+              <p class="pub-journal">2025年日本表面真空学会学術講演会（JVSS2025），1P19，つくば国際会議場，2025年10月20-22日，ポスター, <strong>講演奨励賞</strong>.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">95</span>
+            <div class="pub-body">
+              <p class="pub-authors">野﨑 岳人，山崎 貴大，A.L. Foggiatto，小嗣 真人，</p>
+              <p class="pub-title">「マイクロ磁気シミュレーションによる磁気弾性効果と磁化反転ダイナミクスの相関解析」，</p>
+              <p class="pub-journal">日本機械学会M&amp;M2025材料力学カンファレンス，OS1804，2025年11月10日-13日，熊本城ホール，口頭.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">94</span>
+            <div class="pub-body">
+              <p class="pub-authors">早川 聡，山崎 貴大，福 健太郎，Varadwaj Arpita，A.L. Foggiatto，小嗣 真人，</p>
+              <p class="pub-title">「第一原理計算による磁気弾性定数に及ぼす元素置換効果の理論的検討」，</p>
+              <p class="pub-journal">日本機械学会M&amp;M2025材料力学カンファレンス，OS0925，2025年11月10日-13日，熊本城ホール，口頭.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">93</span>
+            <div class="pub-body">
+              <p class="pub-authors">長岡 竜之輔，山崎 貴大，A.L. Foggiatto，小嗣 真人，</p>
+              <p class="pub-title">「周波数領域 LLG シミュレーションによるスピン波分波器の形状最適化」，</p>
+              <p class="pub-journal">第49回日本磁気学会学術講演会，16pPS-17，愛媛大学, 2025年9月16-19日，ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">92</span>
+            <div class="pub-body">
+              <p class="pub-authors">島 侑一郎，山崎 貴大，田丸 慎吾，三俣 千春，A.L. Foggiatto，小嗣 真人，</p>
+              <p class="pub-title">「マルチスケール磁気シミュレーションによるピニング現象と異常渦電流損失の関係構築」，</p>
+              <p class="pub-journal">第49回日本磁気学会学術講演会，17aPS-15，愛媛大学, 2025年9月16-19日，ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">91</span>
+            <div class="pub-body">
+              <p class="pub-authors">野﨑 岳人，山崎 貴大，A.L. Foggiatto，小嗣 真人，</p>
+              <p class="pub-title">「マイクロ磁気シミュレーションによる磁歪分布および磁化反転機構の解析」，</p>
+              <p class="pub-journal">第49回日本磁気学会学術講演会，17aPS-2，愛媛大学，2025年9月16-19日，ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">90</span>
+            <div class="pub-body">
+              <p class="pub-authors">山崎 貴大，</p>
+              <p class="pub-title">「放射光分光によるCo基ホイスラー合金の電子状態解析と輸送特性」，</p>
+              <p class="pub-journal">次世代材料の創製に向けたJoint senimor 2025，01，千葉，2025年8月28日，口頭．</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">89</span>
+            <div class="pub-body">
+              <p class="pub-authors">中澤 克昭，新津 甲大，山崎 貴大，</p>
+              <p class="pub-title">「5D-STEMを用いたFe基アモルファス合金からの結晶化過程観察」，</p>
+              <p class="pub-journal">日本顕微鏡学会第81回学術講演会，1A_IM-1_13，福岡国際会議場，2025年6月9日-11日，口頭．</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">88</span>
+            <div class="pub-body">
+              <p class="pub-authors">山崎 貴大，</p>
+              <p class="pub-title">「高時間分解磁気計測システムの開発とデータ駆動解析」，</p>
+              <p class="pub-journal">革新的パワエレ第3回中堅・若手意見交換会，2-03，三菱総合研究所，2025年5月9日，口頭.</p>
+            </div>
+          </li>
+
+          <p class="section__subtitle2">2024年度</p>
+          <li class="pub-item"><span class="number">87</span>
+            <div class="pub-body">
+              <p class="pub-authors">高嶋 幸作, 山崎 貴大, C.Y. Lee, A.L. Foggiatto, Ichiro Takeuchi, 小嗣 真人，</p>
+              <p class="pub-title">「鉄系カルコゲナイド磁性体Fe3GaTe2薄膜の相変化に伴う磁気応答特性」，</p>
+              <p class="pub-journal">第72回応用物理学会春季学術講演会，15p-P07-23, 東京理科大学，2025年3月14日-17日，15p-P07-23，ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">86</span>
+            <div class="pub-body">
+              <p class="pub-authors">中澤 克昭，新津 甲大，山崎 貴大，</p>
+              <p class="pub-title">「5D-STEM法によるFe基アモルファス合金のナノ結晶化過程の観察」，</p>
+              <p class="pub-journal">日本金属学会2025年春期(第175回）講演大会，207，東京都立大学，2025年3月8日-10日，G207，口頭.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">85</span>
+            <div class="pub-body">
+              <p class="pub-authors">佐俣 凜人，山崎 貴大，小嗣 真人，</p>
+              <p class="pub-title">「新規窒化鉄ナノ結晶軟磁性材料の創製と特性評価」，</p>
+              <p class="pub-journal">日本金属学会2025年春期(第175回）講演大会，P9，東京都立大学，2025年3月8日-10日，P9，ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">84</span>
+            <div class="pub-body">
+              <p class="pub-authors">山崎 貴大，杉田 涼介，小嗣 真人，</p>
+              <p class="pub-title">「ハーフメタルホイスラー合金のXMCD測定と機械学習を活用したスペクトル解析」，</p>
+              <p class="pub-journal">磁気記録・情報ストレージ研究会，MRIS2024-37，名古屋大学，2025年3月7日，口頭．</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">83</span>
+            <div class="pub-body">
+              <p class="pub-authors">田丸 慎吾，山崎 貴大，</p>
+              <p class="pub-title">「磁気バルクハウゼンノイズ(MBN)測定による軟磁性体中の磁壁ダイナミクスの解析」，</p>
+              <p class="pub-journal">日本金属学会第2分野主催「情報・デバイス」と「材料」研究会，東北大学，2024年11月8日，口頭．</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">82</span>
+            <div class="pub-body">
+              <p class="pub-authors">田丸 慎吾，山崎 貴大,</p>
+              <p class="pub-title">「磁気バルクハウゼンノイズ(MBN)測定による磁気損失機構の解明」，</p>
+              <p class="pub-journal">日本金属学会2024年秋期(第175回)講演大会，62, 大阪大学, 2024年9月18-20日, 口頭.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">81</span>
+            <div class="pub-body">
+              <p class="pub-authors">山崎 貴大，A.L. Foggiatto，遠山 諒，福 健太郎，山神 光平，大沢 仁志，大河内 拓雄，岩崎 悠真, 桜庭 裕弥，小嗣 真人,</p>
+              <p class="pub-title">「高スピン偏極Co2MnGeホイスラー合金のMn-rich組成におけるハイスループットXMCD解析」，</p>
+              <p class="pub-journal">第48回 日本磁気学会学術講演会，26aB-2, 秋田大学, 2024年9月24-27日, 口頭.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">80</span>
+            <div class="pub-body">
+              <p class="pub-authors">佐野 光哉，山崎 貴大，岡 智絵美，櫻井 淳平，秦 誠一，</p>
+              <p class="pub-title">「Fe-Ga系ナノ結晶材料の磁歪特性におけるGa濃度依存性」,</p>
+              <p class="pub-journal">第48回 日本磁気学会学術講演会，24pD-10, 秋田大学, 2024年9月24-27日, 口頭.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">79</span>
+            <div class="pub-body">
+              <p class="pub-authors">田丸 慎吾，山崎 貴大,</p>
+              <p class="pub-title">「磁気バルクハウゼンノイズ測定によるアモルファス及びナノ結晶軟磁性材料中の磁壁ダイナミクスの解析」，</p>
+              <p class="pub-journal">第48回 日本磁気学会学術講演会，24pD-11，秋田大学，2024年9月24-27日，口頭.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">78</span>
+            <div class="pub-body">
+              <p class="pub-authors">岡田 茉佑子，山崎 貴大，河﨑 崇広，野﨑 岳人，島 侑一郎，早川 聡，A.L. Foggiatto，小嗣 真人,</p>
+              <p class="pub-title">「希土類元素Gdを用いた新規メタルフェリ磁性材料の設計と評価」，</p>
+              <p class="pub-journal">第48回 日本磁気学会学術講演会，24pD-7, 秋田大学, 2024年9月24-27日, 口頭.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">77</span>
+            <div class="pub-body">
+              <p class="pub-authors">島 侑一郎, 山崎 貴大, 田丸 慎吾, A.L. Foggiatto, 三俣 千春, 小嗣 真人,</p>
+              <p class="pub-title">「マルチスケール磁気シミュレーションによる単一磁壁の異常渦電流解析モデルの構築」，</p>
+              <p class="pub-journal">第48回 日本磁気学会学術講演会，24pPS-5, 秋田大学, 2024年9月24-27日, ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">76</span>
+            <div class="pub-body">
+              <p class="pub-authors">西岡 宏祐，長岡 竜之輔，谷脇 三千輝，A.L. Foggiatto，三俣 千春，山崎 貴大，岡本 聡，大林 一平，平岡 裕章，小嗣 真人,</p>
+              <p class="pub-title">「拡張型ランダウ理論による高速磁化反転過程のエネルギー損失解析」，</p>
+              <p class="pub-journal">第48回 日本磁気学会学術講演会，24pPS-8, 秋田大学，2024年9月24-27日，ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">75</span>
+            <div class="pub-body">
+              <p class="pub-authors">佐野 光哉，山崎 貴大，岡 智絵美，櫻井 淳平，秦 誠一，</p>
+              <p class="pub-title">「Fe-Ga系ナノ結晶磁歪材料の高濃度Ga組成における組織構造と磁歪特性」，</p>
+              <p class="pub-journal">日本機械学会 2024年度年次大会，J221-02, 愛媛大学（城北キャンパス）, 2024年9月8-11日, 口頭.</p>
+            </div>
+          </li>
+
+          <p class="section__subtitle2">2023年度以前</p>
+          <li class="pub-item"><span class="number">74</span>
+            <div class="pub-body">
+              <p class="pub-authors">早川 聡，山崎 貴大，中村 航平，三俣 千春，A.L. Foggiatto，V. Arpita，福 健太郎，小嗣 真人,</p>
+              <p class="pub-title">「高磁歪材料創製のための磁歪予測と因果解析」，</p>
+              <p class="pub-journal">第71回応用物理学会春季学術講演会，25a-P01-16, 東京都立大学，2024年3月22-25日，ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">73</span>
+            <div class="pub-body">
+              <p class="pub-authors">島 侑一郎，山崎 貴大，A.L. Foggiatto, 三俣 千春, 小嗣 真人，</p>
+              <p class="pub-title">「マイクロ磁気シミュレーションによる軟磁性材料の渦電流損解析」，</p>
+              <p class="pub-journal">第71回応用物理学会春季学術講演会，25a-P01-18, 東京都立大学，2024年3月22-25日，ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">72</span>
+            <div class="pub-body">
+              <p class="pub-authors">西岡 宏祐，A.L. Foggiatto, 三俣 千春，山崎 貴大，岡本 聡，大林 一平，平岡 裕章，小嗣 真人，</p>
+              <p class="pub-title">「時間発展系拡張型ランダウ自由エネルギーモデルによる軟磁性材料のエネルギー損失解析」，</p>
+              <p class="pub-journal">第71回応用物理学会春季学術講演会，25a-61C-4, 東京都立大学，2024年3月22-25日，口頭.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">71</span>
+            <div class="pub-body">
+              <p class="pub-authors">野﨑 岳人，山崎 貴大，冨田 龍也，A.L. Foggiatto，三俣 千春，小嗣 真人，</p>
+              <p class="pub-title">「ナノ結晶アモルファス合金に及ぼす磁歪の影響評価」，</p>
+              <p class="pub-journal">第71回応用物理学会春季学術講演会，25a-P01-15, 東京都立大学，2024年3月22-25日，ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">70</span>
+            <div class="pub-body">
+              <p class="pub-authors">島 侑一郎, 山崎 貴大, A.L. Foggiatto, 三俣 千春, 小嗣 真人，</p>
+              <p class="pub-title">「軟磁性体におけるマルチスケール磁気シミュレーションを用いた渦電流損解析」，</p>
+              <p class="pub-journal">日本金属学会2024年春期(第174回）講演大会，312, 東京理科大学，2024年3月12-15日，口頭.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">69</span>
+            <div class="pub-body">
+              <p class="pub-authors">西岡 宏祐，A.L. Foggiatto, 三俣 千春，山崎 貴大，岡本 聡，大林 一平，平岡 裕章，小嗣 真人，</p>
+              <p class="pub-title">「時間発展系拡張型ランダウ自由エネルギーモデルによる高速磁化反転過程のエネルギー損失解析」，</p>
+              <p class="pub-journal">日本金属学会2024年春期(第174回）講演大会，P3, 東京理科大学，2024年3月12-15日，ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">68</span>
+            <div class="pub-body">
+              <p class="pub-authors">長岡 竜之輔，増澤 賢，A.L. Foggiatto，三俣 千春，山崎 貴大, 大林 一平, 平岡 裕章, 小嗣 真人，</p>
+              <p class="pub-title">「拡張型ランダウ理論による YIG 磁区構造ダイナミクスの因果メカニズム解析」，</p>
+              <p class="pub-journal">日本金属学会2024年春期(第174回）講演大会，P10，東京理科大学，2024年3月12-15日，ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">67</span>
+            <div class="pub-body">
+              <p class="pub-authors">佐野 光哉，山崎 貴大，岡 智絵美，櫻井 淳平，秦 誠一,</p>
+              <p class="pub-title">「Al, Ga添加Fe基ナノ結晶軟磁性材料の組織構造解析」，</p>
+              <p class="pub-journal">第12回シンクロトロン光研究センターシンポジウム，P19，名古屋大学，2024年1月15日, ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">66</span>
+            <div class="pub-body">
+              <p class="pub-authors">長岡 竜之輔，増澤 賢，A.L. Foggiatto，三俣 千春，山崎 貴大，大林 一平，平岡 裕章，小嗣 真人，</p>
+              <p class="pub-title">「鉄損解析に向けたリアルタイム高速磁区構造計測システムの開発とトポロジカルデータ解析」，</p>
+              <p class="pub-journal">第47回日本磁気学会学術講演会，27pPS-2, 大阪大学，2023年9月27-29日，ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">65</span>
+            <div class="pub-body">
+              <p class="pub-authors">河崎 崇広，山崎 貴大，A.L. Foggiatto，福 健太郎，遠山 諒，K. K. Varun，桜庭 裕弥，岩﨑 悠真，小谷 佳範，大河内 拓雄，東 晃太朗，河村 直己，小嗣 真人，</p>
+              <p class="pub-title">「磁気円二色性 (MCD) を用いた高飽和磁化 (Fe75Co25)x-Ir1-x組成傾斜膜における磁気モーメントの起源の解析」，</p>
+              <p class="pub-journal">第47回日本磁気学会学術講演会，27pPS-16, 大阪大学，2023年9月27-29日，ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">64</span>
+            <div class="pub-body">
+              <p class="pub-authors">山崎 貴大，竹内 一郎，小嗣 真人，</p>
+              <p class="pub-title">「グリーン冷却応用に向けた超弾性Ni-Ti合金の弾性熱量効果と相変態挙動」，</p>
+              <p class="pub-journal">日本機械学会M2023材料力学カンファレンス，MM1301，筑波大学，2023年9月27-29日，口頭.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">63</span>
+            <div class="pub-body">
+              <p class="pub-authors">佐野 光哉，山崎 貴大，岡 智絵美，櫻井 淳平，秦 誠一，</p>
+              <p class="pub-title">「Ga固溶Feナノ結晶軟磁性合金薄膜の磁歪特性」，</p>
+              <p class="pub-journal">日本機械学会第30回機械材料・材料加工技術講演会（M&amp;P2023），MPE103，筑波大学，2023年9月27-29日，口頭．</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">62</span>
+            <div class="pub-body">
+              <p class="pub-authors">R. Toyama, S. Kokado, K. Masuda, Z. Li, V. K. Kushwaha, T. T. Sasaki, L. S. R. Kumara, T. Koganezawa, H. Tajiri, T. Yamazaki, M. Kotsugi, Y. Iwasaki, and Y. Sakuraba,</p>
+              <p class="pub-title">“Large negative anisotropic magnetoresistance effect by metastable B2-ordering of Fe<sub>0.75</sub>Co<sub>0.25</sub> single-crystal thin films upon Ir addition,”</p>
+              <p class="pub-journal">第86回応用物理学会秋季学術講演会，22a-P01-5，名城大学，愛知，2023年9月7-10日，口頭.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">61</span>
+            <div class="pub-body">
+              <p class="pub-authors">盛喜 琢也, 橋本 由介, 猿山 直明, A.L. Foggiatto, 笠松 大起, 杉田 涼介, 村山 和恭, 川村 聡太, 富田 広人, 孫澤旭, 山崎 貴大, V. K. Kushwaha, 遠山 諒, 桜庭 裕弥, 小嗣 真人, 松下 智裕，</p>
+              <p class="pub-title">「組成傾斜膜ホイスラー合金Co<sub>2</sub>MnGa<sub>x</sub>Ge<sub>1-x</sub>の光電子ホログラムからのモンテカルロ法による原子配列の推定」，</p>
+              <p class="pub-journal">日本物理学会第78回年次大会，16pA105-7，2023年9月19-23日，口頭（オンライン）．</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">60</span>
+            <div class="pub-body">
+              <p class="pub-authors">盛喜 琢也, 橋本 由介, 猿山 直明, A.L. Foggiatto, 笠松 大起, 杉田 涼介, 村山 和恭, 川村 聡太, 富田 広人, 孫澤旭, 山崎 貴大, V.K. Kushwaha, 遠山 諒, 桜庭 裕弥, 小嗣 真人, 松下 智裕，</p>
+              <p class="pub-title">「光電子ホログラフィーによる組成傾斜膜ホイスラー合金Co<sub>2</sub>MnGa<sub>x</sub>Ge<sub>1-x</sub>の原子配列解析」，</p>
+              <p class="pub-journal">日本物理学会2023年春季大会，22pPSK-7, 2023年3月22-25日，ポスター（オンライン）．</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">59</span>
+            <div class="pub-body">
+              <p class="pub-authors">谷脇 三千輝，A.L. Foggiatto，三俣 千春，山崎 貴大，大林 一平，平岡 裕章，五十嵐 康彦，水鳥 雄太，Sepehri Hossein，大久保 忠勝，小嗣 真人，</p>
+              <p class="pub-title">「拡張型ランダウ自由エネルギーモデルによる無方向性電磁鋼板の磁化反転過程の解析」，</p>
+              <p class="pub-journal">第70回応用物理学会春季学術講演会，18p-A401-1，2023年3月15-18日，口頭.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">58</span>
+            <div class="pub-body">
+              <p class="pub-authors">長岡 竜之輔，増澤 賢，A.L. Foggiatto，三俣 千春，山崎 貴大，大林 一平，平岡 裕章，小嗣 真人，</p>
+              <p class="pub-title">「鉄損解析のためのリアルタイム高速磁区構造計測システムの開発と機械学習応用」，</p>
+              <p class="pub-journal">第70回応用物理学会春季学術講演会，18p-A401-2，2023年3月15-18日，口頭.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">57</span>
+            <div class="pub-body">
+              <p class="pub-authors">猿山 直明，A.L. Foggiatto，山崎 貴大，松下 智裕，橋本 由介，川村 聡太，富田 広人，孫 澤旭，盛喜 琢也，V.K. Kushwaha，桜庭 裕弥，岩崎 悠真，小嗣 真人，</p>
+              <p class="pub-title">「マルチモーダル・マルチスケール解析を用いたCo<sub>2</sub>MnGa<sub>1-x</sub>Ge<sub>x</sub>の機能寄与因子の網羅的探索」，</p>
+              <p class="pub-journal">第70回応用物理学会春季学術講演会，17a-PB02-3，2023年3月15-18日，ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">56</span>
+            <div class="pub-body">
+              <p class="pub-authors">村山 和恭，山崎 貴大，A.L. Foggiatto，V.K. Kushwaha，桜庭 裕弥，岩崎 悠真，小谷 佳範，小嗣 真人，</p>
+              <p class="pub-title">「(Fe<sub>86</sub>Co<sub>14</sub>)<sub>1-x</sub>Ag<sub>x</sub>の組成傾斜薄膜の磁気円二色性(MCD)スペクトル解析」，</p>
+              <p class="pub-journal">第70回応用物理学会春季学術講演会，15p-PA01-37，2023年3月15-18日，ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">55</span>
+            <div class="pub-body">
+              <p class="pub-authors">中村 航平，古矢 大悟，小谷 佳範，山崎 貴大，小嗣 真人，</p>
+              <p class="pub-title">「磁気円二色性を用いたFe/Co/Fe/Ni多層膜の電子スピン状態解析」，</p>
+              <p class="pub-journal">第70回応用物理学会春季学術講演会，15p-PA01-38，2023年3月15-18日，ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">54</span>
+            <div class="pub-body">
+              <p class="pub-authors">河崎 崇広，山崎 貴大，A.L. Foggiatto，遠山 諒，V.K. Kushwaha，桜庭 裕弥，岩崎 悠真，小谷 佳範，大河内 拓雄，小嗣 真人，</p>
+              <p class="pub-title">「磁気円二色性(MCD)を用いた高飽和磁化Fe<sub>3</sub>Co-Ir合金における磁気モーメントの起源の解析」，</p>
+              <p class="pub-journal">第70回応用物理学会春季学術講演会，15p-PA01-39，2023年3月15-18日，ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">53</span>
+            <div class="pub-body">
+              <p class="pub-authors">谷 春菜，山崎 貴大，A.L. Foggiatto，三俣 千春，小嗣 真人，</p>
+              <p class="pub-title">「計算と実験による積層型ナノコンポジット軟磁性薄膜の磁化過程解析」，</p>
+              <p class="pub-journal">第70回応用物理学会春季学術講演会，15p-PA01-50，2023年3月15-18日，ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">52</span>
+            <div class="pub-body">
+              <p class="pub-authors">加藤 泰成，森 崎諒，山崎 貴大，岡 智絵美，櫻井 淳平，秦 誠一，</p>
+              <p class="pub-title">「大面積照射に対応する平行平板形高速原子ビーム源」，</p>
+              <p class="pub-journal">2023年度精密工学会春季大会，G23，東京理科大学，東京，2023年3月14-16日，口頭.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">51</span>
+            <div class="pub-body">
+              <p class="pub-authors">盛喜 琢也, 橋本 由介, 猿山 直明, A.L. Foggiatto, 笠松 大起, 杉田 涼介, 村山 和恭, 川村 聡太, 富田 広人, 孫澤旭, 山崎 貴大, V. K. Kushwaha, 遠山 諒, 桜庭 裕弥, 小嗣 真人, 松下 智裕,</p>
+              <p class="pub-title">「光電子ホログラフィーによる組成傾斜膜ホイスラー合金Co<sub>2</sub>MnGa<sub>x</sub>Ge<sub>1-x</sub>の原子配列解析」，</p>
+              <p class="pub-journal">超秩序構造科学 第5回成果報告会，名古屋大学，2023年3月13日，口頭．</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">50</span>
+            <div class="pub-body">
+              <p class="pub-authors">佐野 光哉，岡 智絵美，櫻井 淳平，山崎 貴大，秦 誠一，</p>
+              <p class="pub-title">「Fe系ナノ結晶合金の磁歪特性におけるAl添加効果」，</p>
+              <p class="pub-journal">日本金属学会 2022年秋期（第171回）講演大会，172，福岡工業大学，2022年9月20-23日，口頭.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">49</span>
+            <div class="pub-body">
+              <p class="pub-authors">佐藤 寛太，山崎 貴大，岡 智絵美，秦 誠一，櫻井 淳平，</p>
+              <p class="pub-title">「HFSMAナノ繊毛構造体作製に及ぼす粘弾性特性の影響」，</p>
+              <p class="pub-journal">日本機械学会2022年度年次大会，J221-p08，富山大学，富山，2022年9月11-14日，ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">48</span>
+            <div class="pub-body">
+              <p class="pub-authors">謝 靖蘭，羽賀 冬樹，山崎 貴大，岡 智絵美，秦 誠一，櫻井 淳平，</p>
+              <p class="pub-title">「MEMSに向けたNi-Nb-Zr薄膜非晶質合金製ダイアフラムの内部応力制御」，</p>
+              <p class="pub-journal">日本機械学会 2022年度 年次大会，J221-p03，富山大学，富山，2022年9月11-14日，ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">47</span>
+            <div class="pub-body">
+              <p class="pub-authors">加藤 泰成，森 崎諒，山崎 貴大，岡 智絵美，櫻井 淳平，秦 誠一，</p>
+              <p class="pub-title">「平行平板形高速原子ビーム源の試作」，</p>
+              <p class="pub-journal">日本機械学会2022年度年次大会，J163-06，富山大学，富山，2022年9月11-14日，口頭.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">46</span>
+            <div class="pub-body">
+              <p class="pub-authors">佐藤 寛太，山崎 貴大，岡 智絵美，秦 誠一，櫻井 淳平，</p>
+              <p class="pub-title">「高成形性形状記憶合金を用いたナノ繊毛構造体の作製に向けた基礎検討」，</p>
+              <p class="pub-journal">形状記憶合金協会第12期定時総会，P06，2022年3月11日，ポスター（オンライン）.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">45</span>
+            <div class="pub-body">
+              <p class="pub-authors">山崎 貴大，大前 緩奈，岡 智絵美，櫻井 淳平，秦 誠一，</p>
+              <p class="pub-title">「機械学習を用いた磁気バルクハウゼンノイズ解析による材料組織の推定と評価」，</p>
+              <p class="pub-journal">東京理科大学小嗣研究室セミナー，01，2022年2月23日，口頭（オンライン）．</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">44</span>
+            <div class="pub-body">
+              <p class="pub-authors">森崎 諒，山崎 貴大，岡 智絵美，櫻井 淳平，赤尾 隆嘉，高橋 知典，辻 裕之，大野 哲靖，秦 誠一，</p>
+              <p class="pub-title">「表面活性化接合用新形高速原子ビーム源の照射特性」，</p>
+              <p class="pub-journal">第38回プラズマ・核融合学会年会，22P-2F-08，名古屋，2021年11月22-25日，ポスター（オンライン）．</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">43</span>
+            <div class="pub-body">
+              <p class="pub-authors">佐野 光哉, 山崎 貴大, 岡 智絵美, 櫻井 淳平, 秦 誠一，</p>
+              <p class="pub-title">「高磁歪・高磁化率を両立した複相磁性材料の創製に向けた検討」，</p>
+              <p class="pub-journal">第29回機械材料・材料加工技術講演会，416，東北大学，2021年11月18-19日，口頭（オンライン）．</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">42</span>
+            <div class="pub-body">
+              <p class="pub-authors">大西 拓也，永井 伶於，山崎 貴大，岡 智絵美，櫻井 淳平，秦 誠一，</p>
+              <p class="pub-title">「薄膜金属ガラスを用いた自立微細構造体の基礎検討」，</p>
+              <p class="pub-journal">日本機械学会第29回機械材料・材料加工技術講演会(M&amp;P2021)，415，東北大学，2021年11月18-19日，口頭（オンライン）.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">41</span>
+            <div class="pub-body">
+              <p class="pub-authors">森崎 諒，櫻井 淳平，岡 智絵美，山崎 貴大，赤尾 隆嘉，高橋 知典，辻 裕之，大野 哲靖，秦 誠一，</p>
+              <p class="pub-title">「表面活性化接合用新形高速原子ビーム源内部のプラズマ解析」，</p>
+              <p class="pub-journal">第82回応用物理学会秋季学術講演会，10a-N204-7，名城大学，名古屋，2021年9月10-13, 21-23日，口頭（オンライン）.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">40</span>
+            <div class="pub-body">
+              <p class="pub-authors">村瀬 正憲，南原 圭汰，山崎 貴大，岡 智絵美，秦 誠一，櫻井 淳平，</p>
+              <p class="pub-title">「反力可変受動形触覚ディスプレイ用新規アクチュエータの駆動特性」，</p>
+              <p class="pub-journal">日本機械学会2021年度年次大会，J221-10，千葉大学，千葉，2021年9月5-8日，口頭（オンライン）. </p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">39</span>
+            <div class="pub-body">
+              <p class="pub-authors">高瀬 駿，山崎 貴大，岡 智絵美，櫻井 淳平，秦 誠一，</p>
+              <p class="pub-title">「MEMS構造体を利用した薄膜内部応力の測定」，</p>
+              <p class="pub-journal">日本機械学会2021年度年次大会，J221-07，千葉大学，千葉，2021年9月5-8日，口頭（オンライン）.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">38</span>
+            <div class="pub-body">
+              <p class="pub-authors">佐藤 寛太，山崎 貴大，岡 智絵美，秦 誠一，櫻井 淳平，</p>
+              <p class="pub-title">「HFSMAを用いたナノ繊毛構造体の作製」，</p>
+              <p class="pub-journal">日本機械学会2021年度年次大会，J221-08，千葉大学，千葉，2021年9月5-8日，口頭（オンライン）.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">37</span>
+            <div class="pub-body">
+              <p class="pub-authors">羽賀 冬樹，山崎 貴大，岡 智絵美，秦 誠一，星野 雄斗，櫻井 淳平，</p>
+              <p class="pub-title">「薄膜非晶質合金Ni-Nb-Zrの機械的特性に及ぼす構造緩和の影響」，</p>
+              <p class="pub-journal">日本機械学会2021年度年次大会，J221-05，千葉大学，千葉，2021年9月5-8日，口頭（オンライン）.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">36</span>
+            <div class="pub-body">
+              <p class="pub-authors">井上 慎，山崎 貴大，岡 智絵美，秦 誠一，櫻井 淳平，</p>
+              <p class="pub-title">「コンビナトリアル手法を用いたTi-Ni－Hf高成形性形状記憶合金の探索」，</p>
+              <p class="pub-journal">日本機械学会2021年度年次大会，J221-01，千葉大学，千葉，2021年9月5-8日，口頭（オンライン）.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">35</span>
+            <div class="pub-body">
+              <p class="pub-authors">佐野 光哉，冨田 龍也，岡 智絵美，櫻井 淳平，山崎 貴大，秦 誠一，</p>
+              <p class="pub-title">「ナノ結晶軟磁性材料の高磁歪化に向けた合金設計」，</p>
+              <p class="pub-journal">第45回日本磁気学会学術講演会，02aC-3，2021年9月2日，口頭（オンライン）．</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">34</span>
+            <div class="pub-body">
+              <p class="pub-authors">井上 慎，山崎 貴大，岡 智絵美，秦 誠一，櫻井 淳平，</p>
+              <p class="pub-title">「Ti-Ni-Hf高成形性形状記憶合金のコンビナトリアル探索」，</p>
+              <p class="pub-journal">形状記憶合金協会第11期定時総会，No. 08，2021年3月12日，ポスター（オンライン）．</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">33</span>
+            <div class="pub-body">
+              <p class="pub-authors">高瀬 駿，山田 恭平，中川 優希，山崎 貴大，岡 智絵美，櫻井 淳平，秦 誠一，</p>
+              <p class="pub-title">「逆リフトオフ法を用いた MEMS ミラーデバイスの作製」，</p>
+              <p class="pub-journal">第28回機械材料・材料加工技術講演会(M&amp;P2020)，158，2020年11月19-20日)，口頭（オンライン）．</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">32</span>
+            <div class="pub-body">
+              <p class="pub-authors">山田 大地，堀 史門，山崎 貴大，岡 智絵美，櫻井 淳平，秦 誠一，</p>
+              <p class="pub-title">「二層構造を有した手術シミュレータ用血管モデルの作製」，</p>
+              <p class="pub-journal">第28回機械材料・材料加工技術講演会(M&amp;P2020)，156，2020年11月19-20日)，口頭（オンライン）. </p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">31</span>
+            <div class="pub-body">
+              <p class="pub-authors">山田 大地，堀 史門，山崎 貴大，岡 智絵美，櫻井 淳平，秦 誠一，</p>
+              <p class="pub-title">「手術シミュレータ用3次元次元応力測定系の開発」，</p>
+              <p class="pub-journal">日本機械学会2020年度年次大会，J24111，名古屋大学，愛知，2020年9月13-16日，口頭（オンライン）.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">30</span>
+            <div class="pub-body">
+              <p class="pub-authors">森崎 諒，櫻井 淳平，岡 智絵美，山崎 貴大，平井 隆巳，高橋 知典，辻 裕之，大野 哲靖，秦 誠一，</p>
+              <p class="pub-title">「プラズマ解析による表面活性化接合用FAB源の高性能化」，</p>
+              <p class="pub-journal">日本機械学会2020年度年次大会，J13105，名古屋大学，愛知，2020年9月13-16日，口頭（オンライン）.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">29</span>
+            <div class="pub-body">
+              <p class="pub-authors">山崎 貴大，秦 誠一，</p>
+              <p class="pub-title">「センサ応用に向けた磁歪材料のバルクハウゼンノイズ解析」，</p>
+              <p class="pub-journal">マテリアルズ・インフォマティクス懇談会第4回研究会，01，東京，2019年11月1日，口頭．</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">28</span>
+            <div class="pub-body">
+              <p class="pub-authors">山崎 貴大，古屋 泰文，中尾 航，</p>
+              <p class="pub-title">「バルクハウゼン効果を利用したFe-Co磁歪合金の塑性ひずみ予測」，</p>
+              <p class="pub-journal">日本機械学会2019年度年次大会，S03126，秋田，2019年9月8-11日，口頭．</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">27</span>
+            <div class="pub-body">
+              <p class="pub-authors">山崎 貴大，</p>
+              <p class="pub-title">「応力センサに向けた磁歪材料のバルクハウゼンノイズ解析」，</p>
+              <p class="pub-journal">次世代材料の創製に向けたJoint senimor 2019，01，東京，2019年7月1日，口頭．</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">26</span>
+            <div class="pub-body">
+              <p class="pub-authors">山崎 貴大，秦 誠一，</p>
+              <p class="pub-title">「環境振動から電力を回生する磁歪式発電材料の開発」，</p>
+              <p class="pub-journal">第9回企業と博士人材の交流会，77，名古屋，2019年8月31日，ポスター．</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">25</span>
+            <div class="pub-body">
+              <p class="pub-authors">古屋 泰文, 山崎 貴大, 中尾 航，</p>
+              <p class="pub-title">「新FeCo系磁歪合金を活用したスマートセンサーデバイス実装化の進展」，</p>
+              <p class="pub-journal">日本機械学会2018年度年次大会，J0460405，大阪，2018年9月9-12日，大阪，口頭.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">24</span>
+            <div class="pub-body">
+              <p class="pub-authors">山崎 貴大，古屋 泰文，中尾 航，</p>
+              <p class="pub-title">「FeCo磁歪合金ワイヤを用いた応力・歪み検出センサ」，</p>
+              <p class="pub-journal">第3回電磁材料・デバイス研究会，P3，仙台，2018年3月，口頭．</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">23</span>
+            <div class="pub-body">
+              <p class="pub-authors">山崎 貴大，古屋 泰文，中尾 航，</p>
+              <p class="pub-title">「生体信号の高感度センシングに向けた磁歪式アクティブマテリアルの創製」，</p>
+              <p class="pub-journal">第7回超異分野学会，No. 48，東京，2018年3月2-3日，ポスター．</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">22</span>
+            <div class="pub-body">
+              <p class="pub-authors">山崎 貴大，古屋 泰文，中尾 航，</p>
+              <p class="pub-title">「磁歪感受率改善と振動発電デバイス設計～バルクハウゼンノイズを用いた磁歪挙動評価～」，</p>
+              <p class="pub-journal">第1回電磁材料・デバイス研究会，P1，仙台，2017年11月，口頭．</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">21</span>
+            <div class="pub-body">
+              <p class="pub-authors">山崎 貴大，古屋 泰文，中尾 航，</p>
+              <p class="pub-title">「バルクハウゼンノイズ手法を用いた新規Fe-Co磁歪ワイヤにおける磁壁挙動評価」，</p>
+              <p class="pub-journal">日本機械学会2017年度年次大会，J0430104，埼玉，2017年9月3-6日，口頭．</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">20</span>
+            <div class="pub-body">
+              <p class="pub-authors">一柳 優子, 石川 智也, 山崎 貴大, 森本 翔大, 兵藤 公美典, 酒井 元大，</p>
+              <p class="pub-title">「診断と治療を目指した磁気ナノ微粒子の開発」，</p>
+              <p class="pub-journal">第63回応用物理学会春季学術講演会，19p-P1-25，東京，2016年3月19-22日，ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">19</span>
+            <div class="pub-body">
+              <p class="pub-authors">兵藤 公美典, 森本 翔大, 山崎 貴大, 石川 智也, 酒井 元大, 太田 郁己, 岡 岳宏, 小池 涼太, 柴田 恵助, 谷口 葉史, 一柳 優子，</p>
+              <p class="pub-title">「(Al-Co)共ドープZnO磁気ナノ微粒子の磁化発現とXAFS測定」，</p>
+              <p class="pub-journal">日本物理学会第71回年次大会，19pPSB-20，仙台，2016年3月19-22日，ポスター．</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">18</span>
+            <div class="pub-body">
+              <p class="pub-authors">山崎 貴大，森本 翔大，兵藤 公美典，石川 智也，酒井 元一大，太田 郁己，岡岳 大，小池 涼太，柴田 恵助，谷口 葉史，一柳 優子，</p>
+              <p class="pub-title">「シリカコート鉄酸化物ナノ微粒子のXAFS解析と質量分析およびハイパーサーミア効果」，</p>
+              <p class="pub-journal">日本物理学会第71回年次大会，19aPS-18，仙台，2016年3月19-22日，ポスター．</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">17</span>
+            <div class="pub-body">
+              <p class="pub-authors">山崎 貴大，兵藤 公美典，森本 翔大，石川 智也，一柳 優子，</p>
+              <p class="pub-title">「Co-Zn ferrite ナノ微粒子の磁気ハイパーサーミア効果」，</p>
+              <p class="pub-journal">日本物理学会第70回秋季大会，16pPSA-1，大阪，2015年9月14-17日，ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">16</span>
+            <div class="pub-body">
+              <p class="pub-authors">石川 智也, 市川 純生, 山崎 貴大, 森本 翔大, 兵藤 公美典, 細貝 良行, 臼井 章仁, 町田 好男, 斉藤 春夫, 一柳 優子，</p>
+              <p class="pub-title">「Mn-Zn Ferrite ナノ微粒子の磁気特性と温熱およびMR 造影効果」，</p>
+              <p class="pub-journal">日本物理学会第70回秋季大会，16pPSA-2，大阪，2015年9月14-17日，ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">15</span>
+            <div class="pub-body">
+              <p class="pub-authors">兵藤 公美典, 森本 翔大, 山崎 貴大, 石川 智也, 一柳 優子，</p>
+              <p class="pub-title">「Al,Co を共ドープしたZnO ナノ微粒子の強磁性発現と電子状態」，</p>
+              <p class="pub-journal">日本物理学会第70回秋季大会，16aPS-16，大阪，2015年9月14-17日，ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">14</span>
+            <div class="pub-body>
+              <p class="pub-authors">森本 翔大, 兵藤 公美典, 山崎 貴大, 石川 智也, 平 修, 常山 幸一, 一柳 優子，</p>
+              <p class="pub-title">「機能化γ-Fe<sub>2</sub>O<sub>3</sub>微粒子のイオン化支援特性とマウス肝臓質量分析イメージング」，</p>
+              <p class="pub-journal">日本物理学会第70回秋季大会，17pPSB-11，大阪，2015年9月14-17日，ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">13</span>
+            <div class="pub-body">
+              <p class="pub-authors">一柳 優子, 酒井 元大, 石川 智也, 山崎 貴大, 森本 翔大, 兵藤 公美典, 内海 淳，</p>
+              <p class="pub-title">「Mn-Zn ferriteナノ微粒子のハイパーサーミア効果とMR造影効果」，</p>
+              <p class="pub-journal">第76回応用物理学会秋季学術講演会，13p-PA1-31，名古屋，2015年9月13-16日，ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">12</span>
+            <div class="pub-body">
+              <p class="pub-authors">蜂巣 将也, 森 一将, 兵藤 公美典, 森本 翔太, 山崎 貴大, 市川 純生, 酒井 元大, 立林 穣, 一柳 優子，</p>
+              <p class="pub-title">「遷移金属共ドープTiO<sub>2</sub>ナノ微粒子の磁気特性とXAFS測定」，</p>
+              <p class="pub-journal">日本物理学会第70回年次大会，21pPSA-64，東京，2015年3月21-24日，ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">11</span>
+            <div class="pub-body">
+              <p class="pub-authors">森 一将, 蜂巣 将也, 兵藤 公美典, 森本 翔大, 山崎 貴大, 市川 純生, 酒井 元大, 立林 穣, 一柳 優子，</p>
+              <p class="pub-title">「磁気ハイパーサーミア用Fe<sub>3</sub>O<sub>4</sub>ナノ微粒子の作製と発熱特性及びXAFS測定」，</p>
+              <p class="pub-journal">日本物理学会第70回年次大会，21pPSA-62，東京，2015年3月21-24日，ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">10</span>
+            <div class="pub-body">
+              <p class="pub-authors">森本 翔大，平 修，常山 幸一，山崎 貴大，兵藤 公美典，石川 智也，一柳 優子，</p>
+              <p class="pub-title">「機能化した磁性ナノ微粒子を用いたマウス肝臓の質量分析イメージング」，</p>
+              <p class="pub-journal">ナノ学会第13回大会，P1-05，仙台，2015年5月11-13日，ポスター．</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">9</span>
+            <div class="pub-body">
+              <p class="pub-authors">石川 智也，兵藤 公美典，森本 翔大，山崎 貴大，上原 政智，君嶋 義英，一柳 優子，</p>
+              <p class="pub-title">「メカニカルミリング法によるCr<sub>2</sub>O<sub>3</sub>の強磁性発現」，</p>
+              <p class="pub-journal">ナノ学会第13回大会，P3-46，仙台，2015年5月11-13日，ポスター．</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">8</span>
+            <div class="pub-body">
+              <p class="pub-authors">兵頭 公美典，一柳 優子，森本 翔大，山崎 貴大，石川 智也，</p>
+              <p class="pub-title">「ZnO磁気ナノ微粒子のAlドープ効果」，</p>
+              <p class="pub-journal">ナノ学会第13回大会，P3-49，仙台，2015年5月11-13日，ポスター．</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">7</span>
+            <div class="pub-body">
+              <p class="pub-authors">山崎 貴大，兵藤 公美典，森本 翔大，石川 智也，一柳 優子，</p>
+              <p class="pub-title">「Coドープしたデラフォサイト型ナノ微粒子AgFeO<sub>2</sub>の作製と磁化測定」，</p>
+              <p class="pub-journal">ナノ学会第13回大会，P3-45，仙台，2015年5月11-13日，ポスター．</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">6</span>
+            <div class="pub-body">
+              <p class="pub-authors">山崎 貴大，近藤 貴也，蜂巣 将也，森 一将，兵藤 公美典，森本 翔太，一柳 優子，</p>
+              <p class="pub-title">「磁気ハイパーサーミア用Mn-Zn ferriteナノ微粒子の作製及び分散性の向上」，</p>
+              <p class="pub-journal">第75回応用物理学会秋季学術講演会，17P-S2-8，札幌，2014年9月17-20日，ポスター．</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">5</span>
+            <div class="pub-body">
+              <p class="pub-authors">森本 翔大, 蜂巣 将也, 森 一将, 兵藤 公美典, 山崎 貴大, 一柳 優子，</p>
+              <p class="pub-title">「機能化したFe微粒子を用いたラット小脳の質量分析イメージング」，</p>
+              <p class="pub-journal">第75回応用物理学会秋季学術講演会，18a-PA2-8，札幌，2014年9月17-20日，ポスター．</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">4</span>
+            <div class="pub-body">
+              <p class="pub-authors">森 一将, 蜂巣 将也, 兵藤 公美典, 森本 翔大, 山崎 貴大, 一柳 優子，</p>
+              <p class="pub-title">「磁気ハイパーサーミアに向けた酸化鉄ナノ微粒子の作製と発熱特性」，</p>
+              <p class="pub-journal">第75回応用物理学会秋季学術講演会，17p-S2-7，札幌，2014年9月17-20日，ポスター．</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">3</span>
+            <div class="pub-body">
+              <p class="pub-authors">蜂巣 将也, 森 一将, 兵藤 公美典, 森本 翔大, 山崎 貴大, 一柳 優子，</p>
+              <p class="pub-title">「遷移金属を共ドープした希薄磁性半導体アナターゼ型TiO<sub>2</sub>ナノ微粒子の作製」，</p>
+              <p class="pub-journal">第75回応用物理学会秋季学術講演会，17p-S2-6，札幌，2014年9月17-20日，ポスター．</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">2</span>
+            <div class="pub-body">
+              <p class="pub-authors">兵藤 公美典, 蜂巣 将也, 森 一将, 森本 翔大, 山崎 貴大, 塩路 直樹, 一柳 優子，</p>
+              <p class="pub-title">「ZnO磁気ナノ微粒子の遷移金属ドープ効果とXAFS測定」，</p>
+              <p class="pub-journal">第75回応用物理学会秋季学術講演会，17p-S2-5，札幌，2014年9月17-20日，ポスター．</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">1</span>
+            <div class="pub-body">
+              <p class="pub-authors">山崎 貴大，上原 政智，一柳 優子，</p>
+              <p class="pub-title">「ホールドーピングによるデラフォサイト型超伝導体の探索」，</p>
+              <p class="pub-journal">ナノ学会第12回大会，P2-11，京都，2014年5月22-24日，ポスター．</p>
+            </div>
+          </li>
+
+
+
+
+        </ol>
+      </section>
+
+      <section id="awards" class="section1 section-divider2 pub-section is-hidden" data-cat="awards">
+        <div class="section-head section-head--row">
+          <div>
+            <p class="eyebrow">Awards</p>
+            <h3 class="title">受賞</h3>
+          </div>
+          <div class="pub-count">Number of Awards : <strong>13</strong></div>
+        </div><br>
+        <ol class="pub-list">
+
+          <p class="section__subtitle2">2023年度</p>
+          <li class="pub-item"><span class="number">13</span>
+            <div class="pub-body">
+              <p class="pub-authors">ポスター発表賞, </p>
+              <p class="pub-title">佐野 光哉，山崎 貴大，岡 智絵美，櫻井 淳平，秦 誠一,</p>
+              <p class="pub-title">「Al, Ga添加Fe基ナノ結晶軟磁性材料の組織構造解析」,</p>
+              <p class="pub-journal">名古屋大学シンクロトロン光研究センター，「シンクロトロン光研究センターシンポジウム2023」, 12th NUSR Symposium, 2024年1月15日.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">12</span>
+            <div class="pub-body">
+              <p class="pub-authors">学生講演賞（桜井講演賞）, </p>
+              <p class="pub-title">河崎 崇広，山崎 貴大，A. L. Foggiatto，福 健太郎，遠山 諒，K. K. Varun，桜庭 裕弥，岩﨑 悠真，小谷 佳範，大河内 拓雄，東 晃太朗，河村 直己，小嗣 真人,</p>
+              <p class="pub-title">“磁気円二色性 (MCD) を用いた高飽和磁化 (Fe<sub>75</sub>Co<sub>25</sub>)<sub>x</sub>-Ir<sub>1-x</sub> 組成傾斜膜における磁気モーメントの起源の解析”,</p>
+              <p class="pub-journal">第47回日本磁気学会学術講演会, 2023年9月27日.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">11</span>
+            <div class="pub-body">
+              <p class="pub-authors">機械材料・材料加工部門 部門一般表彰（奨励講演論文部門）, </p>
+              <p class="pub-title">佐野 光哉，山崎 貴大*，岡 智絵美，櫻井 淳平，秦 誠一,</p>
+              <p class="pub-title">「Ga固溶Feナノ結晶軟磁性合金薄膜の磁歪特性」,</p>
+              <p class="pub-journal">日本機械学会第30回機械材料・材料加工技術講演会（M&P2023）, 2023年9月27日.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">10</span>
+            <div class="pub-body">
+              <p class="pub-authors">講演賞受賞, </p>
+              <p class="pub-title">盛喜 琢也, 橋本 由介, 猿山 直明, Alexandre Foggiatto, 笠松 大起, 杉田 涼介, 村山 和恭, 川村 聡太, 富田 広人, 孫 澤旭, 山崎 貴大, Varun Kumar Kushwaha, 遠山 諒, 桜庭 裕弥, 小嗣 真人, 松下 智裕,</p>
+              <p class="pub-title">「組成傾斜膜ホイスラー合金Co<sub>2</sub>MnGa<sub>x</sub>Ge<sub>1-x</sub>の光電子ホログラムからのモンテカルロ法による原子配列の推定」,</p>
+              <p class="pub-journal">日本物理学会2023年秋季大会, オンライン開催, 2023年9月22日.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">9</span>
+            <div class="pub-body">
+              <p class="pub-authors">機械材料・材料加工部門 部門一般表彰（奨励講演論文部門）, </p>
+              <p class="pub-title">S. Takase, T. Yamazaki, C. Oka, J. Sakurai, S. Hata,</p>
+              <p class="pub-title">“Novel Measurement Method of Internal Stress in Thin Films Using Micro Spring Structure”,</p>
+              <p class="pub-journal">International Conference on Materials & Processing 2022 (ICM&P 2022), Nov. 6–10, 2022.</p>
+          </li>
+
+          <li class="pub-item"><span class="number">8</span>
+            <div class="pub-body">
+              <p class="pub-authors">機械材料・材料加工部門 部門一般表彰（奨励講演論文部門）, </p>
+              <p class="pub-title">M. Murase, K. Nambara, T. Yamazaki, C. Oka, S. Hata, J. Sakurai,</p>
+              <p class="pub-title">“Effect of tactile pin height on driving characteristics using high formable shape‐memory alloy for reaction force variable tactile displays”,</p>
+              <p class="pub-journal">International Conference on Materials and Processing 2022 (ICM&P 2022), P1-17 (2022).</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">7</span>
+            <div class="pub-body">
+              <p class="pub-authors">Best Paper Award MHS2021, </p>
+              <p class="pub-title">S. Inoue, T. Yamazaki, C. Oka, S. Hata, J. Sakurai,</p>
+              <p class="pub-title">“Combinatorial search of new Ti-Ni-Hf high formable shape memory alloys”,</p>
+              <p class="pub-journal">32nd International Symposium on Micro-NanoMechatronics and Human Science (MHS2021), Dec. 2, 2021.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">6</span>
+            <div class="pub-body">
+              <p class="pub-authors">若手優秀講演フェロー賞（当部門選定）, </p>
+              <p class="pub-title">佐野 光哉, 山崎 貴大, 岡 智絵美, 櫻井 淳平, 秦 誠一,</p>
+              <p class="pub-title">「高磁歪・高磁化率を両立した複相磁性材料の創製に向けた検討」,</p>
+              <p class="pub-journal">日本機械学会第29回機械材料・材料加工技術講演会(M&P2020)，2021年11月9日.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">5</span>
+            <div class="pub-body">
+              <p class="pub-authors">最優秀ポスター発表賞, </p>
+              <p class="pub-title">井上 慎，山崎 貴大，岡 智絵美，秦 誠一，櫻井 淳平,</p>
+              <p class="pub-title">「Ti-Ni-Hf高成形性形状記憶合金のコンビナトリアル探索」,</p>
+              <p class="pub-journal">形状記憶合金協会, 2021年3月, ポスター.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">4</span>
+            <div class="pub-body">
+              <p class="pub-authors">若手優秀講演フェロー賞受賞, </p>
+              <p class="pub-title">高瀬 駿，山田 恭平，中川 優希，山崎 貴大，岡 智絵美，櫻井 淳平，秦 誠一,</p>
+              <p class="pub-title">「逆リフトオフ法を用いた MEMS ミラーデバイスの作製」,</p>
+              <p class="pub-journal">第28回機械材料・材料加工技術講演会(M&P2020)，2020年11月19日.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">3</span>
+            <div class="pub-body">
+              <p class="pub-authors">ベストプレゼンテーション賞, </p>
+              <p class="pub-title">山崎 貴大,</p>
+              <p class="pub-title">「磁歪合金の振動ハーベスターに関する研究」,</p>
+              <p class="pub-journal">名古屋大学博士課程教育推進機構, 第9回企業と博士人材の交流会, 2019年8月31日.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">2</span>
+            <div class="pub-body">
+              <p class="pub-authors">Award for Encouragement of Research in IUMRS-ICAM 2017, </p>
+              <p class="pub-title">T. Yamazaki, Y. Furuya, W. Nakao,</p>
+              <p class="pub-title">“Magnetostriction and domain wall movement behavior in heat-treated Fe-Co wire for application of stress sensor”,</p>
+              <p class="pub-journal">The 15th International Conference on Advanced Materials (IUMRS-ICAM), Nov. 2017.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">1</span>
+            <div class="pub-body">
+              <p class="pub-authors">若手優秀ポスター発表賞, </p>
+              <p class="pub-title">山崎 貴大，兵藤 公美典，森本 翔大，石川 智也，一柳 優子,</p>
+              <p class="pub-title">「Coドープしたデラフォサイト型ナノ微粒子AgFeO<sub>2</sub>の作製と磁化測定」,</p>
+              <p class="pub-journal">ナノ学会第13回大会, 2015年5月.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section id="patents" class="section1 section-divider2 pub-section is-hidden" data-cat="patents">
+        <div class="section-head section-head--row">
+          <div>
+            <p class="eyebrow">Patents</p>
+            <h3 class="title">発明・特許</h3>
+          </div>
+          <div class="pub-count">Number of Patents : <strong>9</strong></div>
+        </div><br>
+        <ol class="pub-list">
+          <li class="pub-item"><span class="number">12</span>
+            <div class="pub-body">
+              <p class="pub-authors">中村 太一，秦 誠一，岡 智絵美，山崎 貴大, </p>
+              <p class="pub-title">「磁歪材料およびそれを用いた磁歪式デバイス」,</p>
+              <p class="pub-title">特願2020-076871 (P2020-076871)（出願日：2020年04月23日），特開2021-172850 (P2021-172850A)（公開日：2021年11月01日），,</p>
+              <p class="pub-journal">出願人：パナソニック株式会社，出願国：日本.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">11</span>
+            <div class="pub-body">
+              <p class="pub-authors">山崎貴大，中尾航，古屋泰文，座間誠一, </p>
+              <p class="pub-title">「応力センサー」</p>
+              <p class="pub-title">特願2018-37072 (P2018-37072)（出願日：2018年3月2日），特開2019-152502 (P2019-152502A)（公開日：2019年9月12日），,</p>
+              <p class="pub-journal">出願人：横浜国立大学，東北大学，フィンガルリンク株式会社，出願国：日本.</p>
+            </div>
+          </li>
+        </ol>
+
+      </section>
+
+      <section id="fundings" class="section1 section-divider2 pub-section is-hidden" data-cat="fundings">
+        <div class="section-head section-head--row">
+          <div>
+            <p class="eyebrow">Fundings</p>
+            <h3 class="title">競争的研究費</h3>
+          </div>
+          <div class="pub-count">Number of Fundings : <strong>10</strong></div>
+        </div><br>
+        <ol class="pub-list">
+
+          <li class="pub-item"><span class="number">9</span>
+            <div class="pub-body">
+              <p class="pub-authors">分担, 日本学術振興会 科学研究費 挑戦的研究（No. 25K21676, 代表: 木村康裕）,</p>
+              <p class="pub-title">「非熱型メモリスタ開発に資する原子拡散に基づくナノスケール相変化機構の解明」,</p>
+              <p class="pub-title">2025年9月～2028年3月,</p>
+              <p class="pub-journal">総額2,100千円.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">8</span>
+            <div class="pub-body">
+              <p class="pub-authors">代表, 文部科学省 JST ACT-X（加速フェーズ）（No. JPMJAX22AL）,</p>
+              <p class="pub-title">「多元磁気雑音解析によるナノコンポジット磁歪材料の鉄損モデル構築」,</p>
+              <p class="pub-title">2025年4月～2026年3月,</p>
+              <p class="pub-journal">総額4,250千円.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">7</span>
+            <div class="pub-body">
+              <p class="pub-authors">代表, 文部科学省 JST ACT-X（No. JPMJAX22AL）,</p>
+              <p class="pub-title">「多元磁気雑音解析によるナノコンポジット磁歪材料の鉄損モデル構築」,</p>
+              <p class="pub-title">2024年10月～2025年3月,</p>
+              <p class="pub-journal">総額6,000千円.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">6</span>
+            <div class="pub-body">
+              <p class="pub-authors">代表, 日本学術振興会 科学研究費 若手研究（No. 23K16336）,</p>
+              <p class="pub-title">「磁気弾性効果と積極制御による複層ナノ結晶材料の新規機能開拓」,</p>
+              <p class="pub-title">2023年4月～2027年3月,</p>
+              <p class="pub-journal">総額3,600千円.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">5</span>
+            <div class="pub-body">
+              <p class="pub-authors">代表, 一般社団法人 日本鉄鋼協会 第29回鉄鋼研究振興助成,</p>
+              <p class="pub-title">「コンビトリアル成膜プロセスによるFeCo系磁歪合金の組織制御と高磁歪化」,</p>
+              <p class="pub-title">2021年6月～2022年5月,</p>
+              <p class="pub-journal">総額2,000千円.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">4</span>
+            <div class="pub-body">
+              <p class="pub-authors">代表, 一般財団法人 丸文財団 第32回交流研究助成,</p>
+              <p class="pub-title">「機械学習を用いたバルクハウゼンノイズ解析による磁歪材料の組織構造解析」,</p>
+              <p class="pub-title">2020年4月～2024年3月,</p>
+              <p class="pub-journal">総額1,500千円.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">3</span>
+            <div class="pub-body">
+              <p class="pub-authors">代表, 日本学術振興会 科学研究費 若手研究（No. 20K14607）,</p>
+              <p class="pub-title">「機械学習を用いたバルクハウゼンノイズ解析による磁歪材料の組織構造解析」,</p>
+              <p class="pub-title">2020年4月～2023年3月,</p>
+              <p class="pub-journal">総額3,300千円.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">2</span>
+            <div class="pub-body">
+              <p class="pub-authors">代表, 日本学術振興会 特別研究員奨励費（PD）（No. 19J02078）,</p>
+              <p class="pub-title">「コンビトリアル手法を用いた磁気特性データに基づく動的磁歪挙動の解明と高性能化」,</p>
+              <p class="pub-title">2019年4月～2022年3月,</p>
+              <p class="pub-journal">総額3,700千円.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">1</span>
+            <div class="pub-body">
+              <p class="pub-authors">分担, 日本学術振興会 科学研究費 基盤研究(B)（No. 19H02040, 代表: 秦誠一）,</p>
+              <p class="pub-title">「コンビナトリアル技術を援用した薄膜金属ガラスの内部応力測定とその制御 」,</p>
+              <p class="pub-title">2019年4月～2023年3月,</p>
+              <p class="pub-journal">総額300千円.</p>
+            </div>
+          </li>
+
+          <!-- <li class="pub-item"><span class="number">1</span>
+            <div class="pub-body">
+              <p class="pub-authors">代表, 民間企業㈱ 共同研究,</p>
+              <p class="pub-title">「新規磁性材料の物性評価手法の開発」,</p>
+            </div>
+          </li> -->
+        </ol>
+      </section>
+
+      <section id="thesis" class="section1 section-divider2 pub-section is-hidden" data-cat="thesis">
+        <div class="section-head section-head--row">
+          <div>
+            <p class="eyebrow">Thesis</p>
+            <h3 class="title">博士・修士・学士論文（前所属も含む）</h3>
+          </div>
+          <div class="pub-count">Number of Thesis : <strong>27</strong></div>
+        </div><br>
+        <ol class="pub-list">
+          <p class="section__subtitle2">2025年度</p>
+          
+          <li class="pub-item"><span class="number">27</span>
+            <div class="pub-body">
+              <p class="pub-authors">伊藤 慶, </p>
+              <p class="pub-title">「第一原理計算による Fe-Si 合金の磁気弾性定数の組成依存性と電子論的起源」,</p>
+              <p class="pub-journal">卒業論文，東京理科大学（小嗣研究室）.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">26</span>
+            <div class="pub-body">
+              <p class="pub-authors">小野澤 由悟, </p>
+              <p class="pub-title">「希土類–遷移金属アモルファス合金薄膜における磁気モーメント秩序制御」,</p>
+              <p class="pub-journal">卒業論文，東京理科大学（小嗣研究室）.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">25</span>
+            <div class="pub-body">
+              <p class="pub-authors">森田 隆寛, </p>
+              <p class="pub-title">「渦電流及び磁歪を考慮したマルチフィジックスシミュレーションによる余剰損解析」,</p>
+              <p class="pub-journal">卒業論文，東京理科大学（小嗣研究室）.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">24</span>
+            <div class="pub-body">
+              <p class="pub-authors">長谷川 美晴, </p>
+              <p class="pub-title">「マルチモーダル計測とマルチモーダル機械学習解析による Co2MnxGe2-x の構造と結合状態―AMR 比の包括的解析」,</p>
+              <p class="pub-journal">卒業論文，東京理科大学（小嗣研究室）.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">23</span>
+            <div class="pub-body">
+              <p class="pub-authors">早川 聡, </p>
+              <p class="pub-title">「第一原理計算による磁歪現象におけるスピン軌道相互作用の理論的解析」,</p>
+              <p class="pub-journal">修士論文，東京理科大学（小嗣研究室）.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">22</span>
+            <div class="pub-body">
+              <p class="pub-authors">野﨑 岳人, </p>
+              <p class="pub-title">「マイクロ磁気シミュレーションによる磁気弾性効果と磁化反転ダイナミクスの理論的解析」,</p>
+              <p class="pub-journal">修士論文，東京理科大学（小嗣研究室）.</p>
+            </div>
+          </li>
+          <li class="pub-item"><span class="number">21</span>
+            <div class="pub-body">
+              <p class="pub-authors">島 侑一郎, </p>
+              <p class="pub-title">「マルチスケール磁気連成シミュレーションによるナノ結晶軟磁性材料の磁壁ピニングと異常渦電流損の関係解析」,</p>
+              <p class="pub-journal">2025年度修士論文，東京理科大学（小嗣研究室）.</p>
+            </div>
+          </li>
+
+
+          <p class="section__subtitle2">2024年度</p>
+
+          <li class="pub-item"><span class="number">20</span>
+            <div class="pub-body">
+              <p class="pub-authors">佐野 光哉, </p>
+              <p class="pub-title">「小形磁歪式振動ハーベスタに向けた Fe-Ga 系ナノ結晶合金薄膜 に関する研究」,</p>
+              <p class="pub-journal">2024年度博士論文，名古屋大学（秦研究室）.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">19</span>
+            <div class="pub-body">
+              <p class="pub-authors">谷 春菜，</p>
+              <p class="pub-title">「電磁波シールド性能の広帯域化に向けた軟磁性多層膜の設計指針の構築」，</p>
+              <p class="pub-journal">2024年度修士論文，東京理科大学（小嗣研究室）.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">18</span>
+            <div class="pub-body">
+              <p class="pub-authors">村山 和恭，</p>
+              <p class="pub-title">「主成分分析による不規則ハーフメタル性合金(Fe<sub>86</sub>Co<sub>14</sub>)<sub>1-x</sub>X<sub>x</sub>のスペクトルデータと電子状態の関係構築」，</p>
+              <p class="pub-journal">2024年度修士論文，東京理科大学（小嗣研究室）.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">17</span>
+            <div class="pub-body">
+              <p class="pub-authors">河崎 崇広，</p>
+              <p class="pub-title">「コンビナトリアル合成とハイスループット探索を用いたFeCo合金の磁気特性評価」，</p>
+              <p class="pub-journal">2024年度修士論文，東京理科大学（小嗣研究室）.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">16</span>
+            <div class="pub-body">
+              <p class="pub-authors">岡田 茉佑子，</p>
+              <p class="pub-title">「Gd-Fe-Bアモルファス/ナノ結晶軟磁性材料におけるフェリ磁性制御」，</p>
+              <p class="pub-journal">2024年度修士論文，東京理科大学（小嗣研究室）.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">15</span>
+            <div class="pub-body">
+              <p class="pub-authors">佐俣 凜人，</p>
+              <p class="pub-title">「新規窒化ナノ結晶軟磁性材料の創製」，</p>
+              <p class="pub-journal">2024年度卒業論文，東京理科大学（小嗣研究室）.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">14</span>
+            <div class="pub-body">
+              <p class="pub-authors">高嶋 幸作，</p>
+              <p class="pub-title">「磁性相変化材料の検討に向けた鉄系カルコゲナイド磁性体の創製と磁気特性評価」，</p>
+              <p class="pub-journal">2024年度卒業論文，東京理科大学（小嗣研究室）.</p>
+            </div>
+          </li>
+
+          <p class="section__subtitle2">2023年度</p>
+          <li class="pub-item"><span class="number">13</span>
+            <div class="pub-body">
+              <p class="pub-authors">大前 緩奈，</p>
+              <p class="pub-title">「磁気バルクハウゼンノイズ解析による薄膜応力評価」，</p>
+              <p class="pub-journal">2023年度修士論文 (1.5年修了)，名古屋大学（秦研究室）.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">12</span>
+            <div class="pub-body">
+              <p class="pub-authors">杉田 涼介，</p>
+              <p class="pub-title">「網羅的データ解析によるCo<sub>2</sub>MnGa<sub>x</sub>Ge<sub>1-x</sub>薄膜のXMCDスペクトルとスピン偏極率と電子状態の関係構築」，</p>
+              <p class="pub-journal">2023年度修士論文，東京理科大学（小嗣研究室）.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">11</span>
+            <div class="pub-body">
+              <p class="pub-authors">島 侑一郎，</p>
+              <p class="pub-title">「マルチスケール磁気シミュレーションによる軟磁性体の渦電流損解析」，</p>
+              <p class="pub-journal">2023年度卒業論文，東京理科大学（小嗣研究室）.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">10</span>
+            <div class="pub-body">
+              <p class="pub-authors">早川 聡，</p>
+              <p class="pub-title">「高磁歪材料創製のための磁歪予測と因果解析」，</p>
+              <p class="pub-journal">2023年度卒業論文，東京理科大学（小嗣研究室）.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">9</span>
+            <div class="pub-body">
+              <p class="pub-authors">野﨑 岳人，</p>
+              <p class="pub-title">「ゼロ磁歪ナノ結晶材料の創製と鉄損特性評価」，</p>
+              <p class="pub-journal">2023年度卒業論文，東京理科大学（小嗣研究室）.</p>
+            </div>
+          </li>
+
+          <p class="section__subtitle2">2022年度</p>
+          <li class="pub-item"><span class="number">8</span>
+            <div class="pub-body">
+              <p class="pub-authors">河崎 崇広，</p>
+              <p class="pub-title">「磁気円二色性(MCD)を用いた高磁気モーメント材料FeCoIrにおける電子スピン状態解析」，</p>
+              <p class="pub-journal">2022年度卒業論文，東京理科大学（小嗣研究室）.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">7</span>
+            <div class="pub-body">
+              <p class="pub-authors">谷 春菜，</p>
+              <p class="pub-title">「積層型ナノコンポジット軟磁性膜におけるヒステリシス解析」，</p>
+              <p class="pub-journal">2022年度卒業論文，東京理科大学（小嗣研究室）.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">6</span>
+            <div class="pub-body">
+              <p class="pub-authors">村山 和恭，</p>
+              <p class="pub-title">「FeCoAgの組成傾斜薄膜における磁気円二色性(MCD)スペクトル解析」，</p>
+              <p class="pub-journal">2022年度卒業論文，東京理科大学（小嗣研究室）.</p>
+            </div>
+          </li>
+
+          <p class="section__subtitle2">2021年度</p>
+          <li class="pub-item"><span class="number">5</span>
+            <div class="pub-body">
+              <p class="pub-authors">佐野 光哉，</p>
+              <p class="pub-title">「高磁歪化に向けたFe-Al 系ナノ結晶合金の作製と評価」，</p>
+              <p class="pub-journal">2021年度修士論文，名古屋大学（秦研究室）.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">4</span>
+            <div class="pub-body">
+              <p class="pub-authors">大前 緩奈，</p>
+              <p class="pub-title">「磁気バルクハウゼンノイズ解析による磁性材料の結晶粒径推定」，</p>
+              <p class="pub-journal">2021年度卒業論文，名古屋大学（秦研究室）.</p>
+            </div>
+          </li>
+
+          <p class="section__subtitle2">2020年度以前</p>
+          <li class="pub-item"><span class="number">3</span>
+            <div class="pub-body">
+              <p class="pub-authors">山崎 貴大，</p>
+              <p class="pub-title">「バルクハウゼン効果に基づく高強度Fe-Co磁歪合金の応答特性に関する研究」，</p>
+              <p class="pub-journal">2019年度博士論文，横浜国立大学（中尾研究室）.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">2</span>
+            <div class="pub-body">
+              <p class="pub-authors">山崎 貴大，</p>
+              <p class="pub-title">「粒子間相互作用を考慮したCo-Zn ferriteナノ微粒子の磁気特性とハイパーサーミア効果」，</p>
+              <p class="pub-journal">2016年度修士論文，横浜国立大学（一柳研究室）.</p>
+            </div>
+          </li>
+
+          <li class="pub-item"><span class="number">1</span>
+            <div class="pub-body">
+              <p class="pub-authors">山崎 貴大，</p>
+              <p class="pub-title">「ホールドーピングによるデラフォサイト型超伝導体の探索」，</p>
+              <p class="pub-journal">2014年度学士論文，横浜国立大学（上原研究室）.</p>
+            </div>
+          </li>
+
+        </ol>
+      </section>
+
+      <div class="pub-filter-row">
+        <span class="pub-filter-caption">Category　</span>
+        <div class="pub-filter">
+          <button type="button" class="pub-filter__btn" aria-haspopup="true" aria-expanded="false">
+            <span class="pub-filter__label">原著論文</span>
+            <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          </button>
+          <ul class="pub-filter__menu" role="menu" aria-label="Category list">
+            <li role="menuitem" data-cat="articles"   data-title="原著論文"         data-sub="Number of Articles : 036">原著論文</li>
+            <li role="menuitem" data-cat="proceedings" data-title="国際会議論文"     data-sub="Number of Proceedings : 013">国際会議論文</li>
+            <li role="menuitem" data-cat="books"       data-title="著書"             data-sub="Number of Books : 000">著書</li>
+            <li role="menuitem" data-cat="reviews"     data-title="総説・解説"       data-sub="Number of Reviews : 005">総説・解説</li>
+            <li role="menuitem" data-cat="invited"     data-title="招待講演"         data-sub="Number of Invited Talks : 010">招待講演</li>
+            <li role="menuitem" data-cat="intl-talks"  data-title="国際会議発表"     data-sub="Number of Presentations : 049">国際会議発表</li>
+            <li role="menuitem" data-cat="domestic"    data-title="国内学会発表"     data-sub="Number of Presentations : 095">国内学会発表</li>
+            <li role="menuitem" data-cat="awards"      data-title="受賞"             data-sub="Number of Presentations : 013">受賞</li>
+            <li role="menuitem" data-cat="patents"     data-title="発明・特許"       data-sub="Number of Patents : 002">発明・特許</li>
+            <li role="menuitem" data-cat="fundings"     data-title="競争的研究費" data-sub="Number of Fundings : 009">競争的研究費</li>
+            <li role="menuitem" data-cat="thesis"     data-title="博士・修士・学士論文" data-sub="Number of Degrees : 020">博士・修士・学士論文</li>
+          </ul>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- =================================================================================================== -->
+
+    <button type="button" class="to-top" aria-label="ページ先頭へ" data-to-top>
+      <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- <footer class="site-footer">
+      <p class="footer__copy">
+        <br><br>
+        Copyright © <a href="/">tyamazaki.com</a> | All rights <a href="/test">reserved.</a>
+        <br>
+      </p>
+    </footer> -->
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <script src="./common.js"></script>
+  </body>
+</html>

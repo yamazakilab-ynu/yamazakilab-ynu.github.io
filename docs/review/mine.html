@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en jp">
+  <head>
+    <title>ty/review/mine</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="tyamazaki.com is portfolio, blog and paper reviewing website designed by Takahiro Yamazaki, who is a materials scientist/researcher ant university"/>
+    <meta name="keywords" content="tyamazaki, Takahiro, Yamazaki, portfolio, homepage, website, materials, Scientist, researcher, professor, physics, magnetism, machine learning, Barkhausen, Non-equilibrium, functional, projects, publications, notes, blog, 山崎貴大, 研究者, 大学教員, 論文紹介, 物材見聞録, オブザーブ, ブログ, 材料物理, 物性物理, 材料工学, マテリアルズインフォマティクス"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../img/favicon.png">
+    <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous">
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NYGV5L0T7N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NYGV5L0T7N');
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(function() {
+        $("#sidebar").load("./sidebar.html");
+      });
+    </script>
+  </head>
+  <!-- body -->
+  <body class="light" id="top">
+    <!-- header -->
+    <header class="header center">
+      <h3><a href="../" class="link">tyamazaki.com</a></h3>
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="../">top</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../review">review</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../blog">blog</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../publications">publications</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../projects">projects</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../notes">notes</a>
+          </li>
+        </ul>
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+        <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger"> 
+          <i aria-hidden="true" id="btn-navigation" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+       
+    <div class="about4 center">
+      <h2>論文紹介</h2>
+      <h5>著者論文：要約とポイント | under renewal</h5>
+    </div>
+    <div class="container">
+      
+      <!-- Main contents -->
+      <main class="main-content">
+        <section id="physics">
+          <section>     
+            <h4 class="under3">論文タイトル一覧 (〇は第一/責任著者、それ以外は共著)</h4>
+            <ol class="indent">
+              <li class="description22"><a href="#1">
+                次元削減技術を用いたFe-Ga合金単結晶の磁歪メカニズムの可視化 (2023.09.06)</a></li>
+              <li class="description22"><a href="#2">
+                Ir添加によるFe0.75Co0.25単結晶薄膜の負の異方性磁気抵抗効果の起源 (2023.08.07)</a></li>
+              <li class="description22"><a href="#3">
+                〇 薄膜の応力評価のための機械学習を用いた磁気バルクハウゼン雑音の解析 (2023.06.23)</a></li>
+              <li class="description22"><a href="#4">
+                薄膜金属ガラスの内部応力測定法の開発 (2023.05.17)</a></li>
+              <li class="description22"><a href="#5">
+                〇 熱処理による弾性熱量冷却のための超弾性Ni-Ti合金の温度範囲の調整 (2023.04.28)</a></li>
+            </ol>
+          </section><br>
+
+          <section>
+            <div id="1"><h4 class="indent2">次元削減技術を用いたFe-Ga合金単結晶の磁歪メカニズムの可視化</h4>
+              <div class="description2">
+                高速フーリエ変換（FFT）と教師なし機械学習技術を組み合わせて、磁気光学カー効果（MOKE）顕微鏡で撮影したFe-Ga合金単結晶の磁気ドメイン構造を分析した。主成分分析（PCA）により、磁歪と磁気ドメイン構造の相関を抽出し、180度と90度のドメイン壁運動に関与する異なるメカニズムを識別した。磁歪の最適化に向けて、材料情報学的手法の有効性と可能性を示した。
+              </div><div class="description10">2023-09-06<br>
+                Visualization of the Magnetostriction Mechanism in Fe-Ga Alloy Single Crystal Using Dimensionality Reduction Techniques<br>
+                <a href="https://ieeexplore.ieee.org/document/10242127" target="_blank" class="link2 link2--nav2">IEEE Transactions on Magnetics, 59, 11 (2023)</a></div><div class="img_align">
+                <img src="../review/img/mine-1-1.png" class="img300">
+              </div><br><div class="description6">
+                <span class="name">【コメント】</span>
+                磁区画像とミクロ磁歪の関係を機械学習で接続したもの<br>
+                <span class="name">【用語】</span>
+                磁歪：磁性材料の形状や寸法が、外部磁場の影響で磁化方向に沿って変化する現象。磁歪係数は、磁場によるひずみの大きさを表す指標である。磁歪は、センサーやアクチュエーターなどの応用に利用される。磁気光学カー効果：磁化された表面から反射した光の偏光状態が変化する磁気光学効果の一種。偏光状態の変化は、カー角やカー楕円率として定量化される。磁気光学カー効果は、磁気ドメイン構造の観察に用いられる装置として、カー顕微鏡の原理となっている。主成分分析：多変量データを、データの分散を最大限に説明するように直交する成分に線形変換する統計的手法。主成分分析は、データの次元数を削減するために用いられる。主成分分析は、データの特徴を抽出するために、機械学習やデータ分析において広く利用される。<br>
+                <span class="name">【提案手法】</span>
+                MOKE顕微鏡を用いて、様々な外部磁場下でFe-Ga合金単結晶の磁気ドメイン構造の画像を撮影した。画像に対して、SVDとRPCAというノイズ除去技術を適用して、磨き傷などの影響を除去した。画像に対して、FFTを用いて、磁気ドメインの周期性に関する情報を抽出した。FFT画像をベクトル化して積み重ねた後、PCAを用いて、次元数を削減した。PCAの成分と磁化や磁歪との関係をプロットして、磁気ドメイン構造と磁歪メカニズムとの相関を分析した。<br>
+                <span class="name">【学術的新規性】</span>
+                本研究は、Fe-Ga合金単結晶の磁歪メカニズムを可視化するために、FFTとPCAという次元削減技術を組み合わせて用いた点で、先行研究とは異なる。本研究は、PCAの成分と物理的性質との間に強い相関があることを示し、磁歪の大きさや方向性に影響を与える要因を明らかにした点で、磁歪メカニズムの理解に貢献した。<br>
+              </div>
+            </div><br><br>
+            <div id="2"><h4 class="indent2">Ir添加によるFe0.75Co0.25単結晶薄膜の負の異方性磁気抵抗効果の起源</h4>
+              <div class="description2">
+                Ir添加によりFe3CoのB2規則相が生成することをX線回折や電子顕微鏡で明らかにした。このB2規則相はFe-Co-Ir三元系の平衡相図には現れない準安定相である。Ir添加によりFe3Coの異方性磁気抵抗（AMR）比が正から負に変化し、最大で-4.7%（10 K）と-3.6%（300 K）に達することを測定した。これらの負のAMR比は重金属添加した3d遷移金属合金の中で最大の値である。電子散乱理論を用いて、B2規則相における負のAMR比の起源を説明した。B2規則相では、Feのdε軌道とdγ軌道の間のエネルギー差が小さく、dγ軌道の状態密度がdε軌道よりも大きいことが、s-d散乱におけるAMR比の符号を決める重要な要因であることを示した。
+              </div><div class="description10">2023-08-07<br>
+                Origin of negative anisotropic magnetoresistance effect in Fe0.75Co0.25 single-crystal thin films upon Ir addition<br>
+                <a href="https://journals.aps.org/prmaterials/abstract/10.1103/PhysRevMaterials.7.084401" target="_blank" class="link2 link2--nav2">Phys. Rev. Materials 7, 084401 (2023)</a></div><div class="img_align">
+                <img src="../review/img/mine-2-1.png" class="img300">
+                <img src="../review/img/mine-2-2.png" class="img300c">
+              </div><br><div class="description6">
+                <span class="name">【コメント】</span>
+                FeCoIrコンビ膜で磁気抵抗効果の起源を探究したもの<br>
+                <span class="name">【用語】</span>
+                異方性磁気抵抗（AMR）効果：強磁性体において、電流方向と磁化方向の相対角度によって電気抵抗が変化する現象。スピン軌道相互作用によって起こるスピン依存的な輸送現象の一つである。B2規則相：立方晶系の格子構造の一種で、1aサイト（0,0,0）と1bサイト（1/2,1/2,1/2）に異なる原子が交互に配置される。Fe3Co–Irでは、1aサイトにFe原子が、1bサイトにFe、Co、Ir原子が混在する。電子散乱理論：電子が物質中を移動する際に、他の電子や原子核と衝突することで散乱される現象を記述する理論。散乱の強さや角度分布は、散乱体の種類やエネルギーに依存する。電子散乱は、物質の電気伝導や磁気特性に影響を与える。[D(d)γ− − D(d)ε−]/D(d)ε−とは、d軌道のεとγの部分状態密度の差をεの部分状態密度で規格化した値である。この値は、異方性磁気抵抗（AMR）比の符号や大きさを決める重要な要因の一つ。dγ軌道の部分状態密度がdε軌道よりも大きいと、AMR比は負になり、逆に、dε軌道の部分状態密度がdγ軌道よりも大きいと、AMR比は正になる。<br>
+                <span class="name">【提案手法】</span>
+                Ir添加によるFe0.75Co0.25単結晶薄膜の作製：コンビネータリー溶射法を用いて、MgO(100)基板上にIr濃度が連続的に変化するFe0.75Co0.25単結晶薄膜を作製した。Ir濃度は0から11%まで変化し、膜厚は30 nmであった。作製後、真空中で約380℃で30分間アニール処理を行った。X線回折による結晶構造の解析：室温で、Ir濃度に応じてX線回折パターンを測定した。χ=0°と54.7°の測定配置を用いた。平面内と垂直方向の格子定数やB2規則度を求めた。また、シンクロトロン放射光を用いて、低Ir濃度領域やFe-K吸収端付近のX線回折パターンを測定した。電子顕微鏡による結晶構造の観察：Ir濃度が11%の領域の断面を電子顕微鏡で観察した。高分解能HAADF-STEM像、EDS元素マップ、ナノビーム電子回折パターンを取得し、B2規則相の存在と原子配置を確認した。AMR効果の測定：薄膜を多端子デバイスにパターニングし、10から300 Kまでの温度でAMR効果を測定した。電流は[110]方向に100 μAを印加し、磁場は1 Tで膜面内に回転させた。電流方向と磁化方向の相対角度をϕとし、AMR比を(ρ∥−ρ⊥)/ρ⊥と定義した。電子散乱理論によるAMR比の計算：密度汎関数理論とKKR法を用いて、A2無秩序Fe3Co、A2無秩序(Fe3Co)89Ir11、B2規則(Fe3Co)89Ir11の部分状態密度を計算した。電子散乱理論に基づくモデルを用いて、s-d散乱とd軌道の結晶場を考慮して、AMR比を求めた。<br>
+                <span class="name">【学術的新規性】</span>
+                本研究は、Ir添加によりFe3CoにB2規則相が生成することを初めて報告した。このB2規則相は、Fe-Co-Ir三元系の平衡相図には現れない準安定相であり、その形成機構や安定性は今後の課題である。 また、Ir添加によりFe3CoのAMR比が正から負に変化し、重金属添加した3d遷移金属合金の中で最大の負のAMR比を示すことを明らかにした。これは、B2規則相におけるdε軌道とdγ軌道のエネルギー差の小ささとdγ軌道の状態密度の大きさが、s-d散乱におけるAMR比の符号を決めることを理論的に説明した。 最後に、電子散乱理論を用いて、B2規則相における負のAMR比の起源を定量的に解析した。この理論は、s-d散乱とd軌道の結晶場を考慮することで、AMR比の符号や大きさを予測することができる。この理論は、他の重金属添加した3d遷移金属合金にも適用可能である。<br>
+              </div>
+            </div><br><br>
+            <div id="3"><h4 class="indent2">〇 薄膜の応力評価のための機械学習を用いた磁気バルクハウゼン雑音の解析</h4>
+              <div class="description2">
+                薄膜の応力評価に有効な磁気バルクハウゼン雑音（MBN）の特徴量を機械学習の手法である勾配ブースティング決定木（GBDT）と畳み込みニューラルネットワーク（CNN）を用いて抽出した。GBDTとCNNの予測精度を定量的に比較し、GBDTの方が未知のデータに対する汎化性能が高いことを示した。MBN解析における機械学習の利点と課題について、ドメイン知識の必要性や未知データへの適用性の観点から議論した。
+              </div><div class="description10">2023-06-23<br>
+                Stress measurement based on magnetic Barkhausen noise for thin films<br>
+                <a href="https://journals.aps.org/prmaterials/abstract/10.1103/PhysRevMaterials.7.084401" target="_blank" class="link2 link2--nav2">Microelectronic Engineering 279 (2023) 112057</a></div><div class="img_align">
+                <img src="../review/img/mine-3-1.png" class="img300">
+                <img src="../review/img/mine-3-2.png" class="img300">
+              </div><br><div class="description6">
+                <span class="name">【コメント】</span>
+                磁気バルクハウゼン雑音の機械学習を利用した理解と応用について研究したもの<br>
+                <span class="name">【用語】</span>
+                磁気バルクハウゼン雑音（MBN）とは、強磁性材料に磁場を印加したときに発生する磁気ノイズです。MBNは、磁気ドメインの移動によって発生します。磁気ドメインとは、強磁性材料中の磁気的に均一な領域であり、それぞれの領域内の磁気ベクトルが同じ方向を向いています。磁場を印加すると、ドメインの境界が移動し、ドメインの大きさや方向が変化します。このとき、ドメインの境界が結晶欠陥などに引っかかると、急激な磁場の変化が生じ、MBNが発生します。勾配ブースティング決定木（GBDT）とは、決定木という分類や回帰に用いられる機械学習のモデルを複数組み合わせて、誤差を小さくするように学習するアルゴリズムです。畳み込みニューラルネットワーク（CNN）とは、画像や音声などの時空間的な構造を持つデータに対して、局所的な特徴を抽出するための畳み込み層と、特徴マップを縮小するためのプーリング層を交互に重ねたニューラルネットワークの一種です。ドメイン知識とは、特定の分野や領域に関する専門的な知識や経験のことで、機械学習の前処理や特徴量選択において重要な役割を果たします。<br>
+                <span class="name">【提案手法】</span>
+                Fe-Co多結晶薄膜に曲げ応力を印加しながら、MBNの時間波形を取得する。MBNの時間波形から、FFTによって周波数スペクトルを求める。GBDTの場合は、周波数スペクトルの形状に基づいて、MBNの平均振幅やピーク振幅などの統計量を計算する。CNNの場合は、周波数スペクトルをそのまま入力とする。GBDTとCNNのそれぞれで、MBNの特徴量と応力の関係を学習する。学習したモデルを用いて、未知のMBNに対する応力の予測を行う。<br>
+                <span class="name">【学術的新規性】</span>
+                薄膜の応力評価において、MBNの特徴量を機械学習によって自動的に抽出することで、従来の手作業による特徴量選択の問題を解決した。GBDTとCNNの二種類の機械学習アルゴリズムを用いて、MBNの解析を行い、それぞれの予測精度や汎化性能を定量的に比較した。MBN解析における機械学習の利点と課題について、ドメイン知識の必要性や未知データへの適用性の観点から議論し、今後の研究の方向性を示唆した。<br>
+              </div>
+            </div><br><br>
+            <div id="4"><h4 class="indent2">薄膜金属ガラスの内部応力測定法の開発</h4>
+              <div class="description2">
+                薄膜金属ガラスの内部応力を測定するために、シャック・ハートマンセンサー（SHS）を用いた新しい手法を提案した。SHSを用いて、基板の曲率を測定し、曲率から薄膜の内部応力を計算した。ニッケル硫酸アンモニウム溶液中でニッケル電鋳を行い、電流密度2.1mA/cm2で薄膜の厚さが19μmになるまで成膜した。測定結果から、内部応力の再現性は約1MPaであることが分かった。
+              </div><div class="description10">2023-05-17<br>
+                Novel measurement method of internal stress in thin films using micro spring structure<br>
+                <a href="https://www.jstage.jst.go.jp/article/mej/10/4/10_23-00074/_article" target="_blank" class="link2 link2--nav2">Mechanical Engineering Journal, 10, 4 (2023)</a></div><div class="img_align">
+                <img src="../review/img/mine-4-1.png" class="img300">
+                <img src="../review/img/mine-4-2.png" class="img300">
+              </div><br><div class="description6">
+                <span class="name">【コメント】</span>
+                薄膜物性評価用マイクロデバイスの開発<br>
+                <span class="name">【用語】</span>
+                薄膜金属ガラス：非晶質構造を持つ金属薄膜で、高い強度や弾性限界、優れた耐食性や耐摩耗性などの特性を有する。内部応力：薄膜内部に存在する力の分布で、薄膜の形状や性能に影響を与える。内部応力は薄膜の成膜過程や熱処理などによって変化する。シャック・ハートマンセンサー：光の波面を測定する装置で、レンズアレイを通過した光の焦点位置を検出することで波面の曲率を求める。基板曲げ法：薄膜の内部応力を測定する方法の一つで、薄膜の成膜前後の基板の曲率の変化から内部応力を計算する。<br>
+                <span class="name">【提案手法】</span>
+                薄膜金属ガラスの内部応力を測定するために、基板曲げ法にシャック・ハートマンセンサーを組み合わせた手法を開発した。シャック・ハートマンセンサーを用いて、基板に反射したレーザー光の波面をモニターし、基板の曲率を測定した。基板の曲率から、薄膜の内部応力を計算した。計算には、薄膜と基板の物性値や薄膜の厚さなどが必要である。<br>
+                <span class="name">【学術的新規性】</span>
+                薄膜金属ガラスの内部応力測定において、シャック・ハートマンセンサーを用いた手法は、従来の基板曲げ法に比べて、より高い分解能や精度を持つと期待される。シャック・ハートマンセンサーを用いた手法は、薄膜の厚さや形状に依存しないため、様々な薄膜金属ガラスの内部応力測定に適用できると考えられる。シャック・ハートマンセンサーを用いた手法は、薄膜金属ガラスの内部応力の温度依存性や分布などを詳細に調べることができると推測される。<br>
+              </div>
+            </div><br><br>
+            <div id="5"><h4 class="indent2">〇 熱処理による弾性熱量冷却のための超弾性Ni-Ti合金の温度範囲の調整</h4>
+              <div class="description2">
+                この研究では、弾性熱量冷却に適した超弾性Ni-Ti合金の作用温度範囲を熱処理によって調整する方法を検討しました。商用のNi50.8Ti49.2合金管を異なる時間と温度で熱処理し、その結果、結晶構造、相変態温度、等温超弾性特性、断熱弾性熱量効果に影響を与えることが分かりました。特に、400℃での短時間の熱処理によって、高い超弾性と弾性熱量冷却性能を示すとともに、5～120分の熱処理時間によって24.7℃の範囲でオーステナイト終了温度（Af）を調整できることが明らかになりました。この研究の成果は、熱処理技術が弾性熱量冷却のための超弾性Ni-Ti合金の温度範囲を微調整する有効な手段であることを示しています。
+              </div><div class="description10">2023-04-28<br>
+                Tuning the temperature range of superelastic Ni-Ti alloys for elastocaloric cooling via thermal processing<br>
+                <a href="https://www.jstage.jst.go.jp/article/mej/10/4/10_23-00074/_article" target="_blank" class="link2 link2--nav2">J. Phys. Energy 5 (2023) 024020</a></div><div class="img_align">
+                <img src="../review/img/mine-5-1.png" class="img300v">
+                <img src="../review/img/mine-5-2.png" class="img300">
+              </div><br><div class="description6">
+                <span class="name">【コメント】</span>
+                1年間の在米研究の成果物で形状記憶合金の弾性熱量効果を調査したもの<br>
+                <span class="name">【用語】</span>
+                弾性熱量冷却：超弾性材料に機械的な力を加えることで、相変態に伴う潜熱の放出と吸収によって温度変化を起こす現象を利用した冷却技術です。従来の蒸気圧縮冷却に比べて、環境に優しく、効率的な冷却が可能です。超弾性：Ni-Ti合金のような形状記憶合金が示す特殊な弾性現象で、高温相（オーステナイト）の状態で応力を加えると、低温相（マルテンサイト）に変態し、ひずみを生じます。応力を除去すると、オーステナイトに逆変態し、ひずみが完全に回復します。この現象は、相変態に伴う潜熱の放出と吸収によって弾性熱量効果を引き起こします。Ni-Ti形状記憶合金：ニッケルとチタンのほぼ等原子比の合金で、形状記憶効果（SME）と超弾性（SE）という二つの独特な性質を持ちます。形状記憶効果とは、一定の温度以上で高温相（オーステナイト）になり、一定の温度以下で低温相（マルテンサイト）になるという熱弾性相変態を利用した現象で、低温相で変形させた後に高温相に戻すと、元の形状に戻ります。超弾性とは、高温相で応力を加えると低温相に変態し、応力を除去すると高温相に逆変態することで、大きなひずみを完全に回復する現象です。熱処理：金属材料の組織や性質を変化させるために、一定の温度で加熱したり、冷却したりする工程です。熱処理には、溶体化処理、析出硬化処理、焼入れ処理、焼戻し処理などがあります。Ni-Ti合金の熱処理では、析出硬化処理が重要で、Ni-Ti基体中にNi4Ti3などの析出物を形成することで、相変態温度や超弾性特性を調整できます。<br>
+                <span class="name">【提案手法】</span>
+                この研究で提案する手法は、商用のNi50.8Ti49.2合金管を異なる時間と温度で熱処理することで、弾性熱量冷却に適した超弾性Ni-Ti合金の作用温度範囲を調整する方法です。具体的には、まず合金管を900℃～1000℃で60分間溶体化処理し、水冷します。次に、400℃で5～120分間の析出硬化処理を行い、再び水冷します。この熱処理によって、Ni-Ti合金の結晶構造、相変態温度、等温超弾性特性、断熱弾性熱量効果に影響を与えることができます。<br>
+                <span class="name">【学術的新規性】</span>
+                この研究の学術的な新規性は、熱処理技術を用いて、単一の組成のNi-Ti合金から、異なるAf温度を持つ超弾性Ni-Ti合金を作製できることを示した点にあります。これまでの研究では、Af温度の調整には、Ni濃度の変化や第三元素の添加が必要であるとされていました71。しかし、この研究では、Ni4Ti3などの析出物の量やサイズを制御することで、Af温度の範囲を24.7℃まで変化させることができました。これにより、弾性熱量冷却のための多段カスケード再生器の開発に有用な手法を提供しました。<br>
+              </div>
+            </div><br><br>
+
+          </section>
+        </section>
+      </main>
+
+      <!-- Sidebar -->
+      <aside id="sidebar" class="sidebar"></aside>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftyamazaki.com%2Freview%2Fmine&count_bg=%2318B41D&title_bg=%23555555&icon=atom.svg&icon_color=%23E7E7E7&title=Thanks:)&edge_flat=false"/><br><br>Copyright © 2022-2023 <a href="../">tyamazaki.com</a> | All rights reserved.
+    </footer>
+
+    <div class="scroll-container">
+      <div class="scroll-top">
+        <a aria-label="Scroll up" href="#top">
+          <i aria-hidden="true" class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+      <div class="scroll-down">
+        <a aria-label="Scroll down" href="#bottom">
+            <i aria-hidden="true" class="fas fa-arrow-down"></i>
+        </a>
+    </div>
+    </div>
+    <script src="../script.js"></script>
+    <div id="bottom"></div>
+  </body>
+</html>

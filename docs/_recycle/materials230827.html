@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en jp">
+  <head>
+    <title>ty/review/materials</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 "/>
+    <meta name="description" content="This portfolio website is designed by tyamazaki (Takahiro Yamazaki), who is a materials scientist/researcher" />
+    <meta name="keywords" content="tyamazaki, Takahiro, Yamazaki, portfolio, homepage, website, materials, Scientist, researcher, professor, physics, magnetism, machine learning, Barkhausen, Non-equilibrium, functional, projects, publications, notes, blog" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../img/favicon.png">
+    <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous">
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NYGV5L0T7N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NYGV5L0T7N');
+    </script>
+  </head>
+  <!-- body -->
+  <body class="light" id="top">
+
+    <!-- header -->
+    <header class="header center">
+      <h3><a href="../" class="link">tyamazaki.com</a></h3>
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="../">top</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../review">review</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../blog">blog</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../publications">publications</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../projects">projects</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../notes">notes</a>
+          </li>
+        </ul>
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+        <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger"> 
+          <i aria-hidden="true" id="btn-navigation" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+       
+    <div class="about4 center">
+      <h2>論文紹介</h2>
+      <h5>材料工学に関する注目論文（随時更新中）</h5>
+    </div>
+    <div class="container">
+      
+      <!-- Main contents -->
+      <main class="main-content">
+        <!-- physics -->
+        <section id="physics">
+          <section>
+            <h3 class="section__title3">材料工学：注目論文と傾向のまとめ</h3>
+          </section><br>
+
+          <!-- 論文タイトル一覧 -->
+          <section>     
+            <h4 class="under3">論文タイトル一覧</h4>
+            <ol class="indent">
+              <li class="description22"><a href="#1">
+                多結晶材料の有効特性を予測するためのグラフニューラルネットワーク：包括的な分析</a></li>
+              <li class="description22"><a href="#2">
+                トポロジカル電磁気学によるインダクタンスとキャパシタンスの発現</a></li>
+            </ol>
+          </section><br>
+
+          <section>
+            <div id="1">
+              <h4>1. 多結晶材料の有効特性を予測するためのグラフニューラルネットワーク：包括的な分析</h4>
+              <div class="description2">
+                ・LLZOセラミックを例にとって、有限幅の粒界を持つ三次元多結晶微細構造とその有効イオン伝導率および有効弾性剛性係数を大規模に生成し、物理ベースのシミュレーションで計算した。<br>
+                ・原子結晶構造の特性を予測するために開発された結晶グラフ畳み込みニューラルネットワークを基に、多結晶グラフニューラルネットワーク（PGNN）モデルを開発した。PGNNモデルは、粒子と粒界の物理的特徴をノードとエッジの特徴としてグラフに表現し、メッセージ伝達関数を用いて粒子間や粒界間の相互作用を考慮する。<br>
+                ・最適化されたPGNNモデルは、線形回帰モデルや二つの基準となる畳み込みニューラルネットワーク（CNN）モデルよりも低い誤差（1.4%未満）で有効イオン伝導率テンソルの全ての対角成分を予測することができた。また、EBSDデータから生成された統計的に異なる微細構造に対しても良好な外挿性能を示した。<br>
+                ・逐次的前方選択法を用いて、粒子や粒界の個々の物理的特徴が予測精度に及ぼす相対的な重要度を定量化した。その結果、粒子や粒界の導電率が最も重要であり、粒界の厚さや粒子の中心位置は不要な特徴であることがわかった。さらに、有効イオン伝導率を予測するために事前学習されたPGNNモデルは、同じ微細構造の有効弾性剛性係数を予測する際に優れた転移学習性能を示した。
+              </div>
+              <div class="description6">
+                コメント：複雑になるにつれて物性・材料特性を予測する説明変数は膨大に増えていく。どういった特徴量エンジニアリングが必要になっていくか。また、グラフ理論を機械学習に組み込んだ予測モデルも興味深い。
+              </div>
+              <div class="description10">
+                DATE: 8 Jun 2023 (v2)<br>
+                Graph Neural Network for Predicting the Effective Properties of Polycrystalline Materials: A Comprehensive Analysis<br>
+                Minyi Dai et al. (University of Wisconsin-Madison, USA)<br>
+                <a href="https://arxiv.org/abs/2209.05583" target="_blank" class="link2 link2--nav2">
+                  arXiv:2209.05583 (cond-mat.mtrl-sci)</a>
+              </div><div class="img_align">
+                <img src="../review/img/materials-1-1.png" class="img300">
+                <img src="../review/img/materials-1-2.png" class="img300">
+              </div>
+            </div><br><br>
+
+            <div id="2">
+              <h4>2. トポロジカル電磁気学によるインダクタンスとキャパシタンスの発現</h4>
+              <div class="description2">
+                ・トポロジカル電磁気学：絶縁体中の電子の運動が非自明な運動量空間トポロジーを持つとき、通常のマクスウェル方程式では記述できない異常な磁気電気応答が現れる。これをトポロジカル電磁気学と呼ぶ。<br>
+                ・インダクタンスとキャパシタンス：電流と電圧の関係を表す複素インピーダンスには、インダクタンスとキャパシタンスという二つの要素が含まれる。インダクタンスは電流に対する遅れを、キャパシタンスは電圧に対する遅れを表す。<br>
+                ・トポロジカル材料と磁性材料のヘテロ構造：トポロジカル絶縁体や量子スピンホール絶縁体などのトポロジカル材料と、強磁性体や反強磁性体などの磁性材料を接合したヘテロ構造では、トポロジカル電磁気学と磁化ダイナミクスが相互作用する。<br>
+                ・トポロジカル電磁気学によるインダクタンスとキャパシタンスの発現：トポロジカル材料と磁性材料のヘテロ構造に交流電圧を印加すると、トポロジカル電子系が磁化ダイナミクスを駆動し、その結果としてインダクタンスやキャパシタンスが発現する。このインダクタンスやキャパシタンスは、従来の金属回路や最近提案された金属磁性体によるものと比べて、高い周波数帯域、低い消費電力、高い品質因子を実現できる。
+              </div>
+              <div class="description6">
+                コメント：創発インダクタよりすごい絶縁体インダクタとのこと。トポロジカル磁性体なので高品質な合成や今回はヘテロ構造の高精度な界面制御が求められると思うが、これをベースに派生技術が展開したら面白そう。<br>
+                関連記事：<a href="https://www.jaea.go.jp/02/press2023/p23061602/" target="_blank" class="link2 link2--nav2">日本原子力研究開発機構プレスリリース（16 Jun 2023）</a>「インダクタ」のサイズを10000分の1に！超小型化できる新原理を考案<br>
+                補足：この論文はトポロジカル材料と磁性材料のヘテロ構造という特殊な系を考えているが、その理論的枠組みは一般的であり、他の種類の秩序変数や物質系にも適用できる可能性があることを指摘している。例えば、超伝導体や強相関電子系などのトポロジカル材料と、多極子秩序やスカイルミオンなどの磁性材料とのヘテロ構造では、どのようなトポロジカル電磁気学が現れるか興味深い問題である。
+              </div><div class="description10">
+                DATE: 26 May 2023<br>
+                Emergence of Inductance and Capacitance from Topological Electromagnetism<br>
+                Yasufumi Araki et al. (Japan Atomic Energy Agency, Japan)<br>
+                <a href="https://journals.jps.jp/doi/epdf/10.7566/JPSJ.92.074705" target="_blank" class="link2 link2--nav2">
+                  journals.jps.jp:doi/epdf/10.7566/JPSJ.92.074705</a>
+              </div><div class="img_align">
+                <img src="../review/img/materials-2-1.png" class="img300">
+                <img src="../review/img/materials-2-2.png" class="img300">
+              </div>
+            </div><br><br>
+
+          </section>
+        </section>
+      </main>
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <ul class="chapters"><p class="under3 description1">年月一覧</p>
+          <li class="description3">
+            <ul class="sections description5">
+              <li><a class="link link--nav" href="./review/202309">2023年9月</a></li>
+              <li><a class="link link--nav" href="./review/202308">2023年8月</a></li>
+              <li><a class="link link--nav" href="./review/202307">2023年7月</a></li>
+            </ul>
+          </li>
+        </ul><br>
+
+        <ul class="chapters"><p class="under3 description1">特集一覧</p>
+          <li class="description3">
+            <ul class="sections description5">
+              <li><a class="link link--nav" href="./review/softmag">ソフト磁性</a></li>
+              <li><a class="link link--nav" href="./review/hetero">ヘテロ構造</a></li>
+            </ul>
+          </li>
+        </ul><br>
+
+        <ul class="chapters"><p class="under3 description1">分野一覧</p>
+          <li class="description3">
+            <ul class="sections description5">
+              <li><a class="link link--nav" href="./review/physics">物性物理</a></li>
+              <li><a class="link link--nav" href="./review/materials">材料工学</a></li>
+              <li><a class="link link--nav" href="./review/info">マテインフォ</a></li>
+              <li><a class="link link--nav" href="./review/others">その他</a></li>
+            </ul>
+          </li>
+        </ul><br>
+      </aside>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+      © 2023 <a href="../" class="link footer__link">tyamazaki</a>. All rights reserved.<br><br>
+      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftyamazaki.com%2Freview%2Fmaterials&count_bg=%2318B41D&title_bg=%23555555&icon=atom.svg&icon_color=%23E7E7E7&title=Thanks:)&edge_flat=false"/>
+    </footer>
+
+    <div class="scroll-container">
+      <div class="scroll-top">
+        <a aria-label="Scroll up" href="#top">
+          <i aria-hidden="true" class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+      <div class="scroll-down">
+        <a aria-label="Scroll down" href="#bottom">
+            <i aria-hidden="true" class="fas fa-arrow-down"></i>
+        </a>
+    </div>
+    </div>
+    <script src="../script.js"></script>
+    <div id="bottom"></div>
+  </body>
+</html>

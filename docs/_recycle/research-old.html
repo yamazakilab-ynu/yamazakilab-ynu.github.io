@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <title>tyamazaki.com</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="私たちは、計測・計算・機械学習を融合させることで、物質の電子状態から微細構造、さらには機能発現に至るまでを統一的に理解し、新しい材料研究開発の道を切り拓いています。"/>
+    <meta name="keywords" content="山崎研究室, tyamazaki, Takahiro, Yamazaki, portfolio, homepage, website, materials, Scientist, researcher, professor, physics, magnetism, machine learning, Barkhausen, Non-equilibrium, functional, projects, publications, notes, blog, 山崎貴大, 研究者, 大学教員, 論文紹介, 物材見聞録, オブザーブ, ブログ, 材料物理, 物性物理, 材料工学, マテリアルズインフォマティクス"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="./styles_test.css">
+    <link rel="icon" href="./img/favicon2.png">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NYGV5L0T7N"></script>
+    
+    <!-- <script defer>
+    window.addEventListener('DOMContentLoaded', () => {
+      /* --- テーマ切替 --- */
+      const themeBtn = document.getElementById('btn-theme')?.closest('button') || document.getElementById('btn-theme');
+      themeBtn?.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+      });
+
+      /* --- ハンバーガー --- */
+      const hamBtn = document.querySelector('.nav__hamburger');
+      const navList = document.querySelector('.nav__list');
+      hamBtn?.addEventListener('click', () => {
+        navList?.classList.toggle('is-open');
+      });
+
+      /* --- ヒーロースライダー --- */
+      const hero = document.querySelector('.hero');
+      if (hero) {
+        const slides = Array.from(hero.querySelectorAll('.hero__slide'));
+        const prevBtn = hero.querySelector('.hero__nav.prev');
+        const nextBtn = hero.querySelector('.hero__nav.next');
+        const dotsWrap = hero.querySelector('.hero__dots');
+
+        let idx = 0;
+        let timer = null;
+        const INTERVAL_MS = 5000;
+
+        slides.forEach((_, i) => {
+          const b = document.createElement('button');
+          b.type = 'button';
+          b.setAttribute('aria-label', `Go to slide ${i+1}`);
+          b.addEventListener('click', () => show(i, true));
+          dotsWrap.appendChild(b);
+        });
+
+        function show(i, user = false) {
+          slides[idx].classList.remove('is-active');
+          idx = (i + slides.length) % slides.length;
+          slides[idx].classList.add('is-active');
+          dotsWrap.querySelectorAll('button').forEach((b, j) =>
+            b.setAttribute('aria-current', j === idx ? 'true' : 'false')
+          );
+          if (user) restart();
+        }
+        function next() { show(idx + 1); }
+        function prev() { show(idx - 1); }
+        function start() { timer = setInterval(next, INTERVAL_MS); }
+        function stop()  { clearInterval(timer); timer = null; }
+        function restart(){ stop(); start(); }
+
+        nextBtn?.addEventListener('click', next);
+        prevBtn?.addEventListener('click', prev);
+        hero.addEventListener('mouseenter', stop);
+        hero.addEventListener('mouseleave', start);
+
+        show(0);
+        start();
+      }
+
+      /* --- トップへ戻る --- */
+      const toTop = document.querySelector('[data-to-top]');
+      if (toTop) {
+        const THRESHOLD = 300;
+        const toggle = () => {
+          if (window.scrollY > THRESHOLD) toTop.classList.add('show');
+          else toTop.classList.remove('show');
+        };
+        toggle();
+        window.addEventListener('scroll', toggle, { passive: true });
+        toTop.addEventListener('click', (e) => {
+          e.preventDefault();
+          const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+        });
+      }
+    });
+    </script> -->
+  </head>
+
+  <body class="light" id="top">
+
+    <div id="header"></div>
+
+    <header class="header center">
+      <div class="lab-title">
+        <h3><a href="./">Yamazaki Laboratory</a></h3>
+        <p class="lab-subtitle">
+          <a href="https://www.ynu.ac.jp/" target="_blank" class="lab-link">横浜国立大学</a>
+          <a href="https://www.fse.ynu.ac.jp/" target="_blank" class="lab-link">大学院工学研究院</a><br>
+          <a href="http://www.materep.ynu.ac.jp/" target="_blank" class="lab-link">システムの創生部門</a>
+          <a href="./" class="lab-link">材料情報工学研究室</a>
+        </p>
+      </div>
+
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item"><a class="link link--nav" href="./">home</a></li>
+          <li class="nav__list-item"><a class="link link--nav active" href="./research">research</a></li>
+          <li class="nav__list-item"><a class="link link--nav" href="./members">members</a></li>
+          <li class="nav__list-item"><a class="link link--nav" href="./publications">publications</a></li>
+          <li class="nav__list-item"><a class="link link--nav" href="./album">album</a></li>
+          <li class="nav__list-item"><a class="link link--nav" href="./blog">blog</a></li>
+          <li class="nav__list-item"><a class="link link--nav" href="./access">access</a></li>
+        </ul>
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+        <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger">
+          <i aria-hidden="true" id="btn-navigation" class="fas fa-bars"></i>
+        </button>
+      </nav>
+      <!-- <h3><a href="./" class="link">tyamazaki.com</a></h3>
+        <nav class="nav center">
+          <ul class="nav__list center">
+            <li class="nav__list-item">
+              <a class="link link--nav" href="./">top</a>
+            </li><li class="nav__list-item">
+              <a class="link link--nav" href="./review">review</a>
+            </li><li class="nav__list-item">
+              <a class="link link--nav" href="./blog">blog</a>
+            </li><li class="nav__list-item">
+              <a class="link link--nav" href="./publications">publications</a>
+            </li><li class="nav__list-item">
+              <a class="link link--nav" href="./projects">projects</a>
+            </li><li class="nav__list-item">
+              <a class="link link--nav" href="./notes">notes</a>
+            </li>
+          </ul>
+          <button type="button" aria-label="toggle theme" class="btn btn--icon">
+            <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+          </button>
+          <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger"> 
+            <i aria-hidden="true" id="btn-navigation" class="fas fa-bars"></i>
+          </button>
+        </nav> -->
+    </header>
+
+    <!-- =================================================================================================== -->
+
+    <!-- Main -->
+    <main>
+      <section class="hero2" aria-label="Portfolio hero">
+        <div class="hero__slides">
+          <div class="hero__slide is-active" style="--bg:url('./img/top1.jpg')">
+            <div class="hero__overlay">
+              <div class="hero__panel">
+                <h3 class="hero__title">Research</h3>
+                <p class="hero__desc">研究テーマ</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- <a class="hero__cta" href="./for-students">配属希望の学生さんへ</a> -->
+      </section>
+      
+      <section id="topics" class="section1 section-divider2">
+        <div class="section-head">
+          <p class="eyebrow">Overview</p>
+          <h3 class="title">研究概要</h3>
+        </div>
+        
+        <div class="section-card">
+          <div class="about-split">
+            <div class="about-text">
+              <p class="section__subtitle2">計測・計算・AIで拓く次世代材料研究</p>
+              <p class="paper-desc">
+                　私たちは、計測・計算・データサイエンスを統合することで、物質の電子状態から微細構造、さらには機能発現に至るまでを体系的に理解し、新しい材料研究の地平を切り拓いています。
+                　大型放射光施設を活用した先端解析、高感度磁気計測、マルチスケール計算基盤を駆使し、材料のひずみ・欠陥・拡散・相安定性を起点とした機能創出を目指しています。さらに、電気・磁気・力学応答といった動的プロセスを計測・計算・予測の三位一体で解明し、相変化メモリ・軟磁性材料・スピントロニクスなど次世代デバイス材料の設計・探索へと展開しています。
+                　また、計算予測 → 材料合成 → 特性評価の研究サイクルを、機械学習・AIを用いて加速させることで、データ駆動型アプローチに基づく新しい材料設計指針を社会実装へと結びつけていきます。
+              </p>
+              <a class="achievement-cta" href="./research-overview">Read More</a>
+            </div>
+            <figure class="about-figure">
+              <img src="./img/top8.jpg" alt="Opening image">
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section id="topics" class="section1 section-divider0">
+        <div class="section-head">
+          <p class="eyebrow">Projects</p>
+          <h3 class="title">プロジェクト</h3>
+        </div>
+
+        <div class="section-card">
+          <div class="about-split">
+            <figure class="about-figure">
+              <img src="./img/top8.jpg" alt="Opening image">
+            </figure>
+            <div class="about-text">
+              <p class="section__subtitle2"><span class="num">#001</span><br>計測・計算・AIで拓く次世代材料研究</p>
+              <p class="paper-desc">
+                　私たちは、計測・計算・データサイエンスを統合することで、物質の電子状態から微細構造、さらには機能発現に至るまでを体系的に理解し、新しい材料研究の地平を切り拓いています。
+                　大型放射光施設を活用した先端解析、高感度磁気計測、マルチスケール計算基盤を駆使し、材料のひずみ・欠陥・拡散・相安定性を起点とした機能創出を目指しています。さらに、電気・磁気・力学応答といった動的プロセスを計測・計算・予測の三位一体で解明し、相変化メモリ・軟磁性材料・スピントロニクスなど次世代デバイス材料の設計・探索へと展開しています。
+                　また、計算予測 → 材料合成 → 特性評価の研究サイクルを、機械学習・AIを用いて加速させることで、データ駆動型アプローチに基づく新しい材料設計指針を社会実装へと結びつけていきます。
+              </p>
+              <a class="achievement-cta" href="./research-001">Read More</a>
+            </div>
+          </div>
+        </div>
+      </section><br>
+
+      <section id="topics" class="section1 section-divider0">
+        <div class="section-card">
+          <div class="about-split">
+            <div class="about-text">
+              <p class="section__subtitle2"><span class="num">#002</span><br>計測・計算・AIで拓く次世代材料研究</p>
+              <p class="paper-desc">
+                　私たちは、計測・計算・データサイエンスを統合することで、物質の電子状態から微細構造、さらには機能発現に至るまでを体系的に理解し、新しい材料研究の地平を切り拓いています。
+                　大型放射光施設を活用した先端解析、高感度磁気計測、マルチスケール計算基盤を駆使し、材料のひずみ・欠陥・拡散・相安定性を起点とした機能創出を目指しています。さらに、電気・磁気・力学応答といった動的プロセスを計測・計算・予測の三位一体で解明し、相変化メモリ・軟磁性材料・スピントロニクスなど次世代デバイス材料の設計・探索へと展開しています。
+                　また、計算予測 → 材料合成 → 特性評価の研究サイクルを、機械学習・AIを用いて加速させることで、データ駆動型アプローチに基づく新しい材料設計指針を社会実装へと結びつけていきます。
+              </p>
+              <a class="achievement-cta" href="./research-002">Read More</a>
+            </div>
+            <figure class="about-figure">
+              <img src="./img/top8.jpg" alt="Opening image">
+            </figure>
+          </div>
+        </div>
+      </section><br>
+
+      <section id="topics" class="section1 section-divider0">
+        <div class="section-card">
+          <div class="about-split">
+            <figure class="about-figure">
+              <img src="./img/top8.jpg" alt="Opening image">
+            </figure>
+            <div class="about-text">
+              <p class="section__subtitle2"><span class="num">#003</span><br>計測・計算・AIで拓く次世代材料研究</p>
+              <p class="paper-desc">
+                　私たちは、計測・計算・データサイエンスを統合することで、物質の電子状態から微細構造、さらには機能発現に至るまでを体系的に理解し、新しい材料研究の地平を切り拓いています。
+                　大型放射光施設を活用した先端解析、高感度磁気計測、マルチスケール計算基盤を駆使し、材料のひずみ・欠陥・拡散・相安定性を起点とした機能創出を目指しています。さらに、電気・磁気・力学応答といった動的プロセスを計測・計算・予測の三位一体で解明し、相変化メモリ・軟磁性材料・スピントロニクスなど次世代デバイス材料の設計・探索へと展開しています。
+                　また、計算予測 → 材料合成 → 特性評価の研究サイクルを、機械学習・AIを用いて加速させることで、データ駆動型アプローチに基づく新しい材料設計指針を社会実装へと結びつけていきます。
+              </p>
+              <a class="achievement-cta" href="./research-003">Read More</a>
+            </div>
+          </div>
+        </div>
+      </section><br>
+
+      <section id="topics" class="section1 section-divider0">
+        <div class="section-card">
+          <div class="about-split">
+            <div class="about-text">
+              <p class="section__subtitle2"><span class="num">#004</span><br>計測・計算・AIで拓く次世代材料研究</p>
+              <p class="paper-desc">
+                　私たちは、計測・計算・データサイエンスを統合することで、物質の電子状態から微細構造、さらには機能発現に至るまでを体系的に理解し、新しい材料研究の地平を切り拓いています。
+                　大型放射光施設を活用した先端解析、高感度磁気計測、マルチスケール計算基盤を駆使し、材料のひずみ・欠陥・拡散・相安定性を起点とした機能創出を目指しています。さらに、電気・磁気・力学応答といった動的プロセスを計測・計算・予測の三位一体で解明し、相変化メモリ・軟磁性材料・スピントロニクスなど次世代デバイス材料の設計・探索へと展開しています。
+                　また、計算予測 → 材料合成 → 特性評価の研究サイクルを、機械学習・AIを用いて加速させることで、データ駆動型アプローチに基づく新しい材料設計指針を社会実装へと結びつけていきます。
+              </p>
+              <a class="achievement-cta" href="./research-004">Read More</a>
+            </div>
+            <figure class="about-figure">
+              <img src="./img/top8.jpg" alt="Opening image">
+            </figure>
+          </div>
+        </div>
+      </section><br>
+
+    </main>
+
+    <!-- =================================================================================================== -->
+
+    <button type="button" class="to-top" aria-label="ページ先頭へ" data-to-top>
+      <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- footerを読み込む場所 -->
+    <div id="footer"></div>
+
+    <script>
+      fetch("footer.html")
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById("footer").innerHTML = data;
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer class="site-footer" id="footer">
+      <section class="footer__inner">
+        <div class="lab-title">
+          <h3><a href="./">Yamazaki Laboratory</a></h3>
+          <p class="lab-subtitle">
+            <a href="https://www.ynu.ac.jp/" target="_blank" class="lab-link">横浜国立大学</a>
+            <a href="https://www.fse.ynu.ac.jp/" target="_blank" class="lab-link">大学院工学研究院</a><br>
+            <a href="http://www.materep.ynu.ac.jp/" target="_blank" class="lab-link">システムの創生部門</a>
+            <a href="./" class="lab-link">材料情報工学研究室</a>
+          </p>
+        </div>
+        <nav class="nav center footer-nav">
+          <!-- 1行目 -->
+          <ul class="nav__list">
+            <li class="nav__list-item"><a class="link link--nav" href="./">home</a></li>
+            <li class="nav__list-item"><a class="link link--nav" href="./research">research</a></li>
+            <li class="nav__list-item"><a class="link link--nav" href="./members">members</a></li>
+            <li class="nav__list-item"><a class="link link--nav" href="./publications">publications</a></li>
+            <li class="nav__list-item"><a class="link link--nav" href="./album">album</a></li>
+            <li class="nav__list-item"><a class="link link--nav" href="./blog">blog</a></li>
+            <li class="nav__list-item"><a class="link link--nav" href="./access">access</a></li>
+          </ul>
+          <!-- 2行目 -->
+          <ul class="nav__list">
+            <li class="nav__list-item"><a class="link link--nav" href="./facilities">facilities</a></li>
+            <li class="nav__list-item"><a class="link link--nav" href="./lecture">lecture</a></li>
+            <li class="nav__list-item"><a class="link link--nav" href="./link">link</a></li>
+          </ul>
+        </nav>
+      </section> 
+
+      <p class="footer__copy">
+        <br><br>
+        Copyright © <a href="./">Yamazaki Laboratory</a> (since 2026), YNU.<br>
+        All rights reserved.
+        <br>
+      </p>
+    </footer>
+    <script src="./include.js"></script>
+  </body>
+</html>

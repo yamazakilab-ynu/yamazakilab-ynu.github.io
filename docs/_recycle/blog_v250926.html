@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en jp">
+  <head>
+    <title>tyamazaki.com/blog</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="tyamazaki.com is portfolio, blog and paper reviewing website designed by Takahiro Yamazaki, who is a materials scientist/researcher ant university"/>
+    <meta name="keywords" content="tyamazaki, Takahiro, Yamazaki, portfolio, homepage, website, materials, Scientist, researcher, professor, physics, magnetism, machine learning, Barkhausen, Non-equilibrium, functional, projects, publications, notes, blog, 山崎貴大, 研究者, 大学教員, 論文紹介, 物材見聞録, オブザーブ, ブログ, 材料物理, 物性物理, 材料工学, マテリアルズインフォマティクス"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./img/favicon.png">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NYGV5L0T7N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NYGV5L0T7N');
+    </script>
+  </head>
+  <!-- body -->
+  <body class="light" id="top">
+
+    <!-- header -->
+    <header class="header center">
+      <h3><a href="./" class="link">tyamazaki.com</a></h3>
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="./">top</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="./review">review</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="./blog">blog</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="./publications">publications</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="./projects">projects</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="./notes">notes</a>
+          </li>
+        </ul>
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+        <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger"> 
+          <i aria-hidden="true" id="btn-navigation" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <div class="about4 center">
+      <h1>材物ブログ</h1> <!-- ：物質観察（Matserve）：オブザーブ -->
+      <h5>材料物理研究者の視点</h5> <!-- ：学び、感じ、共有する -->
+    </div>
+    <div class="container">
+      <aside class="sidebar">
+        <ul class="chapters2">
+          <!-- <li class="description3"><a class="link2 link2--nav2" href="./blog/profile">
+            <strong>&nbsp;自己紹介</strong></a>
+          </li>
+          <li class="description3"><a class="link2 link2--nav2" href="./blog/album">
+            <strong>&nbsp;アルバム</strong></a>
+          </li><br> -->
+          <p class="under3 description1">ブログ</p>
+          <li class="description3">&nbsp;2023年
+            <ul class="sections description5">
+              <li><a class="link2 link2--nav2" href="./blog/posts/usa">米メリーランド滞在記</a></li>
+              <!-- <li><a class="link2 link2--nav2" href="#working">大学での仕事内容</a></li> -->
+              <!-- <li><a class="link2 link2--nav2" href="#web3">Web3時代のPeer review</a></li> -->
+            <!-- </ul>
+          </li><br>
+          <li class="description3">&nbsp;2022年
+            <ul class="sections description5"> -->
+              <li><a class="link2 link2--nav2" href="./blog/posts/slackgpt">ChatGPT要約botで論文読み</a></li>
+              <li><a class="link2 link2--nav2" href="./blog/posts/chatgpt">私のChatGPTの使い方</a></li>
+              <!-- <li><a class="link2 link2--nav2" href="#webiste">自作ホームページを作ろう</a></li> -->
+              <li><a class="link2 link2--nav2" href="./blog/posts/220801-hello">初めまして</a></li>
+            </ul><br>
+          </li>
+          <li class="description3">&nbsp;
+            <a class="link2 link2--nav2" href="./blog/profile"><strong>&nbsp;自己紹介</strong></a></li>
+          <li class="description3">&nbsp;
+            <a class="link2 link2--nav2" href="./blog/album"><strong>&nbsp;アルバム</strong></a></li>
+        </ul>
+        <!-- <ul class="chapters"><p class="under3 description1">研究ノート</p>
+          <li class="description3">&nbsp;工事中</li> -->
+          <!-- <li class="description3">&nbsp;材料創製
+            <ul class="sections description5">
+              <li><a class="link2 link2--nav2" href="#sputter">マグネトロンスパッタ装置</a></li>
+              <li><a class="link2 link2--nav2" href="#sem">FE-SEM</a></li>
+              <li><a class="link2 link2--nav2" href="#tem-p">TEM用試料加工</a></li>
+              <li><a class="link2 link2--nav2" href="#tem">TEM観察</a></li>
+              <li><a class="link2 link2--nav2" href="#synchrotron">大型放射光施設</a></li>
+            </ul>
+          </li>
+          <li class="description3">&nbsp;数値計算
+            <ul class="sections description5">
+              <li><a class="link2 link2--nav2" href="#vasp">VASP v6.3.2</a></li>
+              <li><a class="link2 link2--nav2" href="#wien2k">Wien2k v23.2</a></li>
+              <li><a class="link2 link2--nav2" href="#comsol">COMSOL Multiphysics v6.1</a></li>
+              <li><a class="link2 link2--nav2" href="#mumax">mumax v3.10</a></li>
+              <li><a class="link2 link2--nav2" href="#oommf">OOMMG v2.0</a></li>
+            </ul>
+          </li>
+          <li class="description3">&nbsp;機械学習
+            <ul class="sections description5">
+              <li><a class="link2 link2--nav2" href="#chatgpt-p">ChatGPT prompt</a></li>
+              <li><a class="link2 link2--nav2" href="#vscode">VSCode</a></li>
+              <li><a class="link2 link2--nav2" href="#pca">PCA/MDS</a></li>
+              <li><a class="link2 link2--nav2" href="#som">SOM</a></li>
+              <li><a class="link2 link2--nav2" href="#homology">Persistent homology</a></li>
+            </ul>
+          </li> -->
+        <!-- </ul>
+        <ul class="chapters"><p class="under3 description1">テキスト</p>
+          <li class="description3">&nbsp;工事中</li> -->
+          <!-- <li class="description3">&nbsp;物性物理
+            <ul class="sections description5">
+              <li><a class="link2 link2--nav2" href="#p1">物性物理の導入</a></li>
+              <li><a class="link2 link2--nav2" href="#p2">量子力学の復習</a></li>
+              <li><a class="link2 link2--nav2" href="#p3">固体の結晶構造</a></li>
+              <li><a class="link2 link2--nav2" href="#p4">電子のバンド構造</a></li>
+              <li><a class="link2 link2--nav2" href="#p5">電子の動的性質</a></li>
+              <li><a class="link2 link2--nav2" href="#p6">磁性</a></li>
+              <li><a class="link2 link2--nav2" href="#p7">超伝導性</a></li>
+              <li><a class="link2 link2--nav2" href="#p8">格子振動とフォノン</a></li>
+              <li><a class="link2 link2--nav2" href="#p9">強相関系</a></li>
+              <li><a class="link2 link2--nav2" href="#p10">最新の研究トピックと展望</a></li>
+            </ul>
+          </li>
+          <li class="description3">&nbsp;材料工学
+            <ul class="sections description5">
+              <li><a class="link2 link2--nav2" href="#m1">材料工学の導入</a></li>
+              <li><a class="link2 link2--nav2" href="#m2">金属と合金</a></li>
+              <li><a class="link2 link2--nav2" href="#m3">セラミックス</a></li>
+              <li><a class="link2 link2--nav2" href="#m4">ポリマー材料</a></li>
+              <li><a class="link2 link2--nav2" href="#m5">コンポジット材料</a></li>
+              <li><a class="link2 link2--nav2" href="#m6">ナノ材料</a></li>
+              <li><a class="link2 link2--nav2" href="#m7">電子・光学材料</a></li>
+              <li><a class="link2 link2--nav2" href="#m8">材料の機械的性質</a></li>
+              <li><a class="link2 link2--nav2" href="#m9">材料の持続可能性とリサイクル</a></li>
+              <li><a class="link2 link2--nav2" href="#m10">最新の研究トピックと展望</a></li>
+            </ul>
+          </li>
+          <li class="description3">&nbsp;マテインフォ
+            <ul class="sections description5">
+              <li><a class="link2 link2--nav2" href="#i1">マテインフォの導入</a></li>
+              <li><a class="link2 link2--nav2" href="#i2">データの取得と前処理</a></li>
+              <li><a class="link2 link2--nav2" href="#i3">特徴量エンジニアリング</a></li>
+              <li><a class="link2 link2--nav2" href="#i4">データ駆動のモデル構築</a></li>
+              <li><a class="link2 link2--nav2" href="#i5">深層学習と材料データ</a></li>
+              <li><a class="link2 link2--nav2" href="#i6">データの視覚化と解釈</a></li>
+              <li><a class="link2 link2--nav2" href="#i7">高スループット実験とデータ</a></li>
+              <li><a class="link2 link2--nav2" href="#i8">データベースとオープンソースツール</a></li>
+              <li><a class="link2 link2--nav2" href="#i9">実用的な問題への応用</a></li>
+              <li><a class="link2 link2--nav2" href="#i10">最新の研究トピックと展望</a></li>
+            </ul>
+          </li>
+        </ul> -->
+      </aside>
+
+      <main class="main-content">
+        <!-- 2023 -->
+        <section id="2023">
+          <h3 class="section__title3">　2023年</h3>
+          <div class="projects__grid">
+
+            <!-- 米メリーランド滞在記 -->
+            <section id="usa" class="section2 project2"> 
+              <div class="titleWithDate">
+                <a href="./blog/posts/usa" class="link2 link2--nav2">
+                  <h4 class="bar-left4">米メリーランド滞在記</h4></a>
+                <span class="date">
+                  <i aria-hidden="true" class="far fa-clock"></i> 2023-08-25
+                  <!-- <i aria-hidden="true" class="far fa-edit"></i> 2023-08-23 -->
+                </span>
+              </div>
+              <div class="leftImgContainer">
+                <a href="./blog/posts/usa" class="link2 link2--nav2">
+                  <img src="./blog/img/usa.png" alt="Description" class="leftImg2">
+                </a>
+              </div>
+              <div class="rightText">
+                2020年3月から滞在した米国東海岸のメリーランド大学での経験と感じたことを共有します。コロナ禍での初めてのアメリカ生活は大変でした。
+                <ul class="skills__list">
+                  <li class="skills__list-item btn"><i class="fas fa-tags"></i></li>
+                  <li class="skills__list-item btn btn--plain">滞在記</li>
+                  <li class="skills__list-item btn btn--plain">米メリーランド</li>
+                  <li class="skills__list-item btn btn--plain">海外生活</li>
+                  <li class="skills__list-item btn btn--plain">コロナ禍</li>
+                </ul>
+                <!-- <p class="description99">
+                  <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftyamazaki.com%2Fblog%2Fposts%2Fusa&count_bg=%2318B41D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=&edge_flat=false"/>
+                </p> -->
+                <p class="description9">
+                  <a href="./blog/posts/usa" class="link2 link2--nav2">続きを読む <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+                </p>
+              </div>
+            </section>
+            
+            <!-- 大学での仕事内容 -->
+            <section id="working" class="section2 project2"> 
+              <div class="titleWithDate">
+                <a href="./blog/posts/working-" class="link2 link2--nav2">
+                  <h4 class="bar-left4">大学での仕事内容（2023）</h4></a>
+                <span class="date"><i aria-hidden="true" class="far fa-clock"></i> 2023-08-21</span>
+              </div>
+              <div class="leftImgContainer">
+                <a href="./blog/posts/working-" class="link2 link2--nav2">
+                  <img src="./blog/img/working.png" class="leftImg2">
+                </a>
+              </div>
+              <div class="rightText">
+                研究内容というよりは今の大学でのポジション（嘱託助教）における仕事内容についてまとめたいと思う。助教といっても実態はポスドクとして、どんな仕事内容に取り組んでいるか、どんな成果が求められているのか。研究室の学生の指導には関わっているが、大学や授業関係の仕事がほとんどないため、研究活動に全振りできる最高の期間である。
+                <ul class="skills__list">
+                  <li class="skills__list-item btn"><i class="fas fa-tags"></i></li>
+                  <li class="skills__list-item btn btn--plain">アカデミア</li>
+                  <li class="skills__list-item btn btn--plain">助教</li>
+                  <li class="skills__list-item btn btn--plain">仕事内容</li>
+                </ul>
+                <p class="description9">
+                  <a href="./blog/posts/working-" class="link2 link2--nav2">続きを読む <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+                </p>                
+              </div>
+            </section>
+            
+            <!-- Web3時代のPeer review -->
+            <section id="peer-review" class="section2 project2"> 
+              <div class="titleWithDate">
+                <a href="./blog/posts/peer-review-" class="link2 link2--nav2">
+                  <h4 class="bar-left4">Web3時代のPeer review</h4></a>
+                <span class="date"><i aria-hidden="true" class="far fa-clock"></i> 2023-08-21</span>
+              </div>
+              <div class="leftImgContainer">
+                <a href="./blog/posts/peer-review-" class="link2 link2--nav2">
+                  <img src="./blog/img/peer-review.png" class="leftImg2">
+                </a>
+              </div>
+              <div class="rightText">
+                ResearchHubが500万ドルの資金調達に成功し、researchcoinと呼ばれる研究コミュニティ向け仮想通貨を発行するとのこと。ただ働きでしかない現在のpeer reviewシステムや投稿論文のオープンソース問題等の課題を一掃する新しいWeb時代を作ってくれることを期待する。
+                <!-- eLifeが、来年7月から "publish, then review" という新しい論文査読の形式に移行。プレプリントと査読誌の良い所を合わせようという試みで、この流れは今後ひろがりそうな気がします。 Peer Review: Implementing a "publish, then review" model of publishing https://doi.org/10.7554/eLife.64910 -->
+                <!-- https://www.researchhub.com/post/979/researchhub-raises-5m-to-help-scientists-monetize-their-research -->
+                <ul class="skills__list">
+                  <li class="skills__list-item btn"><i class="fas fa-tags"></i></li>
+                  <li class="skills__list-item btn btn--plain">論文</li>
+                  <li class="skills__list-item btn btn--plain">peer review</li>
+                  <li class="skills__list-item btn btn--plain">仮想通貨</li>
+                </ul>
+                <p class="description9">
+                  <a href="./blog/posts/peer-review-" class="link2 link2--nav2">続きを読む <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+                </p>
+              </div>
+            </section>
+          <!-- </div>
+        </section><br><br>
+
+        <section id="2022">
+          <h3 class="section section__title3">2022年</h3>
+          <div class="projects__grid"> -->
+
+            <!-- 5分で作れるホームページ -->
+            <section id="github-pages" class="section2 project2"> 
+              <div class="titleWithDate">
+                <a href="./blog/posts/github-pages-" class="link2 link2--nav2">
+                  <h4 class="bar-left4">自作ホームページを作ろう</h4></a>
+                <span class="date"><i aria-hidden="true" class="far fa-clock"></i> 2022-08-21</span>
+              </div>
+              <div class="leftImgContainer">
+                <a href="./blog/posts/github-pages-" class="link2 link2--nav2">
+                  <img src="./blog/img/github-pages.png" class="leftImg2">
+                </a>
+              </div>
+              <div class="rightText">
+                GitHub pagesを利用して、サーバー費用無料でホームページがあっという間に作成できる。ドメイン名は年3000円で取ってしまえば、完全なる自作ウェブサイトが作成できてしまう。GitHubにアップロードしたファイルをそのままホームページとして公開できる。
+                <ul class="skills__list">
+                  <li class="skills__list-item btn"><i class="fas fa-tags"></i></li>
+                  <li class="skills__list-item btn btn--plain">Github</li>
+                  <li class="skills__list-item btn btn--plain">Portfolio</li>
+                  <li class="skills__list-item btn btn--plain">ホームページ</li>
+                </ul><br>
+                <p class="description9">
+                  <a href="./blog/posts/github-pages-" class="link2 link2--nav2">続きを読む <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+                </p>
+              </div>
+            </section>
+
+            <!-- ChatGPT要約botで論文読み -->
+            <section id="slackgpt" class="section2 project2"> 
+              <div class="titleWithDate">
+                <a href="./blog/posts/slackgpt-" class="link2 link2--nav2">
+                  <h4 class="bar-left4">ChatGPT要約botで論文読み</h4></a>
+                <span class="date"><i aria-hidden="true" class="far fa-clock"></i> 2022-08-21</span>
+              </div>
+              <div class="leftImgContainer">
+                <a href="./blog/posts/slackgpt-" class="link2 link2--nav2">
+                  <img src="./blog/img/slackgpt.png" class="leftImg2">
+                </a>
+              </div>
+              <div class="rightText">
+                Slackのチャンネルを作成し、そこにChatGPTで翻訳・要約したARXIV論文を自動で送り続けることで、研究者の情報収集を効率化することができる。論文要約だけでなく、キーワード解説、この論文に記載のない発展課題まで説明してくれるプロンプトです。
+                <ul class="skills__list">
+                  <li class="skills__list-item btn"><i class="fas fa-tags"></i></li>
+                  <li class="skills__list-item btn btn--plain">ChatGPT</li>
+                  <li class="skills__list-item btn btn--plain">Slack</li>
+                  <li class="skills__list-item btn btn--plain">論文要約bot</li>
+                </ul><br>
+                <p class="description9">
+                  <a href="./blog/posts/slackgpt-" class="link2 link2--nav2">続きを読む <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+                </p>
+              </div>
+            </section>
+
+            <!-- 私のChatGPTの使い方 -->
+            <section id="chatgpt" class="section2 project2"> 
+              <div class="titleWithDate">
+                <a href="./blog/posts/chatgpt-" class="link2 link2--nav2">
+                  <h4 class="bar-left4">私のChatGPTの使い方</h4></a>
+                <span class="date"><i aria-hidden="true" class="far fa-clock"></i> 2022-08-21</span>
+              </div>
+              <div class="leftImgContainer">
+                <a href="./blog/posts/chatgpt-" class="link2 link2--nav2">
+                  <img src="./blog/img/chatgpt.png" class="leftImg2">
+                </a>
+              </div>
+              <div class="rightText">
+                私のChatGPTの使い方について紹介する。具体的には、メールの作成・編集、アイディア出し、論文の要約、論文の仮清書、機械学習やデータ文責のコーディングを行う。これらの作業は、ChatGPTを使うことで、非常に効率的に行うことができる。
+                <ul class="skills__list">
+                  <li class="skills__list-item btn"><i class="fas fa-tags"></i></li>
+                  <li class="skills__list-item btn btn--plain">ChatGPT</li>
+                  <li class="skills__list-item btn btn--plain">仕事効率</li>
+                  <li class="skills__list-item btn btn--plain">コーディング</li>
+                </ul><br>
+                <p class="description9">
+                  <a href="./blog/posts/chatgpt-" class="link2 link2--nav2">続きを読む <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+                </p>
+              </div>
+            </section>
+
+            <!-- 私のChatGPTの使い方 -->
+            <section id="chatgpt" class="section2 project2"> 
+              <div class="titleWithDate">
+                <a href="./blog/posts/220801-hello" class="link2 link2--nav2">
+                  <h4 class="bar-left4">初めまして</h4></a>
+                <span class="date"><i aria-hidden="true" class="far fa-clock"></i> 2022-08-01</span>
+              </div>
+              <div class="leftImgContainer">
+                <a href="./blog/posts/220801-hello" class="link2 link2--nav2">
+                  <img src="./blog/img/220801-hello.png" class="leftImg2">
+                </a>
+              </div>
+              <div class="rightText">
+                初めまして。山崎貴大 (Takahiro Yamazaki) と申します。よろしくお願いします。
+                <ul class="skills__list">
+                  <li class="skills__list-item btn"><i class="fas fa-tags"></i></li>
+                  <li class="skills__list-item btn btn--plain">初投稿</li>
+                  <!-- <li class="skills__list-item btn btn--plain">仕事効率</li>
+                  <li class="skills__list-item btn btn--plain">コーディング</li> -->
+                </ul><br>
+                <p class="description9">
+                  <a href="./blog/posts/220801-hello" class="link2 link2--nav2">続きを読む <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+                </p>
+              </div>
+            </section>
+
+          </div>
+        </section>
+
+        <!-- 材料創製 -->
+        <!-- <section id="know-how">
+          <h3 class="section section__title3">材料創製</h3>
+          <div class="projects__grid"> -->
+
+            <!-- マグネトロンスパッタ装置 -->
+            <!-- <section id="sputtering" class="section2 project2"> 
+              <div class="titleWithDate">
+                <h4 class="bar-left2">マグネトロンスパッタ装置</h4>
+                <span class="date"><i aria-hidden="true" class="far fa-clock"></i> 2023-08-21</span>
+              </div>
+              <a href="./blog/sputtering-" class="link2 link2--nav2">
+                <img src="./blog/img/sputtering.png" class="leftImg">
+              </a>
+              <div class="rightText">
+                薄膜創製の代表的な物理的成膜法であるマグネトロンスパッタリングやその薄膜の評価方法、他の手法との比較などについて説明する。
+              </div>
+                <ul class="skills__list">
+                  <li class="skills__list-item btn"><i class="fas fa-tags"></i></li>
+                  <li class="skills__list-item btn btn--plain">スパッタ</li>
+                  <li class="skills__list-item btn btn--plain">薄膜</li>
+                  <li class="skills__list-item btn btn--plain">ハイスループット</li>
+                </ul>
+                <p class="description9">
+                  <a href="./blog/sputtering-" class="link2 link2--nav2">続きを読む <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+                </p>
+            </section> -->
+
+            <!-- FE-SEM -->
+            <!-- <section id="sem" class="section2 project2"> 
+              <div class="titleWithDate">
+                <h4 class="bar-left2">FE-SEM</h4>
+                <span class="date"><i aria-hidden="true" class="far fa-clock"></i> 2023-08-21</span>
+              </div>
+              <a href="./blog/sem-" class="link2 link2--nav2">
+                <img src="./blog/img/sem.png" class="leftImg">
+              </a>
+              <div class="rightText">
+                FE-SEM（Field Emission Scanning Electron Microscope）の観察原理から、観察方法、観察対象の選び方、観察結果の解釈までを説明する。
+              </div>
+                <ul class="skills__list">
+                  <li class="skills__list-item btn"><i class="fas fa-tags"></i></li>
+                  <li class="skills__list-item btn btn--plain">電子顕微鏡</li>
+                  <li class="skills__list-item btn btn--plain">微細構造</li>
+                  <li class="skills__list-item btn btn--plain">組成分析</li>
+                </ul><br>
+                <p class="description9">
+                  <a href="./blog/sem-" class="link2 link2--nav2">続きを読む <i aria-hidden="true" class="fas fa-external-link-alt"></i></a>
+                </p>
+            </section> -->
+
+          <!-- </div>
+        </section> -->
+      </main>
+    </div><br><br>
+
+    <!-- footer -->
+    <footer class="footer">
+      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftyamazaki.com%2Fblog&count_bg=%2318B41D&title_bg=%23555555&icon=atom.svg&icon_color=%23E7E7E7&title=Thanks:)&edge_flat=false"/><br><br>Copyright © 2022-2023 <a href="./">tyamazaki.com</a> | All rights reserved.
+    </footer>
+
+    <div class="scroll-container">
+      <div class="scroll-top">
+        <a aria-label="Scroll up" href="#top">
+          <i aria-hidden="true" class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+      <div class="scroll-down">
+        <a aria-label="Scroll down" href="#bottom">
+            <i aria-hidden="true" class="fas fa-arrow-down"></i>
+        </a>
+    </div>
+    </div>
+    <script src="./script.js"></script>
+    <div id="bottom"></div>
+  </body>
+</html>

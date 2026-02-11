@@ -1,0 +1,750 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>tyamazaki.com</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="tyamazaki.com is portfolio, blog and paper reviewing website designed by Takahiro Yamazaki, who is a materials scientist/researcher at university"/>
+    <meta name="keywords" content="tyamazaki, Takahiro, Yamazaki, portfolio, homepage, website, materials, Scientist, researcher, professor, physics, magnetism, machine learning, Barkhausen, Non-equilibrium, functional, projects, publications, notes, blog, 山崎貴大, 研究者, 大学教員, 論文紹介, 物材見聞録, オブザーブ, ブログ, 材料物理, 物性物理, 材料工学, マテリアルズインフォマティクス"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./img/favicon.png">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NYGV5L0T7N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NYGV5L0T7N');
+    </script>
+  </head>
+  <!-- body -->
+  <body class="light" id="top">
+    <!-- <canvas id="ballCanvas"></canvas>
+    <script src="bouncingBall.js"></script> -->
+    <!-- header -->
+    <header class="header center">
+      <h3><a href="./" class="link">tyamazaki.com</a></h3>
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="./">top</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="./review">review</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="./blog">blog</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="./publications">publications</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="./projects">projects</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="./notes">notes</a>
+          </li>
+        </ul>
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+        <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger"> 
+          <i aria-hidden="true" id="btn-navigation" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <!-- Portfolio -->
+      <div class="about4 center">
+        <h1>PORTFOLIO</h1>
+        <h5>Follow your intuition</h5>
+      </div>
+      
+      <section id="activities" class="section1">
+        <h3 class="section__title3">Recent activities</h3>
+        <section class="section1 project2">
+          <div class="tabs"> 
+            <!-- style.cssで#y2024:checked ~ #y2024_contentを追加必須 -->
+            <input id="y2025" type="radio" name="tab_item" checked> 
+            <label class="tab_item" for="y2025">2025</label>
+            <input id="y2024" type="radio" name="tab_item"> 
+            <label class="tab_item" for="y2024">2024</label>
+            <input id="y2023" type="radio" name="tab_item"> 
+            <label class="tab_item" for="y2023">2023</label>
+            <input id="y2022" type="radio" name="tab_item">
+            <label class="tab_item" for="y2022">2022</label>
+            <input id="y2021" type="radio" name="tab_item">
+            <label class="tab_item" for="y2021">2021</label>
+            <input id="past" type="radio" name="tab_item">
+            <label class="tab_item" for="past">2020~</label>
+            
+            <div id="y2025_content" class="flex2 tab_content">
+              <div class="tab_content_description">
+
+                <p class="description"><strong>2025.9.2 <i>NEW!!</i></strong><br>&ensp;
+                  A new journal paper was published online, "R. Reika, A. Varadwaj*, and T. Yamazaki et al., Automated Elucidation of Crystal and Electronic Structures in Boron Nitride from X-ray Absorption Spectra Using Uniform Manifold Approximation and Projection, <a href="" class="link footer__link"><i>Scientific Report</i>, in press"</a>.<br>
+                </p>
+
+                <p class="description"><strong>2025.8.4 <i>NEW!!</i></strong><br>&ensp;
+                  A new journal paper was published online, "T. Yamazaki*, S. Tamaru and M Kotsugi, Analysis of Magnetic Barkhausen Noise to Reveal Domain Wall Dynamics in Amorphous/Nanocrystalline Ribbons, <a href="https://ieeexplore.ieee.org/abstract/document/11119667" class="link footer__link"><i>IEEE Access</i>, vol. 13, pp. 140079-140086 (2025)"</a><br>
+                </p>
+
+                <p class="description"><strong>2025.7.25</strong><br>&ensp;
+                  A new proceedings paper was published online, "K. Nakazawa*, K. Niitsu and T. Yamazaki, Observation of Crystallization Process in Fe-base Amorphous via 5D-STEM, <a href="https://doi.org/10.1093/mam/ ozaf048.797" class="link footer__link"><i>Microscopy and Microanalysis</i>, vol. 31, no. 7 pp. 1551-1552 (2025).</a><br>
+                </p>
+
+                <p class="description"><strong>2025.11.10-13</strong><br>&ensp;
+                  M&M2025材料力学カンファレンス@熊本城ホールに参加し、2件の研究発表を実施いたします。発表題目は<a href="https://tyamazaki.com/publications" class="link footer__link">こちら</a>をご覧ください。<br>
+                </p>
+
+                <p class="description"><strong>2025.9.16-19</strong><br>&ensp;
+                  第49回日本磁気学会学術講演会@愛媛大学に参加し、2件の研究発表を実施いたします。発表題目は<a href="https://tyamazaki.com/publications" class="link footer__link">こちら</a>をご覧ください。<br>
+                </p>
+
+                <p class="description"><strong>2025.7.27-31</strong><br>&ensp;
+                  The Microscopy & Microanalysis 2025 conference@Palace Convention Center, Salt Lake City, UT., USAに参加し、1件の研究発表を実施いたしました。発表題目は<a href="https://tyamazaki.com/publications" class="link footer__link">こちら</a>をご覧ください。<br>
+                </p>
+                
+                <p class="description"><strong>2025.7.15</strong><br>&ensp;
+                  A new journal paper was published online, "M. Taniwaki and T. Yamazaki et al., Automated identification of the origin of energy loss in nonoriented electrical steel by feature extended Ginzburg-Landau free energy framework, <a href="https://doi.org/10.1038/s41598-025-00357-z" class="link footer__link"><i>Scientific Report</i>, 15, 23758 (2025).</a><br>
+                </p>
+
+                <p class="description"><strong>2025.5.22</strong><br>&ensp;
+                  The special CMSM-DXmag joint seminar@NIMSで招待講演を実施しました。題目は、「Machine Learning-Assisted Synchrotron X-ray Analysis of Heusler Alloys」です。<br>
+                </p>  
+
+                <p class="description"><strong>2025.4.22</strong><br>&ensp;
+                  A new journal paper was published online, "K. Nakamura and T. Yamazaki et al., Efficient Discovery of Large Magnetic Anisotropy with Thermodynamically Stable Materials via Multi-Objective Bayesian Optimization, <a href="https://doi.org/10.1080/27660400.2025.2485025" class="link footer__link"><i>Science and Technology of Advanced Materials: Methods (STAM-M)</i>, 5, 1 (2025) 2485025".</a><br>
+                </p>
+                
+                <p class="description"><strong>2025.4.21</strong><br>&ensp;
+                  International Conference of Asian Union of Magnetics Societies (IcAUMS) 2025@Okinawa Convention Centerで招待講演(共著者田丸氏)を実施しました。題目は、「Study of domain wall dynamics in soft magnetic materials using magnetic Barkhausen noise measurements」です。<br>
+                </p>  
+                
+                <p class="description"><strong>2025.4.21-24</strong><br>&ensp;
+                  IcAUMS 2025: International Conference of Asian Union of Magnetics Societies@Okinawaに参加し、2件の研究発表を実施いたしました。発表題目は<a href="https://tyamazaki.com/publications" class="link footer__link">こちら</a>をご覧ください。<br>
+                </p>
+
+                <p class="description"><strong>2025.3.26</strong><br>&ensp;
+                  A new journal paper was published online, "Y. Shima and T. Yamazaki et al, Iron Loss analysis in Soft Magnetic Materials via Maxwell equations-coupled Multiscale Micromagnetic Simulations, <a href="https://doi.org/10.1063/5.0237895" class="link footer__link"><i>Journal of Applied Physics</i>, 137 (12), 123906 (2025)".</a><br>
+                </p>
+                
+                <p class="description"><strong>2025.3.14-17</strong><br>&ensp;
+                  第72回応用物理学会春季学術講演会@東京理科大学野田キャンパスに参加し、1件の研究発表を実施しました。発表題目は<a href="https://tyamazaki.com/publications" class="link footer__link">こちら</a>をご覧ください。<br>
+                </p>
+                
+                <p class="description"><strong>2025.3.13</strong><br>&ensp;
+                  A new journal paper was published online, "T. Yamazaki et al, Uncovering the origin of magnetic moment enhancement in Fe-Co-Ir alloys via high-throughput XMCD, <a href="https://doi.org/10.1103/PhysRevMaterials.9.034408" class="link footer__link"><i>Physical Review Materials</i>, 9, 034408 (2025)".</a><br>
+                </p>
+
+                <p class="description"><strong>2025.3.8-10</strong><br>&ensp;
+                  第175回日本金属学会春期講演大会@東京都立大学に参加し、2件の研究発表を実施しました。発表題目は<a href="https://tyamazaki.com/publications" class="link footer__link">こちら</a>をご覧ください。<br>
+                </p>
+
+                <p class="description"><strong>2025.3.7</strong><br>&ensp;
+                  磁気記録・情報ストレージ研究会@名古屋大学で招待講演を実施しました。題目は、「ハーフメタルホイスラー合金のXMCD測定と機械学習を活用したスペクトル解析」です。<br>
+                </p>  
+
+                <p class="description"><strong>2025.2.3</strong><br>&ensp;
+                  A new journal paper was published online entitled, "K. Sano and T. Yamazaki et al, Tuning magnetic properties by microstructure control of nanocrystalline thin films for compact vibration energy harvesters, <a href="https://doi.org/10.1587/elex.22.20250031" class="link footer__link"><i>IEICE Electronics Express</i> 21, 1 (2025) pp.1-6"</a><br>
+                </p>
+
+                <p class="description"><strong>2025.1.30-1/3</strong><br>&ensp;
+                  大型放射光施設SPring-8 (Japan) にて、放射光実験を実施しました。本実験では、「ナノ結晶アモルファス合金のコンビ組成傾斜膜を利用した軟磁性起源の解明」（Proposal No. 2024B1320）を題目とし、ビームラインBL25SUの電磁石XMCD装置を用いた磁気円二色性（XMCD）測定を行いました。<br>
+                </p>
+
+                <!-- <p class="description"><strong>2025.1.2</strong><br>&ensp;
+                  A new journal paper was accepted, "T. Yamazaki et al, Uncovering the origin of magnetic moment enhancement in Fe-Co-Ir alloys via high-throughput XMCD, <a href="" class="link footer__link"><i>Physical Review Materials, accepted (2025)"</i></a><br>
+                </p> -->
+
+                <p class="description"><strong>2025.1.1</strong><br>&ensp;
+                  Happy new year 2025! Follow your intuition.<br>
+                </p>
+              </div>
+            </div>
+
+            <div id="y2024_content" class="flex2 tab_content">
+              <div class="tab_content_description">
+
+                <p class="description"><strong>2024.12.20</strong><br>&ensp;
+                  Invited talk at NSF Global Center Meeting (NSF, University of Maryland, and Tokyo University of Science) and presented my study, "Machine Learning Assisted XMCD Spectra Analysis in High Spin-Polarized Co2MnGaxGe1-x Heusler Alloys".<br>
+                </p>
+
+                <p class="description"><strong>2024.12.6-11</strong><br>&ensp;
+                  Visited the University of Maryland, College Park to have a seminar and discuss recent activities.<br>
+                </p>
+                
+                <p class="description"><strong>2024.12.1-6</strong><br>&ensp;
+                  Joined and had 2 presentations at the 2024 MRS Fall Meeting, Boston. The titles are "Unveiling High Spin Polarization in Mn-Rich Co-Mn-Ge Heusler Alloys via High-Throughput XMCD Analysis" and "Tuning Ferrimagnetic Response in Compositionally Spread Gd-Fe-B Amorphous Thin Films". The detail of presentations is <a href="https://tyamazaki.com/publications" class="link footer__link">HERE</a><br>
+                </p>
+                
+                <p class="description"><strong>2024.11.11-14</strong><br>&ensp;
+                  大型放射光施設SPring-8 (Japan) での放射光計測実験に参加しました。本実験では、「機械学習による大規模MCDスペクトルの自動解析と埋もれた情報の抽出」（Proposal No. 2024B1266）を題目とし、放射光X線磁気円二色性計測とデータサイエンス⼿法を組み合わせることで、ホイスラー合⾦における機能発現メカニズムを明らかにすることを目指した。<br>
+                </p>
+
+                <p class="description"><strong>2024.11.04-09</strong><br>&ensp;
+                  大型放射光施設SPring-8 (Japan) での放射光計測実験に参加しました。本実験では、「Multi-modal Analysis for Investigating Structural and Electronic Properties of Heusler Alloys」（Proposal No. 2024B1402）を題目とし、ホイスラー合金の構造と電子物性を材料インフォマティクス技術と光電子ホログラフィー回折を用いて解析し、スピントロニクスデバイスへの応用可能性を検討した。<br>
+                </p>
+
+                <p class="description"><strong>2024.9.24-27</strong><br>&ensp;
+                  第48回日本磁気学会学術講演会@秋田大学に参加し、6件の研究発表を実施いたしました。発表題目は<a href="https://tyamazaki.com/publications" class="link footer__link">こちら</a>をご覧ください。<br>
+                </p>
+
+                <p class="description"><strong>2024.9.18-20</strong><br>&ensp;
+                  第175回日本金属学会秋期講演大会@大阪大学に参加し、1件の研究発表を実施いたしました。発表題目は<a href="https://tyamazaki.com/publications" class="link footer__link">こちら</a>をご覧ください。<br>
+                </p>
+                <p class="description"><strong>2024.9.8-11</strong><br>&ensp;
+                  2024年度日本機械学会年次大会@愛媛大学に参加し、1件の研究発表を実施いたしました。発表題目は<a href="https://tyamazaki.com/publications" class="link footer__link">こちら</a>をご覧ください。<br>
+                </p>
+
+                <p class="description"><strong>2024.9.2</strong><br>&ensp;
+                  A new journal paper was published, "Y. Iwasaki, R. Toyama, <span class="name">T. Yamazaki</span>, Y. Igarash, M Kotsugi, Y. Sakuraba, Autonomous search for half-metallic materials with B2 structure, <a href="" class="link footer__link"><i>Sci. Technol. Adv. Mater. Methods (STAM:M) 4, 1 (2024) 2403966"</i></a><br>
+                </p>
+
+                <p class="description"><strong>2024.7.5</strong><br>&ensp;
+                  A new journal paper was published, "K. Omae, <span class="name">T. Yamazaki</span>, K. Sano, C. Oka, J. Sakurai, S. Hata, Effect of Noise on Accuracy of Grain Size Evaluation by Magnetic Barkhausen Noise Analysis, <a href="https://doi.org/10.20965/ijat.2024.p0528" class="link footer__link"><i>International Journal of Automation Technology, 18, 4 (2024) pp. 528-536"</i></a><br>
+                </p>
+
+                <p class="description"><strong>2024.06.08-10</strong><br>&ensp;
+                  大型放射光施設SPring-8 (Japan) にて、放射光実験を実施しました。本実験では、「アモルファス軟磁性合金におけるナノ結晶化機構の微視的解明」（Proposal No. 2024A1739）を題目とし、ナノ結晶化機構の解明を目指したIn-situ XRDおよびXAFS計測を実施し、原子スケールでの磁気特性発現の解明を目指した。<br>
+                </p>
+
+                <p class="description"><strong>2024.5.30</strong><br>&ensp;
+                  A new journal paper was published, "T. Kato, R. Morisaki, <span class="name">T. Yamazaki</span>, C. Oka, J. Sakurai, S. Hata, Prototype of parallel plate type fast atom beam source and its improvement of irradiation characteristics, <a href="https://doi.org/10.20965/ijat.2024.p0513" class="link footer__link"><i>International Journal of Automation Technology 18, 4 (2024) pp. 513-520"</i></a><br>
+                </p>
+
+                <p class="description"><strong>2024.5.30</strong><br>&ensp;
+                  A new journal paper was published, "Ryunosuke Nagaoka, Ken Masuzawa, Alexandre Lira Foggiatto, <span class="name">Takahiro Yamazaki</span>, Ippei Obayashi, Yasuaki Hiraoka, Chiharu Mitsumata, Masato Kotsugi, Quantification of the coercivity factor in soft magnetic materials at different frequencies using topological data analysis, <a href="https://doi.org/10.1109/TMAG.2024.3408002" class="link footer__link"><i>IEEE Transactions on Magnetics, 30 May (2024)"</i></a><br>
+                </p>
+                <p class="description"><strong>2024.5.28</strong><br>&ensp;
+                  A new journal paper was published, "Alexandre Lira Foggiatto, Ryunosuke Nagaoka, Michiki Taniwaki, <span class="name">Takahiro Yamazaki</span>, Takeshi Ogasawara, Ippei Obayashi, Yasuaki Hiraoka, Chiharu Mitsumata, Masato Kotsugi, Analysis of the excess loss in high-frequency magnetization process through machine learning and topological data analysis, <a href="https://doi.org/10.1109/TMAG.2024.3406717" class="link footer__link"><i>IEEE Transactions on Magnetics, 28 May (2024)"</i></a><br>
+                </p>
+
+                <p class="description"><strong>2024.3.22-25</strong><br>&ensp;
+                  第71回応用物理学会春季学術講演会@東京都市大学に参加し、4件の研究発表を実施いたしました。発表題目は<a href="https://tyamazaki.com/publications" class="link footer__link">こちら</a>をご覧ください。<br>
+                </p>
+                <p class="description"><strong>2024.3.12-15</strong><br>&ensp;
+                  第174回日本金属学会春期講演大会@東京理科大学に参加し、3件の研究発表を実施いたしました。発表題目は<a href="https://tyamazaki.com/publications" class="link footer__link">こちら</a>をご覧ください。<br>
+                </p>
+                <p class="description"><strong>2024.1.9-10</strong><br>&ensp;
+                  Joined a two-days CREST/Presto camp for "Exploring Innovative Materials in Unknown Search Space" at Shonan village center<br>
+                </p>
+                <p class="description"><strong>2024.1.1</strong><br>&ensp;
+                  Happy new year. Follow your intuition. (Ben L. Feringa, University of Groningen)<br>
+                </p>
+              </div>
+            </div>
+            <div id="y2023_content" class="flex2 tab_content">
+              <div class="tab_content_description">
+                <p class="description"><strong>2023.12.23</strong><br>&ensp;
+                  A new paper entitled "Soft Magnetostrictive Materials: Enhanced Magnetostriction of Fe‐Based Nanocrystalline Alloys via Ga Doping" as a co-auther in 
+                  <a href="https://authors.elsevier.com/c/1iKGG4r9TE97mq" class="link footer__link"><i>Scripta Materialia 242 (2024), 115956</i></a> is available online.<br>
+                </p>
+                <!-- https://doi.org/10.1016/j.scriptamat.2023.115956 -->
+                <p class="description"><strong>2023.10.26</strong><br>&ensp;
+                  Published a new paper entitled "Visualization of the Magnetostriction Mechanism in Fe-Ga Alloy Single Crystal Using Dimensionality Reduction Techniques" as a co-auther in 
+                  <a href="https://doi.org/10.1103/PhysRevMaterials.7.084401" class="link footer__link"><i>IEEE Transactions on Magnetics, (2023), 59, 11</i></a>.<br>
+                </p>
+                <p class="description"><strong>2023.9.27-29</strong><br>&ensp;
+                  Oral presentation entitled "Towards Sustainable Cooling: Elastocaloric Effects and Phase Transition Characteristics of Superelastic Ni-Ti Alloys" at the session of Development of Mechanics of Functional Materials and Structures toward Sustainable Society at M&M2023 conference at Tsukuba University.
+                </p>
+                <p class="description"><strong>2023.9.1</strong><br>&ensp;
+                  Published a new paper as "Research in the U.S. during the COVID-19 Pandemic" in the Ceramics 'Crossroad', by the Japanese Society of Ceramics, Volume 58, Issue 9, 2023 (September 1, 2023). 
+                </p>
+                <p class="description"><strong>2023.9.1</strong><br>&ensp;
+                  Published a review new paper as "Combinatorial Synthesis of Highly Corrosion-Resistant Nanocrystalline Alloys," in the "Materia" by The Japan Institute of Metals and Materials, Volume 62, Issue 9, 2023, pp. 600-605.
+                </p>
+                <p class="description"><strong>2023.8.7</strong><br>&ensp;
+                  Published a new paper as a co-auther entitled "Origin of negative anisotropic magnetoresistance effect in Fe0.75Co0.25 single-crystal thin films upon Ir addition" in 
+                  <a href="https://doi.org/10.1103/PhysRevMaterials.7.084401" class="link footer__link"><i>Physical Review Materials, 7 (2023) 084401.</i></a><br>
+                </p>
+                <p class="description"><strong>2023.7.17-20</strong><br>&ensp;
+                  Attended <a href="https://www.naefrontiers.org/200741/2023-JapanAmerica-Frontiers-of-Engineering-Symposium" class="link footer__link">JAFOE (Japan Association of the Foundations of Engineering) 2023</a> as a general participant and presented our research entitled "Sustainable energy harvesting using functional magnetic materials"<br>
+                </p>
+                <p class="description"><strong>2023.7.15</strong><br>&ensp;
+                  Published a new paper as a co-auther entitled "Strain measurement based on Magnetic Barkhausen noise for thin films" in <a href="https://doi.org/10.1016/j.mee.2023.112057" class="link footer__link"><i>Microelectronic Engineering, 279 (2023) 112057.</i></a><br>
+                </p>
+                <p class="description"><strong>2023.4.28</strong><br>&ensp;
+                  Published a new paper as the first auther entitled "Tuning the Temperature Range of Superelastic Ni-Ti Alloys for Elastocaloric Cooling via Thermal Processing" in <a href="https://doi.org/10.1088/2515-7655/accd21" class="link footer__link"><i>Journal of Physics: Energ, 5 (2023) 024020.</i></a><br>
+                </p>
+                <p class="description"><strong>2023.2.28</strong><br>&ensp;
+                  Awarded a JSPS Grant-in-Aid for Early-Career Scientists (2nd) with a title of Designing magnetic heterostructures with tunable magnetoelastic coupling (No. 23K13636). 
+                </p>
+              </div>
+            </div>
+            <!-- <i aria-hidden="true" class="fas fa-flag-checkered"></i> -->
+            <div id="y2022_content" class="flex2 tab_content">
+              <div class="tab_content_description">
+                <p class="description"><strong>2022.11.22</strong><br>&ensp;
+                  Keynote speech, "Design of large and sensitive magnetostrictive composites for vibration energy harvesters" at international symposium, 
+                  "Integrated Nanocomposites for Thermal and Kinetic Energy Harvesting (INTAKE) Seminar 2022". <br><a href="http://www.material.tohoku.ac.jp/~fukugo/intake/english/" class="link footer__link"></a>
+                </p>
+                <p class="description"><strong>2022.10.01</strong><br>&ensp;
+                  Started JST ACT-X project, 
+                  "Iron-loss analysis of nanocrystalline magnetostrictive composite using magnetic Barkhausen noise" for 2.5 yrs.<br>
+                  <a href="https://www.jst.go.jp/kisoken/act-x/application/2022/220920/220920act-x.pdf" class="link footer__link"></a>
+                </p>
+                <p class="description"><strong>2022.8.10</strong><br>&ensp;
+                  Newly opened my new website. Still some pages are under construction.
+                </p>
+                <p class="description"><strong>2022.4.1</strong><br>&ensp;
+                  Started new position, project assisitant professor at Tokyo University of Science<br>&ensp;
+                  Assigned to JST CREST project (Head: Dr. Iwasaki), "Exploring Innovative Materials in Unknown Search Space"<br>&ensp;
+                  Assigned to MEXT power electric project (Head: Prof. Okamoto), "Creation of ultra-low-loss magnetic materials"
+                </p>
+                <p class="description"><strong>2022.3.7</strong><br>&ensp;
+                  Returned to Japan from College Park, US.
+                </p>
+              </div>
+            </div>
+
+            <div id="y2021_content" class="flex2 tab_content">
+              <div class="tab_content_description">
+                <p class="description"><strong>2021.4.6</strong><br>&ensp;
+                  Started visiting researcher at University of Maryland, College Park, US
+                </p>
+              </div>
+            </div>
+
+            <div class="tab_content" id="past_content">
+              <div class="tab_content_description">
+                <p class="description"><strong>2020.4.1</strong><br>&ensp;
+                  Awarded a JSPS Grant-in-Aid for Early-Career Scientists
+                </p>
+                <p class="description"><strong>2019.4.1</strong><br>&ensp;
+                  Started as a JSPS postdoctoral fellow at Nagoya University
+                </p>
+                <p class="description"><strong>2019.3.26</strong><br>&ensp;
+                  Recieved Ph.D. degree in Materials Science and Engineering from Yokohama National University
+                </p>
+                <p class="description"><strong>2016.7.1</strong><br>&ensp;
+                  Awarded a Toden memorial fellowship
+                </p>
+                <p class="description"><strong>2016.3.31</strong><br>&ensp;
+                  Finished Master's program at Yokohama National University
+                </p>
+                <p class="description"><strong>2014.3.31</strong><br>&ensp;
+                  Finished Bachelor's program at Yokohama National University
+                </p>
+                <p class="description"><strong>2009.3.31</strong><br>&ensp;
+                  Graduated from Chigusa high school, Aichi
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      <!-- Introduction -->
+      <section id="introduction" class="section1">
+        <h3 class="section__title3">Introduction</h3>
+        <h4 class="bar-left2">Brief biography</h4>
+        <p class="description">
+          TYamazaki, Ph.D. is an adjunct assistant professor 
+          at Tokyo University of Science with an academic mission of 
+          multi-scale design for high-performance magnetic materials. 
+          He specializes in magnetic analysis using machine learning 
+          and synchrotron radiation. In 2019, He received his Ph.D. 
+          in Materials Science and Engineering from Yokohama National University, 
+          where his research focused on magnetostrictive materials with 
+          a new metallographic analysis using magnetic Barkhausen noise. 
+          As a JSPS Postdoctoral researcher for three years at Nagoya 
+          University, Japan, and the University of Maryland, US, he developed 
+          a measurement method combining his magnetic analysis technique, 
+          combinatorial thin-film synthesis, and machine learning algorithm. 
+          He currently leads his research of magnetic Barkhausen noise analysis 
+          and new nanocrystalline magnetic materials supported by the 
+          JSPS KAKENHI for Young Scientists since April 2020 and the 
+          JST ACT-X since October 2022.
+        </p>
+        <!--<p class="description">
+          2019年横浜国立大学工学府機能発現工学専攻修了。博士（工学）。
+          同年名古屋大学大学院工学研究科マイクロ・ナノ機械理工学専攻、日本学術振興会特別研究員PD。
+          2021年米国メリーランド大学材料科学工学専攻、博士研究員。
+          2022年4月より東京理科大学研究推進機構総合研究院、助教着任。
+          磁性材料の磁歪効果や磁気バルクハウゼン効果の評価・解析、
+          機械学習や放射光解析を用いた磁気起源解明に関する研究に従事。
+        </p>-->
+        <h4 class="bar-left2">Research area / keywords</h4>
+        <p class="description">
+          My research mission is to design, model, develop the high-performance magnetic functional materials such as soft/ hard magnets, multi-ferroic materials, magnetoelastic materials and ferromagnetic shape memory alloys. 
+        </p>
+        <!--<span class="under2">Research topics</span>-->
+        <ul class="list2">
+          <li class="left skills__list-item btn btn--plain">Solid-state physics</li>
+          <li class="left skills__list-item btn btn--plain">Magnetism</li>
+          <li class="left skills__list-item btn btn--plain">Materials science and engineering</li>
+          <li class="left skills__list-item btn btn--plain">Nanotechnology</li>
+          <li class="left skills__list-item btn btn--plain">Magnetic domain/ microstructure</li>
+          <li class="left skills__list-item btn btn--plain">Sintered alloys/ Thin films/ nanoparticles</li>
+          <li class="left skills__list-item btn btn--plain">soft/hard magnets</li>
+          <li class="left skills__list-item btn btn--plain">Synchrotron X-ray analysis</li>
+          <li class="left skills__list-item btn btn--plain">Micromagnetic simulation</li>
+          <li class="left skills__list-item btn btn--plain">Interpretable & unsupervised Machine learning</li>
+          <li class="left skills__list-item btn btn--plain">Persistent homology</li>
+        </ul>
+
+        <!-- <h4 class="bar-left2">Current position</h4>
+        <p class="description">
+          Project assisitant professor, Tokyo University of Science, Tokyo, Japan
+        </p>
+        <h4 class="bar-left2">Where to find me</h4>
+        <p class="description">
+          Research building 9F, Kotsugi Laboratory, 6-3-1 Niijuku, Katsushika-ku, Tokyo 125-8585, Japan
+        </p> -->
+        <h4 class="bar-left2">E-mail to me</h4>
+        <p class="description">
+          <i class="far fa-envelope"></i> takahiro.yamazaki (at) rs.tus.ac.jp | rd070672 (at) gmail.com
+        </p>
+      </section>
+
+      <!-- Skills -->
+      <section id="skills" class="section1 skills"> <!--skills -->
+        <h3 class="section__title3">Skills</h3>
+          <div class="projects__grid">
+            <!-- Hard skills -->
+            <div class="project">
+              <h5 class="under">Hard skills</h5>
+              <div class="project__description">
+                Hardware skills to operate experimental instraments
+              </div>
+              <ul class="skills__list">
+                <li class="skills__list-item btn btn--plain">Magnetron sputtering</li>
+                <li class="skills__list-item btn btn--plain">Wet mixing method</li>
+                <li class="skills__list-item btn btn--plain">Photolithography</li>
+                <li class="skills__list-item btn btn--plain">Wafer process</li>
+                <li class="skills__list-item btn btn--plain">SEM</li>
+                <li class="skills__list-item btn btn--plain">EBSD</li>
+                <li class="skills__list-item btn btn--plain">TEM</li>
+                <li class="skills__list-item btn btn--plain">FIB</li>
+                <li class="skills__list-item btn btn--plain">SQUID</li>
+                <li class="skills__list-item btn btn--plain">VSM</li>
+                <li class="skills__list-item btn btn--plain">XRD</li>
+                <li class="skills__list-item btn btn--plain">AFM</li>
+                <li class="skills__list-item btn btn--plain">3D printer</li>
+                <li class="skills__list-item btn btn--plain">SPring-8/KEK</li>
+                <li class="skills__list-item btn btn--plain">XANES/EXAFS</li>
+                <li class="skills__list-item btn btn--plain">XAS/XMCD</li>
+                <li class="skills__list-item btn btn--plain">PEEM/PED</li>
+              </ul>
+            </div>
+            <!-- Soft skills -->
+            <div class="project">
+              <h5 class="under">Soft skills</h5>
+              <div class="project__description">
+                Software skills to calculate/simulate its property
+              </div>
+              <ul class="skills__list">
+                <li class="skills__list-item btn btn--plain">VAPS</li>
+                <li class="skills__list-item btn btn--plain">Wien2k</li>
+                <li class="skills__list-item btn btn--plain">Quantum espresso</li>
+                <li class="skills__list-item btn btn--plain">AkaiKKR/SPR-KKR</li>
+                <li class="skills__list-item btn btn--plain">LAMMPS</li>
+                <li class="skills__list-item btn btn--plain">Mumax3</li>
+                <li class="skills__list-item btn btn--plain">OOMMF</li>
+                <li class="skills__list-item btn btn--plain">Ubermag</li>
+                <li class="skills__list-item btn btn--plain">COMSOL</li>
+                <li class="skills__list-item btn btn--plain">Solidworks</li>
+                <li class="skills__list-item btn btn--plain">Linux/Ubuntu</li>
+                <li class="skills__list-item btn btn--plain">Python</li>
+                <li class="skills__list-item btn btn--plain">C++</li>
+                <li class="skills__list-item btn btn--plain">HTML/PHP</li>
+                <li class="skills__list-item btn btn--plain">CSS</li>
+                <li class="skills__list-item btn btn--plain">Markdown</li>
+                <li class="skills__list-item btn btn--plain">Git</li>
+                <li class="skills__list-item btn btn--plain">VSCode</li>
+                <li class="skills__list-item btn btn--plain">OriginPro</li>
+                <li class="skills__list-item btn btn--plain">ImageJ</li>
+                <li class="skills__list-item btn btn--plain">Notion</li>
+                <li class="skills__list-item btn btn--plain">Illustrator</li>
+              </ul>
+            </div>
+          </div>
+      </section>
+
+      <!-- Timeline -->
+      <section id="experiences" class="section1">
+        <h3 class="section__title3">Work experiences</h3>
+        <div class="project2">
+          <ul class="timeline">
+            <li>
+              <p class="timeline-date">Oct. 2022 - Mar. 2025:</p>
+              <div class="timeline-content">
+                <p class="description">Project researcher (JST CREST/INNOPEL)<br>
+                  Department of Materials Science and Technology, Tokyo University of Science, Japan (Prof. Kotsugi)
+                  <br>- Theme: <em><strong>Machine learning-based analysis for low-loss soft magnets</strong></em>
+                </p>
+              </div>
+            </li>
+            <li>
+              <p class="timeline-date">Jul. 2021 - Present:</p>
+              <div class="timeline-content">
+                <p class="description">Visiting Researcher<br>
+                  Research Center for Magnetic and Spintronic Materials, National Institute for Materials Science (NIMS) (Group leader: Dr. T. Ohkubo)
+                </p>
+              </div>
+            </li>
+            <li>
+              <p class="timeline-date">Apr. 2022 - Mar. 2027:</p>
+              <div class="timeline-content">
+                <p class="description">Project assistant professor<br>
+                  Department of Materials Science and Technology, Tokyo University of Science, Japan (Prof. Kotsugi)
+                  <br>- Theme (my own): <em><strong>Design of multifunctional nanocrystalline composites </strong></em>
+                  <br>- Theme (JST CREST): <em><strong>Exploring Innovative Materials in Unknown Search Space </strong></em>
+                  <br>- Theme (MEXT Power.elect.): <em><strong>Creation of ultra-low-loss magnetic materials </strong></em>
+                </p>
+              </div>
+            </li>
+            <li>
+              <p class="timeline-date">Apr. 2021 - present:</p>
+              <div class="timeline-content">
+                <p class="description">Postdoctoral/visiting Researcher<br>
+                  Department of Materials Science and Engineering, the University of Maryland, College Park, US (Prof. Takeuchi)
+                  <br>- Theme: <em><strong>Microstructural improvement for NiTi elastocaloric alloys</strong></em>
+                </p>
+              </div>
+            </li>
+            <li>
+              <p class="timeline-date">Apr. 2019 - Mar. 2022:</p>
+              <div class="timeline-content">
+                <p class="description">JSPS research fellowship (PD)<br>
+                  Department of Micro-Nano Mechanical Science and Engineering, Nagoya University, Japan (Prof. Hata)
+                  <br>- Theme: <em><strong>Conbinatorial synthesis of magnetic thin films</strong></em>
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Education -->
+      <section id="Education" class="section1">
+        <h3 class="section__title3">Education</h3>
+        <div class="project2">
+          <ul class="timeline">
+            <li>
+              <p class="timeline-date">Apr. 2016 - Mar. 2019:</p>
+              <div class="timeline-content">
+                <p class="description">Ph.D. in Materials Science<br>
+                  - Department of Materials Science and Engineering, Yokohama National University, Japan<br>
+                  - Supervised by Prof. Wataru Nakao<br>
+                  - Thesis: <em><strong>Magnetic Barkhausen noise in FeCo magnetostrictive alloys</strong></em>
+                </p>
+              </div>
+            </li>
+            <li>
+              <p class="timeline-date">Apr. 2014 - Mar. 2016:</p>
+              <div class="timeline-content">
+                <p class="description">MA in Physics<br>
+                  - Department of Physics, Electrical and Computer Engineering, Yokohama National University, Japan<br>
+                  - Supervised by Prof. Yuko Ichiyanagi<br>
+                  - Thesis: <em><strong>Magnetic hyperthermia using magnetic nanoparticles</strong></em>
+                </p>
+              </div>
+            </li>
+            <li>
+              <p class="timeline-date">Apr. 2010 - Mar. 2014:</p>
+              <div class="timeline-content">
+                <p class="description">BA in Physics<br>
+                  - Department of Physics, College of Engineering, Yokohama National University, Japan<br>
+                  - Supervised by Prof. Masatomo Uehara<br>
+                  - Thesis: <em><strong>Doping effect on the new delafossite-type superconductors </strong></em>
+                </p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Membership -->
+      <section id="Membership" class="section1">        
+        <h3 class="section__title3">Professional Memberships</h3>
+        <h4 class="bar-left2">Current Membership</h4>
+        <ul>
+          <li class="description">The Magnetics Society of Japan (MSJ)</li> 
+          <li class="description">The Japan Society of Mechanical Engineers (JSME)</li>
+          <li class="description">The Iron and Steel Institute of Japan (ISIJ)</li>
+        </ul>
+        <h4 class="bar-left2">Past Membership</h4>
+        <ul>
+          <li class="description">The Physical Society of Japan (JPS)</li>
+          <li class="description">Japan Society of Applied Physics (JSAP)</li>
+          <li class="description">The Society of Nano Science and Technology</li>
+        </ul>
+      </section>
+
+      <!-- Grants -->
+      <section id="Grants" class="section1">        
+        <h3 class="section__title3">Grants & Fellowships</h3>
+        <ul type="disc" class="description">
+          <li class="bar-left2">2023 FY - 2025 FY : KAKENHI Grant-in-Aid for Early-Career Scientists, 23K13636, Japan Society for the Promotion of Science (JSPS)</li>
+          <li class="bar-left2">2022 FY - 2024 FY : JST ACT-X project (AI powered Research Innovation/Creation), JPMJAX22AL, Japan Science and Technology Agency (JST)</li>
+          <li class="bar-left2">2020 FY - 2022 FY : KAKENHI Grant-in-Aid for Early-Career Scientists, 20K14607, Japan Society for the Promotion of Science (JSPS)</li>   
+          <li class="bar-left2">2020 FY - 2021 FY : Marubun International Exchange Grant, Marubun Research Promotion Foundation</li>
+          <li class="bar-left2">2020 FY - 2021 FY : Research Grant, The Iron and Steel Institute of Japan</li>
+          <li class="bar-left2">2019 FY - 2021 FY : KAKENHI Grant-in-Aid for Scientific Research (B), 19H02040 (Head Investigator: Prof. Hata)</li>
+          <li class="bar-left2">2019 FY - 2021 FY : JSPS Research Fellowship (PD), 19J02078, Japan Society for the Promotion of Science (JSPS)</li>
+          <li class="bar-left2">2017 FY - 2019 FY : TEPCO Research Fellowship, TEPCO Memorial Foundation</li>
+          <li class="bar-left2">2016 FY - 2019 FY : YNU Research Fellowship, Yokohama National University</li>
+        </ul>
+      </section>
+
+      <!-- Awards -->
+      <section id="Awards" class="section1">        
+        <h3 class="section__title3">Awards & Honors</h3>
+        <ul class="description">
+          <li class="bar-left2">2023 FY : 2023 JAFOE attendee, Japan Association of the Foundations of Engineering (JAFOE)</li>
+          <li class="bar-left2">2020 FY : Best Presentation Award, Nagoya University Job Fair event</li>
+          <li class="bar-left2">2019 FY : JSPS Research Fellowship (PD), Japan Society for the Promotion of Science (JSPS)</li>
+          <li class="bar-left2">2019 FY : 11th HOPE attendee, Japan Society for the Promotion of Science (JSPS)</li>
+          <li class="bar-left2">2017 FY : Award for Research Encouragement, The IUMRS International Conference on Advanced Materials 2017</li>
+          <li class="bar-left2">2015 FY : Best Poster Award, The 13th Conference of Nano Science and Technology</li>
+        </ul>
+      </section>
+
+      <!-- International -->
+      <section id="international" class="section1">        
+        <h3 class="section__title3">International activities</h3>
+        <ul class="description">
+          <li class="bar-left2">Jul. 2023 : 2023 Japan Association of the Foundations of Engineering (JAFOE) meeting @ Waseda University, Tokyo, Japan (4 days)</li>
+          <li class="bar-left2">Apr. 2021 : Visiting Researcher @ University of Maryland, College Park, US (1 year)</li>
+          <li class="bar-left2">Mar. 2019 : 11th HOPE meeting with Nobel laureates @ OIST, Okinawa, Japan (1 week)</li>
+          <li class="bar-left2">Sep. 2015 : GO_UCSD technology commercialization training program @ UCSD, San Diego, US (2 weeks)</li>
+          <li class="bar-left2">Feb. 2015 : Boston challenge program @ Cambridge Innovation Center (CIC), Boston, US (4 weeks)</li>
+        </ul>
+      </section>
+
+      <!-- Reviewer -->
+      <section id="Reviewer" class="section1">        
+        <h3 class="section__title3">Reviewer experiences</h3>
+        <ul class="description">
+          <li class="bar-left2">Jun. 2023 : Advanced Engineering Materials
+          </li>
+          <li class="bar-left2">Jun. 2023 : Journal of Applied Physics
+          </li>
+          <li class="bar-left2">May 2022 : Sensors and Actuators: A. Physical
+          </li>
+          <li class="bar-left2">Mar. 2019 : Journal of Magnetism and Magnetic Materials
+          </li>
+        </ul>
+      </section>
+
+      <!-- Media -->
+      <section id="Media" class="section1">        
+        <h3 class="section__title3">Media</h3>
+        <ul class="description">
+          <li class="bar-left2">Feb. 2019 : Interview for the recommended picker, Economical media "NewsPicks"
+            <a href="https://newspicks.com/news/3662533/body/" targer="_blank" aria-label="live preview" class="link link--icon">
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </li>
+          <li class="bar-left2">Sep. 2017 : Press release for award for encouragement of research, Yokohama National University
+            <a href="https://www.ynu.ac.jp/hus/engk2/19163/detail.html" targer="_blank" aria-label="live preview" class="link link--icon">
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </li>
+          <li class="bar-left2">May. 2015 : Press release for presentation award, Yokohama National University
+            <a href="https://www.ynu.ac.jp/hus/engk2/13769/detail.html" targer="_blank" aria-label="live preview" class="link link--icon">
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </li>
+          
+        </ul>
+      </section>
+
+      <!-- Media -->
+      <section id="Languagea" class="section1">        
+        <h3 class="section__title3">Languages</h3>
+        <ul class="description">
+          <li class="bar-left2">Japanese: Native</li>
+          <li class="bar-left2">English: Professional Working Proficiency</li>
+        </ul>
+      </section>
+
+      <!-- Related -->
+      <section id="Related" class="section1">        
+        <h3 class="section__title3">Related</h3>
+        <ul class="description">
+          <li class="bar-left2">JST CREST project, "Exploring Innovative Materials in Unknown Search Space" (Head investigator: Yuma Iwasaki, NIMS)
+            <a href="https://www.jst.go.jp/kisoken/crest//en/project/1111116/1111116_2021.html" targer="_blank" aria-label="live preview" class="link link--icon">
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </li>
+          <li class="bar-left2">MEXT Innovative Power Electronics (INNOPEL) project, "Creation of ultra-low-loss magnetic materials" (Head investigator: Satoru Okamoto, NIMS)
+            <a href="https://www.mext.go.jp/b_menu/boshu/detail/mext_00103.html" targer="_blank" aria-label="live preview" class="link link--icon">
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </li>
+          <li class="bar-left2">Kotsugi Laboratory, Tokyo University of Science (Principal investigator: Masato Kotsugi, TUS)
+            <a href="https://www.kotsugi.jp/" targer="_blank" aria-label="live preview" class="link link--icon">
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </li>
+          <li class="bar-left2">Materials informatics community in Tokyo University of Science
+            <a href="https://rist.tus.ac.jp/wp-content/uploads/2019/10/20191101-2.pdf" targer="_blank" aria-label="live preview" class="link link--icon">
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </li>
+          <li class="bar-left2">Kagakuishin-Juku, Ochanomizu
+            <a href="https://kashinjuku-t.jimdofree.com/" targer="_blank" aria-label="live preview" class="link link--icon">
+              <i aria-hidden="true" class="fas fa-external-link-alt"></i>
+            </a>
+          </li>
+        </ul>
+      </section>
+      
+      <!-- contact -->
+      <!-- <section id="contact" class="section1 contact center">
+        <h4 class="section__title">Contact</h4> -->
+      
+      <section class="sns center">
+        <a href="https://docs.google.com/document/d/1DJfrVVvGl8wiJjjEA-Xey73QRtwMzup4ji3j0gpnTNI/edit" target="_blank"><span class="btn btn--outline">Resume</span>
+        </a>
+        <a href="https://scholar.google.co.jp/citations?user=3K8KqdcAAAAJ&hl=en" target="_blank" aria-label="google" class="link link--icon">
+          <i aria-hidden="true" class="fab fa-google"></i>
+        </a>
+        <a href="https://orcid.org/0000-0003-0738-9373" target="_blank" aria-label="orcid" class="link link--icon">
+          <i aria-hidden="true" class="fab fa-orcid"></i>
+        </a>
+        </a>
+        <a href="https://github.com/rd070672" target="_blank" aria-label="github" class="link link--icon">
+          <i aria-hidden="true" class="fab fa-github"></i>
+        </a>
+        <a href="https://twitter.com/tyamazakicom" target="_blank" aria-label="twitter" class="link link--icon">
+          <i aria-hidden="true" class="fab fa-twitter"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/tyamazakicom/" target="_blank" aria-label="linkedin" class="link link--icon">
+          <i aria-hidden="true" class="fab fa-linkedin"></i>
+        </a>
+        <a href="mailto:takahiro.yamazaki@rs.tus.ac.jp"><span class="btn btn--outline">Email me</span>
+        </a>
+      </section>
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftyamazaki.com&count_bg=%2318B41D&title_bg=%23555555&icon=atom.svg&icon_color=%23E7E7E7&title=Thanks:)&edge_flat=false"/><br><br>
+      Copyright © 2022-2024 <a href="./">tyamazaki.com</a> | All rights reserved.
+    </footer>
+    
+    <section>
+      <div class="scroll-container">
+        <div class="scroll-top">
+          <a aria-label="Scroll up" href="#top">
+            <i aria-hidden="true" class="fas fa-arrow-up"></i>
+          </a>
+        </div>
+        <div class="scroll-down">
+          <a aria-label="Scroll down" href="#bottom">
+              <i aria-hidden="true" class="fas fa-arrow-down"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+    <script src="./script.js"></script>
+    <div id="bottom"></div>
+  </body>
+</html>

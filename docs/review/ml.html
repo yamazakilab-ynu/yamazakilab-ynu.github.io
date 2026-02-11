@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en jp">
+  <head>
+    <title>ty/review/ml</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="tyamazaki.com is portfolio, blog and paper reviewing website designed by Takahiro Yamazaki, who is a materials scientist/researcher ant university"/>
+    <meta name="keywords" content="tyamazaki, Takahiro, Yamazaki, portfolio, homepage, website, materials, Scientist, researcher, professor, physics, magnetism, machine learning, Barkhausen, Non-equilibrium, functional, projects, publications, notes, blog, 山崎貴大, 研究者, 大学教員, 論文紹介, 物材見聞録, オブザーブ, ブログ, 材料物理, 物性物理, 材料工学, マテリアルズインフォマティクス"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../img/favicon.png">
+    <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous">
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NYGV5L0T7N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NYGV5L0T7N');
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(function() {
+        $("#sidebar").load("./sidebar.html");
+      });
+    </script>
+  </head>
+  <!-- body -->
+  <body class="light" id="top">
+    <!-- header -->
+    <header class="header center">
+      <h3><a href="../" class="link">tyamazaki.com</a></h3>
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="../">top</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../review">review</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../blog">blog</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../publications">publications</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../projects">projects</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../notes">notes</a>
+          </li>
+        </ul>
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+        <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger"> 
+          <i aria-hidden="true" id="btn-navigation" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+    
+    <div class="about4 center">
+      <h1>論文紹介</h1>
+      <h5>その他：AI技術</h5>
+    </div>
+    <div class="container">
+      <!-- Main contents -->
+      <main class="main-content">
+        <nav aria-label="breadcrumb">
+          <ul class="breadcrumb">
+            <li><a href="../" class="link2 link2--nav2">Home</a></li>
+            <li><a href="../review" class="link2 link2--nav2">Review</a></li>
+            <li>AI技術</li>
+          </ul>
+        </nav>
+
+        <section>
+          <section>
+            <h3 class="section__title3">狙い</h3>
+            <div class="description2">
+              人工知能（AI）は、近年の科学技術の進展によって私たちの生活に革命をもたらし、未来を創造しています。コンピュータが人間のように思考し、学習し、自ら問題を解決する能力を持つというこの技術は、多くの分野でその効果を発揮しています。医療から自動運転車、日常のスマートフォンのアプリケーションまで、AIはあらゆる場面で私たちの手助けをしており、限りない可能性を秘めています。
+            </div>
+          </section><br>
+
+          <section>     
+            <h4 class="under3">論文タイトル一覧</h4>
+            <ol class="indent">
+              <li class="description22"><a href="#1">
+                不変グラフニューラルネットワーク</a></li>
+            </ol>
+          </section><br>
+
+          <section>
+            <div id="1"><h4 class="indent2">不変グラフニューラルネットワーク</h4>
+              <div class="description2">
+                本研究では、グラフ構造データに対して、平行移動、回転、反射などのE(n)変換に不変なグラフニューラルネットワーク（EGNN）を提案した。EGNNは、既存の手法と比べて、高次の表現や球面調和関数などを必要とせずに、単純で効率的なメッセージパッシングアルゴリズムでE(n)不変性を実現した。また、EGNNは3次元空間に限定されずに、任意の次元の空間に拡張できる。EGNNは、動的システムのモデリング、グラフオートエンコーダー、分子特性予測などのタスクで、競合する手法よりも優れた性能を示した。
+              </div>
+              <div class="description10">
+                Published 2022-02-19<br>
+                E(n) Equivariant Graph Neural Networks<br>
+                Victor Garcia Satorras, et al. (University of Amsterdam, Netherlands)<br>
+                <a href="https://arxiv.org/abs/2102.09844" target="_blank" class="link2 link2--nav2">
+                  https://arxiv.org/abs/2102.09844</a>
+              </div><div class="img_align">
+                <img src="../review/img/ml-1-1.png" class="img300c">
+                <img src="../review/img/ml-1-2.png" class="img300">
+              </div>
+              <div class="description6">
+                <span class="name">【コメント】</span>結晶構造とグラフ理論の考え方を寄り近づけた新しい手法で興味深い。グラフ理論でのモデリングやりたい。<br>
+                <span class="name">【用語】</span>
+                グラフニューラルネットワーク（GNN）：グラフ構造データに対して畳み込みやプーリングなどの操作を行うニューラルネットワークの一種。グラフの頂点や辺に特徴ベクトルを割り当てて、メッセージパッシングと呼ばれる手法で隣接する頂点や辺から情報を受け取りながら特徴を更新する。GNNは、順列不変性を持つが、平行移動や回転などの幾何学的な変換には不変ではない。不変性（equivariance）：ある関数がある変換に対して不変であるとは、入力にその変換を施した後に関数を適用することと、関数を適用した後に出力に同じ変換を施すことが等価であることを意味する。例えば、画像に対する畳み込み層は平行移動不変性を持つが、回転不変性は持たない。不変性は、問題の対称性を利用して汎化性能や計算効率を向上させることができる。平行移動（translation）：空間内の全ての点を同じ方向と距離だけずらす変換。平行移動はE(n)群の一部であり、平行移動後も形や大きさは変わらない。例えば、点群(x1​,x2​,…,xM​)に対して平行移動ベクトルg∈Rnを加えると、(x1​+g,x2​+g,…,xM​+g)という点群になる。回転（rotation）：空間内の全ての点をある中心点や軸周りに一定角度だけ回転させる変換。回転もE(n)群の一部であり、回転後も形や大きさは変わらない。例えば、点群(x1​,x2​,…,xM​)に対して直交行列Q∈Rn×nを掛けると、(Qx1​,Qx2​,…,QxM​)という点群になる。<br>
+                <span class="name">【提案手法】</span>
+                EGNNは、グラフの頂点に対応する座標xi​と特徴hi​を持つ。EGNNは、以下の手順でグラフの特徴を更新する。辺の処理：各頂点のペア(i,j)に対して、辺の特徴mij​を計算する。このとき、頂点の特徴hi​,hj​と距離の二乗∥xi​−xj​∥2を入力とする。この処理は、GNNの辺の処理と同様であるが、距離の二乗が不変性を保証するために追加されている。座標の更新：各頂点iに対して、座標xi​を更新する。このとき、辺の特徴mij​からスカラー値ϕx​(mij​)を出力し、それを重みとして(xi​−xj​)に掛けて足し合わせる。この処理は、GNNにはない独自の処理であり、座標をベクトル場として扱うことで不変性を保証する。特徴の集約：各頂点iに対して、隣接する頂点からの辺の特徴mij​を足し合わせて集約する。この処理は、GNNの集約処理と同様である。特徴の更新：各頂点iに対して、特徴hi​を更新する。このとき、自分自身の特徴hi​と集約した特徴mi​を入力とする。この処理は、GNNの特徴の更新処理と同様である。<br>
+                <span class="name">【意義/新規性】</span>
+                E(n)不変性を持つグラフニューラルネットワークを提案した。既存の手法では、高次元表現や球面調和関数などを用いてE(3)やSE(3)不変性を実現していたが、計算コストが高く3次元空間に限定されていた。本研究では、シンプルで効率的な手法でE(n)不変性を実現し、高次元空間にも拡張可能であることを示した。E(n)不変性が有効である様々なタスクで優れた性能を示した。動的システムのモデリングでは、平行移動や回転に対してロバストな予測が可能であることを示した。グラフオートエンコーダーでは、グラフの対称性問題を解決し、連続空間への埋め込みが改善されたことを示した。分子特性予測では、既存の手法よりもシンプルな構造で競争力のある結果が得られたことを示した。
+              </div>
+            </div><br><br>          
+          </section>
+        </section>
+      </main>
+
+      <!-- Sidebar -->
+      <aside id="sidebar" class="sidebar"></aside>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftyamazaki.com%2Freview%2Fml&count_bg=%2318B41D&title_bg=%23555555&icon=atom.svg&icon_color=%23E7E7E7&title=Thanks:)&edge_flat=false"/><br><br>Copyright © 2022-2023 <a href="../">tyamazaki.com</a> | All rights reserved.
+    </footer>
+
+    <div class="scroll-container">
+      <div class="scroll-top">
+        <a aria-label="Scroll up" href="#top">
+          <i aria-hidden="true" class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+      <div class="scroll-down">
+        <a aria-label="Scroll down" href="#bottom">
+            <i aria-hidden="true" class="fas fa-arrow-down"></i>
+        </a>
+    </div>
+    </div>
+    <script src="../script.js"></script>
+    <div id="bottom"></div>
+  </body>
+</html>

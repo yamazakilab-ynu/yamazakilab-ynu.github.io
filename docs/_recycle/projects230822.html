@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en jp">
+  <head>
+    <title>tyamazaki.com/projects</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 "/>
+    <meta name="description" content="This portfolio website is designed by tyamazaki (Takahiro Yamazaki), who is a materials scientist/researcher" />
+    <meta name="keywords" content="tyamazaki, Takahiro, Yamazaki, portfolio, homepage, website, materials, Scientist, researcher, professor, physics, magnetism, machine learning, Barkhausen, Non-equilibrium, functional, projects, publications, notes, blog" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="./styles.css">
+    <link rel="icon" href="./img/favicon.png">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NYGV5L0T7N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NYGV5L0T7N');
+    </script>
+
+  </head>
+  <!-- body -->
+  <body class="light" id="top">
+
+    <!-- header -->
+    <header class="header center">
+      <h4><a href="./" class="link">tyamazaki.com</a></h4>
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="./">top</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="./projects">projects</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="./publications">publications</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="./blog">blog</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="./review">review</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="./notes">notes</a>
+          </li>
+        </ul>
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+        <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger"> 
+          <i aria-hidden="true" id="btn-navigation" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+
+    <!-- Main contents -->
+    <main>
+      <div class="about4 center">
+        <h2 class="center">Projects</h2>
+        <h5>Welcome to future collaborations</h5>
+      </div>
+
+      <!-- Ongoing projects -->
+      <h4 class="section2 section__title3">Ongoing projects</h4>
+      <div class="projects__grid">
+        <section id="solid-state" class="section1 project2">
+          <h4 class="bar-left3">ACT-X: ML-assisted iron-loss analysis</h4>
+          <div class="flex description3"><img src="./img/act-x.png" alt="" class="img"> 
+            <p>Machine learing-assisited magnetic noise analysis in low-iron-loss soft magnetic materials.
+            </p>
+          </div>
+          <!--<div class="flex description3">
+            <p>Machine learing-assisited magnetic Barkhausen noise analysis for materials design.
+            </p><img src="./img/opensea.png" alt="" width="150" height="150" class="img">
+          </div>-->
+          <ul class="skills__list">
+            <li class="skills__list-item btn btn--plain">iron loss</li>
+            <li class="skills__list-item btn btn--plain">abnormal eddy current</li>
+            <li class="skills__list-item btn btn--plain">nanocomposites</li>
+          </ul>
+        </section>
+
+        <section id="Signal" class="section2 project2">
+          <h4 class="bar-left3">CREST: Synchrotron x-ray spectra analysis</h4>
+          <div class="flex description3"><img src="./img/spring8.png" alt="" class="img"> 
+            <p>Design the new nanocomposites with large magnetostriction & high magnetic susceptibily for sensor applications.
+            </p>
+          </div>
+          <ul class="skills__list">
+            <li class="skills__list-item btn btn--plain">machine learning</li>
+            <li class="skills__list-item btn btn--plain">synchrotron X-ray</li>
+            <li class="skills__list-item btn btn--plain">XMCD</li>
+            <li class="skills__list-item btn btn--plain">half-metal Heusler alloy</li>
+          </ul>
+        </section>
+
+        <section id="solid-state" class="section12 project2">
+          <h4 class="bar-left3">JSPS: Magnetoelastic nanocomposites</h4>
+            <div class="flex description3"><img src="./img/nano.png" alt="" class="img"> 
+              <p>Micromagnetic simulation for creating new magnetic domain & interaction 
+                between the different crystal structures and phases.
+              </p>
+            </div>
+          <ul class="skills__list">
+            <li class="skills__list-item btn btn--plain">nanocrystalline</li>
+            <li class="skills__list-item btn btn--plain">coercivity</li>
+            <li class="skills__list-item btn btn--plain">soft magnets</li>
+            <li class="skills__list-item btn btn--plain">magnetostriction</li>
+          </ul>
+        </section>
+
+        <section id="barkhasen" class="section1 project2">
+          <h4 class="bar-left3">Barkhasen noise generation</h4>
+          <div class="flex description3"><img src="./img/barkhausen.png" alt="" class="img"> 
+            <p>Feature extraction from the measured time-series signals or 
+              spectra on the feature space using machine learning.
+            </p></div>
+          <ul class="skills__list">
+            <li class="skills__list-item btn btn--plain">magnetic Barkhausen noise</li>
+            <li class="skills__list-item btn btn--plain">microstructure</li>
+            <li class="skills__list-item btn btn--plain">magnetic domain</li>
+          </ul>
+        </section>
+      </div><br><br>
+
+       <!-- Past projects -->
+      <h4 class="section section__title3">Past projects</h4>
+      <div class="projects__grid">
+        <section id="solid-state" class="section2 project2">
+          <h4 class="bar-left3">UMD: Tunable elastocaloric effect for NiTi-based alloys</h4>
+          <div class="flex description3"><img src="./img/elastocaloric.png" alt="" class="img"> 
+            <p>Tuning the temperature range of superelastic Ni-Ti alloys for elastocaloric cooling via thermal
+              processing.
+            </p>
+          </div>
+          <ul class="skills__list">
+            <li class="skills__list-item btn btn--plain">elastocaloric</li>
+            <li class="skills__list-item btn btn--plain">Ni-Ti alloy</li>
+            <li class="skills__list-item btn btn--plain">solid-state refridgant</li>
+          </ul>
+        </section>
+
+        <section id="Signal" class="section1 project2">
+          <h4 class="bar-left3">TMI: High corrosion protection</h4>
+          <div class="flex description3"><img src="./img/corrosion.png" alt="" class="img"> 
+            <p>Combinatorial synthesis of nanocrystalline FeSiBPCuC–Ni–(Nb,Mo) soft magnetic alloys with high corrosion resistance.
+            </p>
+          </div>
+          <ul class="skills__list">
+            <li class="skills__list-item btn btn--plain">Combinatorial synthesis</li>
+            <li class="skills__list-item btn btn--plain">NANOMET soft magnets</li>
+            <li class="skills__list-item btn btn--plain">High corrosion</li>
+          </ul>
+        </section>
+
+        <section id="solid-state" class="section1 project1">
+          <h4 class="bar-left3">Pana: New Galfenol magnetostrictive materials</h4>
+            <div class="flex description3"><img src="./img/fega.png" alt="" class="img"> 
+              <p>Developement of new Galfenol magnetostrictive materials with high magnetostriction and low coercivity.
+              </p>
+            </div>
+          <ul class="skills__list">
+            <li class="skills__list-item btn btn--plain">Magnetostriction</li>
+            <li class="skills__list-item btn btn--plain">Galfenol</li>
+            <li class="skills__list-item btn btn--plain">Doping enhancement</li>
+            <li class="skills__list-item btn btn--plain">Combinatorial method</li>
+          </ul>
+        </section>
+
+        <section id="solid-state" class="section1 project2">
+          <h4 class="bar-left3">YNU: Magnetic hyperthermia</h4>
+          <div class="flex description3"><img src="./img/hyperthermia.png" alt="" class="img"> 
+            <p>Feature extraction from the measured time-series signals or 
+              spectra on the feature space using machine learning.
+            </p></div>
+          <ul class="skills__list">
+            <li class="skills__list-item btn btn--plain">Nanoparticles</li>
+            <li class="skills__list-item btn btn--plain">Heat dissipation</li>
+            <li class="skills__list-item btn btn--plain">Neel relaxation</li>
+            <li class="skills__list-item btn btn--plain">Brest cancer</li>
+          </ul>
+        </section>
+
+        <section id="solid-state" class="section2 project2">
+          <h4 class="bar-left3">YNU: Multiferroic nanoparticles</h4>
+          <div class="flex description3"><img src="./img/multiferroic.png" alt="" class="img"> 
+            <p>Feature extraction from the measured time-series signals or 
+              spectra on the feature space using machine learning.
+            </p></div>
+          <ul class="skills__list">
+            <li class="skills__list-item btn btn--plain">Multiferroic</li>
+            <li class="skills__list-item btn btn--plain">Synchrotron X-ray</li>
+            <li class="skills__list-item btn btn--plain">XAFS & XANES</li>
+          </ul>
+        </section>
+      </div>      
+
+      <!-- Private projects / Hobbies -->
+      <!-- <h3 class="section1 section__title3">Private projects / Hobbies</h3>
+      <div class="projects__grid">
+        <section id="solid-state" class="section2 project2">
+          <h4 class="bar-left3">ENS collection</h4>
+          <div class="flex description3"><img src="./img/opensea.png" alt="" class="img"> 
+            <p>I'm an Ethereum Name Service (ENS) collecter. 
+            ENS domains are secure domain names for the future decentralized/ web3 world.
+            </p></div>
+          <ul class="skills__list">
+            <li class="skills__list-item btn btn--plain">ENS</li>
+            <li class="skills__list-item btn btn--plain">Etherium</li>
+            <li class="skills__list-item btn btn--plain">Investment</li>
+            <li class="skills__list-item btn btn--plain">Cryptocurrency</li>
+          </ul>
+        </section>
+
+        <section id="solid-state" class="section2 project2">
+          <h4 class="bar-left3">Bouldering</h4>
+          <div class="flex description3"><img src="./img/opensea.png" alt="" class="img"> 
+            <p>I'v been a climber since 2021. Top grade of bouldering is V6/5.11d.
+            </p></div>
+          <ul class="skills__list">
+            <li class="skills__list-item btn btn--plain">Climbing</li>
+            <li class="skills__list-item btn btn--plain">Bouldering</li>
+            <li class="skills__list-item btn btn--plain">Gym</li>
+            <li class="skills__list-item btn btn--plain">Training</li>
+          </ul>
+        </section>
+
+        <section id="stock" class="section2 project2">
+          <h4 class="bar-left3">Stock marketing</h4>
+          <div class="flex description3"><img src="./img/opensea.png" alt="" class="img"> 
+            <p>I'm a stock inverster for US marketplace from 2019. Prefer individual stocks to index-linked stocks. 
+            </p> </div>
+          <ul class="skills__list">
+            <li class="skills__list-item btn btn--plain">Stock</li>
+            <li class="skills__list-item btn btn--plain">Investment</li>
+            <li class="skills__list-item btn btn--plain">US</li>
+            <li class="skills__list-item btn btn--plain">Tesla</li>
+          </ul>
+        </section>
+
+        <section id="blog" class="section2 project2">
+          <h4 class="bar-left3">Science blog</h4>
+          <div class="flex description3"><img src="./img/opensea.png" alt="" class="img"> 
+            <p>Introduce some interesting journals related to materials science and engineering.
+            </p></div>
+          <ul class="skills__list">
+            <li class="skills__list-item btn btn--plain">Journal</li>
+            <li class="skills__list-item btn btn--plain">blog</li>
+            <li class="skills__list-item btn btn--plain">science</li>
+            <li class="skills__list-item btn btn--plain">translation</li>
+          </ul>
+        </section>
+      </div><br> -->
+
+      <!-- contact -->
+      <!-- <section id="contact" class="section1 contact center" >
+        <h4 class="section__title">Contact</h4>
+        <a href="mailto:takahiro.yamazaki@rs.tus.ac.jp"><span class="btn btn--outline">Email me</span></a>
+      </section> -->
+    </main>
+
+    <!-- footer -->
+    <footer class="footer">
+      © 2023 <a href="./" class="link footer__link">tyamazaki</a>. All rights reserved.<br><br>
+      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftyamazaki.com%2Fprojects&count_bg=%2318B41D&title_bg=%23555555&icon=atom.svg&icon_color=%23E7E7E7&title=Thanks:)&edge_flat=false"/>
+    </footer>
+
+    <div class="scroll-container">
+      <div class="scroll-top">
+        <a aria-label="Scroll up" href="#top"><i aria-hidden="true" class="fas fa-arrow-up"></i></a>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="jp">
+  <head>
+    <title>tyamazaki.com</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="私たちは、計測・計算・機械学習を融合させることで、物質の電子状態から微細構造、さらには機能発現に至るまでを統一的に理解し、新しい材料研究開発の道を切り拓いています。"/>
+    <meta name="keywords" content="山崎研究室, tyamazaki, Takahiro, Yamazaki, portfolio, homepage, website, materials, Scientist, researcher, professor, physics, magnetism, machine learning, Barkhausen, Non-equilibrium, functional, projects, publications, notes, blog, 山崎貴大, 研究者, 大学教員, 論文紹介, 物材見聞録, オブザーブ, ブログ, 材料物理, 物性物理, 材料工学, マテリアルズインフォマティクス"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet">
+    <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous">
+    </script>
+    <link rel="stylesheet" href="./styles_test.css">
+    <link rel="icon" href="./img/favicon2.png">
+    
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-P6D76HT5');</script>
+    <!-- End Google Tag Manager -->
+     
+    <!-- <script defer>
+    window.addEventListener('DOMContentLoaded', () => {
+      /* --- テーマ切替 --- */
+      const themeBtn = document.getElementById('btn-theme')?.closest('button') || document.getElementById('btn-theme');
+      themeBtn?.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+      });
+
+      /* --- ハンバーガー --- */
+      const hamBtn = document.querySelector('.nav__hamburger');
+      const navList = document.querySelector('.nav__list');
+      hamBtn?.addEventListener('click', () => {
+        navList?.classList.toggle('is-open');
+      });
+
+      /* --- ヒーロースライダー --- */
+      const hero = document.querySelector('.hero');
+      if (hero) {
+        const slides = Array.from(hero.querySelectorAll('.hero__slide'));
+        const prevBtn = hero.querySelector('.hero__nav.prev');
+        const nextBtn = hero.querySelector('.hero__nav.next');
+        const dotsWrap = hero.querySelector('.hero__dots');
+
+        let idx = 0;
+        let timer = null;
+        const INTERVAL_MS = 5000;
+
+        slides.forEach((_, i) => {
+          const b = document.createElement('button');
+          b.type = 'button';
+          b.setAttribute('aria-label', `Go to slide ${i+1}`);
+          b.addEventListener('click', () => show(i, true));
+          dotsWrap.appendChild(b);
+        });
+
+        function show(i, user = false) {
+          slides[idx].classList.remove('is-active');
+          idx = (i + slides.length) % slides.length;
+          slides[idx].classList.add('is-active');
+          dotsWrap.querySelectorAll('button').forEach((b, j) =>
+            b.setAttribute('aria-current', j === idx ? 'true' : 'false')
+          );
+          if (user) restart();
+        }
+        function next() { show(idx + 1); }
+        function prev() { show(idx - 1); }
+        function start() { timer = setInterval(next, INTERVAL_MS); }
+        function stop()  { clearInterval(timer); timer = null; }
+        function restart(){ stop(); start(); }
+
+        nextBtn?.addEventListener('click', next);
+        prevBtn?.addEventListener('click', prev);
+        hero.addEventListener('mouseenter', stop);
+        hero.addEventListener('mouseleave', start);
+
+        show(0);
+        start();
+      }
+
+      /* --- トップへ戻る --- */
+      const toTop = document.querySelector('[data-to-top]');
+      if (toTop) {
+        const THRESHOLD = 300;
+        const toggle = () => {
+          if (window.scrollY > THRESHOLD) toTop.classList.add('show');
+          else toTop.classList.remove('show');
+        };
+        toggle();
+        window.addEventListener('scroll', toggle, { passive: true });
+        toTop.addEventListener('click', (e) => {
+          e.preventDefault();
+          const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+          window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+        });
+      }
+    });
+    </script> -->
+  </head>
+
+  <body class="light" id="top">
+        <!-- Header -->
+    <div id="header"></div>
+
+    </header>
+
+    <!-- =================================================================================================== -->
+
+    <!-- Main -->
+    <main>
+      <section class="hero2" aria-label="Portfolio hero">
+        <div class="hero__slides">
+          <div class="hero__slide is-active" style="--bg:url('./img/top1.jpg')">
+            <div class="hero__overlay">
+              <div class="hero__panel">
+                <h3 class="hero__title">wiki</h3>
+                <p class="hero__desc">ウィキ</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section id="topics" class="section1 section-divider2">
+        <div class="section-card">
+
+          <div class="member-text">
+            <p class="section__subtitle2 member-bar">計算関連</p>
+            <p class="member-desc">
+              <a href="./wiki/vasp.html" class="link footer__link">VASP v6.5.1のインストール方法</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">　VASPを用いたDFT計算</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">　MAELAS v3.0</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">　phonopy v2.44.o</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">　Bader charge analysis</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">SPR-KKRのインストール方法</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">Wien2k v23.2のインストール方法</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">mumax3 v3.11のインストール方法</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">　mumax3を用いたLLG計算</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">　mumax+による磁気弾性計算</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">COMSOL v6.4のインストール方法</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">Linux-PCの初期設定</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">東北大金研スパコン"Masamune-II"</a></p>
+          </div><br><br>
+
+          <div class="member-text">
+            <p class="section__subtitle2 member-bar">実験関連</p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">多元スパッタ装置</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">急速昇温熱処理装置</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">バルクハウゼンノイズ計測装置 (MBN)</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">X線回折装置 (XRD)</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">X線光電子分光法 (XPS)</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">振動試料型磁力計 (VSM)</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">磁気特性測定システム (MPMS)</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">集束イオンビーム加工観察装置 (FIB-SEM)</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">透過電子顕微鏡 (TEM)</a></p>
+          </div><br><br>
+
+          <div class="member-text">
+            <p class="section__subtitle2 member-bar">データサイエンス関連</p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">VScode</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">UMAP (Uniform Manifold Approximation and Projection)</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">主成分分析 PCA (Principal component analysis)</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">パーシステントホモロジー PH</a></p>
+          </div><br><br>
+
+          <div class="member-text">
+            <p class="section__subtitle2 member-bar">放射光関連</p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">SPring-8で実験を行うために</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">SPring-8 ~BL25SU XMCD~</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">SPring-8 ~BL14B2 in-situ XAS/XRD~</a></p>
+            
+            <p class="member-desc">
+              <a href="" class="link footer__link">KEK(PF)で実験を行うために</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">KEK(PF) ~BL9C XAFS~</a></p>
+
+            <p class="member-desc">
+              <a href="" class="link footer__link">NanoTerasuで実験を行うために</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">NanoTerasu ~BL09U HAXPES~</a></p>
+          </div><br><br>
+
+          <div class="member-text">
+            <p class="section__subtitle2 member-bar">研究室立ち上げ関連～居室編～</p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">土禁・フロアマット</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">机・椅子</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">Wi-Fiのセットアップ</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">家電類</a></p>
+          </div><br><br>
+
+          <div class="member-text">
+            <p class="section__subtitle2 member-bar">研究室立ち上げ関連～実験室編～</p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">引っ越し</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">実験机・椅子・棚など</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">サーバールーム</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">クリーンベンチ</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">シンク周り</a></p>
+          </div><br><br>
+
+          <div class="member-text">
+            <p class="section__subtitle2 member-bar">その他</p>
+            <p class="member-desc">
+              <a href="" class="link footer__link"></a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">クリーンベンチ</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">シンク周り</a></p>
+            <p class="member-desc">
+              <a href="" class="link footer__link">実験机</a></p>
+          </div><br><br>
+
+        </div>
+      </section><br>
+    </main>
+
+    <!-- =================================================================================================== -->
+
+    <button type="button" class="to-top" aria-label="ページ先頭へ" data-to-top>
+      <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- Footer -->
+    <div id="footer"></div>
+    <script src="./common.js"></script>
+  </body>
+</html>

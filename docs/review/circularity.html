@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en jp">
+  <head>
+    <title>ty/review/circularity</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="tyamazaki.com is portfolio, blog and paper reviewing website designed by Takahiro Yamazaki, who is a materials scientist/researcher ant university"/>
+    <meta name="keywords" content="tyamazaki, Takahiro, Yamazaki, portfolio, homepage, website, materials, Scientist, researcher, professor, physics, magnetism, machine learning, Barkhausen, Non-equilibrium, functional, projects, publications, notes, blog, 山崎貴大, 研究者, 大学教員, 論文紹介, 物材見聞録, オブザーブ, ブログ, 材料物理, 物性物理, 材料工学, マテリアルズインフォマティクス"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../img/favicon.png">
+    <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous">
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NYGV5L0T7N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NYGV5L0T7N');
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(function() {
+        $("#sidebar").load("./sidebar.html");
+      });
+    </script>
+  </head>
+  <!-- body -->
+  <body class="light" id="top">
+    <!-- header -->
+    <header class="header center">
+      <h3><a href="../" class="link">tyamazaki.com</a></h3>
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="../">top</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../review">review</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../blog">blog</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../publications">publications</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../projects">projects</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../notes">notes</a>
+          </li>
+        </ul>
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+        <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger"> 
+          <i aria-hidden="true" id="btn-navigation" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+    
+    <div class="about4 center">
+      <h1>論文紹介</h1>
+      <h5>機能特集：循環性の基礎と応用</h5>
+    </div>
+    <div class="container">
+      <!-- Main contents -->
+      <main class="main-content">
+        <nav aria-label="breadcrumb">
+          <ul class="breadcrumb">
+            <li><a href="../" class="link2 link2--nav2">Home</a></li>
+            <li><a href="../review" class="link2 link2--nav2">Review</a></li>
+            <li>循環性</li>
+          </ul>
+        </nav>
+
+        <section>
+          <section>
+            <h3 class="section__title3">狙い</h3>
+            <div class="description2">
+              循環性の考えは、持続可能な材料管理とリソースの最適利用に焦点を当てたアプローチです。線形経済（「採掘、製造、使用、廃棄」）とは対照的に、循環経済では材料がエンド・オブ・ライフに達した後も再利用、再生、リサイクルされ、無駄を最小限に抑えます。循環性の材料（Circular Materials）は、生産から消費、そして再生に至るまでのライフサイクル全体で環境影響が最小限であるように設計された材料です。これには、リサイクル性、再利用性、耐久性、修理性、そして生物分解性などの特性が含まれます。
+            </div>
+          </section><br>
+          
+          <section>     
+            <h4 class="under3">論文タイトル一覧</h4>
+            <ol class="indent">
+              <li class="description22"><a href="#1">
+                高結晶性ポリオキシメチレンの不均一電気媒介分解</a></li>
+              <!-- <li class="description22"><a href="#2">
+                ハロゲン化物ペロブスカイトの自由エネルギー形貌の解明：CsPbBr3とMAPbI3の不安定性と相転移特性</a></li>
+              <li class="description22"><a href="#3">
+                量子、原子、連続体システムにおける科学のための人工知能</a></li> -->
+              <!-- <li class="description22"><a href="#4">
+                層間スタッキングによって誘起される二次元ファンデルワールス磁性体中の反スキルミオン</a></li> -->
+            </ol>
+          </section><br><br>
+
+          <section>
+            <div id="1"><h4 class="indent2">1. 高結晶性ポリオキシメチレンの不均一電気媒介分解</h4>
+              <div class="description2">
+                ・高結晶性のエンジニアリングプラスチックであるポリオキシメチレン（POM）を室温と常圧で電気抵抗がなくなる物質に分解する電気化学的方法を開発した。<br>
+                ・ヘキサフルオロ-2-プロパノール（HFIP）を溶媒として用いることで、POMの溶解と酸化によるプロトン発生を同時に促進した。<br>
+                ・電気生成されたプロトンがPOMのアセタール結合を切断し、ホルムアルデヒドや1,3,5-トリオキサンなどのモノマーに還元した。<br>
+                ・電気生成された酸素がモノマーを酸化し、最終的にはホルム酸に変換し、商業的なPOM製品（デルリン®）も同様の方法で分解できることを示した。
+              </div>
+              <div class="description6">
+                コメント：実際に製品化されているプラスチックの一つPOMを分解できる手法の確立したとして高く評価されているようである。リサイクルに関する考察には触れていないようなので、そのあたりの議論についても勉強していきたい。<br>
+                用語：ポリオキシメチレン（POM）：オキシメチレン（−CH2O−）構造を単位構造にもつポリマーであり、高い機械的強度や耐摩耗性を持つ。自動車や電子機器などの精密部品に広く利用される。デルリンは、ポリオキシメチレンの一種であり、ホルムアルデヒドを原料としたポリアセタール樹脂（POM）です。電気媒介分解：電気化学的な反応によって高分子や有機物を低分子や無機物に分解すること。電極表面で発生する電子やプロトン、酸素などの活性種が分解反応を促進する。ヘキサフルオロ-2-プロパノール（HFIP）：強い水素結合性と低い極性を持つ有機溶媒であり、高結晶性のポリマーを溶解する能力がある。また、酸化によってプロトンを発生させることができる。
+                方法論：POMの電気媒介分解方法：POM粉末をHFIPに溶かし、その溶液をCH3CNやIPAなどの他の有機溶媒に加えて不均一系の電解液を作った。この電解液を分割セルまたは非分割セルに入れ、銀/塩化銀電極（Ag/AgCl）を基準電極として用いた。ガラス炭素電極や金属電極などの作業電極に2～3.5 Vの電圧を印加し、数時間から数十分間電気化学反応させた。反応後の電解液から生成物を回収し、1H NMRや19F NMRなどの分析手法で同定した。
+
+              </div>
+              <div class="description10">
+                11 Aug 2023<br>Heterogeneous electromediated depolymerization of highly crystalline polyoxymethylene<br>
+                Yuting Zhou, et al. (University of Illinois at Urbana-Champaign, USA)<br>
+                <a href="https://www.nature.com/articles/s41467-023-39362-z" target="_blank" class="link2 link2--nav2">
+                  Nature Communications volume 14, 4847 (2023)</a>
+              </div><div class="img_align">
+                <img src="../review/img/circularity-1-1.png" class="img300">
+                <img src="../review/img/circularity-1-2.png" class="img300">
+              </div>
+            </div><br><br>
+
+            <!-- <div id="2"><h4 class="indent2">2. ハロゲン化物ペロブスカイトの自由エネルギー形貌の解明：CsPbBr3とMAPbI3の不安定性と相転移特性</h4>
+              <div class="description2">
+                ・ハロゲン化物ペロブスカイトは温度によって立方晶、四方晶、斜方晶などの異なる結晶構造を取るが、その自由エネルギー形貌は未解明だった。<br>
+                ・本研究では、CsPbBr3とMAPbI3という二つの代表的なハロゲン化物ペロブスカイトについて、機械学習に基づく分子力場を用いて分子動力学シミュレーションと傘サンプリング法を行った。その結果、CsPbBr3では立方晶から四方晶への相転移が一次相転移であることを確認し、斜方晶から四方晶への相転移は連続相転移であることを示した。<br>
+                ・MAPbI3では、有機分子MAが持つ配向自由度が相転移や不安定性に影響を与えることを見出した。特に、斜方晶から四方晶への相転移は大きな自由エネルギー障壁を持ち、斜方晶は高温でもメタ安定な状態になることがわかった。また、MAPbI3では実験で観測されていないメタ安定な四方晶構造（a −a −c 0）も発見し、その存在可能性や動力学的挙動について議論した。
+              </div>
+              <div class="description6">
+                コメント：ハロゲン化物ペロブスカイトという太陽電池に有望な材料の自由エネルギー形貌を計算物理学と化学の手法で明らかにして、どう他の材料系と比較していくのか興味があります。<br>
+                補足：ハロゲン化物ペロブスカイト：ABX3型の結晶構造を持つ化合物で、Aはアルカリ金属や有機分子（例えばMA=CH3NH3）、Bは鉛や錫などの金属元素、Xはハロゲン元素（フッ素、塩素、臭素、ヨウ素）である。光吸収や電荷移動などの特性が優れており、太陽電池や発光ダイオードなどの応用が期待されている。自由エネルギー形貌：物質の状態や構造を表す変数（例えば温度や圧力、分子の配向など）に対する自由エネルギーの分布を示す図。自由エネルギーが最も低いところが安定な状態や構造であり、自由エネルギーが高いところは不安定な状態や構造である。自由エネルギー形貌は相転移や反応経路などの物理化学的現象を理解するために重要である。傘サンプリング法：分子動力学シミュレーションで用いられるサンプリング法の一種で、自由エネルギー形貌の探索を効率的に行うために、あらかじめ選んだ変数（例えば分子の変形や距離など）に沿って系にバイアスポテンシャル（例えば調和ポテンシャルなど）をかける方法。バイアスポテンシャルによって系は安定な状態から不安定な状態へと移動しやすくなり、自由エネルギー形貌の全体像を得ることができる。
+              </div>
+              <div class="description10">
+                22 Jul 2023<br>
+                Revealing the free energy landscape of halide perovskites: Metastability and transition characters in CsPbBr3 and MAPbI3<br>
+                Erik Fransson et al. (Chalmers University of Technology, Sweden)<br>
+                <a href="hhttps://arxiv.org/abs/2307.12100" target="_blank" class="link2 link2--nav2">
+                  https://arxiv.org/abs/2307.12100v1</a>
+              </div><div class="img_align">
+                <img src="../review/img/circularity-2-1.png" class="img300">
+                <img src="../review/img/circularity-2-2.png" class="img300">
+              </div>
+            </div><br><br> -->
+
+            <!-- <div id="3"><h4 class="indent2">3. 量子、原子、連続体システムにおける科学のための人工知能</h4>
+              <div class="description2">
+                ・AI for Scienceという新しい研究分野、特に、量子、原子、連続体という3つのスケールで自然現象を理解するためのAIの手法について、技術的に詳細に解説しています。AI for Scienceとは、自然科学の発見を促進するために、人工知能（AI）の技術を利用することである。
+                ・量子、原子、連続体システムにおけるAIの手法は、分子の3次元構造や物理的・化学的性質を考慮した表現学習や予測・生成タスクに有効である。
+                ・これらの手法の設計においては、分子の対称性や表現力、効率性などの課題に対処する必要がある。
+                ・既存の手法は、特徴量のテンソル次数とGNN層のボディ次数という2つの観点から分類できる。
+                ・テンソル次数が高いほど、分子の3次元情報をより豊かに表現できるが、計算コストや実装難度も高くなる。ボディ次数が高いほど、分子の局所的な幾何学的特徴をより正確に捉えられるが、組み合わせ爆発や冗長性も発生する。
+              </div>
+              <div class="description6">
+                コメント：AI for Scienceという新しい研究分野に関する263ページにもなるサーベイ論文で、時間をとってじっくり読み込みたいところです。いつかAIが自然科学の理解を深めて、全解明する日は来るのだろうか。
+              </div>
+              <div class="description10">
+                DATE: 17 Jul 2023<br>
+                Artificial Intelligence for Science in Quantum, Atomistic, and Continuum Systems<br>
+                Xuan Zhang et al. (Texas A&M University, USA)<br>
+                <a href="https://arxiv.org/abs/2307.08423" target="_blank" class="link2 link2--nav2">
+                  arXiv:2307.08423 (cs.LG)</a>
+              </div><div class="img_align">
+                <img src="../review/img/circularity-3-1.png" class="img300">
+                <img src="../review/img/circularity-3-2.png" class="img300">
+              </div>
+            </div><br><br> -->
+
+          </section>
+
+        </section>
+      </main>
+      
+      <!-- Sidebar -->
+      <aside id="sidebar" class="sidebar"></aside>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftyamazaki.com%2Freview%2Fcircularity&count_bg=%2318B41D&title_bg=%23555555&icon=atom.svg&icon_color=%23E7E7E7&title=Thanks:)&edge_flat=false"/><br><br>Copyright © 2022-2023 <a href="../">tyamazaki.com</a> | All rights reserved.
+    </footer>
+
+    <div class="scroll-container">
+      <div class="scroll-top">
+        <a aria-label="Scroll up" href="#top">
+          <i aria-hidden="true" class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+      <div class="scroll-down">
+        <a aria-label="Scroll down" href="#bottom">
+            <i aria-hidden="true" class="fas fa-arrow-down"></i>
+        </a>
+      </div>
+    </div>
+    <script src="../script.js"></script>
+    <!-- <script>
+      window.addEventListener("DOMContentLoaded", function() {
+          loadComponent("sidebar", "sidebar.html");
+      });
+
+      function loadComponent(elementId, url) {
+          fetch(url).then(function(response) {
+              return response.text();
+          }).then(function(data) {
+              document.getElementById(elementId).innerHTML = data;
+          });
+      }
+    </script> -->
+    <div id="bottom"></div>
+  </body>
+</html>

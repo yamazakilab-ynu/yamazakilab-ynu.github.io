@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en jp">
+  <head>
+    <title>ty/review/softmag</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="tyamazaki.com is portfolio, blog and paper reviewing website designed by Takahiro Yamazaki, who is a materials scientist/researcher ant university"/>
+    <meta name="keywords" content="tyamazaki, Takahiro, Yamazaki, portfolio, homepage, website, materials, Scientist, researcher, professor, physics, magnetism, machine learning, Barkhausen, Non-equilibrium, functional, projects, publications, notes, blog, 山崎貴大, 研究者, 大学教員, 論文紹介, 物材見聞録, オブザーブ, ブログ, 材料物理, 物性物理, 材料工学, マテリアルズインフォマティクス"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../img/favicon.png">
+    <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous">
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NYGV5L0T7N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NYGV5L0T7N');
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(function() {
+        $("#sidebar").load("./sidebar.html");
+      });
+    </script>
+  </head>
+  <!-- body -->
+  <body class="light" id="top">
+    <!-- header -->
+    <header class="header center">
+      <h3><a href="../" class="link">tyamazaki.com</a></h3>
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="../">top</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../review">review</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../blog">blog</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../publications">publications</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../projects">projects</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../notes">notes</a>
+          </li>
+        </ul>
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+        <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger"> 
+          <i aria-hidden="true" id="btn-navigation" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+       
+    <div class="about4 center">
+      <h1>論文紹介</h1>
+      <h5>材料特集：軟磁性材料の基礎と応用</h5>
+    </div>
+    <div class="container">
+      <!-- Main contents -->
+      <main class="main-content">
+        <nav aria-label="breadcrumb">
+          <ul class="breadcrumb">
+            <li><a href="../" class="link2 link2--nav2">Home</a></li>
+            <li><a href="../review" class="link2 link2--nav2">Review</a></li>
+            <li>軟磁性材料</li>
+          </ul>
+        </nav>
+
+        <section>
+          <section>
+            <h3 class="section__title3">狙い</h3>
+            <div class="description2">
+              軟磁性材料は、磁場に容易に反応し、外部磁場が除去された後も磁化が残りにくい特性を持つ材料です。これらの材料は、電力変換、情報処理、そして磁場の検出といった多くの用途に利用されています。軟磁性材料は、高い磁気透過率、低い磁気異方性、低い磁気残留などの特徴を有します。
+            </div>
+          </section><br>
+          
+          <section>     
+            <h4 class="under3">論文タイトル一覧</h4>
+            <ol class="indent">
+              <!-- <li class="description22"><a href="#1">
+                界面相変化メモリー：エントロピー制御による高速・低消費電力データ記憶</a></li>
+              <li class="description22"><a href="#2">
+                書き換え可能な光メモリの相変化メカニズムの解明</a></li>
+              <li class="description22"><a href="#3">
+                室温・常圧での相変化材料のフェムト秒構造変化をコヒーレントフォノンでモニターする</a></li> -->
+              <!-- <li class="description22"><a href="#2">
+                固体の密度汎関数理論計算の精度を検証するための再現可能で普遍的なワークフローの開発</a></li>
+              <li class="description22"><a href="#2">
+                固体の密度汎関数理論計算の精度を検証するための再現可能で普遍的なワークフローの開発</a></li> -->
+            </ol>
+          </section><br>
+
+          <section>
+            <!-- <div id="1"><h4 class="indent2">1. 界面相変化メモリー：/h4>
+              <div class="description2">
+                ・界面相変化メモリー（IPCM）という新しいナノ構造材料を開発し、従来の相変化メモリー（PCRAM）に用いられるGe2Sb2Te5（GST）と比較した。<br>
+                ・IPCMはGeTeとSb2Te3の超薄層を交互に積層したもので、Ge原子が界面で八面体型から低配位型へと移動することで相変化を起こす。<br>
+                ・IPCMはGSTよりも相変化に必要なエネルギーや時間が大幅に低減され、光学的にも電気的にも高速なスイッチングが可能であることを実証した。<br>
+                ・IPCMの相変化は溶融を伴わないため、原子拡散やデバイス劣化が抑制され、耐久性や再現性が向上していることをTEMやEDXで観察した。<br>
+                ・IPCMの相変化はSETとRESETの状態間でのエントロピー変化が小さいことが効率向上の原因であることを示唆した。
+              </div><div class="description6">
+                コメント：相変化に溶融を必要としないとなると圧力/電気/熱的なマイグレーションでもっと容易に駆動させることができるようになるのだろうか。<br>
+                補足：相変化メモリーは非揮発性で高密度なデータ記憶が可能な技術であり、フラッシュメモリーの代替候補として注目されており、IPCMはその性能や信頼性を大きく改善する可能性がある。相変化メモリーはエントロピー制御によって最適化することができることを示した最初の例であり、ナノ構造材料の設計における新たな自由度を提供している。
+              </div><div class="description10">
+                3 Jul 2011<br>
+                Interfacial phase-change memory<br>
+                R. E. Simpson et al. (National Institute of Applied Industrial Science and Technology, Japan)<br>
+                <a href="https://www.nature.com/articles/nnano.2011.96" target="_blank" class="link2 link2--nav2">
+                  Nature Nanotechnology volume 6, pages501–505 (2011)</a>
+              </div><div class="img_align">
+                <img src="../review/img/softmag-1-1.png" class="img300">
+                <img src="../review/img/softmag-1-2.png" class="img300">
+              </div>
+            </div><br><br>
+
+            <div id="2"><h4 class="indent2">2. 書き換え可能な光メモリの相変化メカニズムの解明</h4>
+              <div class="description2">
+                ・光メモリに用いられる相変化材料の代表的なものであるGe2Sb2Te5（GST）の結晶構造と非晶構造をX線吸収分光法（XAFS）やX線回折法（XRD）などで調べた。<br>
+                ・結晶GSTは、Te原子が面心立方格子を形成し、GeとSb原子がランダムにもう一方の面心立方格子を形成するロックソルト構造に似ているが、実際にはGe2Sb2Te5という剛体的なビルディングブロックからなる歪んだ構造であることを明らかにした。<br>
+                ・非晶GSTは、レーザーパルスによってビルディングブロック間の結合が切断され、Ge原子が八面体対称から四面体対称に移動することで形成されることを示した。この移動は強い共有結合を保ったまま行われるため、高速かつ安定な相変化が可能であることを説明した。<br>
+                ・非晶GSTは、結晶GSTよりも結合長が短くなり、局所的な秩序が高まることを見出した。これは一般的な共有結合性固体では起こらない珍しい現象である。また、非晶GSTの体積は結晶GSTよりも大きくなることも報告した。<br>
+                ・GSTの相変化は、電子励起によって弱い結合が破壊され、電気的・光学的特性が大きく変化する電子的・構造的秩序・無秩序遷移であることを提案した。この遷移の性質は他の相変化材料にも共通している可能性があると述べた。
+              </div>
+              <div class="description6">
+                コメント：構造変化の元素ごとの配位数に着目してそれを実証できるのは放射光技術のおかげである。一連の彼らの研究は、相変化材料の構造変化を理解する上で重要な貢献をしている。<br>
+                補足：GSTは、DVD-RAMやオボニックメモリなどの書き換え可能な光メモリに使われている材料である。光メモリは、レーザー光を当てて材料を結晶状態と非晶状態に切り替えることでデータを記録・再生することができる。この切り替えは非常に高速で何度も繰り返せるが、そのメカニズムは長年不明であった。この研究では、GSTの結晶構造と非晶構造の詳細な原子配置を初めて明らかにした。GSTの相変化は、一般的な固体では起こらない特殊な現象である。通常、固体が溶けたり固まったりするときには、原子間の距離が長くなったり短くなったりするが、GSTでは逆に溶けた方が距離が短くなる。これは、GSTが分子のように振る舞うからである。
+              </div><div class="description10">
+                12 Sep 2004<br>
+                Understanding the phase-change mechanism of rewritable optical media<br>
+                Alexander V. Kolobov et al. (National Institute of Applied Industrial Science and Technology, Japan)<br>
+                <a href="https://www.nature.com/articles/nmat1215" target="_blank" class="link2 link2--nav2">
+                  Nature Materials volume 3, pages703–708 (2004)</a>
+              </div><div class="img_align">
+                <img src="../review/img/softmag-2-1.png" class="img300v">
+                <img src="../review/img/softmag-2-2.png" class="img300">
+              </div>
+            </div><br><br>
+
+            <div id="3"><h4 class="indent2">3. 室温・常圧での相変化材料のフェムト秒構造変化をコヒーレントフォノンでモニターする</h4>
+              <div class="description2">
+                ・相変化メモリに用いられるGeTe-Sb2Te3系の超格子構造（iPCM）において、フェムト秒レーザーパルスによる光励起で非平衡状態に移行させたとき、コヒーレントフォノン分光法で構造ダイナミクスを観測した。<br>
+                ・光励起後のiPCMの結晶相（SET相）では、単一パルスではフォノンの赤方偏移（軟化）が見られたが、二重パルスではフォノンの青方偏移（硬化）と追加ピークが現れた。これはGe原子周りの配位数が混在することを示唆する。<br>
+                ・光励起後のiPCMの非晶相（RESET相）では、構造変化は不可逆であった。また、多結晶GST合金では、二重パルスでもフォノンの青方偏移は見られなかった。<br>
+                ・二重パルス励起では、パルス間隔やパルス強度によってフォノン分光が変化し、非熱的な前相転移状態へのアクセスが可能であることが分かった。<br>
+                ・iPCMでは、非熱的な前相転移状態は数ピコ秒以内に元のSET相に戻る可逆的な過程であった。これは、光励起による電子的な寄与が主要な役割を果たしていることを示している。<br>
+              </div><div class="description6">
+                コメント：相変化材料であるGSTに対して超格子構造を作りこむことで、アモルファスを介さず、高速な固相ー固相相転移を実現している。発想も技術も素晴らしすぎる。<br>
+                関連記事：<a href="https://www.tsukuba.ac.jp/journal/images/pdf/150925hase3.pdf" target="_blank" class="link2 link2--nav2">産総研プレスリリース（25 Sep 2015）</a>相変化光メモリーの動作を超高速化するメカニズムを解明、<a href="https://www.ulvac.co.jp/wiki/pcram_tominaga/" target="_blank" class="link2 link2--nav2">富永博士のインタビュー（20 May 2020）</a>到達点が新たな出発点の相変化メモリ研究<br>
+                補足：iPCMでは、Ge原子の反転移動によって固体-固体相転移が起こるという新しいメカニズムが提案されており、本研究ではそのメカニズムを超高速時間分解で直接観測したことが注目される。さらに、iPCMでは、二重パルス励起によって非平衡状態で隠れた相を発見し、その特徴的なコヒーレントフォノン分光を報告したことが画期的である。これは、フェムト秒レーザーパルスを用いて相変化材料の構造制御や相変化速度やエネルギー消費量の低減につながる可能性がある。
+              </div><div class="description10">
+                25 Sep 2015<br>
+                Femtosecond structural transformation of phase-change materials far from equilibrium monitored by coherent phonons<br>
+                Muneaki Hase et al. (National Institute of Applied Industrial Science and Technology, Japan)<br>
+                <a href="https://www.nature.com/articles/ncomms9367" target="_blank" class="link2 link2--nav2">
+                  Nature Communications volume 6, Article number: 8367 (2015)</a>
+              </div><div class="img_align">
+                <img src="../review/img/softmag-3-1.png" class="img300v">
+                <img src="../review/img/softmag-3-2.png" class="img300">
+              </div>
+            </div><br><br> 
+          </div>-->
+
+          </section>
+        </section>
+      </main>
+
+      <!-- Sidebar -->
+      <aside id="sidebar" class="sidebar"></aside>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftyamazaki.com%2Freview%2Fsoftmag&count_bg=%2318B41D&title_bg=%23555555&icon=atom.svg&icon_color=%23E7E7E7&title=Thanks:)&edge_flat=false"/><br><br>Copyright © 2022-2023 <a href="../">tyamazaki.com</a> | All rights reserved.
+    </footer>
+
+    <div class="scroll-container">
+      <div class="scroll-top">
+        <a aria-label="Scroll up" href="#top">
+          <i aria-hidden="true" class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+      <div class="scroll-down">
+        <a aria-label="Scroll down" href="#bottom">
+            <i aria-hidden="true" class="fas fa-arrow-down"></i>
+        </a>
+    </div>
+    </div>
+    <script src="../script.js"></script>
+    <div id="bottom"></div>
+  </body>
+</html>

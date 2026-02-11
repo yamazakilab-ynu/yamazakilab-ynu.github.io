@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en jp">
+  <head>
+    <title>ty/review/202312</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="tyamazaki.com is portfolio, blog and paper reviewing website designed by Takahiro Yamazaki, who is a materials scientist/researcher ant university"/>
+    <meta name="keywords" content="tyamazaki, Takahiro, Yamazaki, portfolio, homepage, website, materials, Scientist, researcher, professor, physics, magnetism, machine learning, Barkhausen, Non-equilibrium, functional, projects, publications, notes, blog, 山崎貴大, 研究者, 大学教員, 論文紹介, 物材見聞録, オブザーブ, ブログ, 材料物理, 物性物理, 材料工学, マテリアルズインフォマティクス"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="icon" href="../img/favicon.png">
+    <script src="https://kit.fontawesome.com/fa62c117c7.js" crossorigin="anonymous">
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NYGV5L0T7N"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-NYGV5L0T7N');
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      $(function() {
+        $("#sidebar").load("./sidebar.html");
+      });
+    </script>
+  </head>
+  <!-- body -->
+  <body class="light" id="top">
+    <!-- header -->
+    <header class="header center">
+      <h3><a href="../" class="link">tyamazaki.com</a></h3>
+      <nav class="nav center">
+        <ul class="nav__list center">
+          <li class="nav__list-item">
+            <a class="link link--nav" href="../">top</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../review">review</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../blog">blog</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../publications">publications</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../projects">projects</a>
+          </li><li class="nav__list-item">
+            <a class="link link--nav" href="../notes">notes</a>
+          </li>
+        </ul>
+        <button type="button" aria-label="toggle theme" class="btn btn--icon">
+          <i aria-hidden="true" id="btn-theme" class="fas fa-moon"></i>
+        </button>
+        <button type="button" aria-label="toggle navigation" class="btn btn--icon nav__hamburger"> 
+          <i aria-hidden="true" id="btn-navigation" class="fas fa-bars"></i>
+        </button>
+      </nav>
+    </header>
+       
+    <div class="about4 center">
+      <h1>論文紹介</h1>
+      <h5>最新研究の動向と注目論文：2023年12月</h5>
+    </div>
+    <div class="container">
+      <main class="main-content">
+
+        <section id="202312">
+          <section>
+            <h3 class="section__title3"></h3>
+            <div class="description2">
+              12月に掲載された論文やプレプリントをピックアップして紹介していきます。説明を多めにしています。定期的に更新したいと思います。
+            </div>
+          </section><br>
+
+          <!-- ピックアップ論文 -->
+          <section>     
+            <h4 class="under3">論文タイトル一覧</h4>
+            <ol class="indent">
+              <li class="description22"><a href="#1">
+                磁化ダイナミクスの擬スペクトルランダウ・リフシッツ記述</a></li>
+            </ol>
+          </section><br><br>
+
+          <section>
+            <div id="1"><h4 class="indent2">磁化ダイナミクスの擬スペクトルランダウ・リフシッツ記述</h4>
+              <div class="description2">
+                磁化の回転運動を記述するランダウ・リフシッツ方程式に対して、エネルギーと運動量の保存を満たすマグノンの分散関係を反映させる擬スペクトル法を提案した。この手法は、原子スケールと連続体スケールの両方を正確に記述できるだけでなく、任意のスケールでの解析的研究を可能にする。このモデルの適用性を示すために、1次元の垂直磁気異方性を持つ強磁性鎖における変調不安定性と超高速トランジェントグレーティングの現象を調べた。このモデルは、格子依存性がなく、特異点の記述にも適していることから、トポロジカルテクスチャーや遠方からの平衡状態のダイナミクスの研究に理想的であると示唆した。
+              </div><div class="description10">2023-12-21<br>
+                Pseudo-spectral Landau-Lifshitz description of magnetization dynamics<br>
+                Kyle Rockwell, et al. (University of Colorado, Colorado Springs, CO 80918, USA)<br>
+                <a href="https://arxiv.org/abs/2311.03505" target="_blank" class="link2 link2--nav2">https://arxiv.org/abs/2311.03505 </a></div><div class="img_align">
+                <img src="../review/img/202312-1-1.png" class="img300">
+                <img src="../review/img/202312-1-2.png" class="img300">
+                <img src="../review/img/202312-1-3v.png" class="img300v">
+              </div><br><div class="description6">
+                <span><strong>【コメント】</strong></span>
+                LLG方程式と原子シミュレーションを畳み込みで接続しているので、より厳密な計算が可能となる点で興味深い。<br>
+                <span><strong>【用語】</strong></span>
+                マグノン：磁化の量子的な揺らぎに対応する準粒子で、角運動量の量子である。強磁性体や反強磁性体などの磁性物質において、磁化のダイナミクスや熱輸送のメカニズムとして重要な役割を果たす。変調不安定性：非線形波動方程式において、一様な背景状態に対する小さな摂動が指数関数的に成長する現象。強磁性体においては、磁場や磁化の不均一性によって引き起こされる。変調不安定性は、磁化の局所化やドメイン構造の形成に関係する。超高速トランジェントグレーティング：フェムト秒光パルスを用いて、物質表面に周期的なパターンを作り出す技術。パターンの周期は10 nmから100 nmの範囲で調整できる。この技術は、磁性物質において、磁場や磁化の超高速ダイナミクスを制御したり、観測したりするのに利用される。擬スペクトル法：フーリエ変換やラプラス変換などのスペクトル法を用いて、偏微分方程式の数値解を求める手法。スペクトル法は、高精度で高速な計算が可能であるが、非線形項や境界条件の取り扱いが困難であることが多い。擬スペクトル法は、これらの問題を回避するために、スペクトル法と有限差分法などの他の数値手法を組み合わせる。<br>
+                <span><strong>【提案手法】</strong></span>
+                この研究では、ランダウ・リフシッツ方程式の非線形項に対して、擬スペクトル法を適用することで、マグノンの分散関係を正確に再現する手法を提案した。この手法では、磁化の空間微分項に対して、フーリエ変換を行い、スペクトル空間で非線形項を計算する。非線形項は、磁化の自己相互作用によるエネルギーと運動量の保存を反映するカーネル関数との畳み込みとして表される。カーネル関数は、原子スケールでのマグノンの分散関係を再現するために、磁化の格子定数に依存する項を含む。連続体スケールでのマグノンの分散関係は、カーネル関数のテイラー展開によって得られる。この手法は、磁化の格子依存性を排除し、原子スケールと連続体スケールの間の遷移領域を記述できる。また、スペクトル空間での計算によって、高精度で高速な数値解析が可能になる。<br>
+                <span><strong>【学術的新規性】</strong></span>
+                この研究は、磁化のダイナミクスを記述するランダウ・リフシッツ方程式に対して、擬スペクトル法を初めて適用したものである。マグノンの分散関係を正確に再現するカーネル関数を導出し、原子スケールと連続体スケールの両方を統一的に記述できるモデルを構築した。この研究は、擬スペクトル法を用いて、変調不安定性や超高速トランジェントグレーティングなどの現象を解析的に研究し、原子スケールの磁化ダイナミクスの振る舞いを明らかにしたものである。擬スペクトル法が、格子依存性がなく、特異点の記述にも適していることから、トポロジカルテクスチャーや遠方からの平衡状態のダイナミクスの研究に理想的であることを示唆している。<br>
+              </div>
+            </div><br><br>
+          </section>
+
+        </section>
+      </main>
+      
+      <!-- Sidebar -->
+      <aside id="sidebar" class="sidebar"></aside>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ftyamazaki.com%2Freview%2F202312&count_bg=%2318B41D&title_bg=%23555555&icon=atom.svg&icon_color=%23E7E7E7&title=Thanks:)&edge_flat=false"/><br><br>Copyright © 2022-2024 <a href="../">tyamazaki.com</a> | All rights reserved.
+    </footer>
+
+    <div class="scroll-container">
+      <div class="scroll-top">
+        <a aria-label="Scroll up" href="#top">
+          <i aria-hidden="true" class="fas fa-arrow-up"></i>
+        </a>
+      </div>
+      <div class="scroll-down">
+        <a aria-label="Scroll down" href="#bottom">
+            <i aria-hidden="true" class="fas fa-arrow-down"></i>
+        </a>
+      </div>
+    </div>
+    <script src="../script.js"></script>
+    <div id="bottom"></div>
+  </body>
+</html>
